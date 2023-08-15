@@ -245,7 +245,7 @@
 }
 
 .flags.flags-default .flag {
-	background: var(--color-primary-100);
+	background: var(--color-primary-200) !important;
 }
 
 .flags.flags-default {
