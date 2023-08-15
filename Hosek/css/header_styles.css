@@ -160,7 +160,7 @@
 	width: max-content;
 	height: auto;
 	font-size: 12px;
-	background: var(--color-gray-800);
+	background: var(--color-black-800);
 	top: calc(100% + 10px);
 	left: 0;
 	transform: translatex(-36.6%);
@@ -345,7 +345,7 @@
 	width: max-content;
 	height: auto;
 	font-size: 12px;
-	background: var(--color-gray-800);
+	background: var(--color-black-800);
 	top: calc(100% + 10px);
 	left: 0;
 	transform: translatex(-36.6%);
@@ -376,7 +376,7 @@
 	padding: 0 10px 0 10px;
 	color: var(--color-primary);
 	color: white;
-	color: var(--color-gray-800);
+	color: var(--color-black-800);
 }
 #header #navigation ul.menu-level-1 > li:first-child > a {
 	padding: 0px 15px 0px 30px;

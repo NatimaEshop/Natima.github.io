@@ -26,7 +26,7 @@ button:hover,
 .btn:hover,
 .btn-primary:hover,
 .products .product .btn:hover {
-	background-color: var(--color-tertiary-hover);
+	background-color: var(--color-primary-hover);
 }
 
 /*Nadpisy na hl stránce*/
