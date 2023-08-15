@@ -30,7 +30,6 @@
 .products-block.products .product button,
 .products-block.products .product .btn {
 	width: 100% !important;
-	background: 0 0 var(--border-radius) var(--border-radius);
 	border-radius: 0 0 0 0;
 	color: white !important;
 	opacity: 0;
@@ -46,7 +45,8 @@
 }
 .products-block.products .product:hover button:before,
 .products-block.products .product:hover .btn:before {
-	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	/* border-radius: 0 0 var(--border-radius) var(--border-radius); */
+	border-radius: var(--border-radius);
 	background: var(--color-primary) !important;
 }
 .products-block.products .product:hover button:hover:before,
