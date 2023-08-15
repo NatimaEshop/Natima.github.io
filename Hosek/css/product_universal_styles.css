@@ -244,6 +244,10 @@
 	border-radius: var(--border-radius);
 }
 
+.flags.flags-default .flag {
+	background: var(--color-primary-100);
+}
+
 .flags.flags-default {
 	padding-top: 0px;
 	margin-top: 10px;
