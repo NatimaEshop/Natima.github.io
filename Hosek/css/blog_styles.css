@@ -1,0 +1,28 @@
+/*blog*/
+.news-wrapper .news-item .image {
+	height: auto;
+}
+
+.news-wrapper .news-item .image img {
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: none;
+	width: 100%;
+}
+
+@keyframes hoverOpacity {
+	from {
+		opacity: 0;
+		transform: translate(-36.6%, -10px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-36.6%, 0px);
+	}
+}
+
+/*hr v blogu*/
+.content-inner > hr {
+	display: none;
+}
