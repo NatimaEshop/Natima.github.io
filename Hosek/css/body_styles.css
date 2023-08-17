@@ -17,6 +17,7 @@ h6,
 /*full-width do 1920*/
 body .container {
 	max-width: 1920px;
+	width: 100%;
 	padding: 0 40px;
 	margin: auto;
 }
