@@ -1,0 +1,166 @@
+.homepage-box {
+	border-style: none;
+	background: transparent;
+}
+
+/*slidery hero*/
+.before-carousel .banners-row > div:first-child {
+	width: 100%;
+}
+
+/*carousels parent*/
+.row.banners-row {
+	display: grid;
+	grid-template-rows: max-content max-content;
+}
+.row.banners-row > div {
+	width: 100%;
+	max-width: 100% !important;
+}
+.type-index .banners-row .col-sm-8,
+.type-index .banners-row .col-sm-4 {
+	padding: 0 !important;
+}
+
+#carousel {
+	max-width: 100%;
+}
+.carousel-inner {
+	display: flex;
+	column-gap: var(--gap);
+}
+.carousel-inner .item {
+	display: block;
+	min-width: 24.5%;
+	width: 24.5%;
+	border-radius: var(--border-radius);
+}
+.carousel-inner .item img,
+.carousel-inner .item video {
+	max-width: none;
+	width: 100%;
+	border-radius: var(--border-radius);
+}
+.carousel-inner .carousel-banner-content {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	padding: 50px;
+	bottom: 40px;
+	flex-direction: column;
+	left: 0;
+	justify-content: flex-start;
+	gap: 1em;
+}
+
+.carousel-inner .carousel-banner-button {
+	font-size: 14px;
+	/*font-size: 12px;*/
+	line-height: 1em;
+	width: 8em;
+	text-align: center;
+	max-width: 80%;
+	padding: 0.8em 0;
+	border-radius: var(--border-radius);
+	font-weight: 600;
+	transition: all 0.3s ease-out;
+	margin-top: 5px;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+}
+.carousel-inner .carousel-banner-content .carousel-banner-heading {
+	font-size: 24px;
+	/* font-size: 18px; */
+	min-height: 55px;
+	color: inherit;
+}
+.carousel-inner .carousel-banner-content .carousel-banner-text {
+	font-size: 18px;
+	font-weight: 400;
+	/* font-size: 14px; */
+}
+
+.carousel-inner .carousel-banner-content .carousel-banner-heading,
+.carousel-inner .carousel-banner-content .carousel-banner-text {
+	line-height: 1.2em;
+	margin: 0;
+}
+.carousel-inner .carousel-banner-content.bright .carousel-banner-button,
+.carousel-inner .carousel-banner-content .carousel-banner-button {
+	background-color: var(--color-black-800);
+	color: white;
+}
+.carousel-inner .carousel-banner-content.bright,
+.carousel-inner .carousel-banner-content {
+	color: var(--color-black-800);
+}
+
+.carousel-inner .carousel-banner-content.dark .carousel-banner-button {
+	background-color: white;
+	color: var(--color-black-800);
+}
+.carousel-inner .carousel-banner-content.dark {
+	color: white;
+}
+
+.carousel-control {
+	display: none;
+}
+.type-index .banners-row {
+	margin: 0;
+}
+
+/*carousel značky*/
+.next-to-carousel-banners {
+	margin: 0;
+	margin-top: 41px;
+	padding-top: calc(45px + 20px);
+	max-width: 100%;
+	display: flex;
+	gap: var(--gap);
+	position: relative;
+}
+
+.next-to-carousel-banners img {
+	border-radius: var(--border-radius);
+	transition: 0.3s ease;
+	transition-property: transform, filter;
+}
+
+.next-to-carousel-banners .banner-wrapper:hover > img,
+.next-to-carousel-banners .banner-wrapper:hover > a > img {
+	transform: scale(1.02);
+	filter: contrast(0.95);
+}
+
+/*nadpis oblíbené značky*/
+.next-to-carousel-banners .banner-wrapper:first-child {
+	position: absolute;
+	top: 0;
+}
+
+/*bannery uprostred a dole*/
+.body-banners,
+.footer-banners {
+	display: flex;
+	gap: var(--gap);
+	margin: 30px 0px !important;
+}
+.container .body-banners > div,
+.content-wrapper.container .footer-banners .footer-banner {
+	flex: 1;
+	width: 100%;
+	max-width: 100%;
+	padding: 0;
+	margin: 0 !important;
+}
+.container .body-banners > div img,
+.content-wrapper.container .footer-banners .footer-banner img {
+	border-radius: var(--border-radius);
+}
+
+.row:before,
+.row:after {
+	display: none;
+}
