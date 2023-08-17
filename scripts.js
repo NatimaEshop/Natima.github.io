@@ -15,6 +15,11 @@ setTimeout(() => {
 }, 300);
 
 /*kategorie*/
-if ($(".category-top").length >= 1) {
-	$(".category-top").insertBefore(".content-wrapper-in");
-}
+document.addEventListener("DOMContentLoaded", function (event) {
+	if ($(".category-top").length >= 1) {
+		$(".category-top").insertBefore(".content-wrapper-in");
+
+		let filter = $(".filters-wrapper");
+		$("#filters-default-position").append(filter);
+	}
+});
