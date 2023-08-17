@@ -1,7 +1,7 @@
 let contentLoaded = false;
 document.addEventListener("DOMContentLoaded", function (event) {
 	if (!contentLoaded) {
-		$(".in-index").show();
+		$("body").show();
 		contentLoaded = true;
 	}
 });
