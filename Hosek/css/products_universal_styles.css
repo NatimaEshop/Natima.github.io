@@ -1,0 +1,21 @@
+/*sede pozadi produktové fotky*/
+/*sede pozadi produktové fotky*/
+.products-block .image::after,
+.p-image::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-color: hsla(203, 7%, 47%, 0.06);
+	border-radius: var(--border-radius);
+}
+
+.products-block .product .image img,
+.p-image img {
+	filter: brightness(1.02);
+}
+
+/*kod produktu*/
+.products-page .p-code {
+	display: none;
+}
