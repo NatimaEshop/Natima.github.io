@@ -246,7 +246,8 @@
 	background-color: #f7f7f7;
 	background-image: url("https://587774.myshoptet.com/user/documents/upload/Natima/ZoomIcon_3.svg");
 	border-radius: calc(var(--border-radius) * 2) 0 0 calc(var(--border-radius) * 2);
-	filter: drop-shadow(-4px 2px 8px rgba(0, 0, 0, 0.25));
+	/* filter: drop-shadow(-4px 2px 8px rgba(0, 0, 0, 0.25)); */
+	box-shadow: -4px 2px 8px rgba(0, 0, 0, 0.25);
 	max-width: 100%;
 }
 
@@ -261,7 +262,8 @@
 	width: auto;
 	position: relative;
 	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-	filter: drop-shadow(9px 1px 8px rgba(0, 0, 0, 0.25));
+	/* filter: drop-shadow(9px 1px 8px rgba(0, 0, 0, 0.25)); */
+	box-shadow: 9px 1px 8px rgba(0, 0, 0, 0.25);
 }
 #header .search fieldset button::before {
 	content: "";
