@@ -473,7 +473,8 @@
 		display: flex;
 	}
 	.navigation-in > ul > li.ext.exp > a,
-	.navigation-in > ul > li > a:hover {
+	.navigation-in > ul > li > a:hover,
+	.navigation-in > ul > li:first-child > a:hover {
 		color: var(--color-blue-400);
 		padding: 0 10px;
 		background-color: inherit;
@@ -506,4 +507,83 @@
 	100% {
 		opacity: 1;
 	}
+}
+
+/*Kategorie v menu*/
+/*kategorie v menu*/
+.navigation-in.menu .menu-level-2 > li > a {
+	display: none !important;
+}
+.navigation-in > ul > li.ext > ul > li > div a {
+	font-weight: 600;
+	color: var(--color-black-800);
+}
+.navigation-in > ul > li.ext > ul > li .menu-level-3 a {
+	color: var(--color-black-800);
+	font-weight: 400;
+	opacity: 0.85;
+}
+
+#header #navigation .navigation-in.menu .menu-level-1 > .exp .menu-level-2 {
+	display: block;
+	columns: 3;
+	background: #fdfdfd;
+	max-height: 100vh !important;
+	padding-left: 30px;
+}
+#header #navigation .navigation-in.menu .menu-level-1 > .exp:has(.menu-level-2 > li:nth-child(4)) .menu-level-2 {
+	columns: 4;
+}
+@media (min-width: 1440px) {
+	#header #navigation .navigation-in.menu .menu-level-1 > .exp .menu-level-2 {
+		columns: 5 !important;
+	}
+}
+#header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 > li {
+	width: 100%;
+	min-height: auto;
+	padding: 20px 0 20px 40px;
+	align-items: start;
+}
+#header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 > li > div {
+	width: auto;
+}
+#header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 > * {
+	display: inline-block;
+}
+#header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 .menu-level-3 {
+	max-height: none;
+	display: block;
+}
+#header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 .menu-level-3 li {
+	display: block;
+	padding-bottom: 3px;
+}
+.menu-level-1 > li > a {
+	position: relative;
+}
+.menu-level-1 > li > a b {
+	position: relative;
+}
+.menu-item-840 > a::before,
+.menu-item-765 > a::before,
+.menu-item-723 > a::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: var(--color-primary);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.menu-item-840 > a::before {
+	opacity: 0.18;
+}
+.menu-item-765 > a::before {
+	opacity: 0.1;
+}
+.menu-item-723 > a::before {
+	opacity: 0.15;
+	background: rgb(59, 128, 73);
 }
