@@ -10,7 +10,7 @@
 	transition: transform 0.3s linear;
 	transform: translatex(calc(var(--translateXJS) * -1 / var(--SliderPocetProduktuCalc) * var(--SliderPocetProduktu)));
 	--translateXJS: 0%;
-	--SliderPocetProduktu: 7;
+	--SliderPocetProduktu: 6;
 	--SliderCastProduktu: 0.3;
 	--SliderPocetProduktuCalc: calc(var(--SliderPocetProduktu) + var(--SliderCastProduktu));
 }
@@ -19,7 +19,17 @@
 	width: calc(100% / (var(--SliderPocetProduktuCalc)));
 	padding: 0 7px !important;
 	border-style: none !important;
+	user-select: none;
 }
+.in-index .products .product a {
+	user-drag: none !important;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+.in-index .products .product img {
+	pointer-events: none;
+}
+
 .in-index .p-code {
 	display: none;
 }
