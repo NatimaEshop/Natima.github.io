@@ -22,7 +22,6 @@
 	user-select: none;
 }
 .in-index .products .product a {
-	user-drag: none !important;
 	user-select: none;
 	-webkit-user-drag: none;
 }
