@@ -11,6 +11,9 @@ function getSliderProductHeight() {
 }
 /* document.addEventListener("DOMContentLoaded", getSliderProductHeight); */
 productSliderImage.onload = getSliderProductHeight();
+productSliderImage.onload = function () {
+	alert("Height: " + this.height);
+};
 window.addEventListener("resize", getSliderProductHeight);
 
 /*arrows slider*/
