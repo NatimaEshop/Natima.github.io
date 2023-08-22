@@ -2,8 +2,8 @@
 let productImageHeight;
 const root = document.querySelector(":root");
 
-const productSliderElement = document.querySelector(".in-index .products-block .product .image");
-const productSliderImage = document.querySelector(".in-index .products-block .product .image img");
+let productSliderElement = document.querySelector(".in-index .products-block .product .image");
+let productSliderImage = document.querySelector(".in-index .products-block .product .image img");
 function getSliderProductHeight() {
 	productImageHeight = productSliderElement.offsetHeight / 2;
 	root.style.setProperty("--slider-product-height", productImageHeight + "px");
