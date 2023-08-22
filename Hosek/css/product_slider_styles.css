@@ -17,7 +17,7 @@
 
 .in-index .products .product {
 	width: calc(100% / (var(--SliderPocetProduktuCalc)));
-	padding: 0 7px !important;
+	padding: 0px 14px 0px 0px !important;
 	border-style: none !important;
 	user-select: none;
 }
