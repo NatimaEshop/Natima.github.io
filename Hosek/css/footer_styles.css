@@ -1,0 +1,45 @@
+/*footer*/
+#footer {
+	background: var(--color-gray-400);
+}
+#footer .container {
+	background: transparent;
+}
+.custom-footer__banner1 .banner {
+	overflow: visible;
+}
+.custom-footer__banner2 {
+	display: none;
+}
+#footer .site-name {
+	display: none;
+}
+#footer .custom-footer {
+	padding: 0;
+	border-style: none;
+}
+#footer .custom-footer__onlinePayments .text-center {
+	text-align: left;
+}
+footer .custom-footer > div {
+	padding: 30px 15px 0 0 !important;
+}
+footer .custom-footer .site-name .inner-box {
+	padding: initial !important;
+}
+#footer > div.container.footer-rows > div > div:nth-child(2) > div:before {
+	display: none;
+}
+#showHeurekaBadgeHere-11 > a > img {
+	max-width: 100%;
+	padding-right: 10%;
+	margin-left: -10px;
+	height: auto;
+}
+footer h4 {
+	font-size: 16px;
+	margin-bottom: 1.2em;
+}
+body footer .container.footer-bottom {
+	padding: 40px 40px 0 !important;
+}
