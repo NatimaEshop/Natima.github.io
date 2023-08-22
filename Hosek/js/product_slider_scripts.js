@@ -10,9 +10,8 @@ function getSliderProductHeight() {
 	console.log(productImageHeight);
 }
 /* document.addEventListener("DOMContentLoaded", getSliderProductHeight); */
-productSliderImage.onload = getSliderProductHeight();
 productSliderImage.onload = function () {
-	alert("Height: " + this.height);
+	getSliderProductHeight();
 };
 window.addEventListener("resize", getSliderProductHeight);
 
