@@ -3,7 +3,7 @@ body .container,
 .external-fonts-loaded body .container,
 body.blank-mode .container {
 	max-width: 1920px;
-	padding: 0 40px;
+	padding: 0 40px !important;
 	margin: auto;
 }
 body .container.navigation-wrapper {
