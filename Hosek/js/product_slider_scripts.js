@@ -2,12 +2,15 @@
 let productImageHeight;
 const root = document.querySelector(":root");
 
+const productSliderElement = document.querySelector(".in-index .products-block .product .image");
+const productSliderImage = document.querySelector(".in-index .products-block .product .image img");
 function getSliderProductHeight() {
-	productImageHeight = document.querySelector(".in-index .products-block .product .image").offsetHeight / 2;
+	productImageHeight = productSliderElement.offsetHeight / 2;
 	root.style.setProperty("--slider-product-height", productImageHeight + "px");
 	console.log(productImageHeight);
 }
-document.addEventListener("DOMContentLoaded", getSliderProductHeight);
+/* document.addEventListener("DOMContentLoaded", getSliderProductHeight); */
+productSliderImage.onload = getSliderProductHeight();
 window.addEventListener("resize", getSliderProductHeight);
 
 /*arrows slider*/
