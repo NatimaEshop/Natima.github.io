@@ -1,3 +1,7 @@
+:root {
+	--slider-product-height: 150px;
+}
+
 .in-index .content {
 	overflow: hidden;
 	padding: 0;
