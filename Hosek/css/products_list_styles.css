@@ -169,65 +169,53 @@
 }
 
 /*uprava rozložení pro hl stránku*/
-.lSSlideOuter .lightSlider {
-	height: auto !important;
-}
-
-.content-wrapper-in .content .lSSlideOuter .lSSlideWrapper .product {
-	padding: 0;
-	padding-right: 15px;
-}
-
-.content-wrapper-in .content .lSSlideOuter .lSSlideWrapper .product img {
+.in-index .products-block .product img {
 	margin: 50px 0px 40px 0px;
 }
 
-.lSSlideWrapper {
-	--marginProductInfo: 8px;
-}
-.lSSlideWrapper .product .p .p-in-in {
+.in-index .products-block .product .p .p-in-in {
 	grid-template-rows: max-content 1.55em;
 	gap: 0;
 }
 
-.lSSlideWrapper .product .p .p-bottom > div {
+.in-index .products-block .product .p .p-bottom > div {
 	display: block;
 	height: 100%;
 }
 
-.lSSlideWrapper .product .p .p-bottom > div .prices {
+.in-index .products-block .product .p .p-bottom > div .prices {
 	height: 100%;
 	display: flex;
 	align-items: flex-end;
 }
 
-.lSSlideWrapper .product .p .p-in {
+.in-index .products-block .product .p .p-in {
 	font-size: 16px;
 }
 
-.lSSlideWrapper .product .p .p-in .p-in-in > a {
+.in-index .products-block .product .p .p-in .p-in-in > a {
 	-webkit-line-clamp: 4;
 	line-height: 1.3;
 	margin-bottom: 0.2em;
 	font-weight: 500;
 }
 
-.lSSlideWrapper .product .p .p-in-in .ratings-wrapper {
+.in-index .products-block .product .p .p-in-in .ratings-wrapper {
 	grid-row: 2;
 	margin-top: 4px;
 }
-.lSSlideWrapper .availability {
+.in-index .products-block .product .availability {
 	display: none;
 }
-.lSSlideWrapper .products .product .p .p-tools button {
+.in-index .products-block .product .p .p-tools button {
 	height: 36px;
 }
-.lSSlideWrapper .flags .flag {
+.in-index .products-block .product .flags .flag {
 	display: none;
 }
-.lSSlideWrapper .flags .flag:first-child {
+.in-index .products-block .product .flags .flag:first-child {
 	display: block;
 }
-.lSSlideWrapper .products .product:hover .flags.flags-extra .flag.flag-discount {
+.in-index .products-block .product:hover .flags.flags-extra .flag.flag-discount {
 	transform: translatey(-32px);
 }
