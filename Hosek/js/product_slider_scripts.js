@@ -7,7 +7,7 @@ function getSliderProductHeight() {
 	root.style.setProperty("--slider-product-height", productImageHeight + "px");
 	console.log(productImageHeight);
 }
-getSliderProductHeight();
+document.addEventListener("DOMContentLoaded", getSliderProductHeight);
 window.addEventListener("resize", getSliderProductHeight);
 
 /*arrows slider*/
