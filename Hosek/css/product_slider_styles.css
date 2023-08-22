@@ -8,8 +8,8 @@
 	overflow: visible;
 	flex-wrap: nowrap;
 	transition: transform 0.3s linear;
-	transform: translatex(calc(var(--translateXJS) * -1 / var(--SliderPocetProduktuCalc) * var(--SliderPocetProduktu)));
-	--translateXJS: 0%;
+	/*transform: translatex(calc(var(--translateXJS) * -1 / var(--SliderPocetProduktuCalc) * var(--SliderPocetProduktu)));
+	--translateXJS: 0%;*/
 	--SliderPocetProduktu: 6;
 	--SliderCastProduktu: 0.3;
 	--SliderPocetProduktuCalc: calc(var(--SliderPocetProduktu) + var(--SliderCastProduktu));
