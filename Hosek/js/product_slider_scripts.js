@@ -4,11 +4,8 @@ const root = document.querySelector(":root");
 
 function getSliderProductHeight() {
 	productImageHeight = document.querySelector(".in-index .products-block .product .image").offsetHeight / 2;
-	productImageHeight = productImageHeight + document.querySelector(".in-index .homepage-group-title").offsetHeight;
-
-	productImageHeight = document.querySelector(".in-index .products-block .product .image").offsetHeight / 2;
 	root.style.setProperty("--slider-product-height", productImageHeight + "px");
-	console.log("test");
+	console.log(productImageHeight);
 }
 getSliderProductHeight();
 window.addEventListener("resize", getSliderProductHeight);
