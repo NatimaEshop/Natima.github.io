@@ -60,10 +60,9 @@ for (let i = 0; i < productSliderJS.length; i++) {
 		translateIteration[i] = translateIteration[i] + 1;
 		translates[i] = translates[i] + 100;
 		productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
-		console.log(translateIteration[i]);
-		console.log(maximumTranslates[i]);
+		arrowsLeft[i].classList.remove("display-none");
 		if (translateIteration[i] < maximumTranslates[i]) {
-			arrowsLeft[i].classList.remove("display-none");
+			return;
 		} else {
 			arrowsRight[i].classList.add("display-none");
 		}
@@ -73,8 +72,9 @@ for (let i = 0; i < productSliderJS.length; i++) {
 		translateIteration[i] = translateIteration[i] - 1;
 		translates[i] = translates[i] - 100;
 		productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
+		arrowsRight[i].classList.remove("display-none");
 		if (translateIteration[i] !== 1) {
-			arrowsRight[i].classList.remove("display-none");
+			return;
 		} else {
 			arrowsLeft[i].classList.add("display-none");
 		}
