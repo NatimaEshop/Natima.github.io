@@ -137,3 +137,12 @@
 		--SliderCastProduktu: 0;
 	}
 }
+
+@media (min-width: 1720px) {
+	.in-index .products {
+		flex-grow: 8; /*pocet produktu pro JS*/
+		flex-shrink: 0; /*overflow pro JS*/
+		--SliderPocetProduktu: 8;
+		--SliderCastProduktu: 0;
+	}
+}
