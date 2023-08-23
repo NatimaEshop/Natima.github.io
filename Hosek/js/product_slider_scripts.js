@@ -49,7 +49,7 @@ for (let i = 0; i < productSliderJS.length; i++) {
 	translates[i] = 0;
 	realNumProductsInSlider[i] = productSliderJS[i].children.length;
 	maximumTranslates[i] = Math.floor(realNumProductsInSlider[i] / amountOfProductsInSlider);
-	translateIteration[i] = 0;
+	translateIteration[i] = 1;
 
 	arrowsRight[i].addEventListener("click", function () {
 		translateIteration[i] = translateIteration[i] + 1;
@@ -58,9 +58,22 @@ for (let i = 0; i < productSliderJS.length; i++) {
 		console.log(translateIteration[i]);
 		console.log(maximumTranslates[i]);
 		if (translateIteration[i] < maximumTranslates[i]) {
+			arrowsRight[i].classList.remove("display-none");
 			return;
 		} else {
 			arrowsRight[i].classList.add("display-none");
+		}
+	});
+
+	arrowsLeft[i].addEventListener("click", function () {
+		translateIteration[i] = translateIteration[i] - 1;
+		translates[i] = translates[i] - 100;
+		productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
+		if (translateIteration[i] !== 1) {
+			arrowsLeft[i].classList.remove("display-none");
+			return;
+		} else {
+			arrowsLeft[i].classList.add("display-none");
 		}
 	});
 }
