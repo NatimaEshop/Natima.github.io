@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", numberOfProductsInSlider);
 /*transladte slideru*/
 let translates = [];
 let translateIteration = [];
-let productsInSlider = [];
+let realNumProductsInSlider = [];
 let maximumTranslates = [];
 let productSliderJS = document.querySelectorAll(".in-index .products-block");
 let arrowsRight = document.querySelectorAll(".product-slider-arrow.right");
@@ -47,8 +47,8 @@ let arrowsLeft = document.querySelectorAll(".product-slider-arrow.left");
 
 for (let i = 0; i < productSliderJS.length; i++) {
 	translates[i] = 0;
-	productsInSlider[i] = productSliderJS[i].children.length;
-	maximumTranslates[i] = Math.floor(productsInSlider / amountOfProductsInSlider);
+	realNumProductsInSlider[i] = productSliderJS[i].children.length;
+	maximumTranslates[i] = Math.floor(realNumProductsInSlider[i] / amountOfProductsInSlider);
 	translateIteration[i] = 0;
 
 	arrowsRight[i].addEventListener("click", function () {
