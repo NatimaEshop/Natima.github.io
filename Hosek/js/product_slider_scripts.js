@@ -14,12 +14,12 @@ productSliderImage.onload = function () {
 window.addEventListener("resize", getSliderProductHeight);
 
 /*arrows slider*/
-let productSliders = $(".in-index .products-block");
-productSliders.wrap("<div class='sliderWrap'></div>");
-productSliders.wrap("<div class='slider'></div>");
+let productSlidersJQ = $(".in-index .products-block");
+productSlidersJQ.wrap("<div class='sliderWrap'></div>");
+productSlidersJQ.wrap("<div class='slider'></div>");
 let appendElement = $(".sliderWrap");
 
-for (let i = 0; i < productSliders.length; i++) {
+for (let i = 0; i < productSlidersJQ.length; i++) {
 	$("<div class='product-slider-arrow right'></div>").appendTo(appendElement[i]);
 	$("<div class='product-slider-arrow left'></div>").appendTo(appendElement[i]);
 }
@@ -28,8 +28,8 @@ for (let i = 0; i < productSliders.length; i++) {
 let amountOfProductsInSlider;
 let overflowOfProductsInSlider;
 function numberOfProductsInSlider() {
-	amountOfProductsInSlider = getComputedStyle(productSliders[0]).flexGrow;
-	overflowOfProductsInSlider = getComputedStyle(productSliders[0]).flexShrink;
+	amountOfProductsInSlider = getComputedStyle(productSlidersJQ[0]).flexGrow;
+	overflowOfProductsInSlider = getComputedStyle(productSlidersJQ[0]).flexShrink;
 	console.log(amountOfProductsInSlider);
 	console.log(overflowOfProductsInSlider);
 }
@@ -39,25 +39,15 @@ document.addEventListener("DOMContentLoaded", numberOfProductsInSlider);
 /*transladte slideru*/
 let translates = [];
 let productsInSlider = [];
+let productSliderJS = document.querySelectorAll(".in-index .products-block");
 let arrowsRight = document.querySelectorAll(".product-slider-arrow.right");
 let arrowsLeft = document.querySelectorAll(".product-slider-arrow.left");
 
-for (let i = 0; i < productSliders.length; i++) {
+for (let i = 0; i < productSliderJS.length; i++) {
 	translates[i] = 0;
 
 	arrowsRight[i].addEventListener("click", function () {
 		translates[i] = translates[i] + 100;
-		productSliders.eq(i).css({
-			"-webkit-transform": "translateX(-100%)",
-			transform: "translateX(-100%)",
-		});
-	});
-
-	arrowsLeft[i].addEventListener("click", function () {
-		translates[i] = translates[i] + 0;
-		productSliders.eq(i).css({
-			"-webkit-transform": "translateX(0%)",
-			transform: "translateX(0%)",
-		});
+		productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
 	});
 }
