@@ -14,9 +14,9 @@
 	/*transform: translatex(calc(var(--translateXJS) * -1 / var(--SliderPocetProduktuCalc) * var(--SliderPocetProduktu)));
 	--translateXJS: 0%;*/
 	flex-grow: 2; /*pocet produktu pro JS*/
-	flex-shrink: 0.1; /*overflow pro JS*/
+	flex-shrink: 0; /*overflow pro JS*/
 	--SliderPocetProduktu: 2;
-	--SliderCastProduktu: 0.1;
+	--SliderCastProduktu: 0;
 	--SliderPocetProduktuCalc: calc(var(--SliderPocetProduktu) + var(--SliderCastProduktu));
 }
 
