@@ -8,7 +8,7 @@ let productSliderImage = document.querySelector(".in-index .products-block .prod
 let productSliderElement2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image");
 let productSliderImage2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image img");
 let carouselSliderElementJS = document.querySelector(".in-index .col-sm-8");
-let carouselSliderElementJQ = $(".in-index .col-sm-8");
+let carouselSliderElementJQ = $(".in-index .banners-row .col-sm-8");
 
 function getSliderProductHeight() {
 	productImageHeight = productSliderElement.offsetHeight / 2;
@@ -95,8 +95,8 @@ function numberOfProductsInSlider() {
 window.addEventListener("resize", numberOfProductsInSlider);
 numberOfProductsInSlider();
 
-let carouselArrowRight = document.querySelector(".in-index .col-sm-8 .slider-arrow.right");
-let carouselArrowLeft = document.querySelector(".in-index .col-sm-8 .slider-arrow.let");
+let carouselArrowRight = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.right");
+let carouselArrowLeft = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.let");
 
 carouselArrowLeft.classList.add("display-none");
 

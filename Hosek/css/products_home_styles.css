@@ -33,7 +33,7 @@ h4.homepage-group-title,
 	transition: background 0.2s ease;
 	z-index: 9;
 }
-.in-index .col-sm-8 .slider-arrow {
+.in-index .banners-row .col-sm-8 .slider-arrow {
 	top: 50%;
 }
 
