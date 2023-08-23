@@ -51,9 +51,10 @@ let arrowsLeft = document.querySelectorAll(".product-slider-arrow.left");
 
 for (let i = 0; i < productSliderJS.length; i++) {
 	translates[i] = 0;
+	translateIteration[i] = 1;
 	realNumProductsInSlider[i] = productSliderJS[i].children.length;
 	maximumTranslates[i] = Math.floor(realNumProductsInSlider[i] / amountOfProductsInSlider);
-	translateIteration[i] = 1;
+	arrowsLeft[i].classList.add("display-none");
 
 	arrowsRight[i].addEventListener("click", function () {
 		translateIteration[i] = translateIteration[i] + 1;
