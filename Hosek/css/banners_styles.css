@@ -4,9 +4,10 @@
 }
 
 /*slidery hero*/
-.before-carousel .banners-row > div:first-child {
+.before-carousel .banners-row .col-sm-8 {
 	width: 100%;
 	margin-top: calc(var(--gap) * 2);
+	position: relative;
 }
 
 /*carousels parent*/
@@ -21,10 +22,6 @@
 .type-index .banners-row .col-sm-8,
 .type-index .banners-row .col-sm-4 {
 	padding: 0 !important;
-}
-
-.type-index .banners-row .col-sm-8 {
-	position: relative;
 }
 
 #carousel {
