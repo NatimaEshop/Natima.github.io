@@ -7,7 +7,7 @@ let productSliderElement = document.querySelector(".in-index .products-block .pr
 let productSliderImage = document.querySelector(".in-index .products-block .product .image img");
 let productSliderElement2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image");
 let productSliderImage2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image img");
-let carouselSliderElementJS = document.querySelector(".in-index .col-sm-8");
+let carouselSliderElementJS = document.querySelector(".in-index .banners-row .col-sm-8");
 let carouselSliderElementJQ = $(".in-index .banners-row .col-sm-8");
 
 function getSliderProductHeight() {
@@ -88,9 +88,8 @@ $("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementJQ);
 
 /*pocet produktu a overflow v slideru*/
 let amountOfBannersInSlider;
-let overflowOfBannersInSlider;
 function numberOfProductsInSlider() {
-	amountOfBannersInSlider = getComputedStyle(carouselSliderElementJQ).flexGrow;
+	amountOfBannersInSlider = getComputedStyle(carouselSliderElementJQ[0]).flexGrow;
 }
 window.addEventListener("resize", numberOfProductsInSlider);
 numberOfProductsInSlider();
