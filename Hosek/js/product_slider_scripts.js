@@ -88,11 +88,11 @@ $("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementJQ);
 
 /*pocet produktu a overflow v slideru*/
 let amountOfBannersInSlider;
-function numberOfProductsInSlider() {
+function numberOfBannersInSlider() {
 	amountOfBannersInSlider = getComputedStyle(carouselSliderElementJQ[0]).flexGrow;
 }
-window.addEventListener("resize", numberOfProductsInSlider);
-numberOfProductsInSlider();
+window.addEventListener("resize", numberOfBannersInSlider);
+numberOfBannersInSlider();
 
 let carouselArrowRight = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.right");
 let carouselArrowLeft = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.let");
