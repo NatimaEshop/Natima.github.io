@@ -4,11 +4,15 @@ const root = document.querySelector(":root");
 
 let productSliderElement = document.querySelector(".in-index .products-block .product .image");
 let productSliderImage = document.querySelector(".in-index .products-block .product .image img");
+let productSliderImage2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image img");
 function getSliderProductHeight() {
 	productImageHeight = productSliderElement.offsetHeight / 2;
 	root.style.setProperty("--slider-product-height", productImageHeight + "px");
 }
 productSliderImage.onload = function () {
+	getSliderProductHeight();
+};
+productSliderImage2.onload = function () {
 	getSliderProductHeight();
 };
 window.addEventListener("resize", getSliderProductHeight);
@@ -58,8 +62,7 @@ for (let i = 0; i < productSliderJS.length; i++) {
 		console.log(translateIteration[i]);
 		console.log(maximumTranslates[i]);
 		if (translateIteration[i] < maximumTranslates[i]) {
-			arrowsRight[i].classList.remove("display-none");
-			return;
+			arrowsLeft[i].classList.remove("display-none");
 		} else {
 			arrowsRight[i].classList.add("display-none");
 		}
@@ -70,8 +73,7 @@ for (let i = 0; i < productSliderJS.length; i++) {
 		translates[i] = translates[i] - 100;
 		productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
 		if (translateIteration[i] !== 1) {
-			arrowsLeft[i].classList.remove("display-none");
-			return;
+			arrowsRight[i].classList.remove("display-none");
 		} else {
 			arrowsLeft[i].classList.add("display-none");
 		}
