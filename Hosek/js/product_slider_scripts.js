@@ -26,7 +26,21 @@ for (let i = 0; i < productSliders.length; i++) {
 	$("<div class='product-slider-arrow left'></div>").appendTo(appendElement[i]);
 }
 
+/*pocet produktu a overflow v slideru*/
+let amountOfProductsInSlider;
+let overflowOfProductsInSlider;
+function numberOfProductsInSlidedr() {
+	amountOfProductsInSlider = getComputedStyle(ProductsInSlider[0]).order;
+	overflowOfProductsInSlider = getComputedStyle(ProductsInSlider[0]).flex;
+	console.log(amountOfProductsInSlider);
+	console.log(overflowOfProductsInSlider);
+}
+window.addEventListener("resize", numberOfProductsInSlidedr);
+document.addEventListener("DOMContentLoaded", numberOfProductsInSlidedr);
+
+/*transladte slideru*/
 let translates = [];
+let productsInSlider = [];
 let arrowsRight = document.querySelectorAll(".product-slider-arrow.right");
 let arrowsLeft = document.querySelectorAll(".product-slider-arrow.left");
 
