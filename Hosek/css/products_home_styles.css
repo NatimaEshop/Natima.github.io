@@ -1,4 +1,9 @@
 h4.homepage-group-title,
 .h4.homepage-group-title {
-	margin-top: 0 !important;
+	margin-top: 50px !important;
+}
+
+.homepage-box {
+	margin: 0;
+	padding: 0;
 }

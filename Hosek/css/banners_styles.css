@@ -145,7 +145,7 @@
 .footer-banners {
 	display: flex;
 	gap: var(--gap);
-	margin: 30px 0px !important;
+	margin: 0px !important;
 }
 .container .body-banners > div,
 .content-wrapper.container .footer-banners .footer-banner {
