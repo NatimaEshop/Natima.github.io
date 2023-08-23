@@ -10,7 +10,7 @@
 	display: flex;
 	overflow: visible;
 	flex-wrap: nowrap;
-	transition: transform 0.3s linear;
+	transition: transform 0.2s linear;
 	margin-left: -14px;
 	margin-bottom: 25px;
 }
