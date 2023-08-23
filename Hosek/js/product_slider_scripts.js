@@ -7,7 +7,8 @@ let productSliderElement = document.querySelector(".in-index .products-block .pr
 let productSliderImage = document.querySelector(".in-index .products-block .product .image img");
 let productSliderElement2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image");
 let productSliderImage2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image img");
-let carouselSliderElement = document.querySelector(".in-index .carousel-inner"); /*
+let carouselSliderElementJS = document.querySelector(".in-index .carousel-inner");
+let carouselSliderElementJQ = $(".in-index .carousel-inner"); /*
 let carouselSliderImage = document.querySelector(".in-index .carousel-inner .item img"); */
 
 function getSliderProductHeight() {
@@ -96,5 +97,6 @@ for (let i = 0; i < productSliderJS.length; i++) {
 }
 
 /*carousel*/
-$("<div class='slider-arrow right'></div>").appendTo(carouselSliderElement);
-$("<div class='slider-arrow left'></div>").appendTo(carouselSliderElement);
+$("<div class='slider-arrow right'></div>").appendTo(carouselSliderElementJQ);
+$("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementJQ);
+carouselSliderElementJS.append("<div class='slider-arrow right'>TEST TEST TEST</div>");
