@@ -7,18 +7,13 @@ let productSliderElement = document.querySelector(".in-index .products-block .pr
 let productSliderImage = document.querySelector(".in-index .products-block .product .image img");
 let productSliderElement2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image");
 let productSliderImage2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image img");
-let carouselSliderElementJS = document.querySelector(".in-index .carousel-inner");
-let carouselSliderElementJQ = $(".in-index .carousel-inner"); /*
-let carouselSliderImage = document.querySelector(".in-index .carousel-inner .item img"); */
+let carouselSliderElementJS = document.querySelector(".in-index .col-sm-8");
+let carouselSliderElementJQ = $(".in-index .col-sm-8");
 
 function getSliderProductHeight() {
 	productImageHeight = productSliderElement.offsetHeight / 2;
 	root.style.setProperty("--slider-product-height", productImageHeight + "px");
 }
-/* function getCarouselItemHeight() {
-	sliderItemHeight = carouselSliderElement.offsetHeight / 2;
-	root.style.setProperty("--carousel-item-height", productImageHeight + "px");
-} */
 
 productSliderImage.onload = function () {
 	getSliderProductHeight();

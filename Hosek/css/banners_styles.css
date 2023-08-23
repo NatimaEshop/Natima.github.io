@@ -23,8 +23,13 @@
 	padding: 0 !important;
 }
 
+.type-index .banners-row .col-sm-8 {
+	position: relative;
+}
+
 #carousel {
 	max-width: 100%;
+	overflow: hidden;
 }
 .carousel-inner {
 	display: flex;
