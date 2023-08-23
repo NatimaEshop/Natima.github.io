@@ -34,7 +34,7 @@ function numberOfProductsInSlider() {
 	console.log(overflowOfProductsInSlider);
 }
 window.addEventListener("resize", numberOfProductsInSlider);
-document.addEventListener("DOMContentLoaded", numberOfProductsInSlider);
+numberOfProductsInSlider();
 
 /*transladte slideru*/
 let translates = [];
