@@ -36,10 +36,12 @@
 .carousel-inner .item {
 	display: block;
 	--SliderPocetBanneruCalc: calc(var(--SliderPocetBanneru) + var(--SliderCastBanneru));
+	--SliderGapCalc: calc((var(--SliderPocetBanneruCalc) - 1) * var(--gap) / var(--SliderPocetBanneruCalc));
+	--SliderBannerWidth: calc(100% / var(--SliderPocetBanneruCalc) - var(--SliderGapCalc));
 	min-width: 24.5%;
 	width: 24.5%;
-	min-width: calc((100% / var(--SliderPocetBanneruCalc)) - (var(--SliderPocetBanneruCalc) - 1) * 0.66);
-	width: calc((100% / var(--SliderPocetBanneruCalc)) - (var(--SliderPocetBanneruCalc) - 1) * 0.66);
+	min-width: var(--SliderBannerWidth);
+	width: var(--SliderBannerWidth);
 	border-radius: var(--border-radius);
 }
 
