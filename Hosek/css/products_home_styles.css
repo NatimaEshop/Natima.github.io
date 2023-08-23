@@ -1,5 +1,9 @@
 h4.homepage-group-title,
 .h4.homepage-group-title {
+	margin-top: 25px !important;
+}
+
+.h4.homepage-products-heading-1 {
 	margin-top: 50px !important;
 }
 

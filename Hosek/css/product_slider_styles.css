@@ -12,7 +12,7 @@
 	flex-wrap: nowrap;
 	transition: transform 0.3s linear;
 	margin-left: -14px;
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 	/*transform: translatex(calc(var(--translateXJS) * -1 / var(--SliderPocetProduktuCalc) * var(--SliderPocetProduktu)));
 	--translateXJS: 0%;*/
 	flex-grow: 4; /*pocet produktu pro JS*/
