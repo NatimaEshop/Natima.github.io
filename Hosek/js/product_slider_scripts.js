@@ -97,6 +97,6 @@ for (let i = 0; i < productSliderJS.length; i++) {
 }
 
 /*carousel*/
-$("<div class='slider-arrow right'></div>").appendTo(carouselSliderElementJQ);
-$("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementJQ);
-carouselSliderElementJS.append("<div class='slider-arrow right'>TEST TEST TEST</div>");
+console.log("test");
+$("<div class='slider-arrow right'></div>").insertBefore(carouselSliderElementJQ);
+$("<div class='slider-arrow left'></div>").insertBefore(carouselSliderElementJQ);
