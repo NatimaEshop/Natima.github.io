@@ -37,8 +37,6 @@ let overflowOfProductsInSlider;
 function numberOfProductsInSlider() {
 	amountOfProductsInSlider = getComputedStyle(productSlidersJQ[0]).flexGrow;
 	overflowOfProductsInSlider = getComputedStyle(productSlidersJQ[0]).flexShrink;
-	console.log(amountOfProductsInSlider);
-	console.log(overflowOfProductsInSlider);
 }
 window.addEventListener("resize", numberOfProductsInSlider);
 numberOfProductsInSlider();
@@ -85,6 +83,24 @@ for (let i = 0; i < productSliderJS.length; i++) {
 }
 
 /*carousel*/
-console.log("test");
 $("<div class='slider-arrow right'></div>").appendTo(carouselSliderElementJQ);
 $("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementJQ);
+
+/*pocet produktu a overflow v slideru*/
+let amountOfBannersInSlider;
+let overflowOfBannersInSlider;
+function numberOfProductsInSlider() {
+	amountOfBannersInSlider = getComputedStyle(carouselSliderElementJQ).flexGrow;
+}
+window.addEventListener("resize", numberOfProductsInSlider);
+numberOfProductsInSlider();
+
+let carouselArrowRight = document.querySelector(".in-index .col-sm-8 .slider-arrow.right");
+let carouselArrowLeft = document.querySelector(".in-index .col-sm-8 .slider-arrow.let");
+
+carouselArrowLeft.classList.add("display-none");
+
+carouselArrowRight.addEventListener("click", function () {
+	carouselSliderElementJS.classList.add("active");
+	carouselArrowLeft.classList.remove("display-none");
+});
