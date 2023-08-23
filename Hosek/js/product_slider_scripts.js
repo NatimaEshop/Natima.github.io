@@ -38,16 +38,27 @@ document.addEventListener("DOMContentLoaded", numberOfProductsInSlider);
 
 /*transladte slideru*/
 let translates = [];
+let translateIteration = [];
 let productsInSlider = [];
+let maximumTranslates = [];
 let productSliderJS = document.querySelectorAll(".in-index .products-block");
 let arrowsRight = document.querySelectorAll(".product-slider-arrow.right");
 let arrowsLeft = document.querySelectorAll(".product-slider-arrow.left");
 
 for (let i = 0; i < productSliderJS.length; i++) {
 	translates[i] = 0;
+	productsInSlider[i] = productSliderJS[i].children.length;
+	maximumTranslates[i] = Math.floor(productsInSlider / amountOfProductsInSlider);
+	translateIteration[i] = 0;
 
 	arrowsRight[i].addEventListener("click", function () {
+		translateIteration[i] = translateIteration[i] + 1;
 		translates[i] = translates[i] + 100;
 		productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
+		if (translateIteration[i] < maximumTranslates[i]) {
+			return;
+		} else {
+			arrowsRight[i].classList.add("display-none");
+		}
 	});
 }
