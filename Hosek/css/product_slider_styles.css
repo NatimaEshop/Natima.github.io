@@ -115,7 +115,7 @@
 	.in-index .products {
 		flex-grow: 5; /*pocet produktu pro JS*/
 		flex-shrink: 0.2; /*overflow pro JS*/
-		--SliderPocetProduktu: 4;
+		--SliderPocetProduktu: 5;
 		--SliderCastProduktu: 0.2;
 	}
 }
@@ -124,12 +124,12 @@
 	.in-index .products {
 		flex-grow: 6; /*pocet produktu pro JS*/
 		flex-shrink: 0; /*overflow pro JS*/
-		--SliderPocetProduktu: 5;
+		--SliderPocetProduktu: 6;
 		--SliderCastProduktu: 0;
 	}
 }
 
-@media (min-width: 1440) {
+@media (min-width: 1440px) {
 	.in-index .products {
 		flex-grow: 7; /*pocet produktu pro JS*/
 		flex-shrink: 0; /*overflow pro JS*/
