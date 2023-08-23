@@ -9,11 +9,15 @@ function getSliderProductHeight() {
 	productImageHeight = productSliderElement.offsetHeight / 2;
 	root.style.setProperty("--slider-product-height", productImageHeight + "px");
 }
+function getSliderProductHeight2() {
+	productImageHeight2 = productSliderElement.offsetHeight / 2;
+	root.style.setProperty("--slider-product-height", productImageHeight2 + "px");
+}
 productSliderImage.onload = function () {
 	getSliderProductHeight();
 };
 productSliderImage2.onload = function () {
-	getSliderProductHeight();
+	getSliderProductHeight2();
 };
 window.addEventListener("resize", getSliderProductHeight);
 
