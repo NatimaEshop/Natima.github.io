@@ -15,7 +15,7 @@
 	--translateXJS: 0%;*/
 	flex-grow: 4; /*pocet produktu pro JS*/
 	flex-shrink: 0; /*overflow pro JS*/
-	--SliderPocetProduktu: 2;
+	--SliderPocetProduktu: 4;
 	--SliderCastProduktu: 0;
 	--SliderPocetProduktuCalc: calc(var(--SliderPocetProduktu) + var(--SliderCastProduktu));
 }
