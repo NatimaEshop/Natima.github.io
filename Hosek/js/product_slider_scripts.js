@@ -28,8 +28,8 @@ for (let i = 0; i < productSliders.length; i++) {
 let amountOfProductsInSlider;
 let overflowOfProductsInSlider;
 function numberOfProductsInSlider() {
-	amountOfProductsInSlider = getComputedStyle(productSliders[0]).order;
-	overflowOfProductsInSlider = getComputedStyle(productSliders[0]).flex;
+	amountOfProductsInSlider = getComputedStyle(productSliders[0]).flexGrow;
+	overflowOfProductsInSlider = getComputedStyle(productSliders[0]).flexShrink;
 	console.log(amountOfProductsInSlider);
 	console.log(overflowOfProductsInSlider);
 }
