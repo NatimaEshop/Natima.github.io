@@ -7,9 +7,7 @@ let productSliderImage = document.querySelector(".in-index .products-block .prod
 function getSliderProductHeight() {
 	productImageHeight = productSliderElement.offsetHeight / 2;
 	root.style.setProperty("--slider-product-height", productImageHeight + "px");
-	console.log(productImageHeight);
 }
-/* document.addEventListener("DOMContentLoaded", getSliderProductHeight); */
 productSliderImage.onload = function () {
 	getSliderProductHeight();
 };
@@ -29,14 +27,14 @@ for (let i = 0; i < productSliders.length; i++) {
 /*pocet produktu a overflow v slideru*/
 let amountOfProductsInSlider;
 let overflowOfProductsInSlider;
-function numberOfProductsInSlidedr() {
-	amountOfProductsInSlider = getComputedStyle(ProductsInSlider[0]).order;
-	overflowOfProductsInSlider = getComputedStyle(ProductsInSlider[0]).flex;
+function numberOfProductsInSlider() {
+	amountOfProductsInSlider = getComputedStyle(productSliders[0]).order;
+	overflowOfProductsInSlider = getComputedStyle(productSliders[0]).flex;
 	console.log(amountOfProductsInSlider);
 	console.log(overflowOfProductsInSlider);
 }
-window.addEventListener("resize", numberOfProductsInSlidedr);
-document.addEventListener("DOMContentLoaded", numberOfProductsInSlidedr);
+window.addEventListener("resize", numberOfProductsInSlider);
+document.addEventListener("DOMContentLoaded", numberOfProductsInSlider);
 
 /*transladte slideru*/
 let translates = [];
