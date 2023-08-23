@@ -16,3 +16,51 @@ h4.homepage-group-title,
 	margin: 25px 0px;
 	padding: 0;
 }
+
+.in-index .slider-arrow {
+	display: block;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	background: #f6f6f6;
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: white;
+	top: var(--slider-product-height);
+	transform: translateY(-50%);
+	cursor: pointer;
+	transition: background 0.2s ease;
+	z-index: 9;
+}
+.in-index .carousel-inner .slider-arrow {
+	top: 50%;
+}
+
+.in-index .slider-arrow::after {
+	content: "\e910";
+	font-family: "shoptet";
+	height: 100%;
+	font-weight: 600;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	color: var(--color-black-600);
+	transition: color 0.2s ease;
+}
+.in-index .slider-arrow.left::after {
+	transform: rotate(180deg);
+}
+
+.in-index .slider-arrow:hover {
+	background: var(--color-black-600);
+}
+.in-index .slider-arrow:hover::after {
+	color: white;
+}
+.in-index .slider-arrow.left {
+	left: -30px;
+}
+.in-index .slider-arrow.right {
+	right: -30px;
+}

@@ -29,6 +29,7 @@
 .carousel-inner {
 	display: flex;
 	column-gap: var(--gap);
+	min-height: auto !important;
 }
 .carousel-inner .item {
 	display: block;
