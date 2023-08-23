@@ -95,7 +95,7 @@ window.addEventListener("resize", numberOfBannersInSlider);
 numberOfBannersInSlider();
 
 let carouselArrowRight = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.right");
-let carouselArrowLeft = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.let");
+let carouselArrowLeft = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.left");
 
 carouselArrowLeft.classList.add("display-none");
 
