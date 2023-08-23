@@ -13,6 +13,7 @@
 	transition: transform 0.3s linear;
 	/*transform: translatex(calc(var(--translateXJS) * -1 / var(--SliderPocetProduktuCalc) * var(--SliderPocetProduktu)));
 	--translateXJS: 0%;*/
+	order: 2; /*pocet produktu pro JS*/
 	--SliderPocetProduktu: 2;
 	--SliderCastProduktu: 0.1;
 	--SliderPocetProduktuCalc: calc(var(--SliderPocetProduktu) + var(--SliderCastProduktu));
