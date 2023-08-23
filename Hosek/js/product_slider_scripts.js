@@ -61,8 +61,8 @@ let translateIteration = [];
 let realNumProductsInSlider = [];
 let maximumTranslates = [];
 let productSliderJS = document.querySelectorAll(".in-index .products-block");
-let productsArrowsRight = document.querySelectorAll(".in-index .products-block .slider-arrow.right");
-let productsArrowsLeft = document.querySelectorAll(".in-index .products-block .slider-arrow.left");
+let productsArrowsRight = document.querySelectorAll(".in-index .slider .slider-arrow.right");
+let productsArrowsLeft = document.querySelectorAll(".in-index .slider .slider-arrow.left");
 
 for (let i = 0; i < productSliderJS.length; i++) {
 	translates[i] = 0;
