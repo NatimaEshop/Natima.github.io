@@ -215,7 +215,8 @@
 .in-index .products-block .product .flags .flag {
 	display: none;
 }
-.in-index .products-block .product .flags .flag:first-child {
+.in-index .products-block .product .flags .flag:first-child,
+.in-index .products-block .product .flags .flag:nth-child(2) {
 	display: block;
 }
 .in-index .products-block .product:hover .flags.flags-extra .flag.flag-discount {
