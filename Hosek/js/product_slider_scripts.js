@@ -55,6 +55,8 @@ for (let i = 0; i < productSliderJS.length; i++) {
 		translateIteration[i] = translateIteration[i] + 1;
 		translates[i] = translates[i] + 100;
 		productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
+		console.log(translateIteration[i]);
+		console.log(maximumTranslates[i]);
 		if (translateIteration[i] < maximumTranslates[i]) {
 			return;
 		} else {
