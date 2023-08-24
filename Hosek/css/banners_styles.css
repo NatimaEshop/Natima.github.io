@@ -133,52 +133,12 @@
 	margin: 0;
 }
 
-/*carousel značky*/
-/* .next-to-carousel-banners {
-	margin: 0;
-	margin-top: 41px;
-	padding-top: calc(45px + 20px);
-	max-width: 100%;
-	display: flex;
-	gap: var(--gap);
-	position: relative;
-}
-
-.next-to-carousel-banners img {
-	border-radius: var(--border-radius);
-	transition: 0.3s ease;
-	transition-property: transform, filter;
-}
-
-.next-to-carousel-banners .banner-wrapper:hover > img,
-.next-to-carousel-banners .banner-wrapper:hover > a > img {
-	transform: scale(1.02);
-	filter: contrast(0.95);
-
-	.next-to-carousel-banners .banner-wrapper:first-child {
-	position: absolute;
-	top: 0;
-} */
-
 /*bannery uprostred a dole*/
 .body-banners,
-.footer-banners,
-.col-sm-4 .next-to-carousel-banners {
+.footer-banners {
 	display: flex;
 	gap: var(--gap);
 	margin: 25px 0px !important;
-}
-.content > .col-sm-4 {
-	width: 100%;
-	padding: 0;
-}
-
-.col-sm-4 .next-to-carousel-banners .banner-wrapper {
-	margin: 0;
-}
-
-.col-sm-4 .next-to-carousel-banners .banner-wrapper img {
-	border-radius: var(--border-radius);
 }
 
 .container .body-banners > div,
@@ -199,22 +159,8 @@
 	display: none;
 }
 
-.footer-banners {
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.footer-banners > div:first-child {
-	width: 100%;
-	flex: auto !important;
-}
-
-.footer-banners > div:first-child .h1.h4 {
-	font-size: 2.8rem;
-}
-
-.footer-banners > div:last-child {
-	width: 100%;
+.welcome-wrapper {
+	display: none;
 }
 
 @media (max-width: 991px) {
