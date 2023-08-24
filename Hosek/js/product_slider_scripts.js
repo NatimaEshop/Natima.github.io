@@ -128,3 +128,14 @@ carouselArrowRight.addEventListener("click", function () {
 
 	carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
 });
+
+carouselArrowLeft.addEventListener("click", function () {
+	carouselArrowRight.classList.remove("display-none");
+	carouselTranslateId = carouselTranslateId - 1;
+	translateCarousel = 100 * carouselTranslateId;
+	carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
+
+	if (carouselTranslateId === 0) {
+		carouselArrowLeft.classList.add("display-none");
+	}
+});
