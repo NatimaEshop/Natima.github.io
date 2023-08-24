@@ -206,6 +206,11 @@
 
 .footer-banners > div:first-child {
 	width: 100%;
+	flex: auto !important;
+}
+
+.footer-banners > div:first-child .h1.h4 {
+	font-size: 2.8rem;
 }
 
 .footer-banners > div:last-child {
