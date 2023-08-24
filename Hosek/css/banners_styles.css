@@ -24,9 +24,8 @@
 	padding: 0 !important;
 }
 
-/*show pomocí jq*/
 .type-index .banners-row .col-sm-4 {
-	display: none;
+	display: none; /*show pomocí jq*/
 }
 
 #carousel {
@@ -163,11 +162,25 @@
 
 /*bannery uprostred a dole*/
 .body-banners,
-.footer-banners {
+.footer-banners,
+.col-sm-4 .next-to-carousel-banners {
 	display: flex;
 	gap: var(--gap);
 	margin: 25px 0px !important;
 }
+.content > .col-sm-4 {
+	width: 100%;
+	padding: 0;
+}
+
+.col-sm-4 .next-to-carousel-banners .banner-wrapper {
+	margin: 0;
+}
+
+.col-sm-4 .next-to-carousel-banners .banner-wrapper {
+	border-radius: var(--border-radius);
+}
+
 .container .body-banners > div,
 .content-wrapper.container .footer-banners .footer-banner {
 	flex: 1;
