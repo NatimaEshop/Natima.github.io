@@ -32,6 +32,7 @@
 	display: flex;
 	column-gap: var(--gap);
 	min-height: auto !important;
+	transition: transform 0.2s ease;
 }
 .carousel-inner .item {
 	display: block;

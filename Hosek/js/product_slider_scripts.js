@@ -81,11 +81,11 @@ for (let i = 0; i < productSliderJS.length; i++) {
 }
 
 /*carousel*/
-let carouselSliderElementJS = document.querySelector(".in-index .banners-row .col-sm-8");
-let carouselSliderElementJQ = $(".in-index .banners-row .col-sm-8");
+let carouselSliderElementJS = document.querySelector(".in-index .banners-row .col-sm-8 .carousel-inner");
+let carouselSliderElementParentJQ = $(".in-index .banners-row .col-sm-8");
 
-$("<div class='slider-arrow right'></div>").appendTo(carouselSliderElementJQ);
-$("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementJQ);
+$("<div class='slider-arrow right'></div>").appendTo(carouselSliderElementParentJQ);
+$("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementParentJQ);
 
 /*pocet produktu a overflow v slideru*/
 let amountOfBannersInSlider;
@@ -97,7 +97,7 @@ let carouselTranslateId = 0;
 let translateCarousel = 0;
 
 function numberOfBannersInSlider() {
-	amountOfBannersInSlider = getComputedStyle(carouselSliderElementJQ[0]).flexGrow;
+	amountOfBannersInSlider = getComputedStyle(carouselSliderElementParentJQ[0]).flexGrow;
 }
 window.addEventListener("resize", numberOfBannersInSlider);
 numberOfBannersInSlider();
