@@ -18,11 +18,10 @@
 	padding: 0;
 	border-style: none;
 }
-#footer .custom-footer__onlinePayments .text-center {
-	text-align: left;
-}
+
 footer .custom-footer > div {
 	padding: 30px 15px 0 0 !important;
+	text-align: center;
 }
 footer .custom-footer .site-name .inner-box {
 	padding: initial !important;
@@ -80,4 +79,55 @@ body footer .container.footer-bottom {
 	grid-row: 2;
 	margin: 0;
 	padding: 0;
+}
+
+/*newsletter*/
+#footer {
+	position: relative;
+	--newsletter-height: 250px;
+	--newsletter-image-height: clamp(var(--newsletter-height), calc(10vw + 150px), 400px);
+	margin-top: var(--newsletter-image-height);
+}
+.footer-rows {
+	position: unset;
+}
+.custom-footer > div:first-child {
+	position: absolute;
+	top: calc(var(--newsletter-height) / -1);
+	left: 0;
+	width: 100%;
+	padding: 0 !important;
+}
+.custom-footer > div:first-child .banner {
+	overflow: visible;
+	margin: 0;
+	background: var(--color-gray-400);
+}
+
+.footer-newsletter {
+	display: grid;
+	position: relative;
+	grid-template-columns: 30% 70%;
+	height: var(--newsletter-height);
+}
+
+.custom-footer .newsletter-block {
+	width: clamp(300px, 50%, 700px);
+	margin: auto auto auto 0;
+	text-align: left;
+}
+
+#footer .custom-footer .newsletter-block h4 {
+	text-transform: none;
+	font-size: 22px;
+}
+.custom-footer .newsletter-image {
+	position: relative;
+}
+.custom-footer .newsletter-image img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: var(--newsletter-image-height);
+	padding: 0 !important;
 }
