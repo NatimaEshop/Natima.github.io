@@ -32,6 +32,7 @@
 	display: flex;
 	column-gap: var(--gap);
 	min-height: auto !important;
+	overflow: visible;
 	transition: transform 0.2s ease;
 }
 .carousel-inner .item {
@@ -47,7 +48,7 @@
 	display: none;
 }
 
-.col-sm-8.active .carousel-inner > .item:nth-child(n + 5) {
+.col-sm-8 .carousel-inner.active > .item:nth-child(n + 5) {
 	display: block;
 }
 
