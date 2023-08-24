@@ -129,9 +129,3 @@ carouselArrowRight.addEventListener("click", function () {
 
 	carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
 });
-
-/*prepsani shoptet domcotnent loaded*/
-document.addEventListener("DOMContentLoaded", function () {
-	carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
-	console.log("TED");
-});
