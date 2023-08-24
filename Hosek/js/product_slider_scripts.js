@@ -133,4 +133,5 @@ carouselArrowRight.addEventListener("click", function () {
 /*prepsani shoptet domcotnent loaded*/
 document.addEventListener("DOMContentLoaded", function () {
 	carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
+	console.log("TED");
 });
