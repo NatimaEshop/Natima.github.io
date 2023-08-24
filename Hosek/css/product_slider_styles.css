@@ -51,6 +51,7 @@
 	.in-index .products {
 		overflow-x: scroll;
 		overflow-y: hidden;
+		margin-bottom: 20px;
 	}
 }
 
