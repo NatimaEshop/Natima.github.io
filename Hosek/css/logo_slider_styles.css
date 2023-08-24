@@ -42,8 +42,7 @@
 }
 .in-index .banners-row .col-sm-4 {
 	background: #faf7fd;
-	margin: 20px 0;
-	padding: 20px 0;
+	overflow: hidden;
 }
 .in-index .banners-row .col-sm-4 span {
 	padding: 0 32px;
