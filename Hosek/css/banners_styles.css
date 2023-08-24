@@ -187,7 +187,7 @@
 		width: 300px;
 		border-radius: var(--border-radius);
 	}
-	.before-carousel .banners-row .col-sm-8 {
+	.banners-row .col-sm-8 {
 		overflow: hidden;
 	}
 	.col-sm-8 .carousel-inner {
