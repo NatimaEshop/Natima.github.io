@@ -30,17 +30,17 @@
 }
 .carousel-inner {
 	display: flex;
-	column-gap: var(--gap);
+	margin-left: -14px;
 	min-height: auto !important;
 	overflow: visible;
 	transition: transform 0.2s ease;
 }
 .carousel-inner .item {
 	display: block;
-	--SliderGapCalc: calc((var(--SliderPocetBanneru) - 1) * var(--gap) / var(--SliderPocetBanneru));
-	--SliderBannerWidth: calc(100% / var(--SliderPocetBanneru) - var(--SliderGapCalc));
+	--SliderBannerWidth: calc(100% / var(--SliderPocetBanneru));
 	min-width: var(--SliderBannerWidth);
 	width: var(--SliderBannerWidth);
+	padding: 0px 0px 0px var(--gap) !important;
 	border-radius: var(--border-radius);
 }
 
@@ -194,7 +194,6 @@
 	}
 	.col-sm-8 .carousel-inner {
 		overflow: scroll;
-		column-gap: 14px;
 	}
 }
 

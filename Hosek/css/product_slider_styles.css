@@ -11,7 +11,7 @@
 	overflow: visible;
 	flex-wrap: nowrap;
 	transition: transform 0.2s linear;
-	margin-left: -14px;
+	margin-left: calc(var(--gap) / -1);
 	margin-bottom: 25px;
 }
 
@@ -36,7 +36,7 @@
 }
 .in-index .products .product {
 	width: calc(100% / (var(--SliderPocetProduktuCalc)));
-	padding: 0px 0px 0px 14px !important;
+	padding: 0px 0px 0px var(--gap) !important;
 	border-style: none !important;
 	user-select: none;
 }
