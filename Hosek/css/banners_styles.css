@@ -194,7 +194,8 @@
 		overflow: hidden;
 	}
 	.col-sm-8 .carousel-inner {
-		overflow: scroll;
+		overflow-x: scroll;
+		overflow-y: hidden;
 	}
 }
 
