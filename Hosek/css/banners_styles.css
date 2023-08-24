@@ -24,6 +24,11 @@
 	padding: 0 !important;
 }
 
+/*show pomocí jq*/
+.type-index .banners-row .col-sm-4 {
+	display: none;
+}
+
 #carousel {
 	max-width: 100%;
 	overflow: hidden;
