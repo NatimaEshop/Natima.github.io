@@ -130,7 +130,7 @@
 }
 
 /*carousel značky*/
-.next-to-carousel-banners {
+/* .next-to-carousel-banners {
 	margin: 0;
 	margin-top: 41px;
 	padding-top: calc(45px + 20px);
@@ -150,13 +150,11 @@
 .next-to-carousel-banners .banner-wrapper:hover > a > img {
 	transform: scale(1.02);
 	filter: contrast(0.95);
-}
 
-/*nadpis oblíbené značky*/
-.next-to-carousel-banners .banner-wrapper:first-child {
+	.next-to-carousel-banners .banner-wrapper:first-child {
 	position: absolute;
 	top: 0;
-}
+} */
 
 /*bannery uprostred a dole*/
 .body-banners,
