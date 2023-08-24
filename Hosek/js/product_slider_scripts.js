@@ -7,8 +7,6 @@ let productSliderElement = document.querySelector(".in-index .products-block .pr
 let productSliderImage = document.querySelector(".in-index .products-block .product .image img");
 let productSliderElement2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image");
 let productSliderImage2 = document.querySelector(".in-index .products-block.homepage-products-3 .product .image img");
-let carouselSliderElementJS = document.querySelector(".in-index .banners-row .col-sm-8");
-let carouselSliderElementJQ = $(".in-index .banners-row .col-sm-8");
 
 function getSliderProductHeight() {
 	productImageHeight = productSliderElement.offsetHeight / 2;
@@ -83,11 +81,21 @@ for (let i = 0; i < productSliderJS.length; i++) {
 }
 
 /*carousel*/
+let carouselSliderElementJS = document.querySelector(".in-index .banners-row .col-sm-8");
+let carouselSliderElementJQ = $(".in-index .banners-row .col-sm-8");
+
 $("<div class='slider-arrow right'></div>").appendTo(carouselSliderElementJQ);
 $("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementJQ);
 
 /*pocet produktu a overflow v slideru*/
 let amountOfBannersInSlider;
+let realNumberOfBannersInSlider = document.querySelectorAll(
+	".in-index .banners-row .col-sm-8 .carousel-inner .item"
+).length;
+let numberOfScrolledItemsInSlider = amountOfBannersInSlider;
+let carouselTranslateId = 0;
+let translateCarousel = 0;
+
 function numberOfBannersInSlider() {
 	amountOfBannersInSlider = getComputedStyle(carouselSliderElementJQ[0]).flexGrow;
 }
@@ -102,4 +110,21 @@ carouselArrowLeft.classList.add("display-none");
 carouselArrowRight.addEventListener("click", function () {
 	carouselSliderElementJS.classList.add("active");
 	carouselArrowLeft.classList.remove("display-none");
+
+	carouselTranslateId = carouselTranslateId + 1;
+	numberOfScrolledItemsInSlider = amountOfBannersInSlider * (carouselTranslateId + 1);
+
+	if (numberOfScrolledItemsInSlider < realNumberOfBannersInSlider) {
+		translateCarousel = 100 * carouselTranslateId;
+	} else if (numberOfScrolledItemsInSlider === realNumberOfBannersInSlider) {
+		translateCarousel = 100 * carouselTranslateId;
+		carouselArrowRight.classList.add("display-none");
+	} else {
+		translateCarousel =
+			100 * carouselTranslateId -
+			((numberOfScrolledItemsInSlider - realNumberOfBannersInSlider) / amountOfBannersInSlider) * 100;
+		carouselArrowRight.classList.add("display-none");
+	}
+
+	carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
 });
