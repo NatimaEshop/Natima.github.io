@@ -122,7 +122,8 @@ carouselArrowRight.addEventListener("click", function () {
 	} else {
 		translateCarousel =
 			100 * carouselTranslateId -
-			((numberOfScrolledItemsInSlider - realNumberOfBannersInSlider) / amountOfBannersInSlider) * 100;
+			((numberOfScrolledItemsInSlider - realNumberOfBannersInSlider) / amountOfBannersInSlider) * 100 -
+			1;
 		carouselArrowRight.classList.add("display-none");
 	}
 
