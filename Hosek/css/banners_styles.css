@@ -33,6 +33,7 @@
 	margin-left: -14px;
 	min-height: auto !important;
 	overflow: visible;
+	min-width: 100%;
 	transition: transform 0.2s ease;
 }
 .carousel-inner .item {
