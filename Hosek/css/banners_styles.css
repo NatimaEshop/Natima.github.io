@@ -177,7 +177,7 @@
 	margin: 0;
 }
 
-.col-sm-4 .next-to-carousel-banners .banner-wrapper {
+.col-sm-4 .next-to-carousel-banners .banner-wrapper img {
 	border-radius: var(--border-radius);
 }
 
@@ -197,6 +197,19 @@
 .row:before,
 .row:after {
 	display: none;
+}
+
+.footer-banners {
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.footer-banners > div:first-child {
+	width: 100%;
+}
+
+.footer-banners > div:last-child {
+	width: 100%;
 }
 
 @media (max-width: 991px) {
