@@ -41,5 +41,43 @@ footer h4 {
 	margin-bottom: 1.2em;
 }
 body footer .container.footer-bottom {
-	padding: 40px 40px 0 !important;
+	padding: 0px 40px 20px 40px !important;
+}
+
+.container.footer-bottom #signature {
+	margin-right: 0;
+}
+
+.in-index .container.footer-bottom {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.in-index .container.footer-bottom #signature {
+	grid-column: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.in-index .container.footer-bottom .footer-banner {
+	grid-column: 1;
+	grid-row: 1;
+	width: 100%;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+.in-index .container.footer-bottom .footer-banner h1 {
+	color: var(--color-primary);
+	margin: 0;
+	font-size: 16px;
+	margin-bottom: 0.3em;
+}
+
+.in-index .container.footer-bottom .copyright {
+	grid-column: 1;
+	grid-row: 2;
+	margin: 0;
+	padding: 0;
 }
