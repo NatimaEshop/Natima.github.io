@@ -175,6 +175,35 @@
 	display: none;
 }
 
+.body-banners .carousel-banner-content,
+.footer-banners .carousel-banner-content {
+	bottom: 25%;
+	left: 5%;
+	width: 35%;
+	padding: 0;
+	padding-bottom: 60px;
+}
+
+.body-banners .carousel-banner-content h3,
+.footer-banners .carousel-banner-content h3 {
+	font-size: 28px;
+}
+
+.body-banners .carousel-banner-content h3,
+.footer-banners .carousel-banner-content h3 {
+	font-size: 28px;
+}
+
+.body-banners .carousel-banner-content .carousel-banner-text,
+.footer-banners .carousel-banner-content .carousel-banner-text {
+	font-size: 22px;
+}
+
+.body-banners .carousel-banner-content .carousel-banner-button,
+.footer-banners .carousel-banner-content .carousel-banner-button {
+	font-size: 16px;
+}
+
 @media (max-width: 991px) {
 	.carousel-inner .item {
 		display: block;
