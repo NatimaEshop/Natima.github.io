@@ -63,7 +63,7 @@
 	width: 100%;
 	border-radius: var(--border-radius);
 }
-.carousel-inner .carousel-banner-content {
+.carousel-banner-content {
 	display: flex;
 	position: absolute;
 	width: 100%;
@@ -75,7 +75,7 @@
 	gap: 1em;
 }
 
-.carousel-inner .carousel-banner-button {
+.carousel-banner-button {
 	font-size: 14px;
 	/*font-size: 12px;*/
 	line-height: 1em;
@@ -91,38 +91,38 @@
 	top: auto;
 	bottom: 0;
 }
-.carousel-inner .carousel-banner-content .carousel-banner-heading {
+.carousel-banner-content .carousel-banner-heading {
 	font-size: 24px;
 	/* font-size: 18px; */
 	min-height: 55px;
 	color: inherit;
 }
-.carousel-inner .carousel-banner-content .carousel-banner-text {
+.carousel-banner-content .carousel-banner-text {
 	font-size: 18px;
 	font-weight: 400;
 	/* font-size: 14px; */
 }
 
-.carousel-inner .carousel-banner-content .carousel-banner-heading,
-.carousel-inner .carousel-banner-content .carousel-banner-text {
+.carousel-banner-content .carousel-banner-heading,
+.carousel-banner-content .carousel-banner-text {
 	line-height: 1.2em;
 	margin: 0;
 }
-.carousel-inner .carousel-banner-content.bright .carousel-banner-button,
-.carousel-inner .carousel-banner-content .carousel-banner-button {
+.carousel-banner-content.bright .carousel-banner-button,
+.carousel-banner-content .carousel-banner-button {
 	background-color: var(--color-black-800);
 	color: white;
 }
-.carousel-inner .carousel-banner-content.bright,
-.carousel-inner .carousel-banner-content {
+.carousel-banner-content.bright,
+.carousel-banner-content {
 	color: var(--color-black-800);
 }
 
-.carousel-inner .carousel-banner-content.dark .carousel-banner-button {
+.carousel-banner-content.dark .carousel-banner-button {
 	background-color: white;
 	color: var(--color-black-800);
 }
-.carousel-inner .carousel-banner-content.dark {
+.carousel-banner-content.dark {
 	color: white;
 }
 
@@ -150,7 +150,9 @@
 	margin: 0 !important;
 }
 .container .body-banners > div img,
-.content-wrapper.container .footer-banners .footer-banner img {
+.content-wrapper.container .footer-banners .footer-banner img,
+.container .body-banners > div video,
+.content-wrapper.container .footer-banners .footer-banner video {
 	border-radius: var(--border-radius);
 }
 
