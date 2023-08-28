@@ -18,7 +18,7 @@
 
 footer .custom-footer > div {
 	padding: 30px 15px 0 0 !important;
-	text-align: center;
+	text-align: left;
 }
 footer .custom-footer .site-name .inner-box {
 	padding: initial !important;
@@ -65,9 +65,9 @@ body footer .container.footer-bottom {
 	padding: 0;
 }
 .in-index .container.footer-bottom .footer-banner h1 {
-	color: var(--color-primary);
 	margin: 0;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 400;
 	margin-bottom: 0.3em;
 }
 
@@ -127,4 +127,21 @@ body footer .container.footer-bottom {
 	left: 0;
 	height: var(--newsletter-image-height);
 	padding: 0 !important;
+}
+
+/*online payments*/
+.footer-online-payments {
+	display: flex;
+}
+
+#footer .online-payment {
+	flex: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+
+#footer .online-payment.mastercard img {
+	max-height: 80%;
 }
