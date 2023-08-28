@@ -131,17 +131,24 @@ body footer .container.footer-bottom {
 
 /*online payments*/
 .footer-online-payments {
-	display: flex;
+	display: grid;
+	align-items: center;
+	justify-items: start;
+	max-width: 60%;
+	grid-row-gap: 10px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 }
 
 #footer .online-payment {
-	flex: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 10px;
+	max-width: 80px;
+	margin-right: 0px;
 }
 
-#footer .online-payment.mastercard img {
-	max-height: 80%;
+#footer .online-payment img {
+	width: 100%;
+}
+
+#footer .online-payment.mastercard {
+	height: 90%;
 }
