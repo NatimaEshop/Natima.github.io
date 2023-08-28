@@ -124,7 +124,7 @@
 
 /*vlajky*/
 .flags .flag {
-	border-radius: calc(var(--border-radius) - 2);
+	border-radius: calc(var(--border-radius) - 2px);
 }
 
 .flags.flags-default .flag {
