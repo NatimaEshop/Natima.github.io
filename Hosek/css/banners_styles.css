@@ -139,7 +139,7 @@
 	display: block;
 }
 .carousel-video.loaded img {
-	display: none;
+	display: none !important;
 }
 
 /*bannery uprostred a dole*/
