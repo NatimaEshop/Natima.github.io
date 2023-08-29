@@ -132,15 +132,6 @@
 .type-index .banners-row {
 	margin: 0;
 }
-.carousel-video video {
-	display: none;
-}
-.carousel-video.loaded video {
-	display: block;
-}
-.carousel-video.loaded img {
-	display: none !important;
-}
 
 /*bannery uprostred a dole*/
 .body-banners,
