@@ -53,3 +53,9 @@ body .container.navigation-wrapper {
 	height: 1px;
 	width: 100%;
 }
+
+@media (min-width: 768px) {
+	.content {
+		padding: 0;
+	}
+}
