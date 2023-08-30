@@ -110,9 +110,14 @@ body footer .container.footer-bottom {
 }
 
 .custom-footer .newsletter-block {
-	width: clamp(400px, 60%, 700px);
-	margin: auto auto auto 0;
+	width: 100%;
+	max-width: 1920px;
+	padding-left: 40px;
+	margin: auto;
 	text-align: left;
+}
+.custom-footer .newsletter-block-inner {
+	max-width: 600px;
 }
 
 #footer .custom-footer .newsletter-block h4 {
@@ -120,7 +125,9 @@ body footer .container.footer-bottom {
 	font-size: 22px;
 }
 .custom-footer .newsletter-image {
-	position: relative;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 }
 .custom-footer .newsletter-image img {
 	position: absolute;
