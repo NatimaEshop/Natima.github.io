@@ -114,8 +114,8 @@
 	padding: 0;
 	transition: background 0.2s ease;
 }
-.p-tools button:hover {
-	background: black;
+.products .product .p .p-tools button:hover {
+	background: var(--color-black-1000);
 }
 
 .products .product:hover .p .p-tools button {
