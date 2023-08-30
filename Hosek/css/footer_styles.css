@@ -135,13 +135,13 @@ body footer .container.footer-bottom {
 	padding: 0 !important;
 }
 
-.footer-newsletter form > fieldset > .validator-msg-holder > input {
+.custom-footer .footer-newsletter form > fieldset > .validator-msg-holder > input {
 	min-height: 50px;
 	border-radius: 5px;
 	padding-left: 20px;
 	margin-left: -2px;
 }
-.compact-form .btn {
+.custom-footer .compact-form .btn {
 	min-height: 48px;
 	border-radius: 0 5px 5px 0px !important;
 	width: 100px;
@@ -149,7 +149,7 @@ body footer .container.footer-bottom {
 	top: 1px !important;
 }
 
-.footer-newsletter label {
+.custom-footer .footer-newsletter label {
 	color: var(--color-black-800);
 }
 
