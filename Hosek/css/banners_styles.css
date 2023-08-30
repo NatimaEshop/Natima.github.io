@@ -126,14 +126,14 @@
 	color: white;
 }
 
-.item a:hover .carousel-banner-content .carousel-banner-button,
-.body-banners a:hover .carousel-banner-content .carousel-banner-button,
-.footer-banners a:hover .carousel-banner-content .carousel-banner-button {
+.item a .carousel-banner-content .carousel-banner-button:hover,
+.body-banners a .carousel-banner-content .carousel-banner-button:hover,
+.footer-banners a .carousel-banner-content .carousel-banner-button:hover {
 	background-color: var(--color-black-1000);
 }
-.item a:hover .carousel-banner-content.dark .carousel-banner-button,
-.body-banners a:hover .carousel-banner-content.dark .carousel-banner-button,
-.footer-banners a:hover .carousel-banner-content.dark .carousel-banner-button {
+.item a .carousel-banner-content.dark .carousel-banner-button:hover,
+.body-banners a .carousel-banner-content.dark .carousel-banner-button:hover,
+.footer-banners a .carousel-banner-content.dark .carousel-banner-button:hover {
 	background-color: var(--color-gray-400);
 }
 
