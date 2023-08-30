@@ -15,7 +15,7 @@
 	z-index: 9;
 	position: relative;
 	flex-wrap: nowrap;
-	padding: 0 40px;
+	padding: 0 40px 0 10px;
 	gap: min(24px, 2%);
 }
 
