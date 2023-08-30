@@ -11,7 +11,7 @@
 }
 .user-action-login.popup-widget::before {
 	background: white;
-	right: 40px !important;
+	right: var(--padding-sides) !important;
 	top: -8px !important;
 	border-style: none;
 }

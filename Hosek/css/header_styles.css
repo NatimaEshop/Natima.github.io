@@ -15,7 +15,7 @@
 	z-index: 9;
 	position: relative;
 	flex-wrap: nowrap;
-	padding: 0 40px 0 10px;
+	padding: 0 var(--padding-sides) 0 10px;
 	gap: min(24px, 2%);
 }
 
@@ -548,7 +548,7 @@
 #header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 > li {
 	width: 100%;
 	min-height: auto;
-	padding: 20px 0 20px 40px;
+	padding: 20px 0 20px var(--padding-sides);
 	align-items: start;
 }
 #header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 > li > div {

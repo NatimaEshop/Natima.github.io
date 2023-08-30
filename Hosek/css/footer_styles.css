@@ -37,7 +37,7 @@ footer h4 {
 	margin-bottom: 1.2em;
 }
 body footer .container.footer-bottom {
-	padding: 0px 40px 20px 40px !important;
+	padding: 0px var(--padding-sides) 20px var(--padding-sides) !important;
 }
 
 .container.footer-bottom #signature {
@@ -110,7 +110,7 @@ body footer .container.footer-bottom {
 .custom-footer .newsletter-block {
 	width: 100%;
 	max-width: 1920px;
-	padding-left: 40px;
+	padding-left: var(--padding-sides);
 	margin: auto;
 	text-align: left;
 }
