@@ -234,6 +234,16 @@
 	}
 }
 
+/*vypnuti animaci*/
+.banners-content a:hover img,
+.banner-footer a:hover img,
+.banner-wrapper a:hover img,
+.footer-banner a:hover img,
+.banner-category a:hover img {
+	-webkit-transform: none;
+	transform: none;
+}
+
 /*oblibené značky*/
 .favorite-brands {
 	display: flex;
