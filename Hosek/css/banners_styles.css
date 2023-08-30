@@ -129,7 +129,7 @@
 .item a .carousel-banner-content .carousel-banner-button:hover,
 .body-banners a .carousel-banner-content .carousel-banner-button:hover,
 .footer-banners a .carousel-banner-content .carousel-banner-button:hover {
-	background-color: var(--color-black-1000);
+	background-color: var(--color-primary);
 }
 .item a .carousel-banner-content.dark .carousel-banner-button:hover,
 .body-banners a .carousel-banner-content.dark .carousel-banner-button:hover,

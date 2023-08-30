@@ -115,7 +115,7 @@
 	transition: background 0.2s ease;
 }
 .products .product .p .p-tools button:hover {
-	background: var(--color-black-1000);
+	background: var(--color-primary);
 }
 
 .products .product:hover .p .p-tools button {
@@ -132,8 +132,13 @@
 }
 
 .flags.flags-default .flag {
-	background: var(--color-blue-green-100) !important;
-	font-weight: 500;
+	background: var(--color-primary-o90) !important;
+	font-weight: 400;
+	margin-bottom: 0.3em;
+	padding: 6px 8px;
+	font-size: 12px;
+	-webkit-transition: none;
+	transition: none;
 }
 
 .flags.flags-default {
