@@ -28,6 +28,9 @@
 .sidebar .filter-sections {
 	background: transparent;
 }
+.sidebar .filter-sections .filter-section-button {
+	display: none;
+}
 
 /*nejprodavanejsi*/
 .category-header {
