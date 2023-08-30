@@ -104,14 +104,18 @@
 	opacity: 0;
 	border-radius: var(--border-radius);
 	border-style: none;
-	background: var(--color-primary);
+	/*  background: var(--color-primary); */
+	background: var(--color-black-800);
 	height: 46px;
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: 600;
 	font-family: var(--ff-main) !important;
-	letter-spacing: 1px;
+	letter-spacing: 0.2px;
 	padding: 0;
-	transition: none;
+	transition: background 0.2s ease;
+}
+.p-tools button:hover {
+	background: black;
 }
 
 .products .product:hover .p .p-tools button {
@@ -211,7 +215,7 @@
 	display: none;
 }
 .in-index .products-block .product .p .p-tools button {
-	height: 36px;
+	height: 42px;
 }
 .in-index .products-block .product .flags .flag {
 	display: none;
@@ -221,5 +225,5 @@
 	display: block;
 }
 .in-index .products-block .product:hover .flags.flags-extra .flag.flag-discount {
-	transform: translatey(-32px);
+	transform: translatey(-38px);
 }
