@@ -129,13 +129,12 @@
 .item a:hover .carousel-banner-content .carousel-banner-button,
 .body-banners a:hover .carousel-banner-content .carousel-banner-button,
 .footer-banners a:hover .carousel-banner-content .carousel-banner-button {
-	background-color: var(--color-blue-green-100);
-	color: white;
+	background-color: var(--color-black-1000);
 }
 .item a:hover .carousel-banner-content.dark .carousel-banner-button,
 .body-banners a:hover .carousel-banner-content.dark .carousel-banner-button,
 .footer-banners a:hover .carousel-banner-content.dark .carousel-banner-button {
-	background-color: var(--color-blue-green-100);
+	background-color: var(--color-gray-400);
 }
 
 .carousel-control {
