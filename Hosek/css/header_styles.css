@@ -19,6 +19,12 @@
 	gap: min(24px, 2%);
 }
 
+@media (min-width: 1920px) {
+	.header-top {
+		padding: 0 3vw;
+	}
+}
+
 #header .header-top .site-name-wrapper {
 	order: 0;
 }
