@@ -1,7 +1,7 @@
 /*rozložení produktu*/
 :root {
 	--productCategoryGrid: 2.7em 4.2em 1.467em 1.2em;
-	--productCategoryGrid: 2.5em 4em 1.467em 1.2em;
+	--productCategoryGrid: 2.6em 4em 1.467em 1.2em;
 	--marginProductInfo: 0.5em;
 }
 .product .p > a,
