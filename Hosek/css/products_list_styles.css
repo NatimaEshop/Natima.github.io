@@ -1,7 +1,7 @@
 /*rozložení produktu*/
 :root {
 	--productCategoryGrid: calc(2.65em) calc(3.5em + 10px) calc(1.067em + 5px) 1.1em;
-	--productCategoryGrid: 2.7em 3.9em 1.467em 1.2em;
+	--productCategoryGrid: 2.7em 3.2em 1.467em 1.2em;
 	--marginProductInfo: 0.5em;
 }
 .product .p > a,
@@ -80,7 +80,7 @@
 
 .product .p-bottom .p-desc {
 	grid-row: 2;
-	font-size: 0.9em;
+	font-size: 1em;
 	max-height: none;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
