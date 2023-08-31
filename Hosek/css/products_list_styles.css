@@ -1,7 +1,8 @@
 /*rozložení produktu*/
 :root {
 	--productCategoryGrid: calc(2.65em) calc(3.5em + 10px) calc(1.067em + 5px) 1.1em;
-	--marginProductInfo: 1em;
+	--productCategoryGrid: 2.7em 3.9em 1.467em 1.2em;
+	--marginProductInfo: 0.5em;
 }
 .product .p > a,
 .product .p .p-in .p-in-in > a,
@@ -17,7 +18,7 @@
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr;
 	padding: 0;
-	font-size: 18px;
+	font-size: 14px;
 	margin-top: var(--marginProductInfo);
 	position: relative;
 }
@@ -43,11 +44,15 @@
 	color: var(--color-black-800);
 	font-weight: 600;
 	height: auto;
+	font-size: inherit;
+	grid-row: 1;
+}
+
+.product .p .p-in .p-in-in > a {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
-	font-size: inherit;
-	grid-row: 1;
+	overflow: hidden;
 }
 
 .products .product .p .p-in-in .ratings-wrapper {
@@ -104,8 +109,8 @@
 	opacity: 0;
 	border-radius: var(--border-radius);
 	border-style: none;
-	/*  background: var(--color-primary); */
-	background: var(--color-black-800);
+	background: var(--color-primary);
+	/* background: var(--color-black-800); */
 	height: 46px;
 	font-size: 1em;
 	font-weight: 600;
@@ -115,7 +120,8 @@
 	transition: background 0.2s ease;
 }
 .products .product .p .p-tools button:hover {
-	background: var(--color-primary);
+	/* background: var(--color-primary); */
+	background: var(--color-primary-hover);
 }
 
 .products .product:hover .p .p-tools button {
