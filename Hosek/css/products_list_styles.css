@@ -1,7 +1,7 @@
 /*rozložení produktu*/
 :root {
 	--productCategoryGrid: calc(2.65em) calc(3.5em + 10px) calc(1.067em + 5px) 1.1em;
-	--productCategoryGrid: 2.7em 3.2em 1.467em 1.2em;
+	--productCategoryGrid: 2.7em 4.2em 1.467em 1.2em;
 	--marginProductInfo: 0.5em;
 }
 .product .p > a,
@@ -48,10 +48,11 @@
 	grid-row: 1;
 }
 
-.product .p .p-in .p-in-in > a {
+.product .p .p-in .p-in-in > a > span {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
+	line-height: 1.2em;
 	overflow: hidden;
 }
 
@@ -86,6 +87,7 @@
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
 	color: var(--color-black-200);
+	line-height: 1.2em;
 }
 .products .product .p .p-bottom .prices {
 	grid-row: 4;
