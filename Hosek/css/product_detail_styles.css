@@ -32,6 +32,7 @@
 }
 .description-inner .flags .flag {
 	margin: 0;
+	margin-right: 6px;
 }
 .description-inner .p-detail-info > div + div::before {
 	display: none;
