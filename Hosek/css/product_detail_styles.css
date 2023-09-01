@@ -1,3 +1,7 @@
+:root {
+	--productDetailIconWidth: 25px;
+	--productDetatilIconGap: 10px;
+}
 .description-inner .basic-description > h3,
 .description-inner .extended-description > h3,
 .description-inner .extended-description > .detail-parameters,
@@ -24,7 +28,7 @@
 
 .description-inner .p-detail-info {
 	justify-content: space-between;
-	margin-bottom: 6px;
+	margin-bottom: 14px;
 }
 
 .description-inner .flags {
@@ -52,10 +56,11 @@
 	font-size: 24px;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 10px;
+	margin-left: 2px;
+	margin-bottom: 14px;
 }
 
-.description-inner .p-final-price-wrapper::before {
+.description-inner .p-final-price-wrapper::after {
 	content: "";
 	width: 20%;
 	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/hvezdy1.png);
@@ -89,7 +94,7 @@
 	height: 100%;
 	position: absolute;
 	right: 0;
-	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/srdce4.png);
+	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/srdce5.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: var(--border-radius);
@@ -170,6 +175,89 @@
 .availability-label {
 	color: var(--color-black-600) !important;
 	font-size: 14px;
+}
+
+.description-inner .availability-value {
+	display: flex;
+	margin: 0;
+	padding-bottom: var(--productDetatilIconGap);
+}
+
+.description-inner .availability-value::before {
+	content: "";
+	width: calc(var(--productDetailIconWidth) / 2);
+	height: calc(var(--productDetailIconWidth) / 2);
+	margin: auto;
+	margin-left: calc(var(--productDetailIconWidth) / (2 * 2));
+	margin-right: calc(var(--productDetailIconWidth) / (2 * 2) + 5px);
+	display: block;
+	background: rgb(215, 34, 34);
+	border-radius: 50%;
+}
+
+.description-inner .detail-parameters {
+	margin: 0;
+}
+
+.description-inner .detail-parameters th {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.description-inner .detail-parameters span {
+	margin: 0;
+	color: var(--color-black-800);
+}
+.description-inner .detail-parameters .delivery-time-label {
+	display: flex;
+	margin-right: 6px;
+	padding-bottom: var(--productDetatilIconGap);
+}
+.description-inner .detail-parameters .delivery-time-label::before {
+	content: "";
+	width: calc(var(--productDetailIconWidth) / 1.5);
+	height: calc(var(--productDetailIconWidth) / 1.5);
+	margin: auto;
+	margin-left: calc(var(--productDetailIconWidth) / 6);
+	margin-right: calc(var(--productDetailIconWidth) / 6 + 5px);
+	display: block;
+	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/time_icon.svg);
+}
+
+.description-inner .detail-parameters .delivery-time {
+	padding: 0;
+}
+
+.description-inner .detail-parameters a {
+	width: 100%;
+	display: flex;
+	color: var(--color-black-800);
+}
+.description-inner .detail-parameters a::before {
+	content: "";
+	width: calc(var(--productDetailIconWidth) / 1.2);
+	height: calc(var(--productDetailIconWidth) / 1.2);
+	margin: auto;
+	margin-left: calc(var(--productDetailIconWidth) / 11);
+	margin-right: calc(var(--productDetailIconWidth) / 11 + 5px);
+	display: block;
+	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/delivery_icon.svg);
+}
+.description-inner .detail-parameters a::after {
+	content: "\e90e";
+	font-family: shoptet;
+	position: relative;
+	top: 20%;
+	font-size: 10px;
+	margin-left: 5px;
+	display: block;
+}
+
+.description-inner .p-code {
+	color: var(--color-black-400);
+	display: block;
+	text-align: right;
+	font-size: 12px;
 }
 
 @media (min-width: 1200px) {
