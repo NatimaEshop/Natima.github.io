@@ -160,6 +160,32 @@
 	overflow: hidden;
 }
 
+.asset30procentRightSideOverflowNatiosKapsle {
+	transform: translatex(-20%);
+}
+.description-inner .add-to-cart::after {
+	background-position: center;
+}
+
+.availability-label {
+	color: var(--color-black-600) !important;
+	font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+	.description-inner {
+		flex-wrap: nowrap;
+	}
+	.basic-description {
+		flex: 1 1 auto;
+		width: auto;
+	}
+	.extended-description {
+		flex: 1 0 auto;
+		width: clamp(300px, 33%, 420px);
+	}
+}
+
 /*Kavy*/
 .description-inner {
 	position: relative;
