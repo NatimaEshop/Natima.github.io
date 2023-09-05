@@ -1,0 +1,27 @@
+.messages {
+	width: 240px;
+	right: 20px;
+	top: auto;
+	bottom: 10px;
+	left: auto;
+	text-align: center;
+}
+
+.messages .msg {
+	border-radius: var(--border-radius);
+	padding: 10px 5px;
+	animation: mesageTransform;
+	animation-duration: 0.2s;
+	animation-timing-function: ease-out;
+	opacity: 1;
+}
+
+@keyframes mesageTransform {
+	from {
+		transform: translatex(calc(100% + 30px));
+		/*stejna hodnota jako right .messages*/
+	}
+	to {
+		transform: translatex(0);
+	}
+}
