@@ -1,7 +1,8 @@
 /*sede pozadi produktové fotky*/
 /*sede pozadi produktové fotky*/
 .products-block .image::after,
-.p-image::after {
+.p-image::after,
+.p-thumbnails-wrapper a {
 	content: "";
 	position: absolute;
 	inset: 0;
