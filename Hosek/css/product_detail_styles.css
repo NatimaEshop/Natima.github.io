@@ -2,23 +2,23 @@
 	--productDetailIconWidth: 25px;
 	--productDetatilIconGap: 10px;
 }
-.p-detail-inner .basic-description > h3,
-.p-detail-inner .extended-description > h3,
-.p-detail-inner .extended-description > .detail-parameters,
-.p-detail-inner .p-image-wrapper,
-.p-detail-inner .p-info-wrapper > p,
-.p-detail-inner .p-info-wrapper > .social-buttons-wrapper,
-.p-detail-inner .p-short-description {
+.description-inner .basic-description > h3,
+.description-inner .extended-description > h3,
+.description-inner .extended-description > .detail-parameters,
+.description-inner .p-image-wrapper,
+.description-inner .p-info-wrapper > p,
+.description-inner .p-info-wrapper > .social-buttons-wrapper,
+.description-inner .p-short-description {
 	display: none;
 }
 
-.p-detail-inner {
+.description-inner {
 	margin: 0;
 	overflow: initial;
 	padding: 0;
 }
 
-.p-detail-inner h1 {
+.description-inner h1 {
 	font-size: 22px;
 	margin: 0;
 	margin-top: 16px;
@@ -26,33 +26,33 @@
 	font-weight: 600;
 }
 
-.p-detail-inner .p-detail-info {
+.description-inner .p-detail-info {
 	justify-content: space-between;
 	margin-bottom: 14px;
 }
 
-.p-detail-inner .flags {
+.description-inner .flags {
 	margin: 0;
 }
-.p-detail-inner .flags .flag {
+.description-inner .flags .flag {
 	margin: 0;
 	margin-right: 6px;
 }
-.p-detail-inner .p-detail-info > div + div::before {
+.description-inner .p-detail-info > div + div::before {
 	display: none;
 }
-.p-detail-inner .p-detail-info > div {
+.description-inner .p-detail-info > div {
 	color: var(--color-black-800);
 }
-.p-detail-inner .p-detail-info > div a {
+.description-inner .p-detail-info > div a {
 	color: var(--color-primary);
 }
 
-.p-detail-inner .price-measure {
+.description-inner .price-measure {
 	display: none;
 }
 
-.p-detail-inner .p-final-price-wrapper {
+.description-inner .p-final-price-wrapper {
 	font-size: 24px;
 	display: flex;
 	justify-content: space-between;
@@ -60,7 +60,7 @@
 	margin-bottom: 14px;
 }
 
-.p-detail-inner .p-final-price-wrapper::after {
+.description-inner .p-final-price-wrapper::after {
 	content: "";
 	width: 20%;
 	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/hvezdy1.png);
@@ -69,25 +69,25 @@
 	background-position: center;
 }
 
-.p-detail-inner .add-to-cart {
+.description-inner .add-to-cart {
 	display: flex;
 	position: relative;
 	margin-bottom: 20px;
 }
-.p-detail-inner .add-to-cart .quantity {
+.description-inner .add-to-cart .quantity {
 	display: none;
 }
-.p-detail-inner .add-to-cart button {
+.description-inner .add-to-cart button {
 	background: var(--color-primary);
 	border-radius: var(--border-radius);
 	border-style: none;
 	width: 85%;
 	padding: 10px 20px;
 }
-.p-detail-inner .add-to-cart button::before {
+.description-inner .add-to-cart button::before {
 	display: none;
 }
-.p-detail-inner .add-to-cart::after {
+.description-inner .add-to-cart::after {
 	display: block;
 	content: "";
 	width: 13%;
@@ -100,7 +100,7 @@
 	border-radius: var(--border-radius);
 }
 
-.p-detail-inner .add-to-cart button:hover {
+.description-inner .add-to-cart button:hover {
 	background: var(--color-primary-hover);
 }
 
@@ -113,7 +113,7 @@
 	padding: 20px 20px;
 }
 
-.p-detail-inner .p-info-wrapper {
+.description-inner .p-info-wrapper {
 	width: 100%;
 }
 
@@ -150,7 +150,7 @@
 	bottom: 24%;
 }
 
-.p-detail-inner img {
+.description-inner img {
 	max-width: 200%;
 }
 
@@ -168,7 +168,7 @@
 .asset30procentRightSideOverflowNatiosKapsle {
 	transform: translatex(-20%);
 }
-.p-detail-inner .add-to-cart::after {
+.description-inner .add-to-cart::after {
 	background-position: center;
 }
 
@@ -177,13 +177,13 @@
 	font-size: 14px;
 }
 
-.p-detail-inner .availability-value {
+.description-inner .availability-value {
 	display: flex;
 	margin: 0;
 	padding-bottom: var(--productDetatilIconGap);
 }
 
-.p-detail-inner .availability-value::before {
+.description-inner .availability-value::before {
 	content: "";
 	width: calc(var(--productDetailIconWidth) / 2);
 	height: calc(var(--productDetailIconWidth) / 2);
@@ -195,25 +195,25 @@
 	border-radius: 50%;
 }
 
-.p-detail-inner .detail-parameters {
+.description-inner .detail-parameters {
 	margin: 0;
 }
 
-.p-detail-inner .detail-parameters th {
+.description-inner .detail-parameters th {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.p-detail-inner .detail-parameters span {
+.description-inner .detail-parameters span {
 	margin: 0;
 	color: var(--color-black-800);
 }
-.p-detail-inner .detail-parameters .delivery-time-label {
+.description-inner .detail-parameters .delivery-time-label {
 	display: flex;
 	margin-right: 6px;
 	padding-bottom: var(--productDetatilIconGap);
 }
-.p-detail-inner .detail-parameters .delivery-time-label::before {
+.description-inner .detail-parameters .delivery-time-label::before {
 	content: "";
 	width: calc(var(--productDetailIconWidth) / 1.5);
 	height: calc(var(--productDetailIconWidth) / 1.5);
@@ -224,16 +224,16 @@
 	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/time_icon.svg);
 }
 
-.p-detail-inner .detail-parameters .delivery-time {
+.description-inner .detail-parameters .delivery-time {
 	padding: 0;
 }
 
-.p-detail-inner .detail-parameters a {
+.description-inner .detail-parameters a {
 	width: 100%;
 	display: flex;
 	color: var(--color-black-800);
 }
-.p-detail-inner .detail-parameters a::before {
+.description-inner .detail-parameters a::before {
 	content: "";
 	width: calc(var(--productDetailIconWidth) / 1.2);
 	height: calc(var(--productDetailIconWidth) / 1.2);
@@ -243,7 +243,7 @@
 	display: block;
 	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/delivery_icon.svg);
 }
-.p-detail-inner .detail-parameters a::after {
+.description-inner .detail-parameters a::after {
 	content: "\e90e";
 	font-family: shoptet;
 	position: relative;
@@ -253,7 +253,7 @@
 	display: block;
 }
 
-.p-detail-inner .p-code {
+.description-inner .p-code {
 	color: var(--color-black-400);
 	display: block;
 	text-align: right;
@@ -261,7 +261,7 @@
 }
 
 @media (min-width: 1200px) {
-	.p-detail-inner {
+	.description-inner {
 		flex-wrap: nowrap;
 	}
 	.basic-description {
@@ -275,7 +275,7 @@
 }
 
 /*Kavy*/
-.p-detail-inner {
+.description-inner {
 	position: relative;
 }
 .divProduktu {
@@ -556,7 +556,7 @@
 		display: none;
 	}
 
-	.p-detail-inner {
+	.description-inner {
 		padding: 0;
 	}
 }
