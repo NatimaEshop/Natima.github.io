@@ -267,11 +267,13 @@
 	#product-detail-form > .row {
 		margin: 0;
 		display: grid;
-		grid-template-columns: 1fr 660px;
+		grid-template-columns: 1fr 860px;
 		margin-top: calc(var(--gap) * 2);
 	}
 	#product-detail-form > .row .p-image-wrapper .p-image {
 		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
 	}
 	.p-thumbnails a {
 		margin-right: var(--gap);
@@ -289,7 +291,7 @@
 	}
 	#product-detail-form > .row .p-image-wrapper {
 		padding: 0;
-
+		width: 100%;
 		padding-right: calc(var(--gap) * 2);
 	}
 	#product-detail-form > .row .p-info-wrapper {
