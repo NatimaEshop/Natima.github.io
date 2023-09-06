@@ -266,7 +266,8 @@
 @media (min-width: 768px) {
 	#product-detail-form > .row {
 		margin: 0;
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 660px;
 		margin-top: calc(var(--gap) * 2);
 	}
 	#product-detail-form > .row .p-image-wrapper .p-image {
@@ -284,17 +285,16 @@
 	}
 	#product-detail-form > .row .p-image-wrapper .p-main-image img {
 		margin: 50px 0;
+		max-width: 512px;
 	}
 	#product-detail-form > .row .p-image-wrapper {
 		padding: 0;
-		width: min(45%, 920px);
-		flex-shrink: 0;
-		margin-right: calc(var(--gap) * 2);
+
+		padding-right: calc(var(--gap) * 2);
 	}
 	#product-detail-form > .row .p-info-wrapper {
 		padding: 0;
-		width: auto;
-		flex-grow: 1;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
