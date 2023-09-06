@@ -207,7 +207,7 @@
 }
 
 .p-detail .detail-parameters a {
-	width: 100%;
+	width: auto;
 	display: flex;
 	color: var(--color-black-800);
 }
