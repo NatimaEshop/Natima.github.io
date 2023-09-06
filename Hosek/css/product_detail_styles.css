@@ -178,8 +178,8 @@
 }
 
 .p-detail .detail-parameters th {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: max-content max-content;
 }
 
 .p-detail .detail-parameters span {
