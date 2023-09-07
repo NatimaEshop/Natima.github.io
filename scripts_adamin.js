@@ -95,3 +95,74 @@ if ($(window).width() > 992 && $(".type-detail").length > 0) {
 		$(".cart-widget").removeClass("display-none");
 	});
 }
+$(".cart-widget").clone().insertAfter(".description-inner .detail-parameters");
+
+let mernaJednotka = $(".price-measure span");
+
+if (mernaJednotka.text().includes("m3")) {
+	mernaJednotka.text(mernaJednotka.text().replace("m3", "kapsle"));
+}
+
+$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
+$(".p-detail-inner-header > h1").clone().appendTo(".description-inner .extended-description");
+$("#product-detail-form").clone().appendTo(".description-inner .extended-description");
+
+$(".description-inner .p-detail-info").insertBefore(".description-inner .row.product-top");
+$(".description-inner .p-final-price-wrapper").insertBefore(".description-inner .row.product-top");
+$(".description-inner .add-to-cart").insertBefore(".description-inner .row.product-top");
+
+/*kategorie*/
+const categoryPage = document.querySelector(".type-category");
+if (categoryPage) {
+	console.log("KATEGORIE1");
+	const categoryPerexReadMore = document.querySelector(".category-perex > table");
+	const categorySecondReadMore = document.querySelector(".category__secondDescription > table");
+
+	const showMoreCategoryContent = document.createTextNode("Zobrazit více");
+	const showLessategoryContent = document.createTextNode("Zobrazit méně");
+
+	if (categoryPerexReadMore) {
+		console.log("KATEGORIE2");
+		const showMoreCategory = document.createElement("span");
+		const showLessCategory = document.createElement("span");
+
+		showMoreCategory.appendChild(showMoreCategoryContent);
+		showLessCategory.appendChild(showLessategoryContent);
+
+		showMoreCategory.classList.add("category-read", "more");
+		showLessCategory.classList.add("category-read", "less");
+
+		let categoryPerex = document.querySelector(".category-perex");
+		categoryPerex.appendChild(showMoreCategory);
+		categoryPerex.appendChild(showLessCategory);
+
+		showMoreCategory.addEventListener("click", function (e) {
+			e.target.parentElement.classList.add("expanded");
+		});
+		showLessCategory.addEventListener("click", function (e) {
+			e.target.parentElement.classList.remove("expanded");
+		});
+	}
+	if (categorySecondReadMore) {
+		console.log("KATEGORIE3");
+		const showMoreCategorySecond = document.createElement("span");
+		const showLessCategorySecond = document.createElement("span");
+
+		showMoreCategorySecond.appendChild(showMoreCategoryContent);
+		showLessCategorySecond.appendChild(showLessategoryContent);
+
+		showMoreCategorySecond.classList.add("category-read", "more");
+		showLessCategorySecond.classList.add("category-read", "less");
+
+		let categorySecondDesc = document.querySelector(".category__secondDescription");
+		categorySecondDesc.appendChild(showMoreCategorySecond);
+		categorySecondDesc.appendChild(showLessCategorySecond);
+
+		showMoreCategorySecond.addEventListener("click", function (e) {
+			e.target.parentElement.classList.add("expanded");
+		});
+		showLessCategorySecond.addEventListener("click", function (e) {
+			e.target.parentElement.classList.remove("expanded");
+		});
+	}
+}
