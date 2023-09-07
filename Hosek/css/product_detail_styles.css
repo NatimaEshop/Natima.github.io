@@ -375,8 +375,8 @@
 	display: inline-block;
 	height: 100%;
 	border-radius: var(--border-radius);
-	border-color: var(--color-gray-400);
 	border-color: var(--color-primary);
+	border-color: var(--color-black-800);
 	border-style: solid;
 	padding: 0;
 	overflow: hidden;
@@ -401,8 +401,7 @@
 	border-style: none;
 	color: var(--color-primary);
 	background: none;
-	/* border-color: var(--color-primary); */
-	border-color: var(--color-black-800);
+	border-color: var(--color-primary);
 	padding: 10px;
 	width: 24px;
 }
