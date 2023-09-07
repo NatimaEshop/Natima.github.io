@@ -71,6 +71,7 @@
 
 .p-detail .add-to-cart {
 	display: flex;
+	gap: var(--gap);
 	position: relative;
 	margin-bottom: 20px;
 }
@@ -81,7 +82,8 @@
 	background: var(--color-primary);
 	border-radius: var(--border-radius);
 	border-style: none;
-	width: 85%;
+	max-width: 85%;
+	flex: 1 1 0;
 	padding: 10px 20px;
 }
 .p-detail .add-to-cart button::before {
@@ -90,7 +92,7 @@
 .p-detail .add-to-cart::after {
 	display: block;
 	content: "";
-	width: 13%;
+	width: 56px;
 	height: 100%;
 	position: absolute;
 	right: 0;
@@ -288,6 +290,7 @@
 	#product-detail-form > .row .p-image-wrapper .p-main-image img {
 		margin: 50px 0;
 		max-width: 612px;
+		width: 100%;
 	}
 	#product-detail-form > .row .p-image-wrapper {
 		padding: 0;
@@ -362,13 +365,12 @@
 	margin-left: 0;
 }
 #product-detail-form .add-to-cart {
-	justify-content: space-between;
+	justify-content: flex-start;
+	gap: var(--gap);
 }
 #product-detail-form .add-to-cart button {
 	width: 50%;
 	max-width: 300px;
-	margin-right: auto;
-	margin-left: var(--gap);
 	border-radius: var(--border-radius);
 }
 
@@ -495,9 +497,6 @@
 
 .asset30procentRightSideOverflowNatiosKapsle {
 	transform: translatex(-20%);
-}
-.description-inner .add-to-cart::after {
-	background-position: center;
 }
 
 .description-inner {
