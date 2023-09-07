@@ -118,13 +118,13 @@ if (categoryPage) {
 	const categoryPerexReadMore = document.querySelector(".category-perex > table");
 	const categorySecondReadMore = document.querySelector(".category__secondDescription > table");
 
-	const showMoreCategoryContent = document.createTextNode("Zobrazit více");
-	const showLessategoryContent = document.createTextNode("Zobrazit méně");
-
 	if (categoryPerexReadMore) {
 		console.log("KATEGORIE2");
 		const showMoreCategory = document.createElement("span");
 		const showLessCategory = document.createElement("span");
+
+		const showMoreCategoryContent = document.createTextNode("Zobrazit více");
+		const showLessategoryContent = document.createTextNode("Zobrazit méně");
 
 		showMoreCategory.appendChild(showMoreCategoryContent);
 		showLessCategory.appendChild(showLessategoryContent);
@@ -148,8 +148,11 @@ if (categoryPage) {
 		const showMoreCategorySecond = document.createElement("span");
 		const showLessCategorySecond = document.createElement("span");
 
-		showMoreCategorySecond.appendChild(showMoreCategoryContent);
-		showLessCategorySecond.appendChild(showLessategoryContent);
+		const showMoreCategoryContentSecond = document.createTextNode("Zobrazit více");
+		const showLessategoryContentSecond = document.createTextNode("Zobrazit méně");
+
+		showMoreCategorySecond.appendChild(showMoreCategoryContentSecond);
+		showLessCategorySecond.appendChild(showLessategoryContentSecond);
 
 		showMoreCategorySecond.classList.add("category-read", "more");
 		showLessCategorySecond.classList.add("category-read", "less");
@@ -165,4 +168,12 @@ if (categoryPage) {
 			e.target.parentElement.classList.remove("expanded");
 		});
 	}
+}
+
+/*faq*/
+if (document.querySelector(".contact-faq")) {
+	$("body").addClass("no-sidebar");
+	$(".contact-faq-question > p").on("click", function () {
+		$(this).parent().toggleClass("active");
+	});
 }
