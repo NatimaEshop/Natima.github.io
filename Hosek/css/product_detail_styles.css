@@ -375,7 +375,6 @@
 	display: inline-block;
 	height: 100%;
 	border-radius: var(--border-radius);
-	border-color: var(--color-primary);
 	border-color: var(--color-black-800);
 	border-style: solid;
 	padding: 0;
@@ -399,7 +398,7 @@
 	bottom: 0;
 	margin: auto 0;
 	border-style: none;
-	color: var(--color-primary);
+	color: var(--color-black-800);
 	background: none;
 	border-color: var(--color-primary);
 	padding: 10px;
