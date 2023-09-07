@@ -82,8 +82,7 @@
 	background: var(--color-primary);
 	border-radius: var(--border-radius);
 	border-style: none;
-	max-width: 85%;
-	flex-grow: 1
+	flex-grow: 1;
 	padding: 10px 20px;
 }
 .p-detail .add-to-cart button::before {
