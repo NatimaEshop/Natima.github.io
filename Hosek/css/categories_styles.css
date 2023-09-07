@@ -103,7 +103,7 @@
 	overflow: hidden;
 }
 .category-perex.expanded > table,
-.category__secondDescription > table {
+.category__secondDescription.expanded > table {
 	grid-template-rows: 1fr;
 }
 
