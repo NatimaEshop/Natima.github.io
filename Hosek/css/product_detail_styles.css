@@ -383,7 +383,8 @@
 }
 
 #product-detail-form .quantity input {
-	width: 96px;
+	/* width: 96px; */
+	width: 76px;
 	height: 100%;
 	text-align: center;
 	color: var(--color-black-800);
@@ -400,7 +401,8 @@
 	border-style: none;
 	color: var(--color-primary);
 	background: none;
-	border-color: var(--color-primary);
+	/* border-color: var(--color-primary); */
+	border-color: var(--color-black-800);
 	padding: 10px;
 	width: 24px;
 }
@@ -425,13 +427,13 @@
 	content: "+";
 	font-size: 16px;
 	padding-bottom: 4px;
-	border-left-style: solid;
+	/* border-left-style: solid; */
 }
 #product-detail-form .quantity .decrease::before {
 	content: "–";
 	padding-bottom: 1px;
 	font-size: 15px;
-	border-right-style: solid;
+	/* border-right-style: solid; */
 }
 #product-detail-form .quantity .increase:hover::before {
 	font-weight: 500;
