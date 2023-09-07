@@ -91,16 +91,16 @@
 	text-align: justify;
 }
 
-.category-perex > table > tbody {
+.category-perex > table {
 	display: grid;
 	grid-template-rows: 0fr;
 	transition: all 0.3s ease-out;
 }
-.category-perex > table > tbody > tr {
+.category-perex > table > tbody {
 	height: auto;
 	overflow: hidden;
 }
-.category-perex.expanded > table > tbody {
+.category-perex.expanded > table {
 	grid-template-rows: 1fr;
 }
 
