@@ -32,6 +32,10 @@ body .container.navigation-wrapper {
 	margin: 0;
 }
 
+.content-inner {
+	max-width: none;
+}
+
 .top-navigation-bar {
 	display: none;
 }
