@@ -71,6 +71,13 @@ body > .overall-wrapper > .breadcrumbs-wrapper {
 	text-align: center;
 }
 
+body.type-product .content.wide {
+	max-width: none;
+}
+body.type-product .content.wide h1 {
+	text-align: left;
+}
+
 @media (min-width: 768px) {
 	.content {
 		padding: 0;
