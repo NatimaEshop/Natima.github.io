@@ -13,6 +13,7 @@
 }
 #footer .custom-footer {
 	padding: 0;
+	margin: 20px 0 30px 0;
 	border-style: none;
 }
 
@@ -37,7 +38,10 @@ footer h4 {
 	margin-bottom: 1.2em;
 }
 body footer .container.footer-bottom {
-	padding: 0px var(--padding-sides) 20px var(--padding-sides) !important;
+	border-top-style: solid;
+	border-width: 1px;
+	border-color: var(--color-gray-500);
+	padding: 30px var(--padding-sides) 20px var(--padding-sides) !important;
 }
 
 .container.footer-bottom #signature {
