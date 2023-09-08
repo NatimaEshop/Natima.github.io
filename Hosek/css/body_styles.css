@@ -28,6 +28,11 @@ body .container.navigation-wrapper {
 	padding: 0 !important;
 }
 
+/*drobeckova navigace schovat pouze nahore*/
+body > .overall-wrapper > .breadcrumbs-wrapper {
+	visibility: hidden;
+}
+
 #navigation {
 	margin: 0;
 }
