@@ -19,9 +19,12 @@
 	gap: min(24px, 2%);
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
 	.header-top {
-		padding: 0 3vw;
+		padding: 0 2vw;
+	}
+	.navigation-in > ul {
+		padding-left: 2vw;
 	}
 }
 
