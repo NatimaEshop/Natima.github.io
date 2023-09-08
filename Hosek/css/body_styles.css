@@ -33,6 +33,11 @@ body > .overall-wrapper > .breadcrumbs-wrapper {
 	visibility: hidden;
 }
 
+/*random minusove margininy od shoptetu*/
+.row {
+	margin: 0;
+}
+
 #navigation {
 	margin: 0;
 }
