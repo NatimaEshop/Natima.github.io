@@ -1,0 +1,7 @@
+body.ordering-process {
+	background-color: transparent;
+}
+
+body.ordering-process .content.wide {
+	max-width: none;
+}
