@@ -62,6 +62,9 @@ body .container.navigation-wrapper {
 	max-width: 992px;
 	margin: auto;
 }
+.content.wide h1 {
+	text-align: center;
+}
 
 @media (min-width: 768px) {
 	.content {
