@@ -6,6 +6,7 @@
 	background: transparent;
 	pointer-events: none;
 	font-size: 16px;
+	border-style: none !important;
 }
 
 /*top header*/
