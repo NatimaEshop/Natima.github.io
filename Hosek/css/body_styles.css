@@ -58,8 +58,9 @@ body .container.navigation-wrapper {
 	width: 100%;
 }
 
-body.no-sidebar .sidebar {
-	display: none;
+.content.wide {
+	max-width: 992px;
+	margin: auto;
 }
 
 @media (min-width: 768px) {

@@ -4,6 +4,9 @@
 	gap: var(--gap);
 	align-items: flex-start;
 }
+.contact-faq h2 {
+	margin-bottom: 24px;
+}
 .contact-faq-questions {
 	display: flex;
 	flex-wrap: wrap;
