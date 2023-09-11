@@ -60,7 +60,7 @@ body footer .container.footer-bottom {
 	grid-row-end: 3;
 }
 
-.in-index .container.footer-bottom .footer-banner {
+.in-index .container.footer-bottom h1 {
 	grid-column: 1;
 	grid-row: 1;
 	width: 100%;
@@ -68,7 +68,7 @@ body footer .container.footer-bottom {
 	margin: 0;
 	padding: 0;
 }
-.in-index .container.footer-bottom .footer-banner h1 {
+.in-index .container.footer-bottom h1 {
 	margin: 0;
 	font-size: 14px;
 	font-weight: 400;
