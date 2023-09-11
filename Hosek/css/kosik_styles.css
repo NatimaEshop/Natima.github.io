@@ -87,7 +87,8 @@ ol.cart-header li.active strong span::before {
 	align-items: flex-start;
 }
 .ordering-process .row.cart-row .col-md-8 {
-	flex: 1 1 0;
+	width: auto;
+	flex: 1 1 66%;
 }
 
 .ordering-process .cart-table tr {
@@ -255,10 +256,9 @@ ol.cart-header li.active strong span::before {
 
 /*potrebujete pomoc?*/
 .sidebar-in-cart {
-	width: 33%;
 	max-width: 440px;
-	flex-shrink: 1;
-	padding: 00px !important;
+	flex: 1 1 33%;
+	padding: 0 !important;
 	margin-left: 20px;
 	margin-top: 20px;
 	position: sticky;
@@ -276,7 +276,7 @@ ol.cart-header li.active strong span::before {
 .sidebar-in-cart > * {
 	background: var(--color-primary-100);
 	border-radius: var(--border-radius);
-	padding: 20px 20px !important;
+	padding: 20px !important;
 	margin-bottom: var(--gap) !important;
 }
 .sidebar-in-cart h4 {
@@ -309,6 +309,7 @@ ol.cart-header li.active strong span::before {
 .sidebar-in-cart .next-step.next-step--cart {
 	justify-content: space-between;
 	align-items: flex-end;
+	flex-direction: row;
 }
 .sidebar-in-cart .next-step.next-step--cart > a:first-child {
 	color: var(--color-black-800);
@@ -327,13 +328,11 @@ ol.cart-header li.active strong span::before {
 	top: 1px;
 	margin-right: 6px;
 }
-
 .sidebar-in-cart .next-step.next-step--cart > a:first-child:hover {
 	color: var(--color-primary);
 	opacity: 1;
 	transition: none;
 }
-
 .sidebar-in-cart .next-step.next-step--cart > a:last-child {
 	border-radius: var(--border-radius);
 	border-style: none;
@@ -341,4 +340,70 @@ ol.cart-header li.active strong span::before {
 }
 .sidebar-in-cart .next-step.next-step--cart > a:last-child:hover {
 	background: var(--color-primary-hover);
+}
+.extra.delivery span strong {
+	color: var(--color-black-800);
+	margin-right: 10px;
+}
+.extra.delivery::before {
+	position: relative;
+	flex: 0;
+	order: 2;
+	margin: 0;
+	color: var(--color-black-800);
+}
+
+.sidebar-in-cart .delivery-time strong {
+	font-weight: 400;
+}
+.sidebar-in-cart .discount-coupon {
+	padding: 0;
+	margin: 20px 0 25px;
+}
+.sidebar-in-cart .discount-coupon::before {
+	display: none;
+}
+.free-gifts-wrapper form,
+.discount-coupon form {
+	height: 44px;
+	box-shadow: 2px 4px 12px hsla(0, 0%, 0%, 0.1);
+	border-radius: var(--border-radius);
+}
+
+.sidebar-in-cart .discount-coupon .form-control {
+	color: var(--color-black-800);
+	opacity: 1;
+}
+.sidebar-in-cart .discount-coupon .form-control::placeholder {
+	color: var(--color-black-800);
+	opacity: 0.5;
+}
+.sidebar-in-cart .discount-coupon .form-control:-ms-input-placeholder {
+	color: var(--color-black-800);
+	opacity: 0.5;
+}
+.sidebar-in-cart .discount-coupon .form-control::-ms-input-placeholder {
+	color: var(--color-black-800);
+	opacity: 0.5;
+}
+
+.free-gifts-wrapper form,
+.discount-coupon input {
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+	border-style: none;
+	height: 100%;
+}
+
+.sidebar-in-cart .discount-coupon button {
+	background-color: var(--color-black-600);
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
+	border-style: none;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 0;
+	font-family: var(--ff-main) !important;
+	width: auto;
+	position: relative;
+	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+	height: 100%;
 }
