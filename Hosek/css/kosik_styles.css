@@ -86,7 +86,6 @@ ol.cart-header li.active strong span::before {
 	align-items: flex-start;
 }
 .ordering-process .row.cart-row .col-md-8 {
-	width: auto;
 	flex: 1 1 0;
 }
 
