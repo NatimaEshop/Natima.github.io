@@ -341,11 +341,15 @@ ol.cart-header li.active strong span::before {
 .sidebar-in-cart .next-step.next-step--cart > a:last-child:hover {
 	background: var(--color-primary-hover);
 }
-.extra.delivery span strong {
+.sidebar-in-cart .extra.delivery span {
+	flex-grow: 0;
+}
+
+.sidebar-in-cart .extra.delivery span strong {
 	color: var(--color-black-800);
 	margin-right: 10px;
 }
-.extra.delivery::before {
+.sidebar-in-cart .extra.delivery::before {
 	position: relative;
 	flex: 0;
 	order: 2;
