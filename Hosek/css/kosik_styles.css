@@ -1,5 +1,6 @@
 body.ordering-process {
 	background-color: transparent;
+	padding-bottom: 6vh;
 }
 
 body.ordering-process .content.wide {
@@ -255,7 +256,7 @@ ol.cart-header li.active strong span::before {
 /*potrebujete pomoc?*/
 .sidebar-in-cart {
 	width: 33%;
-	max-width: 400px;
+	max-width: 440px;
 	flex-shrink: 1;
 	padding: 00px !important;
 	margin-left: 20px;
