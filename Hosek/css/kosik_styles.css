@@ -411,3 +411,35 @@ ol.cart-header li.active strong span::before {
 	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 	height: 100%;
 }
+
+/*krok 2*/
+
+.in-krok-1.ordering-process .row.cart-row {
+	flex-wrap: wrap;
+}
+
+.in-krok-1.ordering-process .row.cart-row .col-md-8 {
+	flex: 1 0 100%;
+}
+
+.in-krok-1.ordering-process .row.cart-row .col-md-4 {
+	flex: 1 0 100%;
+	position: initial !important;
+}
+
+.in-krok-1 .cart-content form {
+	display: grid;
+	margin: 20px 0;
+	grid-template-columns: 1fr 1fr;
+	gap: calc(var(--gap) * 2);
+}
+
+.in-krok-1 .cart-content form > div {
+	border-style: none;
+	box-shadow: 8px 6px 16px #d9d9d9, -8px -6px 16px #fff;
+	border-radius: var(--border-radius);
+}
+
+.in-krok-1 .checkout-box {
+	display: none;
+}
