@@ -4,7 +4,7 @@ body.ordering-process {
 }
 
 body.ordering-process .content.wide {
-	max-width: none;
+	max-width: 1440px;
 }
 
 /*universal*/
