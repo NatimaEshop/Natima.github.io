@@ -1,3 +1,10 @@
+/*faq*/
+if (document.querySelector(".contact-faq")) {
+	$(".contact-faq-question > p").on("click", function () {
+		$(this).parent().toggleClass("active");
+	});
+}
+
 /*kosik 1*/
 if (document.querySelector("body.in-krok-1")) {
 	$(".checkout-box").appendTo(".co-basic-information");
