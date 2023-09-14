@@ -422,7 +422,7 @@ ol.cart-header li.active strong span::before {
 
 .in-krok-1.ordering-process .co-basic-information {
 	display: flex;
-	gap: clamp(10px, 2%, 40px);
+	gap: clamp(20px, 4%, 60px);
 	padding: 30px 20px 30px 26px;
 	margin: 20px 0 0;
 	border-top-style: solid;
