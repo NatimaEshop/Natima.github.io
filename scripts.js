@@ -70,6 +70,7 @@ if (document.querySelector("body.in-kosik")) {
 		$(".extra.delivery").parent().parent().insertBefore(summaryInsertPlace);
 		$(".delivery-time").insertBefore(summaryInsertPlace);
 		$(".discount-coupon").insertBefore(summaryInsertPlace);
+		$(".extra.gift").insertAfter(".cart-summary h4");
 	}
 	document.addEventListener("ShoptetDOMCartContentLoaded", rearangeSummary);
 }
