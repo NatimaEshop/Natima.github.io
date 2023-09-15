@@ -533,7 +533,8 @@ ol.cart-header li.active strong span::before {
 	opacity: 0.3;
 }
 
-.in-krok-1.ordering-process h4 {
+.in-krok-1.ordering-process h4,
+.in-krok-2.ordering-process h4 {
 	display: flex;
 	align-items: center;
 	padding: 0;
@@ -544,7 +545,8 @@ ol.cart-header li.active strong span::before {
 .in-krok-1.ordering-process .co-basic-information h4 {
 	margin-bottom: 0;
 }
-.in-krok-1.ordering-process .co-box h4::before {
+.in-krok-1.ordering-process .co-box h4::before,
+.in-krok-2.ordering-process .co-box h4::before {
 	position: initial;
 	margin-top: 0;
 	margin-right: 14px;
