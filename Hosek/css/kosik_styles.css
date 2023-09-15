@@ -602,22 +602,26 @@ ol.cart-header li.active strong span::before {
 .in-krok-1.ordering-process .co-payment-method .inactive-child strong {
 	display: none;
 }
-.in-krok-1.ordering-process .order-summary-inner {
+.in-krok-1.ordering-process .order-summary-inner,
+.in-krok-2.ordering-process .order-summary-inner {
 	display: grid;
 	grid-template-columns: 69% 1fr;
 	column-gap: 40px;
 }
-.in-krok-1.ordering-process .order-summary-inner > * {
+.in-krok-1.ordering-process .order-summary-inner > *,
+.in-krok-2.ordering-process .order-summary-inner > * {
 	grid-column: 2;
 	padding: 0 20px;
 	margin: 0;
 	padding-left: 20px;
 	padding-right: 20px;
 }
-.in-krok-1.ordering-process .order-summary-inner > *:nth-child(-n + 3) {
+.in-krok-1.ordering-process .order-summary-inner > *:nth-child(-n + 3),
+.in-krok-2.ordering-process .order-summary-inner > *:nth-child(-n + 3) {
 	grid-column: 1;
 }
-.in-krok-1.ordering-process .order-summary-inner h4 {
+.in-krok-1.ordering-process .order-summary-inner h4,
+.in-krok-2.ordering-process .order-summary-inner h4 {
 	display: block;
 	grid-row: 1;
 	grid-column: 1;
@@ -627,7 +631,8 @@ ol.cart-header li.active strong span::before {
 	pointer-events: none;
 }
 
-.in-krok-1.ordering-process .order-summary-inner h4::after {
+.in-krok-1.ordering-process .order-summary-inner h4::after,
+.in-krok-2.ordering-process .order-summary-inner h4::after {
 	width: 100%;
 	height: 1px;
 	bottom: 0;
@@ -636,14 +641,16 @@ ol.cart-header li.active strong span::before {
 	background: red;
 }
 
-.in-krok-1.ordering-process .order-summary-inner .cart-items {
+.in-krok-1.ordering-process .order-summary-inner .cart-items,
+.in-krok-2.ordering-process .order-summary-inner .cart-items {
 	grid-column: 1;
 	grid-row-start: 1;
 	margin-top: 40px;
 	grid-row-end: 7;
 	border-style: none;
 }
-.in-krok-1.ordering-process .order-summary-inner .gift-items {
+.in-krok-1.ordering-process .order-summary-inner .gift-items,
+.in-krok-2.ordering-process .order-summary-inner .gift-items {
 	grid-column: 1;
 	grid-row: 7;
 	padding-bottom: 0;
@@ -654,32 +661,41 @@ ol.cart-header li.active strong span::before {
 	border-top-style: solid;
 	border-width: 3px;
 }
-.in-krok-1.ordering-process .order-recapitulation {
+.in-krok-1.ordering-process .order-recapitulation,
+.in-krok-2.ordering-process .order-recapitulation {
 	grid-row: 1;
 }
-.in-krok-1.ordering-process .order-summary-item.helper {
+.in-krok-1.ordering-process .order-summary-item.helper,
+.in-krok-2.ordering-process .order-summary-item.helper {
 	grid-row: 2;
 }
-.in-krok-1.ordering-process .order-summary-item.price {
+.in-krok-1.ordering-process .order-summary-item.price,
+.in-krok-2.ordering-process .order-summary-item.price {
 	grid-row: 3;
 	border-style: none;
 }
-.in-krok-1.ordering-process .next-step {
+.in-krok-1.ordering-process .next-step,
+.in-krok-2.ordering-process .next-step {
 	grid-row: 4;
 	border-style: none;
 }
 .in-krok-1 .order-recapitulation > div,
+.in-krok-2 .order-recapitulation > div,
 .in-krok-1 .order-recapitulation > div *,
+.in-krok-2 .order-recapitulation > div *,
 .in-krok-1 .order-summary-item > div,
+.in-krok-2 .order-summary-item > div,
 .in-krok-1 .order-summary-item > div *,
-.in-krok-1 .price-wrapper .price.price-primary {
+.in-krok-2 .order-summary-item > div *,
+.in-krok-1 .price-wrapper .price.price-primary,
+.in-krok-2 .price-wrapper .price.price-primary {
 	padding: 0;
 	font-size: 16px;
 	font-weight: 400 !important;
 	line-height: 1;
 }
-
-.in-krok-1 .summary-background {
+.in-krok-1 .summary-background,
+.in-krok-2 .summary-background {
 	grid-column: 2 !important;
 	grid-row-start: 1;
 	grid-row-end: 6;
@@ -693,8 +709,8 @@ ol.cart-header li.active strong span::before {
 	box-shadow: 8px 6px 20px #cecece, -8px -6px 16px #fff;
 	pointer-events: none;
 }
-
-.in-krok-1 .rekapitulace-background {
+.in-krok-1 .rekapitulace-background,
+.in-krok-2 .rekapitulace-background {
 	position: relative;
 	grid-column: 1 !important;
 	height: 100%;
@@ -711,61 +727,68 @@ ol.cart-header li.active strong span::before {
 	box-shadow: 8px 6px 20px #cecece, -8px -6px 16px #fff;
 	pointer-events: none;
 }
-
-.in-krok-1 .col-md-4 {
+.in-krok-1 .col-md-4,
+.in-krok-2 .col-md-4 {
 	padding: 0;
 }
-
-.in-krok-1 .cart-item-name a {
+.in-krok-1 .cart-item-name a,
+.in-krok-2 .cart-item-name a {
 	text-transform: none;
 }
-.in-krok-1 .order-summary {
+.in-krok-1 .order-summary,
+.in-krok21 .order-summary {
 	margin-top: 40px;
 }
-
-.in-krok-1 .order-summary-item.helper {
+.in-krok-1 .order-summary-item.helper,
+.in-krok-2 .order-summary-item.helper {
 	justify-content: space-between;
 	grid-column: 2 !important;
 }
-.in-krok-1 .order-summary-item.helper > * {
+.in-krok-1 .order-summary-item.helper > *,
+.in-krok21 .order-summary-item.helper > * {
 	flex: auto !important;
 }
 .in-krok-1 .recapitulation-single,
+.in-krok-2.recapitulation-single,
 .in-krok-1 .price-wrapper > *,
+.in-krok-2.price-wrapper > *,
+.in-krok-1 .order-summary-item.helper,
 .in-krok-1 .order-summary-item.helper {
 	margin-bottom: 1em;
 }
-.in-krok-1 .recapitulation-single span {
+.in-krok-1 .recapitulation-single span,
+.in-krok-2 .recapitulation-single span {
 	font-weight: 600 !important;
 }
-.in-krok-1 .order-summary-item .price-primary {
+.in-krok-1 .order-summary-item .price-primary,
+.in-krok2 .order-summary-item .price-primary {
 	font-weight: 700 !important;
 }
-
-.in-krok-1 .order-summary-item .price-primary * {
+.in-krok-1 .order-summary-item .price-primary *,
+.in-krok-2 .order-summary-item .price-primary * {
 	font-weight: 800 !important;
 	font-size: 1.6em;
 }
-
-.in-krok-1 .next-step {
+.in-krok-1 .next-step,
+.in-krok-2 .next-step {
 	display: flex;
 	flex-direction: column-reverse;
 }
-
-.in-krok-1 .next-step a {
+.in-krok-1 .next-step a,
+.in-krok-2 .next-step a {
 	padding: 0;
 	text-align: center;
 	width: 100%;
 }
-
-.in-krok-1 .next-step .btn {
+.in-krok-1 .next-step .btn,
+.in-krok-2 .next-step .btn {
 	border-radius: var(--border-radius);
 	width: 100%;
 	position: relative;
 	margin-top: 10px;
 }
-
-.in-krok-1 .next-step .btn::after {
+.in-krok-1 .next-step .btn::after,
+.in-krok-2 .next-step .btn::after {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
