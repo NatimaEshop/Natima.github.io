@@ -365,28 +365,22 @@ ol.cart-header li.active strong span::before {
 	max-width: none;
 }
 
-.sidebar-in-cart .extra.gift {
-	font-size: 14px;
-
-	padding-right: 25px;
+.ordering-process .extra.gift {
+	max-width: 500px;
+	padding-left: 0;
 }
-.sidebar-in-cart .extra.gift * {
-	letter-spacing: -0.1px;
-}
-.sidebar-in-cart .price-range {
+.ordering-process .price-range {
 	margin-top: 5px;
 	margin-bottom: 0;
 	border-radius: var(--border-radius);
 	overflow: hidden;
 }
-.sidebar-in-cart .extra.gift::before {
+.ordering-process .extra.gift::before {
+	position: relative;
 	color: var(--color-black-600);
 	margin: 0;
-	margin-left: 5px;
+	margin-right: 10px;
 	top: auto;
-	left: auto;
-	right: -10px;
-	font-size: 26px;
 }
 
 .sidebar-in-cart .discount-coupon {
