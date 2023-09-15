@@ -360,6 +360,35 @@ ol.cart-header li.active strong span::before {
 .sidebar-in-cart .delivery-time strong {
 	font-weight: 400;
 }
+
+.sidebar-in-cart .extras-col {
+	max-width: none;
+}
+
+.sidebar-in-cart .extra.gift {
+	font-size: 14px;
+
+	padding-right: 25px;
+}
+.sidebar-in-cart .extra.gift * {
+	letter-spacing: -0.1px;
+}
+.sidebar-in-cart .price-range {
+	margin-top: 5px;
+	margin-bottom: 0;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+.sidebar-in-cart .extra.gift::before {
+	color: var(--color-black-600);
+	margin: 0;
+	margin-left: 5px;
+	top: auto;
+	left: auto;
+	right: -10px;
+	font-size: 26px;
+}
+
 .sidebar-in-cart .discount-coupon {
 	padding: 0;
 	margin: 20px 0 25px;
@@ -646,7 +675,7 @@ ol.cart-header li.active strong span::before {
 .in-krok-1 .order-recapitulation > div *,
 .in-krok-1 .order-summary-item > div,
 .in-krok-1 .order-summary-item > div *,
-.price-wrapper .price.price-primary {
+.in-krok-1 .price-wrapper .price.price-primary {
 	padding: 0;
 	font-size: 16px;
 	font-weight: 400 !important;
