@@ -684,10 +684,7 @@ ol.cart-header li.active strong span::before {
 	grid-row: 4;
 	border-style: none;
 }
-.in-krok-2.ordering-process .next-step {
-	grid-row: 5;
-	border-style: none;
-}
+
 .in-krok-1 .order-recapitulation > div,
 .in-krok-2 .order-recapitulation > div,
 .in-krok-1 .order-recapitulation > div *,
@@ -801,4 +798,101 @@ ol.cart-header li.active strong span::before {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+/*posledni krok*/
+.in-krok-2 #checkoutContent > .cart-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+.in-krok-2 .row.cart-row {
+	flex-wrap: wrap;
+}
+
+.in-krok-2 .col-md-4 {
+	width: 100%;
+	position: initial !important;
+}
+
+.in-krok-2 .cart-header.step-2 {
+	width: 100%;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+
+.in-krok-2 .co-contact-information,
+.in-krok-2 .co-billing-address,
+.in-krok-2 #shipping-address {
+	border-style: none;
+	box-shadow: 8px 6px 20px #cecece, -8px -6px 16px #fff;
+	border-radius: var(--border-radius);
+	padding: 25px 20px 15px 25px;
+	width: calc(50% - (var(--gap) * 1.25));
+}
+.in-krok-2 #shipping-address {
+	margin-top: calc(var(--gap) * 2.5);
+	margin-left: auto;
+}
+.in-krok-2 .co-shipping-address {
+	padding: 0;
+	border-style: none;
+}
+
+.in-krok-2 .co-contact-information {
+	margin-right: auto;
+}
+
+.in-krok-2 .form-group > input.form-control,
+.in-krok-2 .form-group > select.form-control,
+.in-krok-2 .phone-combined-input,
+.in-krok-2 .form-group > div > a {
+	max-width: none;
+	width: clamp(217px, 50%, 600px);
+}
+.in-krok-2 .form-group > div > a {
+	background: var(--color-primary);
+	color: white;
+	border-style: none;
+	padding: 7px 0;
+	border-radius: var(--border-radius);
+}
+.in-krok-2 .form-group > div > a:hover {
+	background: var(--color-primary-hover) !important;
+}
+
+.in-krok-2 .recapitulation-single > span {
+	flex: 0 1 auto;
+	font-weight: 400 !important;
+}
+.in-krok-2 .recapitulation-single > strong {
+	flex: 1;
+}
+.in-krok-2 .recapitulation-single > span::after {
+	content: ":";
+	margin-right: 6px;
+}
+.in-krok-2 .co-box.co-box-additional {
+	padding: 0;
+	border-style: none;
+}
+
+.in-krok-2 .checkout-box {
+	grid-row: 4;
+	margin: 0 0 10px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	background: var(--color-primary-100);
+}
+.in-krok-2 .consents-first {
+	grid-row: 5;
+}
+.in-krok-2.ordering-process .next-step {
+	grid-row: 6;
+	border-style: none;
+}
+.in-krok-2 .summary-background {
+	grid-row-end: 7;
+}
+.in-krok-2.ordering-process .order-summary-inner .gift-items {
+	grid-row: 6;
 }
