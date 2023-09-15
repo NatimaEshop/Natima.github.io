@@ -412,7 +412,7 @@ ol.cart-header li.active strong span::before {
 	height: 100%;
 }
 
-/*krok 1*/
+/*krok 2*/
 .in-krok-1.ordering-process .row.cart-row .step-1 {
 	border-style: none;
 }
@@ -500,6 +500,14 @@ ol.cart-header li.active strong span::before {
 .in-krok-1.ordering-process .co-payment-method {
 	padding: 25px 20px 15px 25px;
 }
+.in-krok-1 .co-payment-method {
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+.in-krok-1 .co-payment-method.unactive {
+	pointer-events: none;
+	opacity: 0.3;
+}
 
 .in-krok-1.ordering-process h4 {
 	display: flex;
@@ -526,6 +534,7 @@ ol.cart-header li.active strong span::before {
 	padding: 0;
 	display: grid;
 	align-items: center;
+	position: relative;
 }
 
 .in-krok-1.ordering-process .co-payment-method label,
@@ -543,7 +552,30 @@ ol.cart-header li.active strong span::before {
 	color: var(--color-primary);
 	text-transform: uppercase;
 }
+.in-krok-1.ordering-process .co-box .radio-wrapper.active::before {
+	content: "";
+	position: absolute;
+	z-index: -0;
+	top: -1px;
+	left: -25px;
+	width: calc(100% + 45px);
+	height: calc(100% + 2px);
+	background: var(--color-primary-100);
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: var(--color-primary);
+}
 
+.in-krok-1.ordering-process .co-payment-method .inactive-child {
+	pointer-events: none;
+}
+.in-krok-1.ordering-process .co-payment-method .inactive-child > * {
+	opacity: 0.5;
+}
+.in-krok-1.ordering-process .co-payment-method .inactive-child strong {
+	display: none;
+}
 .in-krok-1.ordering-process .order-summary-inner {
 	display: grid;
 	grid-template-columns: 69% 1fr;
@@ -566,6 +598,7 @@ ol.cart-header li.active strong span::before {
 	margin-top: 0;
 	position: relative;
 	height: auto;
+	pointer-events: none;
 }
 
 .in-krok-1.ordering-process .order-summary-inner h4::after {
