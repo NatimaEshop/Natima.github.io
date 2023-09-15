@@ -139,3 +139,16 @@ function removePayment() {
 	$(".co-payment-method .radio-wrapper.active").removeClass("active");
 	$(".recapitulation-shipping-billing-info").eq(1).html("<span>Zvolte platbu</span>Platba");
 }
+
+/*posledni krok objednavky*/
+if (document.querySelector("body.in-krok-2")) {
+	$(".next-step").appendTo(".order-summary-inner");
+	$(".order-summary-inner > *:nth-child(4)").removeClass("cart-items").addClass("order-recapitulation");
+	$(".consents-first").appendTo(".order-summary-inner");
+	$(".next-step").appendTo(".order-summary-inner");
+	$("<div class='summary-background'></div>").appendTo(".order-summary-inner");
+	$("<div class='rekapitulace-background'></div>").appendTo(".order-summary-inner");
+	$(".co-box.co-box-additional").appendTo(".co-contact-information");
+	$(".company-shopping").insertAfter(".co-billing-address > fieldset");
+	$(".checkout-box").insertAfter(".order-summary-inner");
+}
