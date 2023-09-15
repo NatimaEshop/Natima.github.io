@@ -460,10 +460,12 @@ ol.cart-header li.active strong span::before {
 .in-krok-1.ordering-process .co-basic-information label {
 	padding: 0;
 }
-.in-krok-1.ordering-process .checkout-box {
+.in-krok-1.ordering-process .checkout-box,
+.in-krok-2.ordering-process .checkout-box {
 	margin: 0;
 }
-.in-krok-1.ordering-process .checkout-box .btn {
+.in-krok-1.ordering-process .checkout-box .btn,
+.in-krok-2.ordering-process .checkout-box .btn {
 	display: block;
 	background-color: transparent;
 	color: var(--color-black-800);
@@ -478,14 +480,18 @@ ol.cart-header li.active strong span::before {
 	pointer-events: none;
 }
 .in-krok-1.ordering-process .checkout-box .btn br,
-.in-krok-1.ordering-process .checkout-box .btn span {
+.in-krok-1.ordering-process .checkout-box .btn span,
+.in-krok-2.ordering-process .checkout-box .btn br,
+.in-krok-2.ordering-process .checkout-box .btn span {
 	display: none;
 }
-.in-krok-1.ordering-process .checkout-box .contact-box {
+.in-krok-1.ordering-process .checkout-box .contact-box,
+.in-krok-2.ordering-process .checkout-box .contact-box {
 	min-height: auto;
 }
 
-.in-krok-1.ordering-process .checkout-box .box.box-sm {
+.in-krok-1.ordering-process .checkout-box .box.box-sm,
+.in-krok-2.ordering-process .checkout-box .box.box-sm {
 	visibility: visible;
 	height: auto;
 	webkit-transform: none;
