@@ -143,7 +143,7 @@ function removePayment() {
 /*posledni krok objednavky*/
 if (document.querySelector("body.in-krok-2")) {
 	$(".next-step").appendTo(".order-summary-inner");
-	$(".order-summary-inner > *:nth-child(4)").removeClass("cart-items").addClass("order-recapitulation");
+	$(".cart-items").last().removeClass("cart-items").addClass("order-recapitulation");
 	$(".checkout-box").appendTo(".order-summary-inner");
 	$(".consents-first").appendTo(".order-summary-inner");
 	$(".next-step").appendTo(".order-summary-inner");
