@@ -752,9 +752,9 @@ ol.cart-header li.active strong span::before {
 	flex: auto !important;
 }
 .in-krok-1 .recapitulation-single,
-.in-krok-2.recapitulation-single,
+.in-krok-2 .recapitulation-single,
 .in-krok-1 .price-wrapper > *,
-.in-krok-2.price-wrapper > *,
+.in-krok-2 .price-wrapper > *,
 .in-krok-1 .order-summary-item.helper,
 .in-krok-2 .order-summary-item.helper {
 	margin-bottom: 1em;
