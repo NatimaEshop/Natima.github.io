@@ -279,7 +279,7 @@
 		margin-right: calc(var(--padding-sides) / -1) !important;
 		margin-left: calc(var(--padding-sides) / -1) !important;
 	}
-	.carousel-inner > .item:first-child() {
+	.carousel-inner > .item:first-child {
 		margin-left: var(--padding-sides);
 	}
 }
