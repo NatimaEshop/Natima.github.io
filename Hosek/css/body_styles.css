@@ -90,6 +90,23 @@ body.in-index .content.wide h1 {
 	text-align: left;
 }
 
+@media (max-width: 992px) {
+	.show-on-mobile {
+		display: block;
+	}
+	.show-on-pc {
+		display: none;
+	}
+}
+@media (min-width: 992px) {
+	.show-on-mobile {
+		display: none;
+	}
+	.show-on-pc {
+		display: block;
+	}
+}
+
 @media (min-width: 768px) {
 	.content {
 		padding: 0;
