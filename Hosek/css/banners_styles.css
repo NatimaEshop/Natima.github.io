@@ -63,7 +63,9 @@
 	width: 100%;
 	border-radius: var(--border-radius);
 }
-.carousel-banner-content {
+.carousel-banner-content,
+.body-banners .show-on-mobile .carousel-banner-content,
+.footer-banners .show-on-mobile .carousel-banner-content {
 	display: flex;
 	position: absolute;
 	width: 100%;
@@ -189,26 +191,6 @@
 	width: 35%;
 	padding: 0;
 	padding-bottom: 60px;
-}
-
-.body-banners .carousel-banner-content h3,
-.footer-banners .carousel-banner-content h3 {
-	font-size: 28px;
-}
-
-.body-banners .carousel-banner-content h3,
-.footer-banners .carousel-banner-content h3 {
-	font-size: 28px;
-}
-
-.body-banners .carousel-banner-content .carousel-banner-text,
-.footer-banners .carousel-banner-content .carousel-banner-text {
-	font-size: 22px;
-}
-
-.body-banners .carousel-banner-content .carousel-banner-button,
-.footer-banners .carousel-banner-content .carousel-banner-button {
-	font-size: 16px;
 }
 
 /*lazy bideo*/
