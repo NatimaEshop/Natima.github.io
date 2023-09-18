@@ -279,6 +279,13 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.carousel-inner .item {
+		min-width: 280px;
+		width: 280px;
+	}
+}
+
 @media (min-width: 992px) {
 	.in-index .col-sm-8 {
 		flex-grow: 3; /*pocet banneru pro JS*/
