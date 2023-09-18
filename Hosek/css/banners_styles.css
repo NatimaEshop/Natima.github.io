@@ -291,6 +291,17 @@
 	.carousel-inner > .item:first-child {
 		margin-left: var(--padding-sides);
 	}
+	.body-banners,
+	.footer-banners {
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+	.body-banners .show-on-mobile img,
+	.body-banners .show-on-mobile video,
+	.footer-banners .show-on-mobile img,
+	.footer-banners .show-on-mobile video {
+		min-width: 280px;
+	}
 }
 
 @media (max-width: 768px) {
