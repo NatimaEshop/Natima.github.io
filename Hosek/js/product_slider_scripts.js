@@ -147,6 +147,12 @@ if (document.querySelector("body.in-index")) {
 			productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
 			productsArrowsRight[i].classList.remove("display-none");
 			productsArrowsLeft[i].classList.add("display-none");
+
+			if (matchesMedia992) {
+				return;
+			} else {
+				productsArrowsRight[i].classList.add("display-none");
+			}
 		}
 
 		carouselTranslateId = 0;
@@ -154,5 +160,10 @@ if (document.querySelector("body.in-index")) {
 		carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
 		carouselArrowRight.classList.remove("display-none");
 		carouselArrowLeft.classList.add("display-none");
+		if (matchesMedia992) {
+			return;
+		} else {
+			carouselArrowRight.classList.add("display-none");
+		}
 	});
 }
