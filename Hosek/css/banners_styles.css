@@ -155,7 +155,7 @@
 	flex: 1;
 	width: 100%;
 	max-width: 100%;
-	padding: 0;
+	padding: 0 !important;
 	margin: 0 !important;
 }
 .container .body-banners > div img,
