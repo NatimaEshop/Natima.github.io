@@ -115,7 +115,7 @@ body.in-index .content.wide h1 {
 
 @media (min-width: 992px) and (max-width: 1200px) {
 	body.in-index .content.wide {
-		padding: var(--padding-sides) !important;
+		padding: 0 var(--padding-sides) !important;
 	}
 }
 
