@@ -310,9 +310,11 @@
 }
 
 @media (min-width: 992px) {
+	:root {
+		--SliderPocetBanneru: 3;
+	}
 	.in-index .col-sm-8 {
 		flex-grow: 3; /*pocet banneru pro JS*/
-		--SliderPocetBanneru: 3;
 	}
 	.body-banners .carousel-banner-content,
 	.footer-banners .carousel-banner-content {
@@ -321,9 +323,11 @@
 	}
 }
 @media (min-width: 1200px) {
+	:root {
+		--SliderPocetBanneru: 4;
+	}
 	.in-index .col-sm-8 {
 		flex-grow: 4; /*pocet banneru pro JS*/
-		--SliderPocetBanneru: 4;
 	}
 }
 @media (min-width: 1440px) {

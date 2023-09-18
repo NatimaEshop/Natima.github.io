@@ -86,9 +86,7 @@ if (document.querySelector("body.in-index")) {
 
 	/*pocet produktu a overflow v slideru*/
 	let amountOfBannersInSlider;
-	let realNumberOfBannersInSlider = document.querySelectorAll(
-		".in-index .banners-row .col-sm-8 .carousel-inner .item"
-	).length;
+	let realNumberOfBannersInSlider = document.querySelectorAll(":root").length;
 	let numberOfScrolledItemsInSlider = amountOfBannersInSlider;
 	let carouselTranslateId = 0;
 	let translateCarousel = 0;
@@ -146,9 +144,9 @@ if (document.querySelector("body.in-index")) {
 			productsArrowsLeft[i].classList.add("display-none");
 			productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
 			productsArrowsLeft[i].classList.add("display-none");
-
+			productsArrowsRight[i].classList.remove("display-none");
 			if (matchesMedia992) {
-				productsArrowsRight[i].classList.remove("display-none");
+				return;
 			} else {
 				productsArrowsRight[i].classList.add("display-none");
 			}
@@ -158,8 +156,9 @@ if (document.querySelector("body.in-index")) {
 		translateCarousel = 0;
 		carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
 		carouselArrowLeft.classList.add("display-none");
+		carouselArrowRight.classList.remove("display-none");
 		if (matchesMedia992) {
-			carouselArrowRight.classList.remove("display-none");
+			return;
 		} else {
 			carouselArrowRight.classList.add("display-none");
 		}
