@@ -80,6 +80,10 @@ body.type-product .content.wide,
 body.in-index .content.wide {
 	max-width: none;
 }
+body.in-index .content.wide {
+	padding: 0 var(--pading-sides) !important;
+}
+
 body.type-product .content.wide h1,
 body.in-index .content.wide h1 {
 	text-align: left;
