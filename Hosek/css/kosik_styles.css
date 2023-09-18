@@ -741,9 +741,15 @@ ol.cart-header li.active strong span::before {
 .in-krok-2 .cart-item-name a {
 	text-transform: none;
 }
-.in-krok-1 .order-summary,
+.in-krok-1 .order-summary {
+	margin-top: 40px;
+}
 .in-krok-2 .order-summary {
 	margin-top: 40px;
+	padding-top: 65px;
+	border-top-style: solid;
+	border-width: 1px;
+	border-color: var(--color-gray-500);
 }
 .in-krok-1 .order-summary-item.helper,
 .in-krok-2 .order-summary-item.helper {
@@ -892,7 +898,4 @@ ol.cart-header li.active strong span::before {
 }
 .in-krok-2 .summary-background {
 	grid-row-end: 7;
-}
-.in-krok-2.ordering-process .order-summary-inner .gift-items {
-	grid-row: 6;
 }
