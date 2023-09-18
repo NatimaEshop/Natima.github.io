@@ -277,12 +277,12 @@
 	.footer-banners {
 		overflow-x: auto;
 		overflow-y: hidden;
-		margin-left: calc(var(--padding-sides) / -1);
-		margin-right: calc(var(--padding-sides) / -1);
+		margin-left: calc(var(--padding-sides) / -1) !important;
+		margin-right: calc(var(--padding-sides) / -1) !important;
 	}
 	.body-banners > div:first-child,
 	.footer-banners > div:first-child {
-		margin-left: var(--padding-sides);
+		margin-left: var(--padding-sides) !important;
 	}
 	.body-banners .show-on-mobile img,
 	.body-banners .show-on-mobile video,
