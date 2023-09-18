@@ -286,7 +286,7 @@
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
 	.in-index .col-sm-8 {
 		flex-grow: 4; /*pocet banneru pro JS*/
 		--SliderPocetBanneru: 4;
