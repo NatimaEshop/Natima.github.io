@@ -81,6 +81,7 @@ body.in-index .content.wide {
 	max-width: none;
 }
 body.in-index .content.wide {
+	margin-top: 20px;
 	padding: 0 var(--pading-sides) !important;
 }
 
