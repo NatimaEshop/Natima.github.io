@@ -20,3 +20,7 @@
 .products-page .p-code {
 	display: none;
 }
+
+.products .product .p a.image {
+	margin-bottom: 0;
+}
