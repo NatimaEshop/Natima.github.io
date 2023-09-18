@@ -82,6 +82,7 @@ body.in-index .content.wide {
 }
 body.in-index .content.wide {
 	padding: 0 !important;
+	margin-top: 0;
 }
 
 body.type-product .content.wide h1,
