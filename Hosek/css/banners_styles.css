@@ -261,6 +261,7 @@
 		min-width: 300px;
 		width: 300px;
 		border-radius: var(--border-radius);
+		padding: 0px var(--gap) 0px 0px !important;
 	}
 	.banners-row .col-sm-8 {
 		overflow: hidden;
@@ -268,6 +269,8 @@
 	.col-sm-8 .carousel-inner {
 		overflow-x: scroll;
 		overflow-y: hidden;
+		padding-bottom: calc(var(--gap) * 2);
+		margin-left: 0;
 	}
 	.slider-arrow {
 		display: none !important;
