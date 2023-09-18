@@ -294,11 +294,18 @@
 	}
 
 	.favorite-brands {
-		overflow-y: auto;
+		overflow-x: auto;
+		margin-left: calc(var(--padding-sides) / -1);
+		margin-right: calc(var(--padding-sides) / -1);
 	}
-	.favorite-brand .favorite-brand {
+	.favorite-brands .favorite-brand {
 		width: clamp(160px, 140px + 12vw, 350px);
-		padding: 0px var(--gap) 0px 0px !important;
+		min-width: clamp(160px, 140px + 12vw, 350px);
+		margin-right: var(--gap);
+		margin-left: 0;
+	}
+	.favorite-brands > .favorite-brand:first-child {
+		margin-left: var(--padding-sides);
 	}
 }
 
