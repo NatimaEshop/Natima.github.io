@@ -18,7 +18,7 @@ h6,
 body .container {
 	max-width: 1920px;
 	width: 100%;
-	padding: 0 var(--padding-sides) !important;
+	padding: 0 var(--pading-sides) !important;
 	margin: auto;
 }
 
@@ -76,10 +76,12 @@ body > .overall-wrapper > .breadcrumbs-wrapper {
 	text-align: center;
 }
 
-body.type-product .content.wide {
+body.type-product .content.wide,
+body.in-index .content.wide {
 	max-width: none;
 }
-body.type-product .content.wide h1 {
+body.type-product .content.wide h1,
+body.in-index .content.wide h1 {
 	text-align: left;
 }
 
