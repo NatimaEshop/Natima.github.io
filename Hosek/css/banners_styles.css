@@ -140,6 +140,7 @@
 .carousel-control {
 	display: none;
 }
+.content-wrapper.container .row,
 .type-index .banners-row {
 	margin: 0;
 }
@@ -273,6 +274,9 @@
 	}
 	.slider-arrow {
 		display: none !important;
+	}
+	.type-index .banners-row {
+		margin-right: calc(var(--padding-sides) / -1) !important;
 	}
 }
 
