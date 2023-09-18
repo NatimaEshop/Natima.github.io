@@ -272,12 +272,12 @@
 		margin-right: calc(var(--padding-sides) / -1) !important;
 		gap: 0;
 	}
-	.body-banners > div:first-child,
-	.footer-banners > div:first-child {
+	.container .body-banners > div:first-child,
+	.content-wrapper.container .footer-banners > div.footer-banner:first-child {
 		margin-left: var(--padding-sides) !important;
 	}
 	.container .body-banners > div,
-	.content-wrapper.container .footer-banners > div {
+	.content-wrapper.container .footer-banners > div.footer-banner {
 		margin-right: var(--gap) !important;
 	}
 	.body-banners .show-on-mobile img,
