@@ -84,6 +84,9 @@ body.in-index .content.wide {
 	padding: 0 !important;
 	margin-top: 0;
 }
+body.in-index.mobile .content.wide {
+	margin-top: 20px;
+}
 
 body.type-product .content.wide h1,
 body.in-index .content.wide h1 {
@@ -110,12 +113,6 @@ body.in-index .content.wide h1 {
 @media (min-width: 768px) {
 	.content {
 		padding: 0;
-	}
-}
-
-@media only screen and (min-device-width: 1px) {
-	body.in-index .content.wide {
-		margin-top: 20px;
 	}
 }
 
