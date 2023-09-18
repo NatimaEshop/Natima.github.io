@@ -211,6 +211,20 @@
 	font-size: 16px;
 }
 
+/*lazy bideo*/
+.carousel-video img {
+	display: none;
+}
+
+.carousel-video.lazy img {
+	display: block;
+}
+.carousel-video.lazy video {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 /*vypnuti animaci*/
 .banners-content a:hover img,
 .banner-footer a:hover img,
