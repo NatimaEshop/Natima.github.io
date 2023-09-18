@@ -112,7 +112,7 @@ body.in-index .content.wide h1 {
 	}
 }
 
-@media only screen {
+@media only screen and (max-device-width: 1200px) {
 	body.in-index .content.wide {
 		margin-top: 20px;
 	}
