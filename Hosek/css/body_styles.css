@@ -96,6 +96,12 @@ body.in-index .content.wide h1 {
 	}
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
+	body.in-index .content.wide {
+		padding: var(--padding-sides) !important;
+	}
+}
+
 @media (min-width: 768px) {
 }
 
