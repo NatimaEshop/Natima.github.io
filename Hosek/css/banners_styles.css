@@ -67,11 +67,12 @@
 	display: flex;
 	position: absolute;
 	width: 100%;
-	padding: 50px;
-	bottom: 40px;
+	padding: 0px 10% 15% 10%;
+	bottom: 7%;
 	flex-direction: column;
 	left: 0;
 	justify-content: flex-start;
+	font-size: clamp(18px, 0.52vw + 14.08px, 24px);
 	gap: 1em;
 }
 
@@ -92,9 +93,7 @@
 	bottom: 0;
 }
 .carousel-banner-content .carousel-banner-heading {
-	font-size: 24px;
-	/* font-size: 18px; */
-	min-height: 55px;
+	min-height: 2.292em;
 	color: inherit;
 }
 .carousel-banner-content .carousel-banner-text {
