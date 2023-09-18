@@ -299,8 +299,8 @@
 		margin-right: calc(var(--padding-sides) / -1);
 	}
 	.favorite-brands .favorite-brand {
-		width: clamp(160px, 140px + 12vw, 350px);
-		min-width: clamp(160px, 140px + 12vw, 350px);
+		width: clamp(160px - var(--gap), 140px + 12vw - var(--gap), 350px - var(--gap));
+		min-width: clamp(160px - var(--gap), 140px + 12vw - var(--gap), 350px - var(--gap));
 		margin-right: var(--gap);
 		margin-left: 0;
 	}
