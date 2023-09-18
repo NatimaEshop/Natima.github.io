@@ -89,10 +89,6 @@ body.in-index .content.wide h1 {
 	text-align: left;
 }
 
-.in-index #content-wrapper {
-	display: none;
-}
-
 @media (max-width: 992px) {
 	.show-on-mobile {
 		display: block;
