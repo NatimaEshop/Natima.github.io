@@ -72,7 +72,7 @@
 	flex-direction: column;
 	left: 0;
 	justify-content: flex-start;
-	font-size: clamp(18px, 0.52vw + 14.08px, 24px);
+	font-size: clamp(18px, 0.65vw + 11.52px, 24px);
 	gap: 0.5em;
 }
 
@@ -254,8 +254,8 @@
 @media (max-width: 992px) {
 	.carousel-inner .item {
 		display: block !important;
-		min-width: 300px;
-		width: 300px;
+		min-width: 360px;
+		width: 360px;
 		border-radius: var(--border-radius);
 		padding: 0px var(--gap) 0px 0px !important;
 	}
