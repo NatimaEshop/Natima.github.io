@@ -112,7 +112,7 @@ body.in-index .content.wide h1 {
 	}
 }
 
-@media (max-width: 768px) {
+@media only screen {
 	body.in-index .content.wide {
 		margin-top: 20px;
 	}
