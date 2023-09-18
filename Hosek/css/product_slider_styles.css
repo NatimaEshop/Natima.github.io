@@ -41,7 +41,7 @@
 	user-select: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
 	.in-index .products .product {
 		width: clamp(200px, 40%, 350px);
 	}
