@@ -284,6 +284,8 @@
 	.footer-banners .show-on-mobile video {
 		min-width: 280px;
 	}
+	.body-banners,
+	.footer-banners,
 	.body-banners .banner-wrapper,
 	.footer-banners .banner-wrapper {
 		margin-top: 0;
