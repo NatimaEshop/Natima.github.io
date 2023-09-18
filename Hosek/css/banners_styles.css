@@ -184,15 +184,6 @@
 	display: none;
 }
 
-.body-banners .carousel-banner-content,
-.footer-banners .carousel-banner-content {
-	bottom: 25%;
-	left: 5%;
-	width: 35%;
-	padding: 0;
-	padding-bottom: 60px;
-}
-
 /*lazy bideo*/
 .carousel-video img {
 	display: none;
@@ -316,10 +307,21 @@
 		--SliderPocetBanneru: 3;
 	}
 }
-
 @media (min-width: 1200px) {
 	.in-index .col-sm-8 {
 		flex-grow: 4; /*pocet banneru pro JS*/
 		--SliderPocetBanneru: 4;
+	}
+
+	.body-banners .carousel-banner-content,
+	.footer-banners .carousel-banner-content {
+		width: 100%;
+		padding: 0 56% 2em 4%;
+	}
+}
+@media (min-width: 1440px) {
+	.body-banners .carousel-banner-content,
+	.footer-banners .carousel-banner-content {
+		padding: 0 56% 12% 4%;
 	}
 }
