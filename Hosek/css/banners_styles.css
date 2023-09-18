@@ -79,13 +79,14 @@
 .carousel-banner-button {
 	font-size: 0.6em;
 	line-height: 1em;
-	width: 8em;
-	text-align: center;
+	width: max-content;
 	max-width: 80%;
-	padding: 0.7em 0 0.65em 0;
+	text-align: center;
+	padding: 1em 1.7em 0.95em 1.7em;
 	border-radius: var(--border-radius);
 	font-weight: 600;
 	transition: all 0.3s ease-out;
+	margin-top: 0.7em;
 }
 .carousel-banner-content .carousel-banner-heading {
 	font-size: inherit;
