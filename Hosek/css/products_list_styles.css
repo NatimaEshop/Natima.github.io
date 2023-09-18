@@ -240,3 +240,10 @@
 .in-index .products-block .product:hover .flags.flags-extra .flag.flag-discount {
 	transform: translatey(-38px);
 }
+
+@media (min-width: 1200px) {
+	.flags.flags-default {
+		margin-top: 8px;
+		margin-left: 8px;
+	}
+}
