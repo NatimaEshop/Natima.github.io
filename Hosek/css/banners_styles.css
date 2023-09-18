@@ -292,6 +292,14 @@
 	.footer-banners .banner-wrapper {
 		margin-top: 0 !important;
 	}
+
+	.favorite-brands {
+		overflow-y: auto;
+	}
+	.favorite-brand .favorite-brand {
+		width: clamp(160px, 140px + 12vw, 350px);
+		padding: 0px var(--gap) 0px 0px !important;
+	}
 }
 
 @media (max-width: 768px) {
