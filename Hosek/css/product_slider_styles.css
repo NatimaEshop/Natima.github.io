@@ -59,7 +59,7 @@
 		margin-left: calc(var(--padding-sides) / -1) !important;
 	}
 	.in-index .products > .product:first-child {
-		margin-left: var(--padding-sides);
+		margin-left: calc(var(--gap) + var(--padding-sides));
 	}
 }
 
