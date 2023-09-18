@@ -95,12 +95,12 @@ body.in-index .content.wide h1 {
 		display: block;
 	}
 	.show-on-pc {
-		display: none;
+		display: none !important;
 	}
 }
 @media (min-width: 992px) {
 	.show-on-mobile {
-		display: none;
+		display: none !important;
 	}
 	.show-on-pc {
 		display: block;
