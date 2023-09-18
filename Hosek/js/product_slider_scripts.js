@@ -145,11 +145,10 @@ if (document.querySelector("body.in-index")) {
 			maximumTranslates[i] = Math.floor(realNumProductsInSlider[i] / amountOfProductsInSlider);
 			productsArrowsLeft[i].classList.add("display-none");
 			productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
-			productsArrowsRight[i].classList.remove("display-none");
 			productsArrowsLeft[i].classList.add("display-none");
 
 			if (matchesMedia992) {
-				return;
+				productsArrowsRight[i].classList.remove("display-none");
 			} else {
 				productsArrowsRight[i].classList.add("display-none");
 			}
@@ -158,10 +157,9 @@ if (document.querySelector("body.in-index")) {
 		carouselTranslateId = 0;
 		translateCarousel = 0;
 		carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
-		carouselArrowRight.classList.remove("display-none");
 		carouselArrowLeft.classList.add("display-none");
 		if (matchesMedia992) {
-			return;
+			carouselArrowRight.classList.remove("display-none");
 		} else {
 			carouselArrowRight.classList.add("display-none");
 		}
