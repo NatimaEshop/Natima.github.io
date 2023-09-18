@@ -68,7 +68,7 @@
 	position: absolute;
 	width: 100%;
 	padding: 0px 5% calc(7% + 0.6em) 10%;
-	bottom: 7%;
+	bottom: 0;
 	flex-direction: column;
 	left: 0;
 	justify-content: flex-start;
@@ -77,19 +77,15 @@
 }
 
 .carousel-banner-button {
-	font-size: 0.778em;
+	font-size: 0.6em;
 	line-height: 1em;
 	width: 8em;
 	text-align: center;
 	max-width: 80%;
-	padding: 0.8em 0;
+	padding: 0.7em 0 0.65em 0;
 	border-radius: var(--border-radius);
 	font-weight: 600;
 	transition: all 0.3s ease-out;
-	margin-top: 5px;
-	position: absolute;
-	top: auto;
-	bottom: 0;
 }
 .carousel-banner-content .carousel-banner-heading {
 	font-size: inherit;
