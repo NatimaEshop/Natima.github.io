@@ -215,36 +215,6 @@
 	font-size: 16px;
 }
 
-@media (max-width: 992px) {
-	.carousel-inner .item {
-		display: block;
-		min-width: 300px;
-		width: 300px;
-		border-radius: var(--border-radius);
-	}
-	.banners-row .col-sm-8 {
-		overflow: hidden;
-	}
-	.col-sm-8 .carousel-inner {
-		overflow-x: scroll;
-		overflow-y: hidden;
-	}
-}
-
-@media (min-width: 992px) {
-	.in-index .col-sm-8 {
-		flex-grow: 3; /*pocet banneru pro JS*/
-		--SliderPocetBanneru: 3;
-	}
-}
-
-@media (min-width: 1200px) {
-	.in-index .col-sm-8 {
-		flex-grow: 4; /*pocet banneru pro JS*/
-		--SliderPocetBanneru: 4;
-	}
-}
-
 /*vypnuti animaci*/
 .banners-content a:hover img,
 .banner-footer a:hover img,
@@ -278,4 +248,37 @@
 	height: 100%;
 	background-color: hsla(203, 7%, 47%, 0.06);
 	border-radius: var(--border-radius);
+}
+
+@media (max-width: 992px) {
+	.carousel-inner .item {
+		display: block !important;
+		min-width: 300px;
+		width: 300px;
+		border-radius: var(--border-radius);
+	}
+	.banners-row .col-sm-8 {
+		overflow: hidden;
+	}
+	.col-sm-8 .carousel-inner {
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	.slider-arrow {
+		display: none !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.in-index .col-sm-8 {
+		flex-grow: 3; /*pocet banneru pro JS*/
+		--SliderPocetBanneru: 3;
+	}
+}
+
+@media (min-width: 1200px) {
+	.in-index .col-sm-8 {
+		flex-grow: 4; /*pocet banneru pro JS*/
+		--SliderPocetBanneru: 4;
+	}
 }
