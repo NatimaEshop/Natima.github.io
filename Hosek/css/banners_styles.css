@@ -293,7 +293,7 @@
 	.body-banners .show-on-mobile video,
 	.footer-banners .show-on-mobile img,
 	.footer-banners .show-on-mobile video {
-		min-width: 280px;
+		min-width: 270px;
 	}
 	.body-banners,
 	.footer-banners,
