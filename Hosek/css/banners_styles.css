@@ -285,8 +285,8 @@
 	.footer-banners > div:first-child {
 		margin-left: var(--padding-sides) !important;
 	}
-	.body-banners > div,
-	.footer-banners > div {
+	.container .body-banners > div,
+	.content-wrapper.container .footer-banners > div {
 		margin-right: var(--gap) !important;
 	}
 	.body-banners .show-on-mobile img,
