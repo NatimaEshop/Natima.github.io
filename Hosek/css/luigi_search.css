@@ -105,6 +105,12 @@
 	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-description .luigi-ac-name {
 		font-weight: 500;
 		color: var(--color-primary) !important;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+		padding: 4px 0 0 0;
+		margin-bottom: 4px;
 	}
 	html body .luigi-ac-main .luigi-ac__highlighted em {
 		color: white !important;
