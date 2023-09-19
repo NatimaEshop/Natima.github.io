@@ -135,8 +135,10 @@
 		border-radius: var(--border-radius);
 		background: var(--color-primary);
 		transition: background 0.2s ease;
-		height: 36px;
-		width: 36px;
+		height: 28px;
+		width: 28px;
+		bottom: 0;
+		right: 0 !important;
 	}
 
 	html body .luigi-ac-heromobile .luigi-ac-action-heromobile:hover,
@@ -163,6 +165,16 @@
 	html body .luigi-ac-others .luigi-ac-name,
 	html body .luigi-ac-rest-main .luigi-ac-name {
 		white-space: break-spaces;
+	}
+	html body .luigi-ac-price {
+		height: 28px;
+	}
+	html body .luigi-ac-price-new,
+	html body .luigi-ac-price-old {
+		line-height: 1 !important;
+	}
+	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-description {
+		position: relative;
 	}
 }
 
