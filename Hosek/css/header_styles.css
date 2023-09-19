@@ -12,6 +12,7 @@
 /*top header*/
 .header-top {
 	pointer-events: auto;
+	display: flex;
 	background: var(--color-primary);
 	z-index: 9;
 	position: relative;
@@ -27,6 +28,10 @@
 	.navigation-in > ul {
 		padding-left: 2vw;
 	}
+}
+
+#header .site-name {
+	position: initial;
 }
 
 #header .header-top .site-name-wrapper {
@@ -615,4 +620,7 @@
 	#header .buy-helper .text {
 		display: flex;
 	}
+}
+
+@media (max-width: 768px) {
 }
