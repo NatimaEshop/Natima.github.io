@@ -393,7 +393,9 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	border-radius: 0;
+	position: absolute;
 	top: 0;
+	left: 0;
 }
 
 #header .header-top .dropdown {
@@ -702,11 +704,19 @@
 		height: var(--header-icon-menu-height);
 		width: var(--header-icon-menu-height);
 	}
+	#header .responsive-tools .toggle-window[data-target="search"] {
+		position: relative;
+	}
 	#header .responsive-tools .toggle-window[data-target="search"]::before {
 		content: "";
-		background-image: url("https://595805.myshoptet.com/user/documents/upload/searchMenuIcon.svg");
+		background-image: url(https://595805.myshoptet.com/user/documents/upload/searchMenuIcon.svg);
 		width: 100%;
 		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 	#header .responsive-tools .toggle-window[data-target="navigation"] {
 		padding: 0;
@@ -743,5 +753,9 @@
 	:root {
 		--header-icon-menu-height: 20px;
 		--header-menu-gap: 10px;
+	}
+	#header .navigation-buttons .cart-count::before {
+		position: relative;
+		top: -2px;
 	}
 }
