@@ -17,7 +17,7 @@
 	position: relative;
 	flex-wrap: nowrap;
 	padding: 0 var(--padding-sides) 0 10px;
-	gap: min(24px, 2%);
+	gap: 1%;
 }
 
 @media (min-width: 1921px) {
@@ -31,6 +31,7 @@
 
 #header .header-top .site-name-wrapper {
 	order: 0;
+	width: clamp(145px, 6.6vw + 94.4px, 221px);
 }
 
 .site-name-wrapper img {
@@ -48,14 +49,15 @@
 #header .header-top .search {
 	order: 1;
 	flex: 1;
-	margin-right: 30px;
-	margin-left: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 #header .buy-helper {
 	order: 2;
 	height: 100%;
 	display: flex;
+	margin-right: 5px;
 	flex-direction: row;
 	align-items: center;
 	text-decoration: none;
@@ -168,14 +170,14 @@
 	background-position: center;
 }
 #header .buy-helper .text {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	font-weight: 400;
 	font-size: 0.9em;
 	line-height: 1.2;
 	color: white;
 	margin-left: 5px;
-	margin-right: 10px;
+	margin-right: 5px;
 }
 
 /*Header Zákaznická podpora*/
@@ -196,6 +198,9 @@
 	display: block;
 	font-weight: 400;
 	font-size: 0.8em;
+}
+#header .top-navigation-contacts a > span {
+	display: block;
 }
 #header .top-navigation-contacts,
 #header .top-navigation-contacts .project-phone {
@@ -597,4 +602,17 @@
 .menu-item-723 > a::before {
 	opacity: 0.15;
 	background: rgb(59, 128, 73);
+}
+
+@media (min-width: 1200px) {
+	.header-top {
+		gap: 2%;
+	}
+	#header .header-top .search {
+		margin-right: 30px;
+		margin-left: 20px;
+	}
+	#header .buy-helper .text {
+		display: flex;
+	}
 }
