@@ -2,17 +2,19 @@
 	:root {
 		--luigiWidth: clamp(80%, 30% + 260px, 100%);
 	}
-
 	html body .luigi-ac-heromobile-input-wrap {
 		width: var(--luigiWidth);
+		top: var(--header-height);
 		left: auto;
 		right: 0;
 	}
 	html body .luigi-ac-open {
 		width: var(--luigiWidth);
+		max-height: calc(100vh - var(--header-height)) !important;
+		max-height: calc(100svh - var(--header-height)) !important;
 		left: auto !important;
 		right: 0 !important;
-		top: 0 !important;
+		top: var(--header-height) !important;
 		color: var(--color-black-800);
 	}
 	html body .luigi-ac.luigi-ac-heromobile.luigi-ac-open:before {
@@ -20,10 +22,11 @@
 	}
 	html body .luigi-ac-heromobile .luigi-ac-heromobile-input-bg {
 		left: auto;
+		top: var(--header-height);
 	}
 	html body .luigi-ac-heromobile .luigi-ac-close {
 		left: calc(100% - var(--luigiWidth) + 17px);
-		top: 25px;
+		top: calc(25px + var(--header-height));
 	}
 	html body .luigi-ac-heromobile-input-wrap .luigi-ac-heromobile-input-clear {
 		top: 6px;
@@ -38,7 +41,7 @@
 		width: 100%;
 		font-weight: 600;
 		font-size: 18px;
-		padding: 0.7em 0em 0.35em 1em;
+		padding: 0.7em 0 0.35em 1em;
 		background: white;
 	}
 	html body .luigi-ac-image .flag {

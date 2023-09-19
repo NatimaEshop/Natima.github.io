@@ -1,4 +1,8 @@
 /*Header*/
+:root {
+	--header-categ-height: 42px;
+	--header-height: 83px;
+}
 #header {
 	position: sticky;
 	top: 0;
@@ -629,6 +633,7 @@
 	:root {
 		--header-icon-menu-height: 24px;
 		--header-menu-gap: 18px;
+		--header-height: 60px;
 	}
 
 	#header {
