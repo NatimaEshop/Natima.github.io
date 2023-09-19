@@ -86,7 +86,9 @@ if (document.querySelector("body.in-index")) {
 
 	/*pocet produktu a overflow v slideru*/
 	let amountOfBannersInSlider;
-	let realNumberOfBannersInSlider = document.querySelectorAll(":root").length;
+	let realNumberOfBannersInSlider = document.querySelectorAll(
+		".in-index .banners-row .col-sm-8 .carousel-inner .item"
+	).length;
 	let numberOfScrolledItemsInSlider = amountOfBannersInSlider;
 	let carouselTranslateId = 0;
 	let translateCarousel = 0;
