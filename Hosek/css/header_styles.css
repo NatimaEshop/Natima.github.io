@@ -645,7 +645,7 @@
 	}
 
 	.header-top {
-		height: 60px;
+		height: var(--header-height);
 		align-items: center;
 		gap: 0;
 	}

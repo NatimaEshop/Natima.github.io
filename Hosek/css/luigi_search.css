@@ -4,7 +4,7 @@
 	}
 	html body .luigi-ac-heromobile-input-wrap {
 		width: var(--luigiWidth);
-		top: var(--header-height);
+		top: calc(20px + var(--header-height));
 		left: auto;
 		right: 0;
 	}
