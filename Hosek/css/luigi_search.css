@@ -12,7 +12,7 @@
 		width: var(--luigiWidth);
 		left: auto !important;
 		right: 0 !important;
-		top: var(--header-height) !important;
+		padding-top: 61px;
 		color: var(--color-black-800);
 	}
 	html body .luigi-ac > div {
@@ -42,7 +42,7 @@
 		width: 100%;
 		font-weight: 600;
 		font-size: 18px;
-		padding: 0.9em 0 0.35em 1em;
+		padding: 0.9em 0 0.35em 15px;
 		background: white;
 	}
 	html body .luigi-ac-result[data-type="product"] .luigi-ac-rest-main::before {
@@ -51,7 +51,7 @@
 		width: 100%;
 		font-weight: 600;
 		font-size: 18px;
-		padding: 0.9em 0 0.35em 1em;
+		padding: 0.9em 0 0.35em 15px;
 		background: white;
 	}
 	html body .luigi-ac-image .flag {
@@ -70,6 +70,7 @@
 		text-align: left;
 		-webkit-box-shadow: none;
 		box-shadow: none;
+		margin-left: 15px;
 	}
 	html
 		body
@@ -80,6 +81,7 @@
 		color: var(--color-primary) !important;
 		border-color: var(--color-primary) !important;
 		font-weight: 400;
+		padding: 16px 10px 5px 10px !important;
 	}
 	html
 		body
@@ -125,6 +127,10 @@
 
 	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-image img {
 		align-self: center;
+	}
+	html body .luigi-ac-others .luigi-ac-name,
+	html body .luigi-ac-rest-main .luigi-ac-name {
+		white-space: break-spaces;
 	}
 }
 
