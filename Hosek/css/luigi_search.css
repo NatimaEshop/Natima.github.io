@@ -168,6 +168,7 @@
 	}
 	html body .luigi-ac-price {
 		height: 28px;
+		align-items: flex-end;
 	}
 	html body .luigi-ac-price-new,
 	html body .luigi-ac-price-old {
