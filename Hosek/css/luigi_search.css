@@ -4,14 +4,12 @@
 	}
 	html body .luigi-ac-heromobile-input-wrap {
 		width: var(--luigiWidth);
-		top: calc(20px + var(--header-height));
+		top: 20px;
 		left: auto;
 		right: 0;
 	}
 	html body .luigi-ac-open {
 		width: var(--luigiWidth);
-		max-height: calc(100vh - var(--header-height)) !important;
-		max-height: calc(100svh - var(--header-height)) !important;
 		left: auto !important;
 		right: 0 !important;
 		top: var(--header-height) !important;
@@ -22,11 +20,10 @@
 	}
 	html body .luigi-ac-heromobile .luigi-ac-heromobile-input-bg {
 		left: auto;
-		top: var(--header-height);
 	}
 	html body .luigi-ac-heromobile .luigi-ac-close {
 		left: calc(100% - var(--luigiWidth) + 17px);
-		top: calc(25px + var(--header-height));
+		top: 25px;
 	}
 	html body .luigi-ac-heromobile-input-wrap .luigi-ac-heromobile-input-clear {
 		top: 6px;
