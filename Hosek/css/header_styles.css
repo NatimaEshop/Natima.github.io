@@ -632,6 +632,10 @@
 		margin-bottom: 0;
 	}
 
+	#navigation {
+		pointer-events: auto;
+	}
+
 	.type-index .overall-wrapper {
 		padding-top: 0;
 	}
