@@ -128,6 +128,38 @@
 	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-image img {
 		align-self: center;
 	}
+	html body .luigi-ac-heromobile .luigi-ac-action-heromobile img {
+		display: none;
+	}
+	html body .luigi-ac-heromobile .luigi-ac-action-heromobile {
+		border-radius: var(--border-radius);
+		background: var(--color-primary);
+		transition: background 0.2s ease;
+		height: 36px;
+		width: 36px;
+	}
+
+	html body .luigi-ac-heromobile .luigi-ac-action-heromobile:hover,
+	html body .luigi-ac-heromobile .luigi-ac-action-heromobile:focus {
+		background: var(--color-primary-hover);
+	}
+	html body .luigi-ac-heromobile .luigi-ac-action-heromobile::after {
+		content: "";
+		background-image: url(https://595805.myshoptet.com/user/documents/upload/addToCartIcon.svg);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 60%;
+		height: 100%;
+		position: absolute;
+		left: 47%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	html body .luigi-ac-heromobile .luigi-ac-description {
+		justify-content: space-between;
+	}
+
 	html body .luigi-ac-others .luigi-ac-name,
 	html body .luigi-ac-rest-main .luigi-ac-name {
 		white-space: break-spaces;
