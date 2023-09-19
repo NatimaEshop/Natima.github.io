@@ -622,10 +622,17 @@
 	}
 }
 
+@media (max-width: 460px) {
+	:root {
+		--header-icon-menu-height: 20px;
+		--header-menu-gap: 10px;
+	}
+}
+
 @media (max-width: 768px) {
 	:root {
 		--header-icon-menu-height: 24px;
-		--header-menu-gap: 22px;
+		--header-menu-gap: 18px;
 	}
 
 	#header {
