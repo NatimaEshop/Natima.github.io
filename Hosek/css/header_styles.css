@@ -649,6 +649,9 @@
 
 	#header .header-top > .search {
 		opacity: 0;
+		max-width: 0px;
+		margin: 0;
+		padding: 0;
 	}
 	.luigi-ac-heromobile.luigi-ac-autocomplete.luigi-ac-open {
 		opacity: 1;
