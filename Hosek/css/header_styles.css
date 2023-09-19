@@ -118,6 +118,7 @@
 	border-style: none;
 	border-radius: 0;
 	padding-left: 44px;
+	padding-right: 10px;
 }
 
 #header .search fieldset button {
