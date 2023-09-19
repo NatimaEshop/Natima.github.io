@@ -15,6 +15,10 @@
 		top: var(--header-height) !important;
 		color: var(--color-black-800);
 	}
+	html body .luigi-ac > div {
+		background: white;
+	}
+
 	html body .luigi-ac.luigi-ac-heromobile.luigi-ac-open:before {
 		background: hsla(0, 0%, 0%, 30%);
 	}
@@ -32,13 +36,22 @@
 	html body .luigi-ac-first-main a {
 		margin-top: 0 !important;
 	}
-	html body .luigi-ac-first-main::before {
+	html body .luigi-ac-result[data-type="product"] .luigi-ac-first-main::before {
 		content: "TOP Produkt";
 		position: relative;
 		width: 100%;
 		font-weight: 600;
 		font-size: 18px;
-		padding: 0.7em 0 0.35em 1em;
+		padding: 0.9em 0 0.35em 1em;
+		background: white;
+	}
+	html body .luigi-ac-result[data-type="product"] .luigi-ac-rest-main::before {
+		content: "Další produkty";
+		position: relative;
+		width: 100%;
+		font-weight: 600;
+		font-size: 18px;
+		padding: 0.9em 0 0.35em 1em;
 		background: white;
 	}
 	html body .luigi-ac-image .flag {
@@ -75,6 +88,43 @@
 		.luigi-ac-heromobile-switches-inner
 		.luigi-ac-heromobile-switch.luigi-ac-heromobile-switch--active {
 		font-weight: 600;
+	}
+	html body .luigi-ac-rest-main a {
+		margin-top: 0 !important;
+		border-bottom-style: solid;
+		border-width: 1px;
+		border-color: var(--color-gray-500);
+	}
+	html body .luigi-ac-active,
+	.luigi-ac-item:focus,
+	.luigi-ac-item:hover {
+		background: var(--color-primary-100) !important;
+	}
+	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-description .luigi-ac-name {
+		font-weight: 500;
+		color: var(--color-primary) !important;
+	}
+	html body .luigi-ac-main .luigi-ac__highlighted em {
+		color: white !important;
+		background: var(--color-primary) !important;
+	}
+	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-image {
+		width: 80px !important;
+		height: 80px !important;
+		max-height: 80px !important;
+		justify-content: center;
+	}
+	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-image::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background-color: hsla(203, 7%, 47%, 0.06);
+		border-radius: var(--border-radius);
+	}
+
+	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-image img {
+		align-self: center;
 	}
 }
 
