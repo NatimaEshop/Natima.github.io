@@ -2,38 +2,37 @@
 	:root {
 		--luigiWidth: clamp(80%, 30% + 260px, 100%);
 	}
-	.luigi-ac {
-		color: var(--color-black-800);
-	}
-	.luigi-ac-heromobile-input-wrap {
+
+	html body .luigi-ac-heromobile-input-wrap {
 		width: var(--luigiWidth);
 		left: auto;
 		right: 0;
 	}
-	.luigi-ac-open {
+	html body .luigi-ac-open {
 		width: var(--luigiWidth);
 		left: auto !important;
 		right: 0 !important;
 		top: 0 !important;
+		color: var(--color-black-800);
 	}
-	.luigi-ac.luigi-ac-heromobile.luigi-ac-open:before {
+	html body .luigi-ac.luigi-ac-heromobile.luigi-ac-open:before {
 		background: hsla(0, 0%, 0%, 30%);
 	}
-	.luigi-ac-heromobile .luigi-ac-heromobile-input-bg {
+	html body .luigi-ac-heromobile .luigi-ac-heromobile-input-bg {
 		left: auto;
 	}
-	.luigi-ac-heromobile .luigi-ac-close {
+	html body .luigi-ac-heromobile .luigi-ac-close {
 		left: calc(100% - var(--luigiWidth) + 17px);
 		top: 25px;
 	}
-	.luigi-ac-heromobile-input-wrap .luigi-ac-heromobile-input-clear {
+	html body .luigi-ac-heromobile-input-wrap .luigi-ac-heromobile-input-clear {
 		top: 6px;
 		background-color: var(--color-gray-500);
 	}
-	.luigi-ac-first-main a {
+	html body .luigi-ac-first-main a {
 		margin-top: 0 !important;
 	}
-	.luigi-ac-first-main::before {
+	html body .luigi-ac-first-main::before {
 		content: "TOP Produkt";
 		position: relative;
 		width: 100%;
@@ -42,10 +41,10 @@
 		padding: 0.7em 0em 0.35em 1em;
 		background: white;
 	}
-	.luigi-ac-image .flag {
+	html body .luigi-ac-image .flag {
 		display: none;
 	}
-	.luigi-ac-heromobile-input-wrap input {
+	html body .luigi-ac-heromobile-input-wrap input {
 		border-radius: var(--border-radius);
 		background: var(--color-gray-500);
 		box-shadow: none;
