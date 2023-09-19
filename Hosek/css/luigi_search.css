@@ -1,6 +1,6 @@
 @media (max-width: 1020px) {
 	:root {
-		--luigiWidth: clamp(80%, 30% + 260px, 100%);
+		--luigiWidth: clamp(50%, 30% + 260px, 85%);
 	}
 	html body .luigi-ac-heromobile-input-wrap {
 		width: var(--luigiWidth);
@@ -47,7 +47,34 @@
 	html body .luigi-ac-heromobile-input-wrap input {
 		border-radius: var(--border-radius);
 		background: var(--color-gray-500);
+		-webkit-box-shadow: none;
 		box-shadow: none;
+	}
+	html body .luigi-ac-heromobile .luigi-ac-inner {
+		padding-top: 0;
+	}
+	html body .luigi-ac-heromobile .luigi-ac-heromobile-switches {
+		text-align: left;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	html
+		body
+		.luigi-ac-heromobile
+		.luigi-ac-heromobile-switches
+		.luigi-ac-heromobile-switches-inner
+		.luigi-ac-heromobile-switch {
+		color: var(--color-primary) !important;
+		border-color: var(--color-primary) !important;
+		font-weight: 400;
+	}
+	html
+		body
+		.luigi-ac-heromobile
+		.luigi-ac-heromobile-switches
+		.luigi-ac-heromobile-switches-inner
+		.luigi-ac-heromobile-switch.luigi-ac-heromobile-switch--active {
+		font-weight: 600;
 	}
 }
 
