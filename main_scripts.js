@@ -7,17 +7,15 @@ if (document.querySelector(".type-category")) {
 	}
 	rearangeCategory();
 
-	/*zmena serazeni*/
-	document.addEventListener("ShoptetPageSortingChanged", function () {
-		document.addEventListener(
-			"ShoptetDOMContentLoaded",
-			function () {
-				$("#content .category-top").remove();
-				document.querySelector("#category-filter-hover").classList.add("visible");
-			},
-			{ once: true }
-		);
-	});
+	/*zmena serazeni a filteru*/
+	function editCategoryArrangment() {
+		console.log("TESTTTTTT");
+		document.addEventListener("ShoptetDOMContentLoaded", function () {
+			$("#content .category-top").remove();
+			document.querySelector("#category-filter-hover").classList.add("visible");
+		});
+	}
+	document.addEventListener("ShoptetDOMContentLoaded", editCategoryArrangment, { once: true });
 
 	/*read more*/
 	const categoryPerexReadMore = document.querySelector(".category-perex > table");
