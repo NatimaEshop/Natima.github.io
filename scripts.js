@@ -9,7 +9,16 @@ if (document.querySelector(".type-category")) {
 		document.querySelector("#category-filter-hover").classList.add("visible");
 	}
 	rearangeCategory();
-	document.addEventListener("ShoptetPageSortingChanged", rearangeCategory());
+	document.addEventListener("ShoptetPageSortingChanged", function () {
+		document.addEventListener(
+			"ShoptetDOMContentLoaded",
+			function () {
+				rearangeCategory();
+				console.log("test");
+			},
+			{ once: true }
+		);
+	});
 
 	/*read more*/
 	const categoryPerexReadMore = document.querySelector(".category-perex > table");
