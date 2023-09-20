@@ -1,13 +1,12 @@
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 	.breadcrumbs {
 		margin: 0;
 	}
 }
 
 /*sidebar*/
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 	.sidebar {
-		/*display: none;*/
 		width: 200px;
 		background: transparent;
 	}
