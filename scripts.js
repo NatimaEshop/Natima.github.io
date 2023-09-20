@@ -9,7 +9,7 @@ if (document.querySelector(".type-category")) {
 		categoryWrapper.parentNode.insertBefore(categorySidebar, categoryWrapper);
 		document.querySelector("#category-filter-hover").classList.add("visible");
 	}
-	rearangeCategory();
+	/* rearangeCategory(); */
 	document.addEventListener("ShoptetPageSortingChanged", function () {
 		document.addEventListener(
 			"ShoptetDOMPageContentLoaded",
