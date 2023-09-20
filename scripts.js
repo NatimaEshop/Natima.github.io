@@ -1,11 +1,21 @@
 /*KATEGORIE*/
 if (document.querySelector(".type-category")) {
-	console.log("KATEGORIE1");
+	/*category wrapper premistetni sidebaru*/
+	/*if (document.querySelector(".type-category .sidebar")){}*/
+	function rearangeCategory() {
+		let categoryWrapper = document.querySelector(".category-content-wrapper");
+		let categorySidebar = document.querySelector(".type-category .sidebar");
+		categoryWrapper.parentNode.insertBefore(categorySidebar, categoryWrapper);
+		document.querySelector("#category-filter-hover").classList.add("visible");
+	}
+	rearangeCategory();
+	document.addEventListener("ShoptetPageSortingChanged", rearangeCategory());
+
+	/*read more*/
 	const categoryPerexReadMore = document.querySelector(".category-perex > table");
 	const categorySecondReadMore = document.querySelector(".category__secondDescription > table");
 
 	if (categoryPerexReadMore) {
-		console.log("KATEGORIE2");
 		const showMoreCategory = document.createElement("span");
 		const showLessCategory = document.createElement("span");
 
@@ -30,7 +40,6 @@ if (document.querySelector(".type-category")) {
 		});
 	}
 	if (categorySecondReadMore) {
-		console.log("KATEGORIE3");
 		const showMoreCategorySecond = document.createElement("span");
 		const showLessCategorySecond = document.createElement("span");
 
