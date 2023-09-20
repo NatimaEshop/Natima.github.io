@@ -31,6 +31,7 @@ body .container.navigation-wrapper {
 /*drobeckova navigace schovat pouze nahore*/
 body > .overall-wrapper > .breadcrumbs-wrapper {
 	visibility: hidden;
+	max-height: 10px;
 }
 
 /*random minusove margininy od shoptetu*/
