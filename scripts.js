@@ -9,15 +9,19 @@ if (document.querySelector(".type-category")) {
 		categoryWrapper.parentNode.insertBefore(categorySidebar, categoryWrapper);
 		document.querySelector("#category-filter-hover").classList.add("visible");
 	}
-	/* rearangeCategory(); */
-	document.addEventListener("ShoptetPageSortingChanged", function () {
-		document.addEventListener(
-			"ShoptetDOMPageContentLoaded",
-			function () {
-				rearangeCategory();
-			},
-			{ once: true }
-		);
+
+	rearangeCategory();
+
+	let categoryAside;
+	document.addEventListener(
+		"ShoptetPageSortingChanged",
+		function () {
+			categoryAside = $("aside");
+		},
+		{ once: true }
+	);
+	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
+		categoryAside.insertBefore(categoryWrapper);
 	});
 
 	/*read more*/
