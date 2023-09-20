@@ -193,9 +193,18 @@
 	font-weight: 400;
 }
 
+@media (min-width: 440px) {
+	.type-category .products-block.products {
+		--product-cat-columns: 2;
+		--product-cat-gap: 12px;
+	}
+}
+
 @media (min-width: 768px) {
 	.category-top .subcategories {
 		--subcategories-columns: 3;
+	}
+	.type-category .products-block.products {
 		--product-cat-columns: 3;
 		--product-cat-gap: 12px;
 	}
