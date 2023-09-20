@@ -1,14 +1,12 @@
 /*KATEGORIE*/
-
+let categoryWrapper;
+let categorySidebar;
+let categoryAside;
 if (document.querySelector(".type-category")) {
 	console.log("testttttttttttttttttttttt");
-	console.log("testttttttttttttttttttttt");
-	console.log("testttttttttttttttttttttt");
-	console.log("testttttttttttttttttttttt");
-	console.log("testttttttttttttttttttttt");
-
-	let categoryWrapper = document.querySelector(".category-content-wrapper");
-	let categorySidebar = document.querySelector(".type-category .sidebar");
+	const testmore = "testmore";
+	categoryWrapper = document.querySelector(".category-content-wrapper");
+	categorySidebar = document.querySelector(".type-category .sidebar");
 
 	function rearangeCategory() {
 		categoryWrapper.parentNode.insertBefore(categorySidebar, categoryWrapper);
@@ -17,7 +15,6 @@ if (document.querySelector(".type-category")) {
 
 	rearangeCategory();
 
-	let categoryAside;
 	/* 	document.addEventListener(
 		"ShoptetPageSortingChanged",
 		function () {
