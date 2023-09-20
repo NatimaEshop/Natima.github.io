@@ -59,7 +59,7 @@
 
 .category-content-wrapper {
 	flex: 1;
-	margin-left: calc(var(--padding-sides) * 2);
+	margin-left: var(--padding-sides);
 }
 
 .type-category .products-block.products {
