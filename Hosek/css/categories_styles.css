@@ -63,8 +63,8 @@
 }
 
 .type-category .products-block.products {
-	--product-cat-columns: 2;
-	--product-cat-gap: 6px;
+	--product-cat-columns: 1;
+	--product-cat-gap: 0px;
 	column-gap: var(--product-cat-gap);
 	row-gap: calc(var(--product-cat-gap) * 2);
 }
