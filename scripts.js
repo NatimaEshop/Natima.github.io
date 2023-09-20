@@ -1,5 +1,6 @@
 /*KATEGORIE*/
 if (document.querySelector(".type-category")) {
+	console.log("test");
 	/*category wrapper premistetni sidebaru*/
 	/*if (document.querySelector(".type-category .sidebar")){}*/
 	function rearangeCategory() {
@@ -11,10 +12,9 @@ if (document.querySelector(".type-category")) {
 	rearangeCategory();
 	document.addEventListener("ShoptetPageSortingChanged", function () {
 		document.addEventListener(
-			"ShoptetDOMContentLoaded",
+			"ShoptetDOMPageContentLoaded",
 			function () {
 				rearangeCategory();
-				console.log("test");
 			},
 			{ once: true }
 		);
