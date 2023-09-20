@@ -15,7 +15,7 @@ if (document.querySelector(".type-category")) {
 			document.querySelector("#category-filter-hover").classList.add("visible");
 		});
 	}
-	document.addEventListener("ShoptetDOMContentLoaded", editCategoryArrangment, { once: true });
+	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
 
 	/*read more*/
 	const categoryPerexReadMore = document.querySelector(".category-perex > table");
