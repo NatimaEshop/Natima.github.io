@@ -1,4 +1,5 @@
 /*KATEGORIE*/
+let categorySecondDesc;
 if (document.querySelector(".type-category")) {
 	/*rearrange menu*/
 	function rearangeCategory() {
@@ -9,10 +10,10 @@ if (document.querySelector(".type-category")) {
 
 	/*zmena serazeni a filteru*/
 	function editCategoryArrangment() {
-		console.log("TESTTTTTT");
 		document.addEventListener("ShoptetDOMContentLoaded", function () {
 			$("#content .category-top").remove();
 			document.querySelector("#category-filter-hover").classList.add("visible");
+			readMoreSecondButton();
 		});
 	}
 	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
@@ -21,54 +22,61 @@ if (document.querySelector(".type-category")) {
 	const categoryPerexReadMore = document.querySelector(".category-perex > table");
 	const categorySecondReadMore = document.querySelector(".category__secondDescription > table");
 
-	if (categoryPerexReadMore) {
-		const showMoreCategory = document.createElement("span");
-		const showLessCategory = document.createElement("span");
+	function readMoreFirstButton() {
+		if (categoryPerexReadMore) {
+			const showMoreCategory = document.createElement("span");
+			const showLessCategory = document.createElement("span");
 
-		const showMoreCategoryContent = document.createTextNode("Zobrazit více");
-		const showLessategoryContent = document.createTextNode("Zobrazit méně");
+			const showMoreCategoryContent = document.createTextNode("Zobrazit více");
+			const showLessategoryContent = document.createTextNode("Zobrazit méně");
 
-		showMoreCategory.appendChild(showMoreCategoryContent);
-		showLessCategory.appendChild(showLessategoryContent);
+			showMoreCategory.appendChild(showMoreCategoryContent);
+			showLessCategory.appendChild(showLessategoryContent);
 
-		showMoreCategory.classList.add("category-read", "more");
-		showLessCategory.classList.add("category-read", "less");
+			showMoreCategory.classList.add("category-read", "more");
+			showLessCategory.classList.add("category-read", "less");
 
-		let categoryPerex = document.querySelector(".category-perex");
-		categoryPerex.appendChild(showMoreCategory);
-		categoryPerex.appendChild(showLessCategory);
+			let categoryPerex = document.querySelector(".category-perex");
+			categoryPerex.appendChild(showMoreCategory);
+			categoryPerex.appendChild(showLessCategory);
 
-		showMoreCategory.addEventListener("click", function (e) {
-			e.target.parentElement.classList.add("expanded");
-		});
-		showLessCategory.addEventListener("click", function (e) {
-			e.target.parentElement.classList.remove("expanded");
-		});
+			showMoreCategory.addEventListener("click", function (e) {
+				e.target.parentElement.classList.add("expanded");
+			});
+			showLessCategory.addEventListener("click", function (e) {
+				e.target.parentElement.classList.remove("expanded");
+			});
+		}
 	}
-	if (categorySecondReadMore) {
-		const showMoreCategorySecond = document.createElement("span");
-		const showLessCategorySecond = document.createElement("span");
 
-		const showMoreCategoryContentSecond = document.createTextNode("Zobrazit více");
-		const showLessategoryContentSecond = document.createTextNode("Zobrazit méně");
+	function readMoreSecondButton() {
+		if (categorySecondReadMore) {
+			const showMoreCategorySecond = document.createElement("span");
+			const showLessCategorySecond = document.createElement("span");
 
-		showMoreCategorySecond.appendChild(showMoreCategoryContentSecond);
-		showLessCategorySecond.appendChild(showLessategoryContentSecond);
+			const showMoreCategoryContentSecond = document.createTextNode("Zobrazit více");
+			const showLessategoryContentSecond = document.createTextNode("Zobrazit méně");
 
-		showMoreCategorySecond.classList.add("category-read", "more");
-		showLessCategorySecond.classList.add("category-read", "less");
+			showMoreCategorySecond.appendChild(showMoreCategoryContentSecond);
+			showLessCategorySecond.appendChild(showLessategoryContentSecond);
 
-		let categorySecondDesc = document.querySelector(".category__secondDescription");
-		categorySecondDesc.appendChild(showMoreCategorySecond);
-		categorySecondDesc.appendChild(showLessCategorySecond);
+			showMoreCategorySecond.classList.add("category-read", "more");
+			showLessCategorySecond.classList.add("category-read", "less");
 
-		showMoreCategorySecond.addEventListener("click", function (e) {
-			e.target.parentElement.classList.add("expanded");
-		});
-		showLessCategorySecond.addEventListener("click", function (e) {
-			e.target.parentElement.classList.remove("expanded");
-		});
+			categorySecondDesc = document.querySelector(".category__secondDescription");
+			categorySecondDesc.appendChild(showMoreCategorySecond);
+			categorySecondDesc.appendChild(showLessCategorySecond);
+
+			showMoreCategorySecond.addEventListener("click", function (e) {
+				e.target.parentElement.classList.add("expanded");
+			});
+			showLessCategorySecond.addEventListener("click", function (e) {
+				e.target.parentElement.classList.remove("expanded");
+			});
+		}
 	}
+	readMoreFirstButton();
+	readMoreSecondButton();
 }
 
 /*faq*/
