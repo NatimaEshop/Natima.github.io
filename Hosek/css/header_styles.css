@@ -471,6 +471,7 @@
 }
 #navigation {
 	pointer-events: auto;
+	padding-right: 10px;
 }
 /*kategorie*/
 @media (min-width: 768px) {
