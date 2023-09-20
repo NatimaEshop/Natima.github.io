@@ -236,7 +236,7 @@
 	}
 	.type-category .products-block.products {
 		--product-cat-columns: 5;
-		--product-cat-gap: 24px;
+		--product-cat-gap: 14px;
 	}
 }
 
@@ -246,6 +246,6 @@
 	}
 	.type-category .products-block.products {
 		--product-cat-columns: 6;
-		--product-cat-gap: 24px;
+		--product-cat-gap: 14px;
 	}
 }
