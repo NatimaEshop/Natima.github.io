@@ -1,10 +1,14 @@
 /*KATEGORIE*/
-let categoryWrapper = document.querySelector(".category-content-wrapper");
-let categorySidebar = document.querySelector(".type-category .sidebar");
+
 if (document.querySelector(".type-category")) {
-	console.log("test");
-	/*category wrapper premistetni sidebaru*/
-	/*if (document.querySelector(".type-category .sidebar")){}*/
+	console.log("testttttttttttttttttttttt");
+	console.log("testttttttttttttttttttttt");
+	console.log("testttttttttttttttttttttt");
+	console.log("testttttttttttttttttttttt");
+	console.log("testttttttttttttttttttttt");
+
+	let categoryWrapper = document.querySelector(".category-content-wrapper");
+	let categorySidebar = document.querySelector(".type-category .sidebar");
 
 	function rearangeCategory() {
 		categoryWrapper.parentNode.insertBefore(categorySidebar, categoryWrapper);
