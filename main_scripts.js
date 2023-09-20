@@ -1,28 +1,23 @@
 /*KATEGORIE*/
-let categoryWrapper;
-let categorySidebar;
-let categoryAside;
 if (document.querySelector(".type-category")) {
-	categoryWrapper = document.querySelector(".category-content-wrapper");
-	categorySidebar = document.querySelector(".type-category .sidebar");
-
+	/*rearrange menu*/
 	function rearangeCategory() {
-		categoryWrapper.parentNode.insertBefore(categorySidebar, categoryWrapper);
+		$("#content .category-top").insertBefore(".content-wrapper-in");
 		document.querySelector("#category-filter-hover").classList.add("visible");
 	}
+	rearangeCategory();
 
-	/* rearangeCategory(); */
-
-	/* 	document.addEventListener(
-		"ShoptetPageSortingChanged",
-		function () {
-			categoryAside = $("aside");
-		},
-		{ once: true }
-	);
-	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
-		categoryAside.insertBefore(categoryWrapper);
-	}); */
+	/*zmena serazeni*/
+	document.addEventListener("ShoptetPageSortingChanged", function () {
+		document.addEventListener(
+			"ShoptetDOMContentLoaded",
+			function () {
+				$("#content .category-top").remove();
+				document.querySelector("#category-filter-hover").classList.add("visible");
+			},
+			{ once: true }
+		);
+	});
 
 	/*read more*/
 	const categoryPerexReadMore = document.querySelector(".category-perex > table");
