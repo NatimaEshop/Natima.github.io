@@ -3,8 +3,6 @@ let categoryWrapper;
 let categorySidebar;
 let categoryAside;
 if (document.querySelector(".type-category")) {
-	console.log("testttttttttttttttttttttt");
-	const testmore = "testmore";
 	categoryWrapper = document.querySelector(".category-content-wrapper");
 	categorySidebar = document.querySelector(".type-category .sidebar");
 
@@ -13,7 +11,7 @@ if (document.querySelector(".type-category")) {
 		document.querySelector("#category-filter-hover").classList.add("visible");
 	}
 
-	rearangeCategory();
+	/* rearangeCategory(); */
 
 	/* 	document.addEventListener(
 		"ShoptetPageSortingChanged",
