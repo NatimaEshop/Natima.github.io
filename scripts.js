@@ -13,7 +13,7 @@ if (document.querySelector(".type-category")) {
 	rearangeCategory();
 
 	let categoryAside;
-	document.addEventListener(
+	/* 	document.addEventListener(
 		"ShoptetPageSortingChanged",
 		function () {
 			categoryAside = $("aside");
@@ -22,7 +22,7 @@ if (document.querySelector(".type-category")) {
 	);
 	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
 		categoryAside.insertBefore(categoryWrapper);
-	});
+	}); */
 
 	/*read more*/
 	const categoryPerexReadMore = document.querySelector(".category-perex > table");
