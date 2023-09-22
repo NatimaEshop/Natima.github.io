@@ -14,6 +14,11 @@ if (document.querySelector(".type-category")) {
 			$("#content .category-top").remove();
 			document.querySelector("#category-filter-hover").classList.add("visible");
 			readMoreSecondButton();
+			/*radit dle mobil*/
+			$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
+			$(".raditPodle").on("click tap touchstart", function () {
+				$(".category-header").toggleClass("active");
+			});
 		});
 	}
 	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
