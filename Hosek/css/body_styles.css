@@ -95,13 +95,13 @@ body.in-index .content.wide h1 {
 }
 
 @media (max-width: 768px) {
-	.show-on-small-mobile {
+	.show-to-768px {
 		display: block;
 	}
 }
 
 @media (min-width: 768px) {
-	.show-on-small-mobile {
+	.show-to-768px {
 		display: none !important;
 	}
 }
