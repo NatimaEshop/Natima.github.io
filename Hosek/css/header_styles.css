@@ -25,6 +25,10 @@
 	gap: 1%;
 }
 
+.navigation-close {
+	right: 10px;
+}
+
 @media (min-width: 1921px) {
 	.header-top {
 		padding: 0 2vw;
@@ -471,7 +475,6 @@
 }
 #navigation {
 	pointer-events: auto;
-	padding-right: 10px;
 }
 /*kategorie*/
 @media (min-width: 768px) {
@@ -479,6 +482,7 @@
 		height: var(--header-categ-height);
 		transition: transform 0.3s ease-in-out;
 		z-index: 1;
+		padding-right: 10px;
 	}
 	.hidden-categories #navigation {
 		transform: translatey(calc((var(--header-categ-height) * -1) - 1px));
