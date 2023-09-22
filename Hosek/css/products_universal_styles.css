@@ -34,7 +34,7 @@
 	}
 	.content-wrapper .products-block .product .p .p-tools button {
 		opacity: 1;
-		height: 36px;
+		height: 36px !important;
 		width: 100%;
 		position: relative;
 	}
