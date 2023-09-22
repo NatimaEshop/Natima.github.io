@@ -1,9 +1,9 @@
-if (document.querySelector("body.in-index")) {
-	/*property to set arrow in the middle of img*/
-	let productImageHeight;
-	/* let sliderItemHeight; */
-	const root = document.querySelector(":root");
+let carouselArrowRight;
+let carouselArrowLeft;
+let productImageHeight; /*property to set arrow in the middle of img*/
+const root = document.querySelector(":root");
 
+if (document.querySelector("body.in-index")) {
 	let productSliderElement = document.querySelector(".in-index .products-block .product .image");
 	let productSliderImage = document.querySelector(".in-index .products-block .product .image img");
 
@@ -99,8 +99,8 @@ if (document.querySelector("body.in-index")) {
 	window.addEventListener("resize", numberOfBannersInSlider);
 	numberOfBannersInSlider();
 
-	let carouselArrowRight = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.right");
-	let carouselArrowLeft = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.left");
+	carouselArrowRight = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.right");
+	carouselArrowLeft = document.querySelector(".in-index .banners-row .col-sm-8 .slider-arrow.left");
 
 	carouselArrowLeft.classList.add("display-none");
 

@@ -58,7 +58,6 @@
 
 .category-content-wrapper {
 	flex: 1;
-	margin-left: var(--padding-sides);
 }
 
 .type-category .products-block.products {
@@ -202,6 +201,9 @@
 @media (min-width: 768px) {
 	.category-top .subcategories {
 		--subcategories-columns: 3;
+	}
+	.category-content-wrapper {
+		margin-left: var(--padding-sides);
 	}
 }
 
