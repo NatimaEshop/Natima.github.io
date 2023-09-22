@@ -165,9 +165,7 @@ if (document.querySelector("body.in-index")) {
 			productSliderJS[i].style.transform = "translateX(-" + translates[i] + "%)";
 			productsArrowsLeft[i].classList.add("display-none");
 			productsArrowsRight[i].classList.remove("display-none");
-			if (matchesMedia992) {
-				return;
-			} else {
+			if (!matchesMedia992) {
 				productsArrowsRight[i].classList.add("display-none");
 			}
 		}
