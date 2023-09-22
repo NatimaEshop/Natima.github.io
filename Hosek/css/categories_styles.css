@@ -256,7 +256,7 @@
 
 @media (max-width: 440px) {
 	.type-category .products-block.products {
-		row-gap: 24px;
+		row-gap: 24px !important;
 	}
 }
 
