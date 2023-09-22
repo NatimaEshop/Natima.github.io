@@ -94,6 +94,18 @@ body.in-index .content.wide h1 {
 	text-align: left;
 }
 
+@media (max-width: 768px) {
+	.show-on-small-mobile {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	.show-on-small-mobile {
+		display: none !important;
+	}
+}
+
 @media (max-width: 992px) {
 	.show-on-mobile {
 		display: block;

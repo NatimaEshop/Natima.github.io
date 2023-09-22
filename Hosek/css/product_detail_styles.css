@@ -117,6 +117,10 @@
 	width: 100%;
 }
 
+#product-detail-form .breadcrumbs {
+	display: flex;
+}
+
 .p-detail .breadcrumbs > *:first-child,
 .p-detail .breadcrumbs > *:last-child,
 .p-detail .breadcrumbs::before,
