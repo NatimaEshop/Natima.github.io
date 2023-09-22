@@ -3,9 +3,34 @@ let carouselArrowLeft;
 let productImageHeight; /*property to set arrow in the middle of img*/
 const root = document.querySelector(":root");
 
+/*carousel*/
+let carouselSliderElementJS;
+let carouselSliderElementParentJQ;
+let amountOfBannersInSlider;
+let realNumberOfBannersInSlider;
+let numberOfScrolledItemsInSlider;
+let carouselTranslateId = 0;
+let translateCarousel = 0;
+
+/*produkt slider*/
+let productSliderElement;
+let productSliderImage;
+let productSlidersJQ;
+let appendElement;
+let amountOfProductsInSlider;
+let productSliderJS;
+let productsArrowsRight;
+let productsArrowsLeft;
+
+/*translate slideru*/
+let translates = [];
+let translateIteration = [];
+let realNumProductsInSlider = [];
+let maximumTranslates = [];
+
 if (document.querySelector("body.in-index")) {
-	let productSliderElement = document.querySelector(".in-index .products-block .product .image");
-	let productSliderImage = document.querySelector(".in-index .products-block .product .image img");
+	productSliderElement = document.querySelector(".in-index .products-block .product .image");
+	productSliderImage = document.querySelector(".in-index .products-block .product .image img");
 
 	function getSliderProductHeight() {
 		productImageHeight = productSliderElement.offsetHeight / 2;
@@ -18,10 +43,10 @@ if (document.querySelector("body.in-index")) {
 	window.addEventListener("resize", getSliderProductHeight);
 
 	/*arrows slider*/
-	let productSlidersJQ = $(".in-index .products-block");
+	productSlidersJQ = $(".in-index .products-block");
 	productSlidersJQ.wrap("<div class='sliderWrap'></div>");
 	productSlidersJQ.wrap("<div class='slider'></div>");
-	let appendElement = $(".sliderWrap");
+	appendElement = $(".sliderWrap");
 
 	for (let i = 0; i < productSlidersJQ.length; i++) {
 		$("<div class='slider-arrow right'></div>").appendTo(appendElement[i]);
@@ -29,21 +54,15 @@ if (document.querySelector("body.in-index")) {
 	}
 
 	/*pocet produktu a overflow v slideru*/
-	let amountOfProductsInSlider;
 	function numberOfProductsInSlider() {
 		amountOfProductsInSlider = getComputedStyle(productSlidersJQ[0]).flexGrow;
 	}
 	window.addEventListener("resize", numberOfProductsInSlider);
 	numberOfProductsInSlider();
 
-	/*translate slideru*/
-	let translates = [];
-	let translateIteration = [];
-	let realNumProductsInSlider = [];
-	let maximumTranslates = [];
-	let productSliderJS = document.querySelectorAll(".in-index .products-block");
-	let productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
-	let productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
+	productSliderJS = document.querySelectorAll(".in-index .products-block");
+	productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
+	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
 
 	for (let i = 0; i < productSliderJS.length; i++) {
 		translates[i] = 0;
@@ -78,20 +97,19 @@ if (document.querySelector("body.in-index")) {
 	}
 
 	/*carousel*/
-	let carouselSliderElementJS = document.querySelector(".in-index .banners-row .col-sm-8 .carousel-inner");
-	let carouselSliderElementParentJQ = $(".in-index .banners-row .col-sm-8");
+	carouselSliderElementJS = document.querySelector(".in-index .banners-row .col-sm-8 .carousel-inner");
+	carouselSliderElementParentJQ = $(".in-index .banners-row .col-sm-8");
 
 	$("<div class='slider-arrow right'></div>").appendTo(carouselSliderElementParentJQ);
 	$("<div class='slider-arrow left'></div>").appendTo(carouselSliderElementParentJQ);
 
 	/*pocet produktu a overflow v slideru*/
-	let amountOfBannersInSlider;
-	let realNumberOfBannersInSlider = document.querySelectorAll(
+	amountOfBannersInSlider;
+	realNumberOfBannersInSlider = document.querySelectorAll(
 		".in-index .banners-row .col-sm-8 .carousel-inner .item"
 	).length;
-	let numberOfScrolledItemsInSlider = amountOfBannersInSlider;
-	let carouselTranslateId = 0;
-	let translateCarousel = 0;
+
+	numberOfScrolledItemsInSlider = amountOfBannersInSlider;
 
 	function numberOfBannersInSlider() {
 		amountOfBannersInSlider = getComputedStyle(carouselSliderElementParentJQ[0]).flexGrow;
