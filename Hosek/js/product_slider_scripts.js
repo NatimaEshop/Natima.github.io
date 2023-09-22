@@ -177,9 +177,7 @@ if (document.querySelector("body.in-index")) {
 		carouselSliderElementJS.style.transform = "translateX(-" + translateCarousel + "%)";
 		carouselArrowLeft.classList.add("display-none");
 		carouselArrowRight.classList.remove("display-none");
-		if (matchesMedia992) {
-			return;
-		} else {
+		if (!matchesMedia992) {
 			carouselArrowRight.classList.add("display-none");
 		}
 	});
