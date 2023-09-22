@@ -86,14 +86,14 @@ if (document.querySelector(".type-category")) {
 }
 
 /*detail produktu*/
+let productNameInDetail;
 if (document.body.classList.contains("type-detail")) {
 	/*nadpis a vlajecky do praveho sloupce*/
 	$(".p-code-label").text("Kód produktu:");
 	$(".row.product-top > div:first-child()").insertBefore(
 		"#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()"
 	);
-	const productNameInDetail = $(".p-detail-inner-header h1").html();
-	productNameInDetail.insertBefore($(".p-detail-tabs-wrapper"));
+	productNameInDetail = $(".p-detail-inner-header h1").html();
 
 	$(".p-detail-inner-header").insertBefore("#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()");
 	$(".breadcrumbs").insertBefore("#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()");
