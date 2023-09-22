@@ -249,6 +249,15 @@
 		background: transparent !important;
 		opacity: 1;
 	}
+	.type-category .products-block > div .p a.image {
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 440px) {
+	.type-category .products-block.products {
+		row-gap: 24px;
+	}
 }
 
 @media (min-width: 440px) {
@@ -280,6 +289,12 @@
 	.type-category .products-block.products {
 		--product-cat-columns: 3;
 		--product-cat-gap: 12px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.type-category .products-block.products {
+		row-gap: calc(var(--product-cat-gap) * 3);
 	}
 }
 
