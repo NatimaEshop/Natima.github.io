@@ -2,20 +2,20 @@
 let categorySecondDesc;
 if (document.querySelector(".type-category")) {
 	/*rearrange menu*/
-	/* 	function rearangeCategory() {
+	function rearangeCategory() {
 		$("#content .category-top").insertBefore(".content-wrapper-in");
 		document.querySelector("#category-filter-hover").classList.add("visible");
 	}
-	rearangeCategory(); */
+	rearangeCategory();
 
 	/*zmena serazeni a filteru*/
-	/* 	function editCategoryArrangment() {
+	function editCategoryArrangment() {
 		document.addEventListener("ShoptetDOMContentLoaded", function () {
 			$("#content .category-top").remove();
 			document.querySelector("#category-filter-hover").classList.add("visible");
 			readMoreSecondButton();
 		});
-	} */
+	}
 	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
 
 	/*read more*/

@@ -131,7 +131,8 @@
 .item a .carousel-banner-content.dark .carousel-banner-button:hover,
 .body-banners a .carousel-banner-content.dark .carousel-banner-button:hover,
 .footer-banners a .carousel-banner-content.dark .carousel-banner-button:hover {
-	background-color: var(--color-gray-400);
+	background-color: var(--color-primary);
+	color: white;
 }
 
 .carousel-control {
