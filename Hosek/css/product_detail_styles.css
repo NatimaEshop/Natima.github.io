@@ -478,7 +478,8 @@
 
 /*Kavy*/
 .description-inner img {
-	max-width: 200%;
+	max-width: 100%;
+	/*max-width: 100%;*/
 }
 
 .asset30procentRightSideOverflowNatiosKapsle {
@@ -486,6 +487,10 @@
 	width: auto;
 	flex: 1;
 	right: 0 !important;
+}
+
+.asset30procentRightSideOverflowNatiosKapsle img {
+	max-width: 166%;
 }
 
 .sekceProduktu {
