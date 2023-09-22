@@ -666,11 +666,18 @@
 	}
 
 	#header .header-top > .search {
-		opacity: 0;
-		max-width: 0px;
+		position: fixed;
 		margin: 0;
-		padding: 0;
+		padding: 10px 0;
+		top: calc(var(--header-height));
+		width: 100vw;
+		left: 0;
+		background: var(--color-primary-100);
 	}
+	#header .header-top > .search fieldset {
+		width: 70%;
+	}
+
 	.luigi-ac-heromobile.luigi-ac-autocomplete.luigi-ac-open {
 		opacity: 1;
 	}
