@@ -26,18 +26,19 @@
 }
 
 @media (max-width: 1200px) {
-	.products .product .p .p-tools {
+	/*vse v content wrapper kvuli priorite*/
+	.content-wrapper .products .product .p .p-tools {
 		width: 36px;
 		right: 8px;
 		top: calc(var(--marginProductInfo) * -1 - 8px);
 	}
-	.products-block .product .p .p-tools button {
+	.content-wrapper .products-block .product .p .p-tools button {
 		opacity: 1;
 		height: 36px;
 		width: 100%;
 		position: relative;
 	}
-	.products-block .product .p .p-tools button::after {
+	.content-wrapper .products-block .product .p .p-tools button::after {
 		content: "";
 		background-image: url(https://595805.myshoptet.com/user/documents/upload/addToCartIcon.svg);
 		background-size: contain;
@@ -51,16 +52,16 @@
 		transform: translate(-50%, -50%);
 	}
 
-	.products-block .product .p .p-tools button span {
+	.content-wrapper .products-block .product .p .p-tools button span {
 		display: none;
 	}
-	.products .product div.flags-extra {
+	.content-wrapper .products .product div.flags-extra {
 		bottom: 8px;
 		left: 8px;
 		width: clamp(60px, 50%, 90px) !important;
 		transform: none;
 	}
-	.products .product div.flags-extra .flag.flag-discount {
+	.content-wrapper .products .product div.flags-extra .flag.flag-discount {
 		transform: none !important;
 		width: 100%;
 	}
