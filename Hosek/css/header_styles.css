@@ -674,6 +674,7 @@
 		left: 0;
 		background: var(--color-primary-100);
 	}
+
 	#header .header-top > .search fieldset {
 		width: 70%;
 	}
