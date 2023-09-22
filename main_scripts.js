@@ -94,6 +94,7 @@ if (document.body.classList.contains("type-detail")) {
 		"#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()"
 	);
 	productNameInDetail = $(".p-detail-inner-header h1").html();
+	/*TADY*/
 
 	$(".p-detail-inner-header").insertBefore("#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()");
 	$(".breadcrumbs").insertBefore("#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()");
