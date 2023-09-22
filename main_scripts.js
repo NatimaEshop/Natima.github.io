@@ -85,6 +85,40 @@ if (document.querySelector(".type-category")) {
 	readMoreSecondButton();
 }
 
+/*detail produktu*/
+if (document.body.classList.contains("type-detail")) {
+	/*nadpis a vlajecky do praveho sloupce*/
+	$(".p-code-label").text("Kód produktu:");
+	$(".row.product-top > div:first-child()").insertBefore(
+		"#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()"
+	);
+	const productNameInDetail = $(".p-detail-inner-header h1").html();
+	productNameInDetail.insertBefore($(".p-detail-tabs-wrapper"));
+
+	$(".p-detail-inner-header").insertBefore("#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()");
+	$(".breadcrumbs").insertBefore("#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()");
+
+	document.addEventListener("DOMContentLoaded", function (event) {
+		$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
+		$(".p-detail-inner-header > h1").clone().appendTo(".description-inner .extended-description");
+		$(".description-inner .extended-description h1").replaceWith(
+			"<p>" + $(".description-inner .extended-description h1").html() + "</p>"
+		);
+		$(".description-inner .extended-description p").addClass("h1");
+		$("#product-detail-form").clone().removeAttr("id").appendTo(".description-inner .extended-description");
+
+		$(".description-inner .p-detail-info").insertBefore(".description-inner .row.product-top");
+		$(".description-inner .p-final-price-wrapper").insertBefore(".description-inner .row.product-top");
+		$(".description-inner .add-to-cart").insertBefore(".description-inner .row.product-top");
+
+		$(".description-inner .col-xs-12 > .p-detail-inner-header").remove();
+		$(".description-inner .col-xs-12 > .breadcrumbs").remove();
+		$(".description-inner .col-xs-12 > .col-xs-12").remove();
+
+		$(".p-code").clone().appendTo(".description-inner .extended-description");
+	});
+}
+
 /*faq*/
 if (document.querySelector(".contact-faq")) {
 	$(".contact-faq-question > p").on("click", function () {
