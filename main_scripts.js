@@ -122,6 +122,7 @@ if (document.body.classList.contains("type-detail")) {
 
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
+		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
 		$(".p-detail-inner-header > h1").clone().appendTo(".description-inner .extended-description");
 		$(".description-inner .extended-description h1").replaceWith(
 			"<p>" + $(".description-inner .extended-description h1").html() + "</p>"
@@ -139,8 +140,8 @@ if (document.body.classList.contains("type-detail")) {
 
 		$(".p-code").clone().appendTo(".description-inner .extended-description");
 
-		$(".dkLabFavouriteDiv").eq(1).remove();
-		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
+		/* $(".dkLabFavouriteDiv").eq(1).remove(); */
+		/* $(".dkLabFavouriteDiv").insertAfter(".add-to-cart button"); */
 	});
 }
 
