@@ -25,6 +25,18 @@
 	margin-bottom: 0;
 }
 
+/*oblibene*/
+.dkLabFavouriteProductDiv {
+	transition: transform 0.1s ease;
+}
+.dkLabFavouriteProductDiv:hover {
+	transform: scale(1.05);
+}
+
+.dkLabFavProductSpan::before {
+	color: var(--color-primary);
+}
+
 @media (max-width: 1200px) {
 	/*vse v content wrapper kvuli priorite*/
 	.content-wrapper .products .product .p .p-tools {
