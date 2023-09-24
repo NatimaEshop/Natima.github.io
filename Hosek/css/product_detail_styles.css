@@ -442,9 +442,6 @@
 	font-weight: 600;
 }
 
-.social-buttons-wrapper {
-	justify-content: flex-end;
-}
 .social-buttons-wrapper .link-icons {
 	gap: var(--gap);
 }
