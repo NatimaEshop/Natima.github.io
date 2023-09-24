@@ -122,11 +122,11 @@ if (document.body.classList.contains("type-detail")) {
 
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
-		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
+		$(".dkLabFavouriteDiv").removeAttr("id").insertAfter(".add-to-cart button");
 		$(".stars-wrapper").appendTo(".p-final-price-wrapper");
 
 		if ($(".availability-value").text().indexOf("Momen") > -1) {
-			$(".availability-label").addClass("red");
+			$(".availability-value").addClass("red");
 		}
 
 		$(".p-detail-inner-header > h1").clone().appendTo(".description-inner .extended-description");
