@@ -123,9 +123,9 @@ if (document.body.classList.contains("type-detail")) {
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
 		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
-		$(".stars-wrapper").insertAfter(".p-final-price-wrapper");
+		$(".stars-wrapper").appendTo(".p-final-price-wrapper");
 
-		if ($(".availability-label").text().indexOf("Momen") > -1) {
+		if ($(".availability-value").text().indexOf("Momen") > -1) {
 			$(".availability-label").addClass("red");
 		}
 
