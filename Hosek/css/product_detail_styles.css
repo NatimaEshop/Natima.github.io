@@ -60,15 +60,6 @@
 	margin-bottom: 14px;
 }
 
-.p-detail .p-final-price-wrapper::after {
-	content: "";
-	width: 20%;
-	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/hvezdy1.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-}
-
 .p-detail .add-to-cart {
 	display: flex;
 	gap: var(--gap);
@@ -162,8 +153,11 @@
 	margin-left: calc(var(--productDetailIconWidth) / (2 * 2));
 	margin-right: calc(var(--productDetailIconWidth) / (2 * 2) + 5px);
 	display: block;
-	background: rgb(215, 34, 34);
+	background: rgb(53, 166, 64);
 	border-radius: 50%;
+}
+.p-detail .availability-value.red::before {
+	background: rgb(215, 34, 34);
 }
 
 .p-detail .detail-parameters {
@@ -252,6 +246,16 @@
 		flex: 1 0 auto;
 		width: clamp(300px, 33%, 420px);
 	}
+}
+
+.type-product #dkLabFavouriteDiv {
+	margin: 0;
+}
+.type-product .dkLabFavDetailSpan span {
+	display: none !important;
+}
+.p-detail .extended-description .stars-label {
+	display: none;
 }
 
 /*top detailu*/

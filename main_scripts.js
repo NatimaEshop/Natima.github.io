@@ -123,6 +123,12 @@ if (document.body.classList.contains("type-detail")) {
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
 		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
+		$(".stars-wrapper").insertAfter(".p-final-price-wrapper");
+
+		if ($(".availability-label").text().indexOf("Momen") > -1) {
+			$(".availability-label").addClass("red");
+		}
+
 		$(".p-detail-inner-header > h1").clone().appendTo(".description-inner .extended-description");
 		$(".description-inner .extended-description h1").replaceWith(
 			"<p>" + $(".description-inner .extended-description h1").html() + "</p>"
@@ -139,9 +145,6 @@ if (document.body.classList.contains("type-detail")) {
 		$(".description-inner .col-xs-12 > .col-xs-12").remove();
 
 		$(".p-code").clone().appendTo(".description-inner .extended-description");
-
-		/* $(".dkLabFavouriteDiv").eq(1).remove(); */
-		/* $(".dkLabFavouriteDiv").insertAfter(".add-to-cart button"); */
 	});
 }
 
