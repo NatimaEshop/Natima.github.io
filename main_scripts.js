@@ -31,7 +31,7 @@ if (document.querySelector(".type-category")) {
 		});
 	}
 	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
-	document.addEventListener("ShoptetDOMContentLoaded", favoritesMove);
+	document.addEventListener("ShoptetDOMPageContentLoaded", favoritesMove);
 
 	/*radit dle mobil*/
 	$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
