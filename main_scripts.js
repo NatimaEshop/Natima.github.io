@@ -31,7 +31,13 @@ if (document.querySelector(".type-category")) {
 		});
 	}
 	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
-	document.addEventListener("ShoptetDOMPageContentLoaded", favoritesMove);
+	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
+		/*srdicko*/
+		allProducts = document.querySelectorAll(".product .p");
+		allProducts.forEach((element) => {
+			element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
+		});
+	});
 
 	/*radit dle mobil*/
 	$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
