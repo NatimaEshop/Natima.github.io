@@ -20,7 +20,7 @@ if (document.querySelector(".type-category")) {
 		document.querySelector("#category-filter-hover").classList.add("visible");
 	}
 	rearangeCategory();
-	favoritesMove();
+	document.addEventListener("DOMContentLoaded", favoritesMove);
 
 	/*zmena serazeni a filteru*/
 	function editCategoryArrangment() {
