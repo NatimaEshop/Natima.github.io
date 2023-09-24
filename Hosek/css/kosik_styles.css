@@ -81,7 +81,21 @@ ol.cart-header li.active strong span::before {
 }
 
 /*krok 1*/
+.in-kosik tr.related,
+.in-kosik .show-related {
+	display: none;
+}
 
+.applied-coupon form {
+	position: absolute;
+	right: 0;
+	top: 0;
+	box-shadow: none;
+}
+
+.applied-coupon form .btn {
+	border-radius: var(--border-radius);
+}
 .ordering-process .row.cart-row {
 	display: flex;
 	align-items: flex-start;
