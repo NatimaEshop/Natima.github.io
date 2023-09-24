@@ -1,3 +1,16 @@
+/*hl stránka*/
+let allProducts;
+function favoritesMove() {
+	/*srdicko*/
+	allProducts = document.querySelectorAll(".product .p");
+	allProducts.forEach((element) => {
+		element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
+	});
+}
+if (document.body.classList.contains("in-index")) {
+	favoritesMove();
+}
+
 /*KATEGORIE*/
 let categorySecondDesc;
 if (document.querySelector(".type-category")) {
@@ -7,6 +20,7 @@ if (document.querySelector(".type-category")) {
 		document.querySelector("#category-filter-hover").classList.add("visible");
 	}
 	rearangeCategory();
+	favoritesMove();
 
 	/*zmena serazeni a filteru*/
 	function editCategoryArrangment() {
@@ -17,6 +31,7 @@ if (document.querySelector(".type-category")) {
 		});
 	}
 	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
+	document.addEventListener("DOMContentLoaded", favoritesMove());
 
 	/*radit dle mobil*/
 	$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
