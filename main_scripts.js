@@ -122,7 +122,7 @@ if (document.body.classList.contains("type-detail")) {
 
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
-		$(".dkLabFavouriteDiv").removeAttr("id").insertAfter(".add-to-cart button");
+		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
 		$(".stars-wrapper").appendTo(".p-final-price-wrapper");
 
 		if ($(".availability-value").text().indexOf("Momen") > -1) {
