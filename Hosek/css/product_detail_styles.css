@@ -88,17 +88,6 @@
 .p-detail .add-to-cart button::before {
 	display: none;
 }
-.p-detail .add-to-cart::after {
-	display: block;
-	content: "";
-	width: 56px;
-	height: 100%;
-	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/srdce5.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	border-radius: var(--border-radius);
-	background-position: center;
-}
 
 .p-detail .add-to-cart button:hover {
 	background: var(--color-primary-hover);
