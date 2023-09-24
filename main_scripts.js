@@ -143,7 +143,7 @@ if (document.body.classList.contains("type-detail")) {
 		$(".description-inner .col-xs-12 > .p-detail-inner-header").remove();
 		$(".description-inner .col-xs-12 > .breadcrumbs").remove();
 		$(".description-inner .col-xs-12 > .col-xs-12").remove();
-
+		$(".description-inner .dkLabFavouriteDiv").remove();
 		$(".p-code").clone().appendTo(".description-inner .extended-description");
 	});
 }
