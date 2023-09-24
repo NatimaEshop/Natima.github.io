@@ -138,6 +138,9 @@ if (document.body.classList.contains("type-detail")) {
 		$(".description-inner .col-xs-12 > .col-xs-12").remove();
 
 		$(".p-code").clone().appendTo(".description-inner .extended-description");
+
+		$(".dkLabFavouriteDiv").eq(1).remove();
+		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
 	});
 }
 
