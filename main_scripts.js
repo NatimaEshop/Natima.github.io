@@ -8,7 +8,7 @@ function favoritesMove() {
 	});
 }
 if (document.body.classList.contains("in-index")) {
-	favoritesMove();
+	document.addEventListener("DOMContentLoaded", favoritesMove);
 }
 
 /*KATEGORIE*/
@@ -31,7 +31,7 @@ if (document.querySelector(".type-category")) {
 		});
 	}
 	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
-	document.addEventListener("DOMContentLoaded", favoritesMove());
+	document.addEventListener("ShoptetDOMContentLoaded", favoritesMove);
 
 	/*radit dle mobil*/
 	$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
