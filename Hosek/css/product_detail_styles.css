@@ -99,6 +99,7 @@
 	background: #f6f6f6;
 	border-radius: var(--border-radius);
 	padding: 20px 20px;
+	margin-top: 20px;
 }
 
 .description-inner .p-info-wrapper {
@@ -583,7 +584,7 @@
 .shp-tabs-row {
 	margin-top: var(--gap);
 	margin-bottom: 4px;
-	background: #f9f9f9;
+	background: #f6f6f6;
 	border-radius: var(--border-radius);
 }
 
