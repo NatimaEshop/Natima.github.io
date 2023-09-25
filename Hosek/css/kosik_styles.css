@@ -1063,6 +1063,58 @@ ol.cart-header li.active strong span::before {
 		margin-top: 0;
 		padding: 20px 0px;
 	}
+	.in-krok-2 .cart-header.step-2 {
+		margin-bottom: var(--gap);
+	}
+	.in-krok-2 .co-contact-information,
+	.in-krok-2 .co-billing-address,
+	.in-krok-2 #shipping-address {
+		width: 100%;
+	}
+	.in-krok-2 .co-contact-information {
+		margin-bottom: calc(var(--gap) * 3);
+	}
+	.in-krok-2 .form-group > input.form-control,
+	.in-krok-2 .form-group > select.form-control,
+	.in-krok-2 .phone-combined-input,
+	.in-krok-2 .form-group > div > a {
+		width: 100%;
+	}
+	.in-krok-2 .checkout-box {
+		background: transparent;
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
+	}
+	.in-krok-2 .form-group > input.form-control,
+	.in-krok-2 .form-group > select.form-control,
+	.in-krok-2 .phone-combined-input,
+	.in-krok-2 .form-group > div > a {
+		grid-row: 5;
+	}
+	.in-krok-2 #shipping-billing-summary {
+		display: none;
+	}
+	.in-krok-2 .order-recapitulation {
+		margin-top: 20px !important;
+	}
+	.in-krok-2 .summary-background {
+		grid-row-start: 5;
+		grid-row-end: 11;
+		margin-top: 0 !important;
+	}
+	.in-krok-2 .consents-first {
+		grid-row: 9;
+	}
+	.in-krok-2.ordering-process .next-step {
+		grid-row: 10;
+		margin-bottom: 20px;
+	}
+	.in-krok-2 .order-summary {
+		padding-top: 40px;
+	}
+	.in-krok-2 .js-validator-msg {
+		margin-left: 0;
+	}
 }
 
 @media (max-width: 768px) {
