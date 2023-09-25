@@ -92,7 +92,7 @@
 }
 .carousel-banner-content .carousel-banner-heading {
 	font-size: inherit;
-	min-height: 2.292em;
+	/* 	min-height: 2.292em; */
 	color: inherit;
 }
 .carousel-banner-content .carousel-banner-text {
