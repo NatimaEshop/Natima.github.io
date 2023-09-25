@@ -155,6 +155,14 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 		brandReadMoreFirstButton();
 		$("#content #filters-wrapper").remove();
 	});
+
+	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
+		/*srdicko*/
+		allProducts = document.querySelectorAll(".product .p");
+		allProducts.forEach((element) => {
+			element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
+		});
+	});
 }
 
 /*detail produktu*/
