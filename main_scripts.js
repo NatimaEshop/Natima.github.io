@@ -117,7 +117,7 @@ let parentNode;
 
 if (document.body.classList.contains("type-manufacturer-detail")) {
 	$("#filters-wrapper").addClass("sidebar sidebar-left").insertBefore("#content");
-	document.addEventListener("DOMContentLoaded", favoritesMove());
+	document.addEventListener("DOMContentLoaded", favoritesMove);
 
 	brandPerexReadMore = document.querySelector("#content > table");
 
