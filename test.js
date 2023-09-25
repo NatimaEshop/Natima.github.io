@@ -1,19 +1,45 @@
-/*kategorie na mobil*/
-$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
-$(".raditPodle").on("click tap touchstart", function () {
-	$(".category-header").toggleClass("active");
-});
+let brandPerexReadMore;
+let showMoreBrand;
+let showLessBrand;
+let showMoreBrandContent;
+let showLessBrandContent;
 
-document.addEventListener("ShoptetPageSortingChanged", filterMobileRearange);
-document.addEventListener("ShoptetPageFilterValueChange", filterMobileRearange);
-document.addEventListener("ShoptetPageFiltersCleared", filterMobileRearange);
-document.addEventListener("ShoptetPagePriceFilterChange", filterMobileRearange);
+if (document.body.classList.contains("type-manufacturer-detail")) {
+	$("#filters-wrapper").addClass("sidebar sidebar-left").insertBefore("#content");
+	document.addEventListener("DOMContentLoaded", favoritesMove());
 
-function filterMobileRearange() {
-	if (!matchesMedia768) {
+	brandPerexReadMore = document.querySelector("#content > table");
+
+	function brandReadMoreFirstButton() {
+		if (brandPerexReadMore) {
+			function insertAfter(newNode, existingNode) {
+				existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+			}
+
+			showMoreBrand = document.createElement("span");
+			showLessBrand = document.createElement("span");
+
+			showMoreBrandContent = document.createTextNode("Zobrazit více");
+			showLessBrandContent = document.createTextNode("Zobrazit méně");
+
+			showMoreBrand.appendChild(showMoreBrandContent);
+			showLessBrand.appendChild(showLessBrandContent);
+
+			showMoreBrand.classList.add("category-read", "more");
+			showLessBrand.classList.add("category-read", "less");
+
+			insertAfter(showMoreBrand, brandPerexReadMore);
+			insertAfter(showLessBrand, brandPerexReadMore);
+
+			showMoreBrand.addEventListener("click", function (e) {
+				e.target.parentElement.classList.add("expanded");
+			});
+			showLessBrand.addEventListener("click", function (e) {
+				e.target.parentElement.classList.remove("expanded");
+			});
+		}
 	}
-}
+	brandReadMoreFirstButton();
 
-if ($(".availability-label").text().indexOf("Momen") > -1) {
-	$(".availability-label").addClass("red");
+	document.addEventListener("ShoptetDOMPageContentLoaded", brandReadMoreFirstButton);
 }
