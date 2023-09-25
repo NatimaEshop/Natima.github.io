@@ -2,14 +2,14 @@
 	display: none;
 }
 
-.cart-header .step.step-1 {
-	content: "1";
+.cart-header .step.step-1 span::before {
+	content: "1" !important;
 }
-.cart-header .step.step-1 {
-	content: "2";
+.cart-header .step.step-2 span::before {
+	content: "2" !important;
 }
-.cart-header .step.step-1 {
-	content: "3";
+.cart-header .step.step-3 span::before {
+	content: "3" !important;
 }
 .ordering-process .next-step-back {
 	line-height: 1;
