@@ -303,12 +303,6 @@
 	height: auto;
 }
 
-@media (max-width: 500px) {
-	#dkLabFavouriteDiv {
-		margin-left: auto !important;
-	}
-}
-
 .type-product .dkLabFavouriteDetailLinkRemove {
 	background: none !important;
 	border-style: solid;
@@ -502,6 +496,7 @@
 	margin-left: 0;
 }
 #product-detail-form .add-to-cart {
+	height: 56px;
 	justify-content: flex-start;
 	gap: var(--gap);
 }
@@ -919,5 +914,14 @@
 
 	.description-inner {
 		padding: 0;
+	}
+}
+
+@media (max-width: 400px) {
+	#dkLabFavouriteDiv {
+		margin-left: auto !important;
+	}
+	#product-detail-form .add-to-cart {
+		height: auto;
 	}
 }
