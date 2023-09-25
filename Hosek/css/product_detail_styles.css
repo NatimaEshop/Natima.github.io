@@ -429,6 +429,12 @@
 	padding-right: calc(var(--gap) * 2);
 }
 
+@media (max-width: 768px) {
+	#product-detail-form > .row .p-image-wrappe {
+		padding-right: 0;
+	}
+}
+
 #product-detail-form > .row .p-info-wrapper {
 	padding: 0;
 	width: 100%;
