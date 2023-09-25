@@ -583,6 +583,8 @@
 .shp-tabs-row {
 	margin-top: var(--gap);
 	margin-bottom: 4px;
+	background: #f9f9f9;
+	border-radius: var(--border-radius);
 }
 
 .shp-tab a {
@@ -594,7 +596,7 @@
 }
 
 .type-product .shp-tab a {
-	background: white;
+	background: transparent;
 }
 .type-product .shp-tab.active a {
 	color: var(--color-black-600);
