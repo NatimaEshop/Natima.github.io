@@ -2,6 +2,19 @@
 	display: none;
 }
 
+.cart-header .step.step-1 {
+	content: "1";
+}
+.cart-header .step.step-1 {
+	content: "2";
+}
+.cart-header .step.step-1 {
+	content: "3";
+}
+.ordering-process .next-step-back {
+	line-height: 1;
+}
+
 body.ordering-process {
 	background-color: transparent;
 	padding-bottom: 6vh;
@@ -971,5 +984,28 @@ ol.cart-header li.active strong span::before {
 @media (max-width: 768px) {
 	.in-kosik #dkLabFavCartWrapper .products {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.cart-header {
+		position: relative !important;
+	}
+	.cart-header .step {
+		display: none !important;
+	}
+	.cart-header .step.active {
+		width: 100%;
+		display: block !important;
+	}
+	.ordering-process .cart-header .step span::after {
+		display: none;
+	}
+	ol.cart-header li {
+		padding: 0 20px 20px;
+	}
+	.ordering-process .top-navigation-tools {
+		padding-right: 30px !important;
+	}
+	.ordering-process #header .responsive-tools .toggle-window[data-target="navigation"] {
+		top: 5px;
+		right: 14px;
 	}
 }
