@@ -156,9 +156,9 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 		$("#content #filters-wrapper").remove();
 	});
 
-	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
+	document.addEventListener("ShoptetDOMContentLoaded", function () {
 		document.addEventListener(
-			"shoptet.products.sameHeightOfProducts",
+			"ShoptetDOMPageContentLoaded",
 			function () {
 				/*srdicko*/
 				allProducts = document.querySelectorAll(".product .p");
