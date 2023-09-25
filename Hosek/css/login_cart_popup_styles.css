@@ -208,12 +208,17 @@
 		right: 0 !important;
 		top: var(--header-height) !important;
 	}
+	.login-widget .popup-widget-inner {
+		border-radius: 0 0 var(--border-radius) var(--border-radius);
+		box-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+	}
 	.user-action-in .user-action-cart {
 		width: 100vw;
 		left: 0;
 		right: 0 !important;
 		top: var(--header-height) !important;
 		height: fit-content;
+		border-radius: 0 0 var(--border-radius) var(--border-radius);
 	}
 	.cart-widget-products-inner {
 		max-height: 50vh;
