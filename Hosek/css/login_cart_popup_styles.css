@@ -18,6 +18,7 @@
 .user-action-login.popup-widget .popup-widget-inner {
 	border-style: none;
 	border-radius: var(--border-radius);
+	background: var(--color-primary);
 }
 .user-action-login.popup-widget .popup-widget-inner .login-wrapper {
 	display: flex;
