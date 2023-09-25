@@ -242,7 +242,7 @@
 	margin-right: 4px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1320px) {
 	.extended-description {
 		display: none;
 	}
@@ -250,7 +250,7 @@
 		overflow-x: hidden;
 	}
 }
-@media (min-width: 1440px) {
+@media (min-width: 1320px) {
 	.description-inner {
 		flex-wrap: nowrap;
 	}
