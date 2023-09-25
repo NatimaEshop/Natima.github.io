@@ -593,6 +593,28 @@
 	font-weight: 600;
 }
 
+.type-product .shp-tab a {
+	background: white;
+}
+.type-product .shp-tab.active a {
+	color: var(--color-black-600);
+}
+.type-product .products-related .product {
+	border-style: none;
+}
+.type-product .products-related .p-code {
+	display: none;
+}
+.type-product .products-related img {
+	margin: 30px 0 40px 0;
+}
+.type-product .products-related .dkLabFavouriteProductDiv {
+	display: none;
+}
+.type-product .products-related .flags.flags-default {
+	margin: 8px 0px 0 8px;
+}
+
 /*Kavy*/
 .description-inner img {
 	max-width: 100%;
@@ -685,11 +707,6 @@
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
-
-/*overflow scroll*/
-/*.content-wrapper:has(.asset30procentRightSideOverflowNatiosKapsle){
- overflow-x: hidden;
-}*/
 
 @media screen and (min-width: 1000px) {
 	.imghide_pc {
@@ -906,6 +923,9 @@
 	}
 	#product-detail-form > .row .p-image-wrapper {
 		padding-right: 0;
+	}
+	.type-product .products-related .p > a {
+		margin-bottom: 0 !important;
 	}
 }
 
