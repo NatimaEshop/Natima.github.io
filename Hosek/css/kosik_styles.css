@@ -965,7 +965,7 @@ ol.cart-header li.active strong span::before {
 	padding: 40px;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1000px) {
 	.in-kosik .row.cart-row {
 		flex-direction: column;
 	}
