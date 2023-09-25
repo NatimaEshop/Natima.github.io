@@ -268,6 +268,23 @@ ol.cart-header li.active strong span::before {
 	padding-bottom: 2px;
 }
 
+.in-kosik #dkLabFavCartWrapper .products {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--gap);
+}
+.in-kosik #dkLabFavCartWrapper .products img {
+	margin: 20px 0 30px 0;
+}
+.in-kosik #dkLabFavCartWrapper .product {
+	width: 100%;
+	border-style: none;
+}
+.in-kosik #dkLabFavCartWrapper {
+	max-width: 1440px;
+	margin: auto;
+}
+
 /*potrebujete pomoc?*/
 .sidebar-in-cart {
 	max-width: 440px;
@@ -929,4 +946,26 @@ ol.cart-header li.active strong span::before {
 
 .in-dekujeme .co-order {
 	padding: 40px;
+}
+
+@media (max-width: 1200px) {
+	.in-kosik .row.cart-row {
+		flex-direction: column;
+	}
+	.in-kosik .row.cart-row > div {
+		flex: 1 0 100% !important;
+	}
+	.in-kosik .sidebar-in-cart {
+		max-width: none;
+		width: 100%;
+		margin-left: 0;
+	}
+	.in-kosik #dkLabFavCartWrapper .products {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media (max-width: 768px) {
+	.in-kosik #dkLabFavCartWrapper .products {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
