@@ -19,6 +19,7 @@
 	border-style: none;
 	border-radius: var(--border-radius);
 	background: var(--color-primary-100);
+	height: auto;
 }
 .user-action-login.popup-widget .popup-widget-inner .login-wrapper {
 	display: flex;
@@ -226,7 +227,7 @@
 		left: 0;
 		right: 0 !important;
 		top: var(--header-height) !important;
-		height: fit-content;
+		height: auto;
 		border-radius: 0 0 var(--border-radius) var(--border-radius);
 	}
 	.user-action-in .user-action-cart > div {
