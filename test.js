@@ -13,3 +13,7 @@ function filterMobileRearange() {
 	if (!matchesMedia768) {
 	}
 }
+
+if ($(".availability-label").text().indexOf("Momen") > -1) {
+	$(".availability-label").addClass("red");
+}

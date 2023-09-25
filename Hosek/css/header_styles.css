@@ -625,7 +625,7 @@
 
 @media (min-width: 1200px) {
 	.header-top {
-		gap: 2%;
+		gap: 25px;
 	}
 	#header .header-top .search {
 		margin-right: 30px;

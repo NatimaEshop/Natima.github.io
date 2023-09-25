@@ -6,7 +6,7 @@
 .user-action-login.popup-widget {
 	position: fixed;
 	top: calc(var(--header-height) + 0px) !important;
-	right: 212px !important;
+	right: 190px !important;
 	left: auto;
 }
 .user-action-login.popup-widget::before {
