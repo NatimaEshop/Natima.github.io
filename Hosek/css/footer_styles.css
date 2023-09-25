@@ -180,3 +180,28 @@ body footer .container.footer-bottom {
 #footer .online-payment.mastercard {
 	height: 90%;
 }
+
+@media (max-width: 768px) {
+	.in-index .copyright {
+		text-align: left;
+	}
+	.newsletter-image {
+		display: none;
+	}
+	footer .banner {
+		min-height: auto;
+		margin: 0;
+	}
+	footer .custom-footer > div {
+		padding: 0 !important;
+		margin-bottom: 40px;
+		text-align: left;
+	}
+	footer .banner-wrapper {
+		margin: 0;
+	}
+	footer ul,
+	footer li {
+		margin: 0;
+	}
+}

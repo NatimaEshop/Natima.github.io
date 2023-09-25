@@ -279,10 +279,6 @@
 	padding: 0;
 }
 
-.type-product #dkLabFavouriteDiv {
-	height: 100%;
-	margin: 0;
-}
 .type-product #dkLabFavouriteDiv .dkLabFavDetailSpan {
 	border-radius: var(--border-radius);
 	background: var(--color-black-600);
