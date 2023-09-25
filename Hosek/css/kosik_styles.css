@@ -980,7 +980,65 @@ ol.cart-header li.active strong span::before {
 	.in-kosik #dkLabFavCartWrapper .products {
 		grid-template-columns: repeat(3, 1fr);
 	}
+
+	.in-krok-1 .cart-content form.order-delivery-payment-form {
+		grid-template-columns: 1fr;
+		gap: calc(var(--gap) * 4);
+	}
+	.in-krok-1.ordering-process .order-summary-inner,
+	.in-krok-2.ordering-process .order-summary-inner {
+		grid-template-columns: 1fr;
+	}
+	.in-krok-1.ordering-process .order-summary-inner .cart-items,
+	.in-krok-2.ordering-process .order-summary-inner .cart-items {
+		grid-row: 2;
+	}
+	.in-krok-1.ordering-process .order-summary-inner .cart-items.gift-items,
+	.in-krok-2.ordering-process .order-summary-inner .cart-items.gift-items {
+		grid-row: 3;
+		margin-bottom: 10px;
+	}
+	.in-krok-1 .rekapitulace-background,
+	.in-krok-2 .rekapitulace-background {
+		grid-row-start: 1;
+		grid-row-end: 4;
+		height: 100%;
+	}
+	.in-krok-1.ordering-process .order-summary-inner > *,
+	.in-krok-2.ordering-process .order-summary-inner > * {
+		grid-column: 1;
+	}
+	.in-krok-1.ordering-process #shipping-billing-summary,
+	.in-krok-2.ordering-process #shipping-billing-summary {
+		grid-row: 6;
+		margin-top: 40px;
+	}
+	.in-krok-1.ordering-process .order-summary-item.helper,
+	.in-krok-2.ordering-process .order-summary-item.helper {
+		grid-row: 7;
+		grid-column: 1 !important;
+	}
+	.in-krok-1.ordering-process .order-summary-item.price,
+	.in-krok-2.ordering-process .order-summary-item.price {
+		grid-row: 8;
+	}
+	.in-krok-1.ordering-process .next-step {
+		grid-row: 9;
+	}
+	.in-krok-1 .summary-background,
+	.in-krok-2 .summary-background {
+		grid-column: 1 !important;
+		grid-row-start: 6;
+		grid-row-end: 10;
+		height: 100%;
+		margin-top: 50px !important;
+	}
+	.in-krok-1 .next-step .btn,
+	.in-krok-2 .next-step .btn {
+		margin-bottom: 10px;
+	}
 }
+
 @media (max-width: 768px) {
 	.in-kosik #dkLabFavCartWrapper .products {
 		grid-template-columns: repeat(2, 1fr);
@@ -1005,7 +1063,12 @@ ol.cart-header li.active strong span::before {
 		padding-right: 30px !important;
 	}
 	.ordering-process #header .responsive-tools .toggle-window[data-target="navigation"] {
-		top: 5px;
+		top: 4px;
 		right: 14px;
+	}
+	.sidebar-in-cart .next-step.next-step--cart > a:first-child {
+		flex: 0;
+		text-align: left;
+		padding-right: 10px;
 	}
 }
