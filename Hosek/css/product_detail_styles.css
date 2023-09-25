@@ -2,6 +2,10 @@
 	--productDetailIconWidth: 25px;
 	--productDetatilIconGap: 10px;
 }
+.type-product .overall-wrapper {
+	overflow: hidden;
+}
+
 .description-inner .basic-description > h3,
 .description-inner .extended-description > h3,
 .description-inner .extended-description > .detail-parameters,
@@ -234,7 +238,12 @@
 	margin-right: 4px;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1440px) {
+	.extended-description {
+		display: none;
+	}
+}
+@media (min-width: 1440px) {
 	.description-inner {
 		flex-wrap: nowrap;
 	}
@@ -255,6 +264,92 @@
 	display: none !important;
 }
 .p-detail .extended-description .stars-label {
+	display: none;
+}
+
+.type-product .col-sm-12 {
+	padding: 0;
+}
+
+.type-product #dkLabFavouriteDiv {
+	height: 100%;
+	margin: 0;
+}
+.type-product #dkLabFavouriteDiv .dkLabFavDetailSpan {
+	border-radius: var(--border-radius);
+	background: var(--color-black-600);
+	transition: 0.2s ease;
+	display: flex;
+	height: 100%;
+	position: relative;
+}
+.type-product #dkLabFavouriteDiv .dkLabFavDetailSpan:hover {
+	color: white;
+}
+.type-product #dkLabFavouriteDiv .dkLabFavDetailSpan::before {
+	transition: 0.2s ease;
+}
+.type-product #dkLabFavouriteDiv .dkLabFavDetailSpan:hover::before {
+	transform: scale(1.2) translatey(5%);
+}
+
+.type-product #dkLabFavouriteDiv .dkLabFavDetailSpan::before {
+	top: 35%;
+	margin: 0 18px;
+	height: auto;
+}
+
+.type-product .dkLabFavouriteDetailLinkRemove {
+	background: none !important;
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--color-primary);
+}
+.type-product .dkLabFavouriteDetailLinkRemove:hover::before {
+	color: var(--color-primary);
+}
+.type-product .dkLabFavDetailSpan::after {
+	transform: translatex(50%) translatey(100%);
+	transition: transform 0.2s ease-out;
+	content: "";
+	width: 140px;
+	font-size: 12px;
+	padding: 5px 0;
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	color: white;
+	text-align: center;
+}
+.type-product .dkLabFavouriteDetailLinkAdd:hover::after {
+	content: "Přidat do oblíbených";
+	background: var(--color-black-600);
+	border-radius: var(--border-radius);
+	transform: translatex(50%) translatey(120%);
+}
+.type-product .dkLabFavouriteDetailLinkRemove:hover::after {
+	content: "Odebrat z oblíbených";
+	background: var(--color-black-600);
+	border-radius: var(--border-radius);
+	transform: translatex(50%) translatey(120%);
+}
+
+.type-product .stars-label {
+	color: var(--color-black-600);
+	font-size: 14px;
+	margin-left: 4px;
+}
+
+.type-product .stars .star {
+	color: #f0b820;
+}
+
+.type-product .product-top .flag-discount {
+	font-size: 16px;
+}
+.type-product .p-final-price-wrapper .price-additional,
+.type-product .p-final-price-wrapper .price-standard,
+.type-product .p-final-price-wrapper .price-save {
 	display: none;
 }
 
