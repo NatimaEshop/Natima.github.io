@@ -88,6 +88,7 @@
 }
 
 #header #dkLabFavHeaderWrapper {
+	position: unset;
 	order: 5;
 	height: 100%;
 	width: 30px;
@@ -688,6 +689,10 @@
 
 	#header .header-top .navigation-buttons {
 		margin-right: calc(var(--header-icon-menu-height) + var(--header-menu-gap));
+		margin-left: 12px;
+	}
+	#header .header-top .dropdown {
+		display: none;
 	}
 	#header .navigation-buttons .cart-count {
 		position: relative;
