@@ -95,6 +95,7 @@
 	top: 0;
 	padding: 0;
 	margin: 0;
+	transform: none;
 }
 
 #header .header-top .navigation-buttons {
@@ -763,6 +764,32 @@
 
 	.top-navigation-contacts {
 		display: none !important;
+	}
+}
+
+@media (max-width: 1200px) {
+	.user-action-in .user-action-cart {
+		right: 56px;
+	}
+	.user-action-login.popup-widget {
+		right: 150px !important;
+	}
+}
+
+@media (max-width: 992px) {
+	body.user-action-visible {
+		overflow: auto;
+	}
+	.user-action-login.popup-widget {
+		width: 40vw;
+		right: 130px !important;
+		height: max-content;
+	}
+}
+
+@media (max-width: 768px) {
+	.dkLabFavHeaderIconBtn {
+		height: 40%;
 	}
 }
 
