@@ -1095,6 +1095,7 @@ ol.cart-header li.active strong span::before {
 		display: none;
 	}
 	.in-krok-2 .order-recapitulation {
+		grid-row: 5 !important;
 		margin-top: 20px !important;
 	}
 	.in-krok-2 .summary-background {
