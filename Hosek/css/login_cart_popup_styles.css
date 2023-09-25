@@ -203,7 +203,8 @@
 
 @media (max-width: 998px) {
 	.cart-widget-products-inner {
-		max-height: 50vh;
+		max-height: 250px;
+		max-height: 40vh;
 	}
 }
 
