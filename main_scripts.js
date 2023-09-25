@@ -157,11 +157,17 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 	});
 
 	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
-		/*srdicko*/
-		allProducts = document.querySelectorAll(".product .p");
-		allProducts.forEach((element) => {
-			element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
-		});
+		document.addEventListener(
+			"shoptet.products.sameHeightOfProducts",
+			function () {
+				/*srdicko*/
+				allProducts = document.querySelectorAll(".product .p");
+				allProducts.forEach((element) => {
+					element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
+				});
+			},
+			{ once: true }
+		);
 	});
 }
 
