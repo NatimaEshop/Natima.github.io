@@ -1,0 +1,27 @@
+.in-blog .news-item {
+	margin-bottom: 40px;
+	padding-bottom: 0;
+}
+.in-blog .news-item img {
+	border-radius: var(--border-radius);
+}
+.in-blog .news-item .title {
+	font-weight: 500;
+}
+.in-blog #newsWrapper {
+	margin-top: 30px;
+}
+.in-blog h1 {
+	text-align: left !important;
+	width: fit-content;
+	position: relative;
+}
+.in-blog h1::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: var(--color-primary);
+	bottom: -6px;
+	left: 0;
+}
