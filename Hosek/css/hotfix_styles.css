@@ -71,7 +71,7 @@
 }
 /*luigy*/
 #lb-results .products {
-	display: grid !important;
+	display: flex !important;
 }
 
 #lb-results .products .product .p .p-in-in,
