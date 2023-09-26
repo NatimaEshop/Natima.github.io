@@ -11,9 +11,6 @@
 .user-action-in .user-action-cart {
 	right: 10px;
 }
-.user-action-login.popup-widget {
-	right: 121px !important;
-}
 
 /*objednavka*/
 .in-krok-1 .order-summary {
@@ -49,4 +46,18 @@
 	.in-krok-1 .checkout-box {
 		width: auto;
 	}
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	.dkLabFavHeaderIconBtn:hover::after {
+		transform: translatex(-50%);
+	}
+}
+
+.user-action-login.popup-widget {
+	right: 121px !important;
+}
+
+.ordering-process .user-action-login.popup-widget {
+	right: 5px !important;
 }
