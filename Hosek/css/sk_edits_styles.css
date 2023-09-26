@@ -32,10 +32,21 @@
 	border-radius: var(--border-radius);
 }
 
+.ordering-process #header .header-top .top-nav-button-login:hover::before,
+.ordering-process #header .header-top .top-nav-button-account:hover::before {
+	display: none;
+}
+
 /*footer*/
 .custom-footer__banner95 {
 	display: none;
 }
 .custom-footer__banner94 .banner {
 	overflow: visible;
+}
+
+@media (max-width: 768px) {
+	.in-krok-1 .checkout-box {
+		width: auto;
+	}
 }
