@@ -2,11 +2,12 @@
 #footer .container {
 	background: transparent;
 }
-.custom-footer__banner1 .banner {
-	overflow: visible;
-}
+
 .custom-footer__banner143 {
 	display: none;
+}
+.custom-footer__banner142 .banner {
+	overflow: visible;
 }
 #footer .site-name {
 	display: none;
