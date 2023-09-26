@@ -10,7 +10,7 @@
 	left: auto;
 }
 .user-action-login.popup-widget::before {
-	background: white;
+	background: var(--color-primary-100);
 	right: var(--padding-sides) !important;
 	top: -8px !important;
 	border-style: none;

@@ -1,3 +1,37 @@
+/*header*/
+#header .header-top .top-nav-button-login:hover::before {
+	content: "Prihlásenie / Registrácia";
+}
+#header .header-top .top-nav-button-account:hover::before {
+	content: "Môj účet";
+}
+.dkLabFavHeaderIconBtn:hover::after {
+	content: "Obľúbené produkty";
+}
+.user-action-in .user-action-cart {
+	right: 10px;
+}
+.user-action-login.popup-widget {
+	right: 121px !important;
+}
+
+/*objednavka*/
+.in-krok-1 .order-summary {
+	display: grid;
+}
+
+.in-krok-1 .checkout-box {
+	order: 2;
+	width: 440px;
+	padding: 20px 20px;
+	max-width: 100%;
+	margin-left: auto !important;
+	margin-right: 00px !important;
+	margin-top: 40px !important;
+	background: var(--color-primary-100);
+	border-radius: var(--border-radius);
+}
+
 /*footer*/
 .custom-footer__banner95 {
 	display: none;
