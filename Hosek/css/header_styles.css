@@ -802,3 +802,18 @@
 		--header-menu-gap: 14px;
 	}
 }
+
+@media (min-width: 768px) {
+	.luigi-ac-hero.luigi-ac-autocomplete.luigi-ac-open {
+		position: fixed;
+		top: var(--header-height) !important;
+		padding: 0;
+		transform: translatex(-3%);
+	}
+	.luigi-ac-hero .luigi-ac-ribbon {
+		background: white !important;
+	}
+	.luigi-ac-caret.luigi-ac-hero-color {
+		background: white !important;
+	}
+}
