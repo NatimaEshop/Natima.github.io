@@ -832,7 +832,7 @@ ol.cart-header li.active strong span::before {
 .in-krok-1 .next-step,
 .in-krok-2 .next-step {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 }
 .in-krok-1 .next-step a,
 .in-krok-2 .next-step a {
@@ -946,6 +946,27 @@ ol.cart-header li.active strong span::before {
 }
 .in-krok-2 .summary-background {
 	grid-row-end: 7;
+}
+
+.in-krok-1 .next-step a,
+.in-krok-2 .next-step a {
+	margin-top: 14px;
+}
+.in-krok-2 .consents {
+	text-align: left;
+	margin-bottom: 16px;
+}
+.in-krok-2 .consents-first {
+	margin-top: 20px;
+}
+.in-krok-2 .next-step > button {
+	order: 1;
+}
+.in-krok-2 .next-step > a {
+	order: 2;
+}
+.in-krok-2 .next-step > div {
+	order: 3;
 }
 
 /*Dekujeme za objednávku*/

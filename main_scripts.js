@@ -305,7 +305,7 @@ function removePayment() {
 }
 
 /*posledni krok objednavky*/
-if (document.querySelector("body.in-krok-2")) {
+if (document.body.classList.contains("in-krok-2")) {
 	$(".next-step").appendTo(".order-summary-inner");
 	$(".cart-items").last().removeClass("cart-items").addClass("order-recapitulation");
 	$(".checkout-box").appendTo(".order-summary-inner");
@@ -315,4 +315,5 @@ if (document.querySelector("body.in-krok-2")) {
 	$("<div class='rekapitulace-background'></div>").appendTo(".order-summary-inner");
 	$(".co-box.co-box-additional").appendTo(".co-contact-information");
 	$(".company-shopping").insertAfter(".co-billing-address > fieldset");
+	$(".consents").appendTo(".next-step");
 }
