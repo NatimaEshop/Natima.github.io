@@ -365,6 +365,7 @@
 /*header kosik*/
 .navigation-buttons {
 	display: flex;
+	align-items: center;
 }
 
 .navigation-buttons .cart-price,
