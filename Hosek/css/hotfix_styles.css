@@ -151,3 +151,46 @@
 		--product-brand-gap: 14px;
 	}
 }
+
+/*drobecky kategorie*/
+body.type-category .container.breadcrumbs-wrapper {
+	visibility: visible;
+	margin-bottom: 30px;
+}
+body.type-category .navigation-home-icon-wrapper::before {
+	left: 0px;
+}
+body.type-category span#navigation-first {
+	width: 30px;
+}
+body.type-category .breadcrumbs > span > span {
+	padding-left: 0;
+}
+body.type-category .container.breadcrumbs-wrapper .breadcrumbs,
+body.type-category .container.breadcrumbs-wrapper .breadcrumbs a {
+	color: var(--color-primary);
+}
+body.type-category .breadcrumbs a {
+	color: var(--color-primay);
+	padding: 0;
+	padding-right: 20px;
+	min-height: auto;
+	font-size: 14px;
+}
+
+body.type-category .breadcrumbs a::before,
+body.type-category .breadcrumbs a::after {
+	content: "";
+	position: absolute;
+
+	height: 30%;
+	right: 10px;
+	background-color: var(--color-black-800);
+}
+
+body.type-category .breadcrumbs a::before {
+	top: 24%;
+}
+body.type-category .breadcrumbs a::after {
+	bottom: 24%;
+}
