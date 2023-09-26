@@ -46,6 +46,28 @@
 	}
 }
 
+/*menu kategorii mobil*/
+@media (max-width: 768px) {
+	#header #navigation .navigation-in.menu .menu-level-1 > .exp:has(.menu-level-2 > li:nth-child(4)) .menu-level-2 {
+		columns: 1;
+		max-height: auto;
+	}
+	#header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 > li {
+		padding: 5px 0 5px 0;
+	}
+	.navigation-in ul.menu-level-2 li a {
+		padding-left: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	#header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 .menu-level-3 li {
+		display: flex;
+		align-items: center;
+	}
+	.menu-level-1 > li > a {
+		padding-left: 10px !important;
+	}
+}
 /*luigy*/
 #lb-results .products {
 	display: grid !important;
