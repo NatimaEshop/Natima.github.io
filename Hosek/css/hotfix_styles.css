@@ -48,9 +48,9 @@
 
 /*menu kategorii mobil*/
 @media (max-width: 768px) {
-	#header #navigation .navigation-in.menu .menu-level-1 > .exp:has(.menu-level-2 > li:nth-child(4)) .menu-level-2 {
+	#header #navigation .navigation-in.menu .menu-level-1 > .exp .menu-level-2 {
 		columns: 1;
-		max-height: auto;
+		max-height: auto !important;
 	}
 	#header #navigation .navigation-in.menu .menu-level-1 .menu-level-2 > li {
 		padding: 5px 0 5px 0;
