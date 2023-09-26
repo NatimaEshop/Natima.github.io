@@ -9,6 +9,12 @@
 	right: 190px !important;
 	left: auto;
 }
+
+/*objednavka prihlaseni*/
+.ordering-process .user-action-login.popup-widget {
+	right: 76px !important;
+}
+
 .user-action-login.popup-widget::before {
 	background: var(--color-primary-100);
 	right: var(--padding-sides) !important;

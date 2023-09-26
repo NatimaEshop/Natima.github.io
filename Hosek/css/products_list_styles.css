@@ -106,7 +106,8 @@
 	width: 100%;
 }
 
-.products .product .p .p-tools button {
+.products .product .p .p-tools button,
+.products .product .p .p-tools > a {
 	width: 100%;
 	opacity: 0;
 	border-radius: var(--border-radius);
@@ -120,15 +121,18 @@
 	padding: 0;
 	transition: background 0.2s ease;
 }
-.products .product .p .p-tools button:hover {
+.products .product .p .p-tools button:hover,
+.products .product .p .p-tools > a:hover {
 	background: var(--color-primary-hover);
 }
 
-.products .product:hover .p .p-tools button {
+.products .product:hover .p .p-tools button,
+.products .product:hover .p .p-tools > a {
 	opacity: 1;
 }
 
-.products .product .p .p-tools button::before {
+.products .product .p .p-tools button::before,
+.products .product .p .p-tools > a::before {
 	display: none;
 }
 
@@ -225,7 +229,8 @@
 .in-index .products-block .product .p-desc {
 	display: none;
 }
-.in-index .products-block .product .p .p-tools button {
+.in-index .products-block .product .p .p-tools button,
+.in-index .products-block .product .p .p-tools > a {
 	height: 42px;
 }
 .in-index .products-block .product .flags .flag {
