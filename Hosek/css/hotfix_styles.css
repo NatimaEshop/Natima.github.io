@@ -1,0 +1,29 @@
+.in-kosik #fvstudio-delivery-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start !important;
+}
+.in-kosik .extra.delivery > span {
+	max-width: 80%;
+	text-align: left;
+}
+.in-kosik .extra.delivery > span strong {
+	margin-right: 0;
+}
+.in-kosik .extra.delivery::before {
+	margin-left: 10px;
+}
+
+.ordering-process.id--9 #fvstudio-delivery-info .extra.delivery,
+.content-window.cart-window #fvstudio-delivery-info .extra.delivery {
+	max-width: 100%;
+	margin-left: 0;
+}
+
+.in-kosik .extra.discount::before {
+	display: none;
+}
+
+.ordering-process.id--9 .discount-coupon {
+	width: 100% !important;
+}
