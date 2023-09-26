@@ -348,3 +348,12 @@
 		padding: 0 56% 12% 4%;
 	}
 }
+
+/*fix na mac*/
+banners-content a img,
+.banner-footer a img,
+.banner-wrapper a img,
+.footer-banner a img,
+.banner-category a img {
+	transform: none !important;
+}
