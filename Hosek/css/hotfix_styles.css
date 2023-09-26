@@ -28,7 +28,15 @@
 	width: 100% !important;
 }
 
+.flag-velkoobchod {
+	display: none !important;
+}
+
 /*luigy*/
+#lb-results .products {
+	display: grid !important;
+}
+
 #lb-results .products .product .p .p-in-in,
 #lb-results .products .product .p .p-bottom > div {
 	--productCategoryGrid: 3.6em 4em 1.467em 1.2em;
