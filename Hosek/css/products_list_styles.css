@@ -250,6 +250,19 @@
 	transform: translatey(-38px);
 }
 
+/*momentalne nedostupne produkty zasedle*/
+.products .product:has(.p-tools > a) .p::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	opacity: 0.4;
+	pointer-events: none;
+}
+
 @media (max-width: 1200px) {
 	.flags.flags-default {
 		margin-top: 8px;
