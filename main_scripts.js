@@ -31,12 +31,19 @@ if (document.querySelector(".type-category")) {
 		});
 	}
 	document.addEventListener("DOMContentLoaded", editCategoryArrangment, { once: true });
-	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
-		/*srdicko*/
-		allProducts = document.querySelectorAll(".product .p");
-		allProducts.forEach((element) => {
-			element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
-		});
+
+	document.addEventListener("ShoptetDOMContentLoaded", function () {
+		document.addEventListener(
+			"ShoptetDOMPageContentLoaded",
+			function () {
+				/*srdicko*/
+				allProducts = document.querySelectorAll(".product .p");
+				allProducts.forEach((element) => {
+					element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
+				});
+			},
+			{ once: true }
+		);
 	});
 
 	/*radit dle mobil*/
