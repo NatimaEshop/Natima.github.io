@@ -816,6 +816,9 @@ ol.cart-header li.active strong span::before {
 .in-krok-2 .order-summary-item.helper {
 	margin-bottom: 1em;
 }
+.in-krok-2 .recapitulation-single > span {
+	display: none;
+}
 .in-krok-1 .recapitulation-single span,
 .in-krok-2 .recapitulation-single span {
 	font-weight: 600 !important;
