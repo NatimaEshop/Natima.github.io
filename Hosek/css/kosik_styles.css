@@ -962,9 +962,11 @@ ol.cart-header li.active strong span::before {
 .in-krok-2 .consents-first {
 	margin-top: 20px;
 }
+.in-krok-1 .next-step > button,
 .in-krok-2 .next-step > button {
 	order: 1;
 }
+.in-krok-1 .next-step > a,
 .in-krok-2 .next-step > a {
 	order: 2;
 }
@@ -1023,6 +1025,7 @@ ol.cart-header li.active strong span::before {
 	.in-krok-2.ordering-process .order-summary-inner .cart-items {
 		grid-row: 2;
 		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 	.in-krok-1.ordering-process .order-summary-inner .cart-items.gift-items,
 	.in-krok-2.ordering-process .order-summary-inner .cart-items.gift-items {
