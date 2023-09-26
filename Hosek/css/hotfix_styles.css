@@ -220,9 +220,9 @@ body.type-category .breadcrumbs a::after {
 .lb-search .lb-search__main {
 	width: auto !important;
 	max-width: 100%;
-	flex: 1;
+	flex: 1 !important;
 	padding: 0 !important;
-	margin-left: var(--padding-sides);
+	margin-left: var(--padding-sides) !important;
 }
 
 .lb-search .p-in-in > a > span {
@@ -231,7 +231,7 @@ body.type-category .breadcrumbs a::after {
 
 @media (max-width: 768px) {
 	.lb-search .lb-search__main {
-		margin: 0;
+		margin-left: 0 !important;
 	}
 	.lb-search .lb-search__headline {
 		padding-top: 0;
