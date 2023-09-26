@@ -34,7 +34,7 @@
 .sliderWrap .slider {
 	overflow: hidden;
 }
-.in-index .products .product {
+.in-index .slider .products .product {
 	width: calc(100% / (var(--SliderPocetProduktuCalc)));
 	padding: 0px 0px 0px var(--gap) !important;
 	border-style: none !important;
@@ -42,7 +42,7 @@
 }
 
 @media (max-width: 992px) {
-	.in-index .products-block .slider-arrow {
+	.in-index .slider .products-block .slider-arrow {
 		display: none;
 	}
 	.sliderWrap {
