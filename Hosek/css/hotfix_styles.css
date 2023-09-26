@@ -27,3 +27,9 @@
 .ordering-process.id--9 .discount-coupon {
 	width: 100% !important;
 }
+
+/*luigy*/
+#lb-results .products .product .p .p-in-in,
+#lb-results .products .product .p .p-bottom > div {
+	--productCategoryGrid: 3.6em 4em 1.467em 1.2em;
+}
