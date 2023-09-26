@@ -608,7 +608,7 @@
 	color: var(--color-black-600);
 }
 .type-product .products-related .product {
-	border-style: none;
+	border-style: none !important;
 }
 .type-product .products-related .p-code {
 	display: none;
@@ -621,6 +621,9 @@
 }
 .type-product .products-related .flags.flags-default {
 	margin: 8px 0px 0 8px;
+}
+.type-product .products-related .flags.flags-default .flag {
+	margin-bottom: 8px;
 }
 
 /*Kavy*/
