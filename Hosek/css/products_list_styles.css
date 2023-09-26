@@ -131,6 +131,12 @@
 	opacity: 1;
 }
 
+.products .product:hover .p .p-tools > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .products .product .p .p-tools button::before,
 .products .product .p .p-tools > a::before {
 	display: none;
