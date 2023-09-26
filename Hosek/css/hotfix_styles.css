@@ -32,6 +32,20 @@
 	display: none !important;
 }
 
+/*header mobil*/
+@media (max-width: 768px) {
+	.responsive-tools .toggle-window[data-target="login"] {
+		display: none;
+	}
+	.search {
+		display: none;
+	}
+
+	.search-window-visible .search {
+		display: block;
+	}
+}
+
 /*luigy*/
 #lb-results .products {
 	display: grid !important;
