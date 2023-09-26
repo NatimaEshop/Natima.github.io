@@ -92,6 +92,11 @@
 	background: var(--color-primary-hover);
 }
 
+.type-product .availability-amount {
+	font-size: 14px;
+	margin-left: 5px;
+}
+
 .extended-description {
 	position: sticky;
 	top: 120px;
