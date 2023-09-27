@@ -123,6 +123,11 @@ let brandHeader;
 let parentNode;
 
 if (document.body.classList.contains("type-manufacturer-detail")) {
+	$("#content .category-title").each(function () {
+		$(this).nextUntil("#category-header").addBack().wrapAll("<div class='brandPerex'></div>");
+	});
+	$(".brandPerex").insertBefore(".content-wrapper-in");
+
 	$("#filters-wrapper").addClass("sidebar sidebar-left").insertBefore("#content");
 	document.addEventListener("DOMContentLoaded", favoritesMove);
 
@@ -161,6 +166,10 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
 		brandReadMoreFirstButton();
 		$("#content #filters-wrapper").remove();
+
+		$("#content .category-title").each(function () {
+			$(this).nextUntil("#category-header").addBack().remove();
+		});
 	});
 
 	document.addEventListener("ShoptetDOMContentLoaded", function () {
