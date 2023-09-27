@@ -221,10 +221,17 @@
 }
 
 @media (max-width: 768px) {
+	.type-manufacturer-detail .sidebar .filters-unveil-button-wrapper,
 	.filters-unveil-button-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+	.type-manufacturer-detail .sidebar .filters-unveil-button-wrapper {
+		align-items: center;
+	}
+	.type-manufacturer-detail .sidebar .btn.unveil-button {
+		display: inline-block;
 	}
 	.type-manufacturer-detail .filters-unveil-button-wrapper a.bt #content .filters-unveil-button-wrapper a.btn {
 		width: 140px;
