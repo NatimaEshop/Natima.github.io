@@ -157,6 +157,12 @@
 	color: var(--color-primary-hover);
 }
 
+.brandPerex,
+.category-perex,
+.category__secondDescription {
+	overflow: hidden;
+}
+
 /*podkategorie*/
 .category-top .subcategories {
 	--subcategories-columns: 2;
