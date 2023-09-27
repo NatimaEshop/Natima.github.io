@@ -231,7 +231,8 @@
 		border-radius: var(--border-radius);
 	}
 	.type-manufacturer-detail .sidebar .filters-unveil-button-wrapper {
-		align-items: center;
+		justify-content: center;
+		margin-bottom: 16px;
 	}
 	.type-manufacturer-detail .sidebar .btn.unveil-button {
 		display: inline-block;
