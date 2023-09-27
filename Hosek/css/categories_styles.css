@@ -91,41 +91,48 @@
 
 .category-perex > table:last-of-type,
 .category__secondDescription > table:last-of-type,
-.type-manufacturer-detail #content > table:last-of-type {
+.type-manufacturer-detail #content > table:last-of-type,
+.type-manufacturer-detail .brandPerex > table:last-of-type {
 	display: grid;
 	grid-template-rows: 0fr;
 	transition: all 0.3s ease-out;
 }
 .category-perex > table:last-of-type > tbody,
 .category__secondDescription > table:last-of-type > tbody,
-.type-manufacturer-detail #content > table:last-of-type > tbody {
+.type-manufacturer-detail #content > table:last-of-type > tbody,
+.type-manufacturer-detail .brandPerex > table:last-of-type > tbody {
 	height: auto;
 	overflow: hidden;
 }
 .category-perex.expanded > table:last-of-type,
 .category__secondDescription.expanded > table:last-of-type,
-.type-manufacturer-detail #content.expanded > table:last-of-type {
+.type-manufacturer-detail #content.expanded > table:last-of-type,
+.type-manufacturer-detail .brandPerex.expanded > table:last-of-type {
 	grid-template-rows: 1fr;
 }
 
 .category-perex .category-read.less,
 .category__secondDescription .category-read.less,
-.type-manufacturer-detail #content .category-read.less {
+.type-manufacturer-detail #content .category-read.less,
+.type-manufacturer-detail .brandPerex .category-read.less {
 	display: none;
 }
 .category-perex .category-read.more,
 .category__secondDescription .category-read.more,
-.type-manufacturer-detail #content .category-read.more {
+.type-manufacturer-detail #content .category-read.more,
+.type-manufacturer-detail .brandPerex .category-read.more {
 	display: block;
 }
 .category-perex.expanded .category-read.less,
 .category__secondDescription.expanded .category-read.less,
-.type-manufacturer-detail #content.expanded .category-read.less {
+.type-manufacturer-detail #content.expanded .category-read.less,
+.type-manufacturer-detail .brandPerex.expanded .category-read.less {
 	display: block;
 }
 .category-perex.expanded .category-read.more,
 .category__secondDescription.expanded .category-read.more,
-.type-manufacturer-detail #content.expanded .category-read.more {
+.type-manufacturer-detail #content.expanded .category-read.more,
+.type-manufacturer-detail .brandPerex.expanded .category-read.more {
 	display: none;
 }
 .category-read {
