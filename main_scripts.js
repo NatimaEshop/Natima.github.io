@@ -131,12 +131,11 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 	$("#filters-wrapper").addClass("sidebar sidebar-left").insertBefore("#content");
 	document.addEventListener("DOMContentLoaded", favoritesMove);
 
-	brandPerexReadMore = document.querySelector("#content > table");
+	brandPerexReadMore = document.querySelector(".brandPerex > table");
 
 	function brandReadMoreFirstButton() {
 		if (brandPerexReadMore) {
-			parentNode = document.querySelector("#content");
-			brandHeader = document.querySelector("#category-header");
+			parentNode = document.querySelector(".brandPerex");
 
 			showMoreBrand = document.createElement("span");
 			showLessBrand = document.createElement("span");
@@ -150,8 +149,8 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 			showMoreBrand.classList.add("category-read", "more");
 			showLessBrand.classList.add("category-read", "less");
 
-			parentNode.insertBefore(showMoreBrand, brandHeader);
-			parentNode.insertBefore(showLessBrand, brandHeader);
+			parentNode.appendChild(showMoreBrand);
+			parentNode.appendChild(showLessBrand);
 
 			showMoreBrand.addEventListener("click", function (e) {
 				e.target.parentElement.classList.add("expanded");
@@ -164,7 +163,6 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 	brandReadMoreFirstButton();
 
 	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
-		brandReadMoreFirstButton();
 		$("#content #filters-wrapper").remove();
 
 		$("#content .category-title").each(function () {
