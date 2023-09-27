@@ -227,6 +227,9 @@
 		align-items: center;
 		justify-content: space-between;
 	}
+	.filters-unveil-button-wrapper a {
+		border-radius: var(--border-radius);
+	}
 	.type-manufacturer-detail .sidebar .filters-unveil-button-wrapper {
 		align-items: center;
 	}
