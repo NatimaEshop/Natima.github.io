@@ -62,7 +62,7 @@ if (document.querySelector(".type-category")) {
 
 	/*radit dle mobil*/
 	$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
-	$(".raditPodle").on("click tap touchstart", function () {
+	$(".raditPodle").on("click tap", function () {
 		$(".category-header").toggleClass("active");
 	});
 
@@ -229,7 +229,8 @@ if (document.body.classList.contains("type-detail")) {
 
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
-		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
+		console.log("test");
+		/* $(".dkLabFavouriteDiv").insertAfter(".add-to-cart button"); */
 		$(".stars-wrapper").appendTo(".p-final-price-wrapper");
 
 		if ($(".availability-value").text().indexOf("Momen") > -1) {
