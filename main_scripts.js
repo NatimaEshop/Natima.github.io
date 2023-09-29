@@ -46,6 +46,20 @@ if (document.querySelector(".type-category")) {
 		);
 	});
 
+	document.addEventListener("ShoptetDOMContentLoaded", function () {
+		document.addEventListener(
+			"ShoptetDOMPageMoreProductsLoaded",
+			function () {
+				/*srdicko*/
+				allProducts = document.querySelectorAll(".product .p");
+				allProducts.forEach((element) => {
+					element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
+				});
+			},
+			{ once: true }
+		);
+	});
+
 	/*radit dle mobil*/
 	$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
 	$(".raditPodle").on("click tap touchstart", function () {
@@ -173,6 +187,20 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 	document.addEventListener("ShoptetDOMContentLoaded", function () {
 		document.addEventListener(
 			"ShoptetDOMPageContentLoaded",
+			function () {
+				/*srdicko*/
+				allProducts = document.querySelectorAll(".product .p");
+				allProducts.forEach((element) => {
+					element.appendChild(element.querySelector(".dkLabFavouriteProductDiv"));
+				});
+			},
+			{ once: true }
+		);
+	});
+
+	document.addEventListener("ShoptetDOMContentLoaded", function () {
+		document.addEventListener(
+			"ShoptetDOMPageMoreProductsLoaded",
 			function () {
 				/*srdicko*/
 				allProducts = document.querySelectorAll(".product .p");
