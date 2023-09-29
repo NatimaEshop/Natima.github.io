@@ -583,10 +583,10 @@
 
 .shp-tabs-holder {
 	background: none;
-	overflow: hidden;
 }
 .shp-tabs-wrapper .shp-tabs-row {
 	margin-bottom: 20px;
+	overflow: hidden;
 }
 
 .shp-tabs-row {
@@ -672,8 +672,8 @@ body.type-product .products-related .product {
 		overflow: hidden;
 		gap: 0;
 		--relatedNumber: 4;
-		margin-left: calc(var(--gap) / -1);
-		margin-right: calc(var(--gap) / -1);
+		margin-left: calc(var(--gap) / -2);
+		margin-right: calc(var(--gap) / -2);
 	}
 	.type-product .products-related .product {
 		margin: 0 !important;
