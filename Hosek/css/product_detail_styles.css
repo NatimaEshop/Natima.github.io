@@ -583,6 +583,10 @@
 
 .shp-tabs-holder {
 	background: none;
+	overflow: hidden;
+}
+.shp-tabs-wrapper .shp-tabs-row {
+	margin-bottom: 20px;
 }
 
 .shp-tabs-row {
@@ -606,7 +610,7 @@
 .type-product .shp-tab.active a {
 	color: var(--color-black-600);
 }
-.type-product .products-related .product {
+body.type-product .products-related .product {
 	border-style: none !important;
 }
 .type-product .products-related .p-code {
@@ -633,6 +637,60 @@
 
 .extended-description .p-gifts-wrapper {
 	display: none;
+}
+/*souvisejici produkty*/
+.type-product .browse-p {
+	display: none;
+}
+.type-product .products-related .product {
+	display: block;
+}
+
+.type-product .products-related {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	margin-left: calc(var(--padding-sides) / -1);
+	margin-right: calc(var(--padding-sides) / -1);
+	gap: calc(var(--gap) * 1.5);
+	margin-bottom: 20px;
+}
+.type-product .products-related .product {
+	width: clamp(160px, 140px + 12vw, 350px);
+	padding: 0;
+}
+.type-product .products-related > .product:first-child {
+	margin-left: var(--padding-sides);
+}
+.type-product .products-related > .product:last-child {
+	margin-right: var(--padding-sides);
+}
+@media (min-width: 992px) {
+	.type-product .products-related {
+		overflow: hidden;
+		gap: 0;
+		--relatedNumber: 4;
+		margin-left: calc(var(--gap) / -1);
+		margin-right: calc(var(--gap) / -1);
+	}
+	.type-product .products-related .product {
+		margin: 0 !important;
+		width: calc(100% / var(--relatedNumber));
+		padding: 0 calc(var(--gap) / 2) 0 calc(var(--gap) / 2);
+	}
+}
+@media (min-width: 1200px) {
+	.type-product .products-related {
+		--relatedNumber: 5;
+	}
+}
+
+@media (min-width: 1440px) {
+	.type-product .products-related {
+		--relatedNumber: 6;
+	}
 }
 
 /*pokud neni tlacitko do kosiku*/
