@@ -639,6 +639,9 @@ body.type-product .products-related .product {
 	display: none;
 }
 /*souvisejici produkty*/
+.products-related:after {
+	display: none;
+}
 .type-product .browse-p {
 	display: none;
 }
