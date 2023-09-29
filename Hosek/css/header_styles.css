@@ -767,6 +767,16 @@
 	.top-navigation-contacts {
 		display: none !important;
 	}
+
+	.navigation-in ul li a b {
+		font-weight: 600;
+		color: var(--color-black-800);
+		font-size: 16px;
+	}
+
+	.navigation-in > ul > li.ext > ul > li .menu-level-3 a {
+		margin-left: 10px;
+	}
 }
 
 @media (max-width: 1200px) {
