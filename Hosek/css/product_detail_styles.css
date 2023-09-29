@@ -635,6 +635,30 @@
 	display: none;
 }
 
+/*pokud neni tlacitko do kosiku*/
+.p-info-wrapper > .dkLabFavouriteDiv {
+	order: 5;
+	width: 56px;
+	height: 0px !important;
+	margin-left: auto !important;
+	position: relative;
+}
+.p-info-wrapper > .dkLabFavouriteDiv > .dkLabFavDetailSpan {
+	position: absolute !important;
+	height: 56px !important;
+	bottom: 4px;
+}
+
+@media (max-width: 1700px) {
+	.p-info-wrapper > .dkLabFavouriteDiv > .dkLabFavDetailSpan::after {
+		transform: translatex(0%) translatey(100%);
+		right: 0;
+	}
+	.p-info-wrapper > .dkLabFavouriteDiv:hover > .dkLabFavDetailSpan::after {
+		transform: translatex(0%) translatey(120%);
+	}
+}
+
 /*Kavy*/
 .description-inner img {
 	max-width: 100%;
