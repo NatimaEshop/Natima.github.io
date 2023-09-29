@@ -143,6 +143,7 @@
 	top: 16px;
 	transition: transform 0.2s ease;
 }
+
 .contact-faq-question.active > .contact-faq-answer {
 	grid-template-rows: 1fr;
 }
@@ -156,4 +157,10 @@
 }
 .contact-faq-question.active > p::after {
 	transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+	.contact-faq-question > p::after {
+		right: -10px;
+	}
 }
