@@ -99,12 +99,11 @@
 
 .extended-description {
 	position: sticky;
-	top: 120px;
+	top: 140px;
 	background: var(--color-gray-400);
 	background: #f6f6f6;
 	border-radius: var(--border-radius);
 	padding: 20px 20px;
-	margin-top: 20px;
 }
 
 .description-inner .p-info-wrapper {
@@ -624,6 +623,16 @@
 }
 .type-product .products-related .flags.flags-default .flag {
 	margin-bottom: 8px;
+}
+
+.p-gifts-wrapper {
+	order: 9;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.extended-description .p-gifts-wrapper {
+	display: none;
 }
 
 /*Kavy*/

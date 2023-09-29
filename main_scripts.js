@@ -229,8 +229,8 @@ if (document.body.classList.contains("type-detail")) {
 
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$(".breadcrumbs").clone().appendTo(".description-inner .extended-description");
-		console.log("test");
-		/* $(".dkLabFavouriteDiv").insertAfter(".add-to-cart button"); */
+		$(".dkLabFavouriteDiv").insertAfter(".detail-parameters"); /*neni tlacitko doruceni*/
+		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
 		$(".stars-wrapper").appendTo(".p-final-price-wrapper");
 
 		if ($(".availability-value").text().indexOf("Momen") > -1) {
