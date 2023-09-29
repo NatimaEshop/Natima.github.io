@@ -88,7 +88,7 @@ body footer .container.footer-bottom {
 	position: relative;
 	--newsletter-height: 290px;
 	--newsletter-image-height: clamp(var(--newsletter-height), calc(10vw + 150px), 400px);
-	margin-top: calc(var(--newsletter-height) + 36px);
+	margin-top: calc(var(--newsletter-height) + 36px) !important;
 }
 .footer-rows {
 	position: unset;
