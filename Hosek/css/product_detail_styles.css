@@ -710,7 +710,7 @@ body.type-product .products-related .product {
 	bottom: 4px;
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1940px) {
 	.p-info-wrapper > .dkLabFavouriteDiv > .dkLabFavDetailSpan::after {
 		transform: translatex(0%) translatey(100%);
 		right: 0;
