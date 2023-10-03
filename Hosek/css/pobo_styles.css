@@ -5,10 +5,10 @@
 	font-weight: 700 !important;
 }
 .pb-standard-table tr > td {
-	width: 20%;
+	width: 20% !important;
 }
 .pb-standard-table tr > td:first-child {
-	width: 50%;
+	width: 50% !important;
 }
 .pb-standard-table td {
 	border-style: solid;
@@ -19,6 +19,14 @@
 }
 .pb-standard-table tbody > tr:nth-child(even) {
 	background: #f9f9f9;
+}
+.pb-standard-table tr > td ul {
+	margin: 0;
+	padding-left: 15px;
+}
+
+.pb-standard-table tr > td ul li {
+	display: block;
 }
 #pobo-standard-widget > div:nth-child(odd) .pb-standard-table tbody > tr:nth-child(odd) {
 	background: #f6f6f6;
