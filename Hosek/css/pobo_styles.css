@@ -2,6 +2,7 @@
 	margin-top: 0;
 	margin-bottom: 0.6em;
 	font-family: var(--ff-main) !important;
+	font-weight: 700 !important;
 }
 .pb-standard-table tr > td {
 	width: 20%;
