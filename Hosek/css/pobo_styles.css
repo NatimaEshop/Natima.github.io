@@ -48,3 +48,15 @@
 		text-align: justify;
 	}
 }
+
+/*images*/
+#pobo-standard-widget .rc-image-right__image a,
+#pobo-standard-widget .rc-image-right__image img {
+	pointer-events: none;
+}
+.rc-image-right .rc-image-right__image img {
+	max-height: 350px;
+	max-width: 90%;
+	display: block;
+	margin: auto;
+}
