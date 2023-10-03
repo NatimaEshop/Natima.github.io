@@ -281,7 +281,7 @@
 }
 
 .type-product .col-sm-12 {
-	padding: 0;
+	padding: 0 !important;
 }
 
 .type-product #dkLabFavouriteDiv .dkLabFavDetailSpan {
