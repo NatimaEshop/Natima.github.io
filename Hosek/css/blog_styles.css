@@ -25,3 +25,59 @@
 	bottom: -6px;
 	left: 0;
 }
+
+.type-posts-listing .content-inner > hr,
+.type-posts-listing .content-inner > p {
+	display: none;
+}
+
+.type-post .text p {
+	text-align: justify;
+}
+.type-post h5 {
+	font-size: 22px;
+	font-weight: 700;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+.type-post h6 {
+	font-size: 18px;
+	padding-top: 5px;
+}
+
+/*ZOBRAZIT VÍCE/ ZOBRAZIT MÉNĚ*/
+.read-more-state {
+	display: none;
+}
+.read-more-target {
+	opacity: 0;
+	max-height: 0;
+	font-size: 0;
+	transition: 0.25s ease;
+}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+	opacity: 1;
+	font: inherit;
+	max-height: 999em;
+}
+.read-more-state ~ .read-more-trigger:before {
+	content: "Zobrazit více";
+}
+.read-more-state:checked ~ .read-more-trigger:before {
+	content: "Zobrazit méně";
+}
+.read-more-trigger,
+.zobrazitvice {
+	/* Tlacitko zobrazit více o produktu na blogu*/
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.2em 2em;
+	margin: 1em 0.2em;
+	color: #ffffff;
+	font-size: 1.6rem;
+	line-height: 2;
+	background: #9068be;
+	border-style: none;
+	border-radius: var(--border-radius);
+}
+/*konec ZOBRAZIT VÍCE/ ZOBRAZIT MÉNĚ*/
