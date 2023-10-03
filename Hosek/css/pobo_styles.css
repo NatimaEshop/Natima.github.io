@@ -20,6 +20,9 @@
 .pb-standard-table tbody > tr:nth-child(even) {
 	background: #f9f9f9;
 }
+.pb-standard-table tbody > tr:nth-child(odd) {
+	background: white;
+}
 #pobo-standard-widget > div {
 	border-radius: var(--border-radius);
 	padding: 20px 30px;
