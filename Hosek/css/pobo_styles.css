@@ -13,8 +13,8 @@
 	border-style: solid;
 	border-width: 1px;
 	border-color: var(--color-black-400);
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
 }
 .pb-standard-table tbody > tr:nth-child(even) {
 	background: #f9f9f9;
