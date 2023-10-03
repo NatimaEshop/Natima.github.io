@@ -1,4 +1,4 @@
-#pobo-all-content .widget-typography h3 {
+#pobo-all-content #pobo-standard-widget .widget-typography h3 {
 	margin-top: 0;
 	margin-bottom: 0.6em;
 	font-family: var(--ff-main) !important;
