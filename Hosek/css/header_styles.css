@@ -149,7 +149,7 @@ body {
 	margin: auto;
 	display: flex;
 	height: 40px;
-	border-radius: calc(var(--border-radius) * 2);
+	border-radius: calc(var(--border-radius) * 3);
 	overflow: hidden;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
@@ -179,6 +179,7 @@ body {
 	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 	height: 100%;
 	border-style: none;
+	border-radius: 0 calc(var(--border-radius) * 3) calc(var(--border-radius) * 3) 0;
 	left: -1px;
 }
 #header .search fieldset button::before {
