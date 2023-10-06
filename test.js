@@ -1,5 +1,5 @@
 let containsFavorites = false;
-if ($(".top-nav-button-account")) {
+if ($(".top-nav-button-account").length > 0) {
 	console.log("logged in");
 	document.addEventListener("DOMContentLoaded", function () {
 		// Function to react when the class changes to "action"
