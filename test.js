@@ -13,7 +13,6 @@ if ($(".top-nav-button-account").length > 0) {
 			}
 		}
 
-		// Set up a MutationObserver to watch for changes in the DOM
 		const observer = new MutationObserver(function (mutationsList) {
 			for (let mutation of mutationsList) {
 				if (mutation.type === "attributes" && mutation.attributeName === "class") {
@@ -22,7 +21,10 @@ if ($(".top-nav-button-account").length > 0) {
 			}
 		});
 
-		// Start observing the document body and its subtree
 		observer.observe(document.body, { attributes: true, subtree: false });
+
+		$(document).ajaxComplete(function () {
+			favoritesMove();
+		});
 	});
 }
