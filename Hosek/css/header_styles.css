@@ -721,7 +721,7 @@ body {
 
 	#header .header-top .navigation-buttons {
 		margin-right: calc(var(--header-icon-menu-height) + var(--header-menu-gap));
-		margin-left: 12px;
+		margin-left: 8px;
 	}
 	#header .header-top .dropdown {
 		display: none;
@@ -831,7 +831,7 @@ body {
 
 @media (max-width: 768px) {
 	.dkLabFavHeaderIconBtn {
-		height: 40%;
+		height: 35%;
 	}
 	#navigation {
 		padding-bottom: 0;

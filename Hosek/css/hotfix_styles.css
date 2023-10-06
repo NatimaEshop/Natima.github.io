@@ -34,7 +34,8 @@
 
 /*header mobil*/
 @media (max-width: 768px) {
-	.responsive-tools .toggle-window[data-target="login"] {
+	.responsive-tools .toggle-window[data-target="login"],
+	.responsive-tools .toggle-window[data-target="klient"] {
 		display: none;
 	}
 	.search {
