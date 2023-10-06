@@ -178,8 +178,10 @@ body footer .container.footer-bottom {
 	width: 100%;
 }
 
-#footer .online-payment.mastercard {
-	height: 90%;
+#footer .online-payment.mastercard img {
+	width: 75%;
+	display: block;
+	margin: auto;
 }
 
 @media (max-width: 768px) {
