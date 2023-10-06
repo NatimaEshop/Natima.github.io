@@ -21,8 +21,11 @@
 footer .custom-footer > div {
 	padding: 30px 15px 0 0 !important;
 	text-align: left;
-	overflow: visible;
 	width: 20%;
+}
+
+footer .custom-footer > div .banner {
+	overflow: visible;
 }
 
 footer .custom-footer .site-name .inner-box {
