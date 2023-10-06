@@ -1,8 +1,18 @@
+let containsFavorites = false;
 document.addEventListener("DOMContentLoaded", function () {
 	// Function to react when the class changes to "action"
 	function handleActionClassChange(event) {
-		if (event.target.classList.contains("dklab-favourites")) {
+		if (event.target.classList.contains("dklab-favourites") && !containsFavorites) {
 			favoritesMove();
+			console.log("test");
+			console.log("test");
+			console.log("test");
+			console.log("test");
+			console.log("test");
+			console.log("test");
+			console.log("test");
+			console.log("test");
+			containsFavorites = true;
 		}
 	}
 
@@ -16,5 +26,5 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Start observing the document body and its subtree
-	observer.observe(document.body, { attributes: true, subtree: true });
+	observer.observe(document.body, { attributes: true, subtree: false });
 });
