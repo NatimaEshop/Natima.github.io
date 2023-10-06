@@ -1,45 +1,25 @@
-let brandPerexReadMore;
-let showMoreBrand;
-let showLessBrand;
-let showMoreBrandContent;
-let showLessBrandContent;
-
-if (document.body.classList.contains("type-manufacturer-detail")) {
-	$("#filters-wrapper").addClass("sidebar sidebar-left").insertBefore("#content");
-	document.addEventListener("DOMContentLoaded", favoritesMove());
-
-	brandPerexReadMore = document.querySelector("#content > table");
-
-	function brandReadMoreFirstButton() {
-		if (brandPerexReadMore) {
-			function insertAfter(newNode, existingNode) {
-				existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
-			}
-
-			showMoreBrand = document.createElement("span");
-			showLessBrand = document.createElement("span");
-
-			showMoreBrandContent = document.createTextNode("Zobrazit více");
-			showLessBrandContent = document.createTextNode("Zobrazit méně");
-
-			showMoreBrand.appendChild(showMoreBrandContent);
-			showLessBrand.appendChild(showLessBrandContent);
-
-			showMoreBrand.classList.add("category-read", "more");
-			showLessBrand.classList.add("category-read", "less");
-
-			insertAfter(showMoreBrand, brandPerexReadMore);
-			insertAfter(showLessBrand, brandPerexReadMore);
-
-			showMoreBrand.addEventListener("click", function (e) {
-				e.target.parentElement.classList.add("expanded");
-			});
-			showLessBrand.addEventListener("click", function (e) {
-				e.target.parentElement.classList.remove("expanded");
-			});
+document.addEventListener("DOMContentLoaded", function () {
+	// Function to react when the class changes to "action"
+	function handleActionClassChange(event) {
+		if (event.target.classList.contains("dklab-favourites")) {
+			console.log('Element with class "action" was modified.');
+			console.log('Element with class "action" was modified.');
+			console.log('Element with class "action" was modified.');
+			console.log('Element with class "action" was modified.');
+			console.log('Element with class "action" was modified.');
+			console.log('Element with class "action" was modified.');
 		}
 	}
-	brandReadMoreFirstButton();
 
-	document.addEventListener("ShoptetDOMPageContentLoaded", brandReadMoreFirstButton);
-}
+	// Set up a MutationObserver to watch for changes in the DOM
+	const observer = new MutationObserver(function (mutationsList) {
+		for (let mutation of mutationsList) {
+			if (mutation.type === "attributes" && mutation.attributeName === "class") {
+				handleActionClassChange(mutation);
+			}
+		}
+	});
+
+	// Start observing the document body and its subtree
+	observer.observe(document.body, { attributes: true, subtree: true });
+});
