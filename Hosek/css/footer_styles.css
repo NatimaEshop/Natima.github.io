@@ -21,7 +21,10 @@
 footer .custom-footer > div {
 	padding: 30px 15px 0 0 !important;
 	text-align: left;
+	overflow: visible;
+	width: 20%;
 }
+
 footer .custom-footer .site-name .inner-box {
 	padding: initial !important;
 }
@@ -184,6 +187,12 @@ body footer .container.footer-bottom {
 	margin: auto;
 }
 
+@media (max-width: 1200px) {
+	footer .custom-footer > div {
+		width: 33.3%;
+	}
+}
+
 @media (max-width: 768px) {
 	.in-index .copyright {
 		text-align: left;
@@ -199,7 +208,7 @@ body footer .container.footer-bottom {
 		padding: 0 !important;
 		margin-bottom: 40px;
 		text-align: left;
-		overflow: visible;
+		width: 100%;
 	}
 	footer .banner-wrapper {
 		margin: 0;
