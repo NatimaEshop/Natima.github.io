@@ -60,3 +60,15 @@
 	display: block;
 	margin: auto;
 }
+
+@media (max-width: 768px) {
+	#pobo-all-content .empty::-webkit-scrollbar {
+		display: none;
+	}
+
+	#pobo-all-content .empty {
+		overflow-x: scroll;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+}
