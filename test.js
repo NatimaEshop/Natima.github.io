@@ -2,12 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Function to react when the class changes to "action"
 	function handleActionClassChange(event) {
 		if (event.target.classList.contains("dklab-favourites")) {
-			console.log('Element with class "action" was modified.');
-			console.log('Element with class "action" was modified.');
-			console.log('Element with class "action" was modified.');
-			console.log('Element with class "action" was modified.');
-			console.log('Element with class "action" was modified.');
-			console.log('Element with class "action" was modified.');
+			favoritesMove();
 		}
 	}
 
