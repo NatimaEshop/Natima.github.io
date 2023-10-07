@@ -1,0 +1,9 @@
+body.not-logged-in .search-whisperer ul li:has(.availability-reg-only) .price {
+	display: none;
+}
+.pouzeProPrihlasene {
+	font-size: 14px;
+}
+.pouzeProPrihlasene p {
+	margin-bottom: 0.5em;
+}
