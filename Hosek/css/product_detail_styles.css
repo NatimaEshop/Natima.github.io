@@ -11,7 +11,7 @@
 	display: grid;
 }
 
-.description-inner .basic-description > h3,
+.description-inner .basic-description > h3:first-child,
 .description-inner .extended-description > h3,
 .description-inner .extended-description > .detail-parameters,
 .description-inner .p-image-wrapper,
