@@ -237,6 +237,33 @@ body.user-logged-in .flag.flag-vip {
 	display: block;
 }
 
+/*detailní parametry*/
+.basic-description .detail-parameters {
+	border-top-style: solid;
+	border-width: 1px;
+	border-color: var(--color-black-800);
+	padding-top: 45px !important;
+	border-collapse: initial;
+	position: relative;
+}
+
+.basic-description .detail-parameters::before {
+	content: "Detailní parametry:";
+	position: absolute;
+	top: 0.2em;
+	left: 0;
+	font-size: 18px;
+	font-weight: 800;
+}
+.basic-description .detail-parameters span,
+.basic-description .detail-parameters td {
+	font-size: 16px;
+	font-weight: 400;
+}
+.basic-description .detail-parameters span {
+	font-weight: 700;
+}
+
 .p-detail .p-code {
 	color: var(--color-black-400);
 	display: block;

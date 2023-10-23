@@ -291,6 +291,7 @@ if (document.body.classList.contains("type-detail")) {
 
 		if (detailParameters.length > 2) {
 			$(".basic-description").append(detailParametersTable);
+			$(".basic-description .row-header-label:contains('Hmotnost')").parent().parent().hide();
 		}
 	});
 }
