@@ -384,3 +384,12 @@ if (document.body.classList.contains("in-krok-2")) {
 	$(".company-shopping").insertAfter(".co-billing-address > fieldset");
 	$(".consents").appendTo(".next-step");
 }
+
+/*is user logged in*/
+$(document).ready(function () {
+	if ($('.top-navigation-tools > a[href="/klient/"]').length) {
+		$("body").addClass("user-logged-in");
+	} else {
+		$("body").addClass("user-not-logged-in");
+	}
+});
