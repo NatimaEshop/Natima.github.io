@@ -284,6 +284,14 @@ if (document.body.classList.contains("type-detail")) {
 		$(".description-inner .col-xs-12 > .col-xs-12").remove();
 		$(".description-inner .dkLabFavouriteDiv").remove();
 		$(".p-code").eq(0).clone().appendTo(".description-inner .extended-description");
+
+		/*parametry*/
+		const detailParameters = $(".extended-description > .detail-parameters tr");
+		const detailParametersTable = $(".extended-description > .detail-parameters");
+
+		if (detailParameters.length > 2) {
+			$(".basic-description").append(detailParametersTable);
+		}
 	});
 }
 
