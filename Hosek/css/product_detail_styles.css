@@ -217,7 +217,7 @@ body.user-logged-in .flag.flag-vip {
 	display: flex;
 	color: var(--color-black-800);
 }
-.p-detail .detail-parameters a::before {
+.p-detail .extended-description .detail-parameters a::before {
 	content: "";
 	width: calc(var(--productDetailIconWidth) / 1.2);
 	height: calc(var(--productDetailIconWidth) / 1.2);
@@ -227,7 +227,7 @@ body.user-logged-in .flag.flag-vip {
 	display: block;
 	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/delivery_icon.svg);
 }
-.p-detail .detail-parameters a::after {
+.p-detail .extended-description .detail-parameters a::after {
 	content: "\e90e";
 	font-family: shoptet;
 	position: relative;
