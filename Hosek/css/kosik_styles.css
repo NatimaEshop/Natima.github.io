@@ -302,6 +302,98 @@ ol.cart-header li.active strong span::before {
 	margin: auto;
 }
 
+/*vycet produktu v kosiku*/
+.ordering-process .cart-table td.cart-p-image::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-color: hsla(203, 7%, 47%, 0.06);
+	border-radius: var(--border-radius);
+}
+
+.ordering-process .cart-table td.cart-p-image {
+	position: relative;
+	margin-right: 5px;
+	padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+	.ordering-process .cart-table tr {
+		display: grid;
+		grid-template-columns: 20% 26.66% 26.66% 26.66%;
+	}
+	.ordering-process .cart-table td.cart-p-image {
+		width: auto;
+		margin: 0 5px 0 0;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+	.cart-table tr > td:nth-child(even).p-name {
+		width: 100%;
+		grid-column-start: 2;
+		grid-column-end: 5;
+	}
+	.ordering-process .p-availability.p-cell {
+		grid-column: 2;
+		width: auto;
+		display: flex;
+		justify-content: left;
+		gap: 5px;
+		margin: 5px;
+		padding: 0;
+	}
+	.ordering-process .p-availability.p-cell .p-label {
+		display: none;
+	}
+	.ordering-process .p-quantity.p-cell {
+		grid-column: 3;
+		margin: 5px;
+		padding: 0;
+	}
+	.ordering-process .quantity-form .quantity {
+		margin: 0;
+	}
+	.ordering-process .p-price {
+		display: none;
+	}
+	.ordering-process .cart-table tr > td.p-total {
+		grid-column: 4;
+		text-align: left;
+		width: auto;
+	}
+	.ordering-process .remove-item::before {
+		color: var(--color-red-400);
+		font-size: 12px;
+	}
+	.ordering-process .cart-table tr > td.p-total .p-label {
+		display: none;
+	}
+	.ordering-process .cart-table tr > td.p-total .price-final {
+		font-size: 16px;
+		margin: 5px 5px 5px 8px;
+	}
+}
+
+@media (max-width: 500px) {
+	.ordering-process .cart-table tr {
+		display: grid;
+		grid-template-columns: 0.33fr 0.67fr;
+	}
+	.ordering-process .cart-table td.cart-p-image {
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+	.cart-table tr > td:nth-child(even).p-name {
+		grid-column: 2;
+	}
+	.ordering-process .p-quantity.p-cell,
+	.ordering-process .p-availability.p-cell,
+	.ordering-process .cart-table tr > td.p-total {
+		grid-column: 2;
+	}
+}
+
 /*Dárky v košíku*/
 .in-kosik .cart-summary h4,
 .in-kosik .cart-summary .extra.gift {
