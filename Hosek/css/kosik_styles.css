@@ -302,7 +302,11 @@ ol.cart-header li.active strong span::before {
 	margin: auto;
 }
 
-/*Darky v kosiku*/
+/*Dárky v košíku*/
+.in-kosik .cart-summary h4,
+.in-kosik .cart-summary .extra.gift {
+	margin-left: 10px;
+}
 .in-kosik .extras-col {
 	max-width: none;
 }
