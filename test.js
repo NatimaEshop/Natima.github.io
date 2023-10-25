@@ -23,7 +23,11 @@ if (document.body.classList.contains("in-krok-2")) {
 		$(document).ajaxComplete(function () {
 			if ((orderVatChange = true)) {
 				orderVatChange = false;
-				$(".cart-items").last().removeClass("cart-items").addClass("order-recapitulation");
+
+				if ($(".cart-items").length >= 2) {
+					$(".cart-items").last().removeClass("cart-items").addClass("order-recapitulation");
+				}
+
 				orderCheckoutBox.appendTo(".order-summary-inner");
 				orderConsentsFirst.appendTo(".order-summary-inner");
 				orderNextStepButton.appendTo(".order-summary-inner");
