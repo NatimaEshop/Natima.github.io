@@ -426,6 +426,7 @@ function removePayment() {
 }
 
 /*posledni krok objednavky*/
+/*
 if (document.body.classList.contains("in-krok-2")) {
 	$(".next-step").appendTo(".order-summary-inner");
 	$(".cart-items").last().removeClass("cart-items").addClass("order-recapitulation");
@@ -438,6 +439,7 @@ if (document.body.classList.contains("in-krok-2")) {
 	$(".company-shopping").insertAfter(".co-billing-address > fieldset");
 	$(".consents").appendTo(".next-step");
 }
+*/
 
 /*is user logged in*/
 $(document).ready(function () {
