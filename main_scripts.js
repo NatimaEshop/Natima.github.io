@@ -286,6 +286,7 @@ if (document.body.classList.contains("type-detail")) {
 		$(".p-code").eq(0).clone().appendTo(".description-inner .extended-description");
 
 		/*parametry*/
+		$(".extended-description > .detail-parameters tr.sold-out").remove();
 		const detailParameters = $(".extended-description > .detail-parameters tr");
 		const detailParametersTable = $(".extended-description > .detail-parameters");
 
