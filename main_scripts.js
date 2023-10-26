@@ -365,8 +365,6 @@ if (document.querySelector("body.in-kosik")) {
 			$(".free-gifts-wrapper .free-gifts li[data-free-gift-id=" + dataIdNatiosZasobnik + "]").show();
 		}
 
-		console.log(pocetProduktuNatiosVKosiku);
-
 		if ($(".extras-col .free-gift").length > 0 && $(".extra.gift").length > 0) {
 			giftSpan.empty();
 			giftSpan.append(darkyTextObjednejte);
