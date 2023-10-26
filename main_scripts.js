@@ -336,6 +336,7 @@ if (document.querySelector("body.in-kosik")) {
 		const darkyPrice = $(".extra.gift > span > strong").eq(0);
 		const darkyPriceRange = $(".extra.gift .price-range");
 		let dataIdNatiosZasobnik = "10188";
+		let dataIdNatiosTaska = "10027";
 		let pocetProduktuNatiosVKosiku = 0;
 
 		if (document.body.classList.contains("sk")) {
@@ -343,11 +344,12 @@ if (document.querySelector("body.in-kosik")) {
 			darkyTextObjednejte = "Objednajte si ešte za ";
 			darkyTextHodnotnejsi = " a vyberte si z hodnotnejších darčekov.";
 			dataIdNatiosZasobnik = "20589";
+			dataIdNatiosTaska = "20448";
 		}
 
 		$(".in-kosik .cart-summary h4").text(darkyText);
 
-		/*zobrazeni natios zasobniku pouze pokud obsahuje natios produkt*/
+		/*zobrazeni natios zasobniku a tašky pouze pokud obsahuje natios produkt*/
 		if ($(".p-name a:contains('NATIOS')").length > 0) {
 			$(".p-name a:contains('NATIOS')").each(function () {
 				pocetProduktuNatiosVKosiku =
@@ -362,6 +364,9 @@ if (document.querySelector("body.in-kosik")) {
 		}
 		if (pocetProduktuNatiosVKosiku >= 3) {
 			$(".free-gifts-wrapper .free-gifts li[data-free-gift-id=" + dataIdNatiosZasobnik + "]").show();
+		}
+		if (pocetProduktuNatiosVKosiku >= 4) {
+			$(".free-gifts-wrapper .free-gifts li[data-free-gift-id=" + dataIdNatiosTaska + "]").show();
 		}
 
 		console.log(pocetProduktuNatiosVKosiku);
