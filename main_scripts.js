@@ -343,11 +343,12 @@ if (document.querySelector("body.in-kosik")) {
 			darkyTextHodnotnejsi = " a vyberte si z hodnotnejších darčekov.";
 		}
 
+		$(".in-kosik .cart-summary h4").text(darkyText);
+
+		/*zobrazeni natios zasobniku pouze pokud obsahuje natios produkt*/
 		if ($(".p-name a:contains('NATIOS')").length > 0 || $(".p-name a:contains('Natios')").length > 0) {
 			$(".free-gifts-wrapper .free-gifts li[data-free-gift-id=" + dataIdNatios + "]").show();
 		}
-
-		$(".in-kosik .cart-summary h4").text(darkyText);
 
 		if ($(".extras-col .free-gift").length > 0 && $(".extra.gift").length > 0) {
 			giftSpan.empty();
