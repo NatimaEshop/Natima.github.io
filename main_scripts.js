@@ -335,7 +335,7 @@ if (document.querySelector("body.in-kosik")) {
 		let darkyTextHodnotnejsi = " a vyberte si z hodnotnějších dárků.";
 		const darkyPrice = $(".extra.gift > span > strong").eq(0);
 		const darkyPriceRange = $(".extra.gift .price-range");
-		const dataIdNatios = "10185";
+		const dataIdNatios = "10188";
 
 		if (document.body.classList.contains("sk")) {
 			darkyText = "Darčeky";
