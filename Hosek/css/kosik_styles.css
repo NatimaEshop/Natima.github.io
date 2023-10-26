@@ -466,6 +466,13 @@ ol.cart-header li.active strong span::before {
 .in-kosik ul.free-gifts > li .free-gift-name {
 	text-transform: none;
 }
+/*schovani natios zasobniku*/
+.in-kosik.cs ul.free-gifts li[data-free-gift-id="10188"] {
+	display: none;
+}
+.in-kosik.sk ul.free-gifts li[data-free-gift-id="20589"] {
+	display: none;
+}
 
 /*potrebujete pomoc?*/
 .sidebar-in-cart {
