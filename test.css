@@ -1,3 +1,6 @@
-.in-kosik ul.free-gifts li[data-free-gift-id="10188"] {
+.in-kosik.cs ul.free-gifts li[data-free-gift-id="10188"] {
+	display: none;
+}
+.in-kosik.sk ul.free-gifts li[data-free-gift-id="20589"] {
 	display: none;
 }

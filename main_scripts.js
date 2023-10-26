@@ -335,13 +335,14 @@ if (document.querySelector("body.in-kosik")) {
 		let darkyTextHodnotnejsi = " a vyberte si z hodnotnějších dárků.";
 		const darkyPrice = $(".extra.gift > span > strong").eq(0);
 		const darkyPriceRange = $(".extra.gift .price-range");
-		const dataIdNatios = "10188";
+		let dataIdNatiosZasobnik = "10188";
 		let pocetProduktuNatiosVKosiku = 0;
 
 		if (document.body.classList.contains("sk")) {
 			darkyText = "Darčeky";
 			darkyTextObjednejte = "Objednajte si ešte za ";
 			darkyTextHodnotnejsi = " a vyberte si z hodnotnejších darčekov.";
+			dataIdNatiosZasobnik = "20589";
 		}
 
 		$(".in-kosik .cart-summary h4").text(darkyText);
@@ -360,7 +361,7 @@ if (document.querySelector("body.in-kosik")) {
 			});
 		}
 		if (pocetProduktuNatiosVKosiku >= 3) {
-			$(".free-gifts-wrapper .free-gifts li[data-free-gift-id=" + dataIdNatios + "]").show();
+			$(".free-gifts-wrapper .free-gifts li[data-free-gift-id=" + dataIdNatiosZasobnik + "]").show();
 		}
 
 		console.log(pocetProduktuNatiosVKosiku);
