@@ -336,6 +336,7 @@ if (document.querySelector("body.in-kosik")) {
 		const darkyPrice = $(".extra.gift > span > strong").eq(0);
 		const darkyPriceRange = $(".extra.gift .price-range");
 		const dataIdNatios = "10188";
+		let pocetProduktuNatiosVKosiku = 0;
 
 		if (document.body.classList.contains("sk")) {
 			darkyText = "Darčeky";
@@ -346,9 +347,21 @@ if (document.querySelector("body.in-kosik")) {
 		$(".in-kosik .cart-summary h4").text(darkyText);
 
 		/*zobrazeni natios zasobniku pouze pokud obsahuje natios produkt*/
-		if ($(".p-name a:contains('NATIOS')").length > 0 || $(".p-name a:contains('Natios')").length > 0) {
+		if ($(".p-name a:contains('NATIOS')").length > 0) {
+			$(".p-name a:contains('NATIOS')").each(function () {
+				pocetProduktuNatiosVKosiku = pocetProduktuNatiosVKosiku + $(this).parent().parent().find("input.amount").val();
+			});
+		}
+		if ($(".p-name a:contains('Natios')").length > 0) {
+			$(".p-name a:contains('Natios')").each(function () {
+				pocetProduktuNatiosVKosiku = pocetProduktuNatiosVKosiku + $(this).parent().parent().find("input.amount").val();
+			});
+		}
+		if (pocetProduktuNatiosVKosiku >= 3) {
 			$(".free-gifts-wrapper .free-gifts li[data-free-gift-id=" + dataIdNatios + "]").show();
 		}
+
+		console.log(pocetProduktuNatiosVKosiku);
 
 		if ($(".extras-col .free-gift").length > 0 && $(".extra.gift").length > 0) {
 			giftSpan.empty();
