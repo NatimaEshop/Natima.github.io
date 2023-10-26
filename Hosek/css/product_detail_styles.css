@@ -659,11 +659,11 @@ body.type-product .products-related .product {
 }
 body.type-detail .products .product .p .p-tools button,
 body.type-detail .products .product .p .p-tools > a {
-	height: 40px;
+	height: 42px;
 }
 
 body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount {
-	transform: translatey(-36px);
+	transform: translatey(-38px);
 }
 .type-product .products-related .dkLabFavouriteProductDiv {
 	display: none;
