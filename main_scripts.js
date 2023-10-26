@@ -335,11 +335,16 @@ if (document.querySelector("body.in-kosik")) {
 		let darkyTextHodnotnejsi = " a vyberte si z hodnotnějších dárků.";
 		const darkyPrice = $(".extra.gift > span > strong").eq(0);
 		const darkyPriceRange = $(".extra.gift .price-range");
+		const dataIdNatios = "10185";
 
 		if (document.body.classList.contains("sk")) {
 			darkyText = "Darčeky";
 			darkyTextObjednejte = "Objednajte si ešte za ";
 			darkyTextHodnotnejsi = " a vyberte si z hodnotnejších darčekov.";
+		}
+
+		if ($(".p-name a:contains('NATIOS')").length > 0 || $(".p-name a:contains('Natios')").length > 0) {
+			$(".free-gifts-wrapper .free-gifts li[data-free-gift-id=" + dataIdNatios + "]").show();
 		}
 
 		$(".in-kosik .cart-summary h4").text(darkyText);
