@@ -349,12 +349,14 @@ if (document.querySelector("body.in-kosik")) {
 		/*zobrazeni natios zasobniku pouze pokud obsahuje natios produkt*/
 		if ($(".p-name a:contains('NATIOS')").length > 0) {
 			$(".p-name a:contains('NATIOS')").each(function () {
-				pocetProduktuNatiosVKosiku = pocetProduktuNatiosVKosiku + $(this).parent().parent().find("input.amount").val();
+				pocetProduktuNatiosVKosiku =
+					pocetProduktuNatiosVKosiku + parseInt($(this).parent().parent().find("input.amount").val());
 			});
 		}
 		if ($(".p-name a:contains('Natios')").length > 0) {
 			$(".p-name a:contains('Natios')").each(function () {
-				pocetProduktuNatiosVKosiku = pocetProduktuNatiosVKosiku + $(this).parent().parent().find("input.amount").val();
+				pocetProduktuNatiosVKosiku =
+					pocetProduktuNatiosVKosiku + parseInt($(this).parent().parent().find("input.amount").val());
 			});
 		}
 		if (pocetProduktuNatiosVKosiku >= 3) {
