@@ -650,7 +650,20 @@ body.type-product .products-related .product {
 	display: none;
 }
 .type-product .products-related img {
-	margin: 30px 0 40px 0;
+	margin: 50px 0 60px 0;
+}
+@media (max-width: 1200px) {
+	.type-product .products-related img {
+		margin: 40px 0 50px 0;
+	}
+}
+body.type-detail .products .product .p .p-tools button,
+body.type-detail .products .product .p .p-tools > a {
+	height: 40px;
+}
+
+body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount {
+	transform: translatey(-36px);
 }
 .type-product .products-related .dkLabFavouriteProductDiv {
 	display: none;
