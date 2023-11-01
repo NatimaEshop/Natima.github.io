@@ -281,3 +281,17 @@ body.type-category .breadcrumbs a::after {
 		border-radius: var(--border-radius);
 	}
 }
+
+/*pobo obrazky a blog*/
+#pobo-all-content img {
+	border-radius: var(--border-radius) !important;
+	pointer-events: none;
+}
+#pobo-all-content .pb-gallery-trigger {
+	pointer-events: none;
+}
+.type-post #pobo-all-content #pobo-standard-widget > div {
+	background: none;
+	padding: 0;
+	border-radius: 0;
+}
