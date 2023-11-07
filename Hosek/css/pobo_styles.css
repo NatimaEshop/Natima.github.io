@@ -72,3 +72,11 @@
 		scrollbar-width: none;
 	}
 }
+#pobo-all-content .widget-projector p {
+	font-size: 16px !important;
+	line-height: 23px !important;
+	font-weight: 400 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	color: #303233 !important;
+}
