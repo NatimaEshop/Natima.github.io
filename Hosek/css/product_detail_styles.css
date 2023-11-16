@@ -1127,11 +1127,11 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	}
 }
 @media (max-width: 768px) {
-	.matios-daruje-blok {
+	.natios-daruje-blok {
 		grid-template-columns: 1fr;
 		text-align: center;
 	}
-	.matios-daruje-blok img {
+	.natios-daruje-blok img {
 		margin: auto;
 		max-width: 200px;
 	}
