@@ -80,3 +80,75 @@
 	padding-bottom: 0 !important;
 	color: #303233 !important;
 }
+
+/*Tabulka vlevo (kavy apod)*/
+#pobo-all-content .widget-projector .rc-parameter-small-left__image {
+	display: none;
+}
+#pobo-all-content .widget-projector .rc-parameter-small-left__box {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 0.43fr 0.57fr;
+	grid-template-rows: 1fr;
+	column-gap: 7%;
+}
+#pobo-all-content .widget-projector .rc-parameter-small-left__box > * {
+	grid-row: 1;
+}
+#pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter__header-right {
+	grid-column: 2;
+	display: flex;
+	text-align: justify;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+}
+#pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter {
+	justify-content: space-between;
+	row-gap: 36px;
+}
+#pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter__box-small-left-parameter {
+	width: 32%;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+}
+#pobo-all-content
+	.widget-projector
+	.rc-parameter-small-left__box
+	.rc-parameter__box-small-left-parameter
+	.rc-parameter__box-small-left-content {
+	padding: 0;
+	width: 100%;
+}
+#pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter__box-small-left-parameter span {
+	text-align: center;
+	font-size: 16px;
+}
+#pobo-all-content
+	.widget-projector
+	.rc-parameter-small-left__box
+	.rc-parameter__box-small-left-parameter
+	.rc-parameter__box-small-left-content-value {
+	margin: 16px 0 8px;
+}
+
+@media (max-width: 992px) {
+	#pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter__box-small-left-parameter {
+		width: 48%;
+	}
+}
+@media (max-width: 768px) {
+	#pobo-all-content .widget-projector .rc-parameter-small-left__box {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		row-gap: 30px;
+	}
+	#pobo-all-content .widget-projector .rc-parameter-small-left__box > * {
+		grid-column: 1 !important;
+		grid-row: auto;
+	}
+	#pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter__header-right {
+		text-align: left;
+		grid-row: 2;
+	}
+}
