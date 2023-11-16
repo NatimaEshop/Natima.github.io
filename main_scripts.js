@@ -295,6 +295,16 @@ if (document.body.classList.contains("type-detail")) {
 			$(".basic-description .row-header-label:contains('Hmotnost')").parent().parent().hide();
 			$(".basic-description .row-header-label:contains('Hmotnosť')").parent().parent().hide();
 		}
+
+		/*Pobo tabulka vlevo - prepsani h2 na p*/
+		if ($(".rc-parameter__header-right").length > 0) {
+			let poboH2vTabulce = $(
+				"#pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter__header-right"
+			);
+			poboH2vTabulce.each(function () {
+				$(this).replaceWith("<p class='rc-parameter__header-right'>" + $(this).html() + "</p>");
+			});
+		}
 	});
 }
 
