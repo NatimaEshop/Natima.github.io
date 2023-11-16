@@ -301,8 +301,27 @@ if (document.body.classList.contains("type-detail")) {
 			let poboH2vTabulce = $(
 				"#pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter__header-right"
 			);
+
 			poboH2vTabulce.each(function () {
-				$(this).replaceWith("<p class='rc-parameter__header-right'>" + $(this).html() + "</p>");
+				let poboH2vTabulceText = $(this).html();
+				// Split the string into an array of characters
+				var characters = poboH2vTabulceText.split("");
+				console.log(characters);
+				// Iterate through the array and replace odd/even instances of "#"
+				for (var i = 0; i < characters.length; i++) {
+					if (characters[i] === "#") {
+						// Use the modulus operator to determine odd/even position
+						if (i % 2 === 0) {
+							characters[i] = "<b>";
+						} else {
+							characters[i] = "</b>";
+						}
+					}
+				}
+				console.log(characters);
+				// Join the array back into a string
+				poboH2vTabulceText = characters.join("");
+				$(this).replaceWith("<p class='rc-parameter__header-right'>" + poboH2vTabulceText + "</p>");
 			});
 		}
 	});
