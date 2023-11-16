@@ -304,23 +304,22 @@ if (document.body.classList.contains("type-detail")) {
 
 			poboH2vTabulce.each(function () {
 				let poboH2vTabulceText = $(this).html();
-				// Split the string into an array of characters
-				var characters = poboH2vTabulceText.split("");
+
+				/*nahrazení # <b> nebo </b> pro ztučnění textu*/
+				let characters = poboH2vTabulceText.split("");
 				let whichHashtag = 0;
-				console.log(characters);
-				// Iterate through the array and replace odd/even instances of "#"
 				for (var i = 0; i < characters.length; i++) {
 					if (characters[i] === "#") {
-						// Use the modulus operator to determine odd/even position
 						if (whichHashtag % 2 === 0) {
 							characters[i] = "<b>";
 						} else {
 							characters[i] = "</b>";
 						}
 						whichHashtag = whichHashtag + 1;
+					} else if (characters[i] === "$") {
+						characters[i] = "</br>";
 					}
 				}
-				console.log(characters);
 				// Join the array back into a string
 				poboH2vTabulceText = characters.join("");
 				$(this).replaceWith("<p class='rc-parameter__header-right'><span>" + poboH2vTabulceText + "</span></p>");
