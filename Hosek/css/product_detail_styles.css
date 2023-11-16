@@ -1099,3 +1099,45 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 		max-height: 460px;
 	}
 }
+
+/*Natios daruje v popisku - uprava vlozeneho divu pres JS*/
+.natios-daruje-blok {
+	background: hsla(222, 70%, 30%, 0.06);
+	padding: 30px 10px 30px 20px;
+	border-radius: var(--border-radius);
+	display: grid;
+	grid-template-columns: 1fr 0.5fr;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.natios-daruje-blok img {
+	max-width: 170px;
+	display: block;
+	transition: transform 0.3s ease-in-out;
+}
+
+.natios-daruje-blok img:hover {
+	transform: scale(1.15);
+}
+@media (min-width: 1600px) {
+	.natios-daruje-blok {
+		max-width: 80%;
+	}
+}
+@media (max-width: 768px) {
+	.matios-daruje-blok {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.matios-daruje-blok img {
+		margin: auto;
+		max-width: 200px;
+	}
+	.natios-daruje-blok p {
+		margin: auto;
+		max-width: 330px;
+		margin-bottom: 10px;
+	}
+}

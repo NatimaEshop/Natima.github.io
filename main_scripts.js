@@ -296,6 +296,21 @@ if (document.body.classList.contains("type-detail")) {
 			$(".basic-description .row-header-label:contains('Hmotnosť')").parent().parent().hide();
 		}
 
+		if (document.body.classList.contains("cs")) {
+			if ($(".product-top .p-detail-inner-header h1:contains('NATIOS')").length > 0) {
+				$(".p-short-description").append(
+					'<div class="natios-daruje-blok"><p>Natios z každého prodaného produktu <b>daruje 1 Kč dětské hematoonkologii</b> ve Fakultní nemocnici v Ostravě.</br></br> Léčba každého onkologického pacienta v České republice se odhaduje na přibližně 8&nbsp;000&nbsp;Kč měsíčně. Věříme tedy, že tímto krokem společně dokážeme pomoci několika rodinám. </br></br>Více se můžete dočíst <a href="https://natima.cz/blog/natios-pomaha-hematoonkologii-v-ostrave/">zde.</a></p><a href="https://natima.cz/blog/natios-pomaha-hematoonkologii-v-ostrave/"><img src="https://natima.cz/user/documents/upload/NatiosDarujeFNO_2.svg"alt="Natios daruje 1 Kč"></a></div>'
+				);
+			}
+		}
+		if (document.body.classList.contains("sk")) {
+			if ($(".product-top .p-detail-inner-header h1:contains('NATIOS')").length > 0) {
+				$(".p-short-description").append(
+					'<div class="natios-daruje-blok"><p>Natios z každého predaného produktu <b>daruje 1 Kč detskej hematoonkológii</b> vo Fakultnej nemocnici v Ostrave.</br></br> Liečba každého onkologického pacienta v Českej republike sa odhaduje na približne 8&nbsp;000&nbsp;Kč mesačne. Veríme teda, že týmto krokom spoločne dokážeme pomôcť niekoľkým rodinám.</br></br>Viac sa môžete dočítať <a href="https://www.natima.sk/blog/natios-pomaha-hematoonkologii-v-ostrave/">tu.</a></p><a href="https://www.natima.sk/blog/natios-pomaha-hematoonkologii-v-ostrave/"><img src="https://www.natima.cz/user/documents/upload/NatiosDarujeFNO_2.svg"alt="Natios daruje 1 Kč"></a></div>'
+				);
+			}
+		}
+
 		/*Pobo tabulka vlevo - prepsani h2 na p*/
 		if ($(".rc-parameter__header-right").length > 0) {
 			let poboH2vTabulce = $(
