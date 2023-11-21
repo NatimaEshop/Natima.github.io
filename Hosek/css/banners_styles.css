@@ -107,7 +107,7 @@
 }
 .carousel-banner-content.bright .carousel-banner-button,
 .carousel-banner-content .carousel-banner-button,
-.carousel-banner-content .carousel-banner-button.bright {
+.carousel-banner-content.dark .carousel-banner-button.bright {
 	background-color: var(--color-black-800);
 	color: white;
 }
@@ -128,7 +128,7 @@
 .item a .carousel-banner-content .carousel-banner-button:hover,
 .body-banners a .carousel-banner-content .carousel-banner-button:hover,
 .footer-banners a .carousel-banner-content .carousel-banner-button:hover,
-.footer-banners a .carousel-banner-content .carousel-banner-button.bright:hover {
+.footer-banners a .carousel-banner-content.dark .carousel-banner-button.bright:hover {
 	background-color: var(--color-primary);
 }
 .item a .carousel-banner-content.dark .carousel-banner-button:hover,
