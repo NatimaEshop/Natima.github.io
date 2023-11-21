@@ -115,7 +115,8 @@
 	color: var(--color-black-800);
 }
 
-.carousel-banner-content.dark .carousel-banner-button {
+.carousel-banner-content.dark .carousel-banner-button,
+.carousel-banner-content .carousel-banner-button.dark {
 	background-color: white;
 	color: var(--color-black-800);
 }
