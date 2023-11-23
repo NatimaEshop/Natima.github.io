@@ -272,3 +272,13 @@
 		-webkit-line-clamp: 3;
 	}
 }
+
+@media (max-width: 768px) {
+	.products-block > div .flags .flag.flag-discount {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.products-block > div .flags .flag.flag-discount > * {
+		margin: auto !important;
+	}
+}
