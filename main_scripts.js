@@ -49,7 +49,7 @@ if (document.querySelector(".type-category")) {
 	/*rearrange menu*/
 	function rearangeCategory() {
 		$("#content .category-top").insertBefore(".content-wrapper-in");
-		if (document.querySelector("#category-filter-hover").length > 0) {
+		if (document.querySelector("#category-filter-hover")) {
 			document.querySelector("#category-filter-hover").classList.add("visible");
 		}
 	}
@@ -60,7 +60,7 @@ if (document.querySelector(".type-category")) {
 	function editCategoryArrangment() {
 		document.addEventListener("ShoptetDOMContentLoaded", function () {
 			$("#content .category-top").remove();
-			if (document.querySelector("#category-filter-hover").length > 0) {
+			if (document.querySelector("#category-filter-hover")) {
 				document.querySelector("#category-filter-hover").classList.add("visible");
 			}
 			readMoreSecondButton();
