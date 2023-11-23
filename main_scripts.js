@@ -49,7 +49,9 @@ if (document.querySelector(".type-category")) {
 	/*rearrange menu*/
 	function rearangeCategory() {
 		$("#content .category-top").insertBefore(".content-wrapper-in");
-		document.querySelector("#category-filter-hover").classList.add("visible");
+		if (document.querySelector("#category-filter-hover").length > 0) {
+			document.querySelector("#category-filter-hover").classList.add("visible");
+		}
 	}
 	rearangeCategory();
 	document.addEventListener("DOMContentLoaded", favoritesMove);
@@ -58,7 +60,9 @@ if (document.querySelector(".type-category")) {
 	function editCategoryArrangment() {
 		document.addEventListener("ShoptetDOMContentLoaded", function () {
 			$("#content .category-top").remove();
-			document.querySelector("#category-filter-hover").classList.add("visible");
+			if (document.querySelector("#category-filter-hover").length > 0) {
+				document.querySelector("#category-filter-hover").classList.add("visible");
+			}
 			readMoreSecondButton();
 		});
 	}
