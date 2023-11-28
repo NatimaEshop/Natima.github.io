@@ -346,7 +346,7 @@ body.type-category .breadcrumbs a::after {
 	background: white;
 	color: var(--color-primary);
 }
-.not-found-home-button {
+.not-found-home-button:hover {
 	background: var(--color-primary);
 	color: white;
 }
