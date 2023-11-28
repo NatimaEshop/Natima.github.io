@@ -364,4 +364,11 @@ body.type-category .breadcrumbs a::after {
 		display: flex;
 		flex-direction: column-reverse;
 	}
+	.not-found-text {
+		padding-bottom: 20px;
+	}
+	.not-found-home-button {
+		background: #eddefd;
+		color: var(--color-primary);
+	}
 }
