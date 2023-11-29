@@ -516,7 +516,7 @@ body {
 		height: var(--header-categ-height);
 		transition: transform 0.3s ease-in-out;
 		z-index: 1;
-		padding-right: 10px;
+		padding-right: 20px;
 	}
 	.hidden-categories #navigation {
 		transform: translatey(calc((var(--header-categ-height) * -1) - 1px));
