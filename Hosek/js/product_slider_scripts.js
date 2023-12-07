@@ -97,6 +97,14 @@ if (document.querySelector("body.in-index")) {
 	}
 
 	/*carousel*/
+
+	/*----remove carousel item for not logged in*/
+	if ($(".carousel-inner .carousel-banner-content.for-logged-in-only").length > 0) {
+		if (document.body.classList.contains("user-not-logged-in")) {
+			$(".carousel-inner .carousel-banner-content.for-logged-in-only").parent().parent().parent().remove();
+		}
+	}
+
 	carouselSliderElementJS = document.querySelector(".in-index .banners-row .col-sm-8 .carousel-inner");
 	carouselSliderElementParentJQ = $(".in-index .banners-row .col-sm-8");
 
