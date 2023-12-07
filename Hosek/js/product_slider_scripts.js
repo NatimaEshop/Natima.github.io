@@ -97,11 +97,13 @@ if (document.querySelector("body.in-index")) {
 	}
 
 	/*carousel*/
-
+	console.log("0");
 	/*----remove carousel item for not logged in*/
 	if ($(".carousel-inner .carousel-banner-content.for-logged-in-only").length > 0) {
+		console.log("1");
 		if (document.body.classList.contains("user-not-logged-in")) {
 			$(".carousel-inner .carousel-banner-content.for-logged-in-only").parent().parent().parent().remove();
+			console.log("2");
 		}
 	}
 
