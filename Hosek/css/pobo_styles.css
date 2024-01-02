@@ -153,17 +153,17 @@
 	}
 }
 
-.rc-image-half-right__text {
+#pobo-all-content .rc-image-half-right__text {
 	width: 55%;
 }
-.rc-image-half-right__image {
+#pobo-all-content .rc-image-half-right__image {
 	width: 45%;
 }
 @media (max-width: 767.98px) {
-	.rc-image-half-right__text {
+	#pobo-all-content .rc-image-half-right__text {
 		width: 100%;
 	}
-	.rc-image-half-right__image {
+	#pobo-all-content .rc-image-half-right__image {
 		width: 100%;
 	}
 }
