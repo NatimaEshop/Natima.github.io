@@ -181,6 +181,9 @@
 	color: var(--color-black-800);
 	padding-bottom: 5px;
 }
+#pobo-all-content .rc-card-call-to-action__single h2 span {
+	font-weight: 600;
+}
 #pobo-all-content .rc-card-call-to-action__single .rc-card-call-to-action__image {
 	max-width: 80%;
 	margin: auto;
