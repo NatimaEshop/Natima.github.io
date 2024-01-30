@@ -194,6 +194,11 @@
 	font-size: 1em !important;
 }
 
+/*doprava zdarma*/
+.products .flag-freeshipping {
+	display: none;
+}
+
 /*uprava rozložení pro hl stránku*/
 .in-index .products-block .product img {
 	margin: 60px 0px 50px 0px;
