@@ -344,6 +344,13 @@ if (document.body.classList.contains("type-detail")) {
 				$(this).replaceWith("<p class='rc-parameter__header-right'><span>" + poboH2vTabulceText + "</span></p>");
 			});
 		}
+
+		/*Pobo overflow 30% obrazek*/
+		$(".widget-container").each(function () {
+			if ($(this).find('.pb-standard-table .td:contains("#POBOOVERFLOW#")').length > 0) {
+				$(this).addClass("overflow-image");
+			}
+		});
 	});
 }
 
