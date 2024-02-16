@@ -347,10 +347,9 @@ if (document.body.classList.contains("type-detail")) {
 
 		/*Pobo overflow 30% obrazek*/
 		$(".widget-container").each(function () {
-			if ($(this).find('.pb-standard-table .td:contains("#POBOOVERFLOW#")').length > 0) {
+			if ($(this).find('.pb-standard-table td:contains("#POBOOVERFLOW#")').length > 0) {
 				$(this).addClass("overflow-image");
 			}
-			console.log("overflow");
 		});
 	});
 }
