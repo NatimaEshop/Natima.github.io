@@ -350,6 +350,7 @@ if (document.body.classList.contains("type-detail")) {
 			if ($(this).find('.pb-standard-table .td:contains("#POBOOVERFLOW#")').length > 0) {
 				$(this).addClass("overflow-image");
 			}
+			console.log("overflow");
 		});
 	});
 }
