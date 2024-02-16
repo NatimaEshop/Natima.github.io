@@ -354,6 +354,9 @@ if (document.body.classList.contains("type-detail")) {
 			if ($(this).find('.pb-standard-table td:contains("#SIRKA#")').length > 0) {
 				$(this).addClass("sirka");
 			}
+			if ($(this).find('.pb-standard-table td:contains("#VYSKA#")').length > 0) {
+				$(this).addClass("vyska");
+			}
 		});
 	});
 }
