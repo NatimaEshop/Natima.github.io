@@ -351,6 +351,9 @@ if (document.body.classList.contains("type-detail")) {
 				$(this).addClass("overflow-image");
 				$(this).find('.pb-standard-table td:contains("#POBOOVERFLOW#")').addClass("display-none");
 			}
+			if ($(this).find('.pb-standard-table td:contains("#SIRKA#")').length > 0) {
+				$(this).addClass("sirka");
+			}
 		});
 	});
 }
