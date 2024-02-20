@@ -78,6 +78,12 @@
 	gap: 0.5em;
 }
 
+@media (max-width: 768px) {
+	.carousel-banner-content {
+		padding: 0px 5% calc(5% + 0.6em) 10%;
+	}
+}
+
 .carousel-banner-button {
 	font-size: 0.6em;
 	line-height: 1em;
