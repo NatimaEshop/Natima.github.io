@@ -315,6 +315,22 @@ if (document.body.classList.contains("type-detail")) {
 			}
 		}
 
+		function cardHeight() {
+			if ($(".card-text").length > 1) {
+				let cardHeight = 0;
+
+				$(".card-text").each(function () {
+					var thisHeight = $(this).height();
+					if (thisHeight > cardHeight) {
+						cardHeight = thisHeight;
+					}
+				});
+				$(".card-text").css("min-height", maxHeight);
+			}
+		}
+		cardHeight();
+		window.addEventListener("resize", cardHeight);
+
 		/*Pobo tabulka vlevo - prepsani h2 na p*/
 		if ($(".rc-parameter__header-right").length > 0) {
 			let poboH2vTabulce = $(
