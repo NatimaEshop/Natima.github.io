@@ -325,7 +325,7 @@ if (document.body.classList.contains("type-detail")) {
 						cardHeight = thisHeight;
 					}
 				});
-				$(".card-text").css("min-height", maxHeight);
+				$(".card-text").css("min-height", cardHeight);
 			}
 		}
 		cardHeight();
