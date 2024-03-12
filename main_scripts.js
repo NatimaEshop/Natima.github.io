@@ -319,6 +319,8 @@ if (document.body.classList.contains("type-detail")) {
 			if ($(".card-text").length > 1) {
 				let cardHeight = 0;
 
+				$(".card-text").css("min-height", "");
+
 				$(".card-text").each(function () {
 					var thisHeight = $(this).outerHeight();
 					if (thisHeight > cardHeight) {
