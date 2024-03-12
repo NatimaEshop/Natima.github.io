@@ -981,6 +981,10 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 		display: none;
 	}
 
+	.sekceProduktu p {
+		text-align: left;
+	}
+
 	.text70procent,
 	.text100procent {
 		max-width: 100%;
