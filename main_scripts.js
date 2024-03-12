@@ -320,7 +320,7 @@ if (document.body.classList.contains("type-detail")) {
 				let cardHeight = 0;
 
 				$(".card-text").each(function () {
-					var thisHeight = $(this).height();
+					var thisHeight = $(this).outerHeight();
 					if (thisHeight > cardHeight) {
 						cardHeight = thisHeight;
 					}
