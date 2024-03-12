@@ -981,7 +981,8 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 		display: none;
 	}
 
-	.sekceProduktu p {
+	.sekceProduktu p,
+	.sekceProduktu li {
 		text-align: left;
 	}
 
