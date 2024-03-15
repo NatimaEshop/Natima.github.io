@@ -205,7 +205,7 @@ body.user-logged-in .flag.flag-vip {
 	margin-left: calc(var(--productDetailIconWidth) / 6);
 	margin-right: calc(var(--productDetailIconWidth) / 6 + 5px);
 	display: block;
-	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/time_icon.svg);
+	background-image: url(https://www.natima.cz/user/documents/upload/Natima/time_icon.svg);
 }
 
 .p-detail .detail-parameters .delivery-time {
@@ -225,7 +225,7 @@ body.user-logged-in .flag.flag-vip {
 	margin-left: calc(var(--productDetailIconWidth) / 11);
 	margin-right: calc(var(--productDetailIconWidth) / 11 + 5px);
 	display: block;
-	background-image: url(https://595805.myshoptet.com/user/documents/upload/bannery/delivery_icon.svg);
+	background-image: url(https://www.natima.cz/user/documents/upload/Natima/delivery_icon.svg);
 }
 .p-detail .extended-description .detail-parameters a::after {
 	content: "\e90e";
