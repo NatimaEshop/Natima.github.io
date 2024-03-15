@@ -276,7 +276,7 @@ body {
 	height: 100%;
 	width: 30px;
 	content: "";
-	background-image: url("https://595805.myshoptet.com/user/documents/upload/icon_phone.svg");
+	background-image: url("https://www.natima.cz/user/documents/upload/Natima/icon_phone.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: 0 50%;
@@ -291,7 +291,7 @@ body {
 	width: 30px;
 	padding: 0;
 	margin: 0;
-	background-image: url(https://595805.myshoptet.com/user/documents/upload/accountMenuIcon.svg);
+	background-image: url(https://www.natima.cz/user/documents/upload/Natima/accountMenuIcon.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -760,7 +760,7 @@ body {
 	}
 	#header .responsive-tools .toggle-window[data-target="search"]::before {
 		content: "";
-		background-image: url(https://595805.myshoptet.com/user/documents/upload/searchMenuIcon.svg);
+		background-image: url(https://www.natima.cz/user/documents/upload/Natima/searchMenuIcon.svg);
 		width: 100%;
 		height: 100%;
 		background-size: contain;
@@ -777,7 +777,7 @@ body {
 	#header .responsive-tools .toggle-window[data-target="navigation"]::before {
 		content: "";
 		background: none;
-		background-image: url("https://595805.myshoptet.com/user/documents/upload/moreMenuIcon.svg");
+		background-image: url("https://www.natima.cz/user/documents/upload/Natima/moreMenuIcon.svg");
 		background-position: center;
 		background-repeat: no-repeat;
 		height: var(--header-icon-menu-height);
