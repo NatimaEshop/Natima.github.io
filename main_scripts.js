@@ -271,6 +271,9 @@ if (document.body.classList.contains("type-detail")) {
 		if ($(".availability-value").text().indexOf("Momen") > -1) {
 			$(".availability-value").addClass("red");
 		}
+		if ($(".availability-value").text().indexOf("BRZY") > -1) {
+			$(".availability-value").addClass("red");
+		}
 
 		$(".p-detail-inner-header > h1").clone().appendTo(".description-inner .extended-description");
 		$(".description-inner .extended-description h1").replaceWith(
