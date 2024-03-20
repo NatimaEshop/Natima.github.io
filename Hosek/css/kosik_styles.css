@@ -1146,20 +1146,29 @@ ol.cart-header li.active strong span::before {
 }
 
 /*Dekujeme za objednávku*/
-.in-dekujeme h4 {
+.in-dekujeme h4,
+.in-dakujeme h4 {
 	margin-left: -55px;
 	padding-left: 80px;
 }
-.in-dekujeme .co-payment-method {
+.in-dekujeme .co-payment-method,
+.in-dakujeme .co-payment-method {
 	padding: 20px 40px 30px 40px;
 }
 
-.in-dekujeme .col-sm-12 {
+.in-dekujeme .col-sm-12,
+.in-dakujeme .col-sm-12 {
 	float: none;
 }
 
-.in-dekujeme .co-order {
+.in-dekujeme .co-order,
+.in-dakujeme .co-order {
 	padding: 40px;
+}
+.in-dekujeme .recapitulation-wrapper .cart-table .cart-p-image,
+.in-dakujeme .recapitulation-wrapper .cart-table .cart-p-image {
+	display: flex;
+	justify-content: center;
 }
 
 @media (max-width: 1000px) {
