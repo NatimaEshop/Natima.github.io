@@ -245,6 +245,7 @@ body.user-logged-in .flag.flag-vip {
 	padding-top: 45px !important;
 	border-collapse: initial;
 	position: relative;
+	min-width: 190px;
 }
 
 .basic-description .detail-parameters::before {

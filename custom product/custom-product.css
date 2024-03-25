@@ -1,0 +1,570 @@
+/*:root {
+    --desc-color-primary: var(--color-primary);
+    --desc-color-secondary: var(--color-primary-hover);
+    --desc-color-bg-primary: var(--color-primary);
+    --desc-color-bg-secondary: var(--color-primary-hover);
+}*/
+.custom-desc {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	font-size: 1.6rem;
+	color: var(--color-black-1000);
+	font-weight: 400;
+	line-height: 1.2;
+	gap: var(--gap);
+	--gap: 20px;
+	--border-radius: 20px;
+	--padding-block: 60px;
+}
+.pad {
+	padding: 60px;
+}
+.pad-l {
+	padding-left: 60px;
+}
+.pad-r {
+	padding-right: 60px;
+}
+.pad-t {
+	padding-top: 60px;
+}
+.pad-b {
+	padding-bottom: 60px;
+}
+.block > * {
+	width: 100%;
+	height: 100%;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	margin: auto;
+	align-items: center;
+}
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------POZADI*/
+/*---------------------------------------------------------------------------------------------*/
+.bg {
+	background: #f6f6f6;
+}
+
+.bg.gradient.grey {
+	background: -moz-linear-gradient(0deg, rgba(205, 205, 205, 1) 0%, rgba(246, 246, 246, 1) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(205, 205, 205, 1) 0%, rgba(246, 246, 246, 1) 100%);
+	background: linear-gradient(0deg, rgba(205, 205, 205, 1) 0%, rgba(246, 246, 246, 1) 100%);
+}
+.bg.gradient {
+	background: var(--desc-color-bg-primary);
+	background: -moz-radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
+	background: -webkit-radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
+	background: radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
+}
+.ikona .bg.gradient {
+	background: -moz-linear-gradient(90deg, var(--desc-color-bg-secondary) 0%, var(--desc-color-bg-primary) 100%);
+	background: -webkit-linear-gradient(90deg, var(--desc-color-bg-secondary) 0%, var(--desc-color-bg-primary) 100%);
+	background: linear-gradient(90deg, var(--desc-color-bg-secondary) 0%, var(--desc-color-bg-primary) 100%);
+}
+.bg-img {
+	display: grid;
+}
+.bg-img > * {
+	grid-row: 1;
+	grid-column: 1;
+	z-index: 1;
+}
+.bg-img-div {
+	overflow: hidden;
+	border-radius: var(--border-radius);
+	min-width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+.bg-img-div img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+	max-width: none;
+	min-width: 100%;
+	min-height: 100%;
+}
+.pad .bottom {
+	position: relative;
+	min-width: calc(100% + var(--padding-block) * 2);
+	left: calc(var(--padding-block) / -1);
+	top: auto;
+	bottom: 0;
+	margin-top: auto;
+	display: flex;
+}
+div:has(> .bottom) {
+	display: flex;
+	padding-bottom: 0;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------BLOKY*/
+/*---------------------------------------------------------------------------------------------*/
+.custom-desc > * {
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+.custom-desc > *:has(.bottom) {
+	padding-bottom: 0;
+}
+.custom-desc > *:has(.top) {
+	padding-top: 0;
+}
+
+.w-5 {
+	width: 5%;
+}
+.w-10 {
+	width: 10%;
+}
+.w-15 {
+	width: 15%;
+}
+.w-20 {
+	width: 20%;
+}
+.w-25 {
+	width: 25%;
+}
+.w-30 {
+	width: 30%;
+}
+.w-35 {
+	width: 35%;
+}
+.w-40 {
+	width: 40%;
+}
+.w-45 {
+	width: 45%;
+}
+.w-50 {
+	width: 50%;
+}
+.w-55 {
+	width: 55%;
+}
+.w-60 {
+	width: 60%;
+}
+.w-65 {
+	width: 65%;
+}
+.w-70 {
+	width: 70%;
+}
+.w-75 {
+	width: 75%;
+}
+.w-80 {
+	width: 80%;
+}
+.w-85 {
+	width: 85%;
+}
+.w-90 {
+	width: 90%;
+}
+.w-95 {
+	width: 95%;
+}
+.w-100 {
+	width: 100%;
+}
+.w-5 > *,
+.w-10 > *,
+.w-15 > *,
+.w-20 > *,
+.w-25 > *,
+.w-30 > *,
+.w-35 > *,
+.w-40 > *,
+.w-45 > *,
+.w-50 > *,
+.w-55 > *,
+.w-60 > *,
+.w-65 > *,
+.w-70 > *,
+.w-75 > *,
+.w-80 > *,
+.w-85 > *,
+.w-90 > *,
+.w-95 > *,
+.w-100 > * {
+	width: 100%;
+}
+
+.col-1-9,
+.col-2-8,
+.col-25-75,
+.col-3-7,
+.col-4-6,
+.col-5-5,
+.col-6-4,
+.col-7-3,
+.col-75-25,
+.col-8-2,
+.col-9-1,
+.col-1-1-8,
+.col-1-2-7,
+.col-1-3-6,
+.col-1-4-5,
+.col-1-5-4,
+.col-1-6-3,
+.col-1-7-2,
+.col-1-8-1,
+.col-2-1-7,
+.col-2-2-6,
+.col-2-3-5,
+.col-2-4-4,
+.col-2-5-3,
+.col-2-6-2,
+.col-2-7-1,
+.col-3-1-6,
+.col-3-2-5,
+.col-3-3-4,
+.col-3-4-3,
+.col-3-5-2,
+.col-3-6-1,
+.col-4-1-5,
+.col-4-2-4,
+.col-4-3-3,
+.col-4-4-2,
+.col-4-5-1,
+.col-5-1-4,
+.col-5-2-3,
+.col-5-3-2,
+.col-5-4-1,
+.col-6-1-3,
+.col-6-2-2,
+.col-6-3-1,
+.col-7-1-2,
+.col-7-2-1,
+.col-8-1-1 {
+	display: grid;
+	gap: var(--gap);
+	align-items: center;
+}
+.block {
+	gap: var(--gap);
+}
+
+.col-1-9 {
+	grid-template-columns: calc(10% - var(--gap) / 2) calc(90% - var(--gap) / 2);
+}
+.col-2-8 {
+	grid-template-columns: calc(20% - var(--gap) / 2) calc(80% - var(--gap) / 2);
+}
+.col-3-7 {
+	grid-template-columns: calc(30% - var(--gap) / 2) calc(70% - var(--gap) / 2);
+}
+.col-25-75 {
+	grid-template-columns: calc(25% - var(--gap) / 2) calc(75% - var(--gap) / 2);
+}
+.col-4-6 {
+	grid-template-columns: calc(40% - var(--gap) / 2) calc(60% - var(--gap) / 2);
+}
+.col-5-5 {
+	grid-template-columns: calc(50% - var(--gap) / 2) calc(50% - var(--gap) / 2);
+}
+.col-6-4 {
+	grid-template-columns: calc(60% - var(--gap) / 2) calc(40% - var(--gap) / 2);
+}
+.col-7-3 {
+	grid-template-columns: calc(70% - var(--gap) / 2) calc(30% - var(--gap) / 2);
+}
+.col-75-25 {
+	grid-template-columns: calc(75% - var(--gap) / 2) calc(25% - var(--gap) / 2);
+}
+.col-8-2 {
+	grid-template-columns: calc(80% - var(--gap) / 2) calc(20% - var(--gap) / 2);
+}
+.col-9-1 {
+	grid-template-columns: calc(90% - var(--gap) / 2) calc(10% - var(--gap) / 2);
+}
+.col-1-1-8 {
+	grid-template-columns: calc(10% - var(--gap) / 3) calc(10% - var(--gap) / 3) calc(80% - var(--gap) / 3);
+}
+.col-1-2-7 {
+	grid-template-columns: calc(10% - var(--gap) / 3) calc(20% - var(--gap) / 3) calc(70% - var(--gap) / 3);
+}
+.col-1-3-6 {
+	grid-template-columns: calc(10% - var(--gap) / 3) calc(30% - var(--gap) / 3) calc(60% - var(--gap) / 3);
+}
+.col-1-4-5 {
+	grid-template-columns: calc(10% - var(--gap) / 3) calc(40% - var(--gap) / 3) calc(50% - var(--gap) / 3);
+}
+.col-1-5-4 {
+	grid-template-columns: calc(10% - var(--gap) / 3) calc(50% - var(--gap) / 3) calc(40% - var(--gap) / 3);
+}
+.col-1-6-3 {
+	grid-template-columns: calc(10% - var(--gap) / 3) calc(60% - var(--gap) / 3) calc(30% - var(--gap) / 3);
+}
+.col-1-7-2 {
+	grid-template-columns: calc(10% - var(--gap) / 3) calc(70% - var(--gap) / 3) calc(20% - var(--gap) / 3);
+}
+.col-1-8-1 {
+	grid-template-columns: calc(10% - var(--gap) / 3) calc(80% - var(--gap) / 3) calc(10% - var(--gap) / 3);
+}
+.col-2-1-7 {
+	grid-template-columns: calc(20% - var(--gap) / 3) calc(10% - var(--gap) / 3) calc(70% - var(--gap) / 3);
+}
+.col-2-2-6 {
+	grid-template-columns: calc(20% - var(--gap) / 3) calc(20% - var(--gap) / 3) calc(60% - var(--gap) / 3);
+}
+.col-2-3-5 {
+	grid-template-columns: calc(20% - var(--gap) / 3) calc(30% - var(--gap) / 3) calc(50% - var(--gap) / 3);
+}
+.col-2-4-4 {
+	grid-template-columns: calc(20% - var(--gap) / 3) calc(40% - var(--gap) / 3) calc(40% - var(--gap) / 3);
+}
+.col-2-5-3 {
+	grid-template-columns: calc(20% - var(--gap) / 3) calc(50% - var(--gap) / 3) calc(30% - var(--gap) / 3);
+}
+.col-2-6-2 {
+	grid-template-columns: calc(20% - var(--gap) / 3) calc(60% - var(--gap) / 3) calc(20% - var(--gap) / 3);
+}
+.col-2-7-1 {
+	grid-template-columns: calc(20% - var(--gap) / 3) calc(70% - var(--gap) / 3) calc(10% - var(--gap) / 3);
+}
+.col-3-1-6 {
+	grid-template-columns: calc(30% - var(--gap) / 3) calc(10% - var(--gap) / 3) calc(60% - var(--gap) / 3);
+}
+.col-3-2-5 {
+	grid-template-columns: calc(30% - var(--gap) / 3) calc(20% - var(--gap) / 3) calc(50% - var(--gap) / 3);
+}
+.col-3-3-4 {
+	grid-template-columns: calc(30% - var(--gap) / 3) calc(30% - var(--gap) / 3) calc(40% - var(--gap) / 3);
+}
+.col-3-4-3 {
+	grid-template-columns: calc(30% - var(--gap) / 3) calc(40% - var(--gap) / 3) calc(30% - var(--gap) / 3);
+}
+.col-3-5-2 {
+	grid-template-columns: calc(30% - var(--gap) / 3) calc(50% - var(--gap) / 3) calc(20% - var(--gap) / 3);
+}
+.col-3-6-1 {
+	grid-template-columns: calc(30% - var(--gap) / 3) calc(60% - var(--gap) / 3) calc(10% - var(--gap) / 3);
+}
+.col-4-1-5 {
+	grid-template-columns: calc(40% - var(--gap) / 3) calc(10% - var(--gap) / 3) calc(50% - var(--gap) / 3);
+}
+.col-4-2-4 {
+	grid-template-columns: calc(40% - var(--gap) / 3) calc(20% - var(--gap) / 3) calc(40% - var(--gap) / 3);
+}
+.col-4-3-3 {
+	grid-template-columns: calc(40% - var(--gap) / 3) calc(30% - var(--gap) / 3) calc(30% - var(--gap) / 3);
+}
+.col-4-4-2 {
+	grid-template-columns: calc(40% - var(--gap) / 3) calc(40% - var(--gap) / 3) calc(20% - var(--gap) / 3);
+}
+.col-4-5-1 {
+	grid-template-columns: calc(40% - var(--gap) / 3) calc(50% - var(--gap) / 3) calc(10% - var(--gap) / 3);
+}
+.col-5-1-4 {
+	grid-template-columns: calc(50% - var(--gap) / 3) calc(10% - var(--gap) / 3) calc(40% - var(--gap) / 3);
+}
+.col-5-2-3 {
+	grid-template-columns: calc(50% - var(--gap) / 3) calc(20% - var(--gap) / 3) calc(30% - var(--gap) / 3);
+}
+.col-5-3-2 {
+	grid-template-columns: calc(50% - var(--gap) / 3) calc(30% - var(--gap) / 3) calc(20% - var(--gap) / 3);
+}
+.col-5-4-1 {
+	grid-template-columns: calc(50% - var(--gap) / 3) calc(40% - var(--gap) / 3) calc(10% - var(--gap) / 3);
+}
+.col-6-1-3 {
+	grid-template-columns: calc(60% - var(--gap) / 3) calc(10% - var(--gap) / 3) calc(30% - var(--gap) / 3);
+}
+.col-6-2-2 {
+	grid-template-columns: calc(60% - var(--gap) / 3) calc(20% - var(--gap) / 3) calc(20% - var(--gap) / 3);
+}
+.col-6-3-1 {
+	grid-template-columns: calc(60% - var(--gap) / 3) calc(30% - var(--gap) / 3) calc(10% - var(--gap) / 3);
+}
+.col-7-1-2 {
+	grid-template-columns: calc(70% - var(--gap) / 3) calc(10% - var(--gap) / 3) calc(20% - var(--gap) / 3);
+}
+.col-7-2-1 {
+	grid-template-columns: calc(70% - var(--gap) / 3) calc(20% - var(--gap) / 3) calc(10% - var(--gap) / 3);
+}
+.col-8-1-1 {
+	grid-template-columns: calc(80% - var(--gap) / 3) calc(10% - var(--gap) / 3) calc(10% - var(--gap) / 3);
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------FONTY*/
+/*---------------------------------------------------------------------------------------------*/
+.f-14 {
+	font-size: 1.4rem;
+}
+.f-16 {
+	font-size: 1.6rem;
+}
+.f-18 {
+	font-size: 1.8rem;
+}
+.f-20 {
+	font-size: 2rem;
+}
+.f-22 {
+	font-size: 2.2rem;
+}
+.f-24 {
+	font-size: 2.4rem;
+}
+.f-26 {
+	font-size: 2.6rem;
+}
+.f-28 {
+	font-size: 2.8rem;
+}
+.f-30 {
+	font-size: 3rem;
+}
+.f-32 {
+	font-size: 3.2rem;
+}
+.f-34 {
+	font-size: 3.4rem;
+}
+.f-36 {
+	font-size: 3.6rem;
+}
+.f-38 {
+	font-size: 3.8rem;
+}
+.f-40 {
+	font-size: 4rem;
+}
+.white {
+	color: white;
+	font-weight: 500;
+}
+.bold-semi {
+	font-weight: 500;
+}
+.bold {
+	font-weight: 600;
+}
+.bold-extra {
+	font-weight: 700;
+}
+.bold-mega {
+	font-weight: 800;
+}
+.center {
+	text-align: center;
+}
+
+.custom-desc h2,
+.custom-desc h3 {
+	font-weight: 600;
+	line-height: 1;
+	font-size: 3rem;
+}
+.custom-desc p,
+.custom-dest h2,
+.custom-desc h3 {
+	padding-bottom: 1em;
+	margin: 0;
+}
+.compare h3 {
+	font-size: 4rem;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------IKONY*/
+/*---------------------------------------------------------------------------------------------*/
+.ikony {
+	--gap: 40px;
+}
+.ikona {
+	width: 100%;
+	aspect-ratio: 1/1;
+	border-radius: var(--border-radius);
+	padding: 25%;
+}
+.ikona-slider {
+	display: flex;
+
+	align-items: center;
+}
+.ikona-slider > div {
+	width: 100%;
+	flex-shrink: 0;
+}
+.ikona-slider .ikona {
+	padding: 0;
+	width: 35%;
+	margin-bottom: calc(var(--gap) * 2);
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------COMPARE*/
+/*---------------------------------------------------------------------------------------------*/
+.compare {
+	display: grid;
+	gap: 20px;
+	align-content: center;
+	text-align: center;
+}
+.compare.col-2 {
+	grid-template-columns: 1fr 1fr;
+}
+.compare.col-3 {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.compare.col-4 {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.compare > * {
+	max-width: 70%;
+}
+.comapare.col-2 > *nth:child(-n + 3) {
+	grid-row: 1;
+}
+.comapare.col-3 > *nth:child(-n + 3) {
+	grid-row: 2;
+}
+.comapare.col-4 > *nth:child(-n + 4) {
+	grid-row: 2;
+}
+.comapare.col-3 > h3 {
+	grid-row: 1;
+	grid-column: 1/4;
+}
+.comapare.col-4 > h3 {
+	grid-row: 1;
+	grid-column: 1/5;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------Tabulka složení*/
+/*---------------------------------------------------------------------------------------------*/
+.ingredients {
+	font-size: 1.4rem;
+}
+.ingredients table {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+.ingredients table,
+.ingredients th,
+.ingredients td {
+	border: 1px solid var(--color-gray-800);
+}
+.ingredients th,
+.ingredients td {
+	display: flex;
+	align-items: center;
+	padding: 1em;
+}
