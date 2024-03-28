@@ -271,7 +271,7 @@ if (document.body.classList.contains("type-detail")) {
 		if ($(".availability-value").text().indexOf("Momen") > -1) {
 			$(".availability-value").addClass("red");
 		}
-		if ($(".availability-value").text().indexOf("Přibližné datum") > -1) {
+		if ($(".availability-value").text().indexOf("nasklad") > -1) {
 			$(".availability-value").addClass("red");
 		}
 
