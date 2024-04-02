@@ -583,7 +583,7 @@
 .custom-desc h2,
 .custom-desc h3 {
 	font-weight: 600;
-	line-height: 1;
+	line-height: 1.2;
 	font-size: 3rem;
 }
 .custom-desc p,
@@ -651,6 +651,7 @@
 /*---------------------------------------------------------------------------------------------*/
 .custom-desc .compare {
 	row-gap: 0;
+	--column-gap: calc(var(--gap) * 3);
 }
 .custom-desc .compare p {
 	padding: 1em 0;
@@ -689,6 +690,10 @@
 	width: 35%;
 	text-align: center;
 	margin: auto;
+}
+.custom-desc .compare.items-2 > img {
+	filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.25));
+	max-width: 175px;
 }
 .custom-desc .compare.items-3 h3,
 .custom-desc .compare.items-4 h3 {
