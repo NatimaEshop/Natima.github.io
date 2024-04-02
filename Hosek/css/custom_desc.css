@@ -673,9 +673,10 @@
 .custom-desc .compare.items-2 h3 {
 	grid-row: 1;
 	grid-column: 1/3;
-	width: 30%;
+	width: 32%;
 	text-align: center;
 	margin: auto;
+	line-height: 1.3;
 }
 .custom-desc .compare.items-2 > img:first-of-type {
 	grid-row: 1;
@@ -689,7 +690,7 @@
 	grid-column: 2;
 	width: 35%;
 	text-align: center;
-	margin: auto;
+	margin: auto auto 20px auto;
 }
 .custom-desc .compare.items-2 > img {
 	filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.25));
