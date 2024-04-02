@@ -32,7 +32,12 @@
 .custom-desc .pad-b {
 	padding-bottom: var(--padding-block);
 }
-
+.custom-desc .m-top-auto {
+	margin-top: auto;
+}
+.custom-desc .m-bottom-auto {
+	margin-bottom: auto;
+}
 .custom-desc .m-top-1 {
 	margin-top: 10px !important;
 }
