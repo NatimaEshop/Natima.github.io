@@ -397,7 +397,7 @@ if (document.body.classList.contains("type-detail")) {
 		let sliderChildLength = sliderChild.length;
 		let activeChild = 0;
 		let intervalId;
-		let intervalTime = 10000;
+		let intervalTime = 7000;
 
 		// Check if there are more than 1 children
 		if (sliderChildLength > 1) {
