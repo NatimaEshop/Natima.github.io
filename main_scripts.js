@@ -390,6 +390,57 @@ if (document.body.classList.contains("type-detail")) {
 			}
 		});
 	});
+
+	/*CUSTOM NATIOS*/
+	if ($(".custom-desc").length >= 1) {
+		let sliderChild = $(".ikony.slider").children();
+		let sliderChildLength = sliderChild.length;
+		let activeChild = 0;
+		let intervalId;
+		let intervalTime = 10000;
+
+		// Check if there are more than 1 children
+		if (sliderChildLength > 1) {
+			// Create div dots
+			let dots = $('<div class="dots"></div>');
+
+			// Create a dot for each entry in sliderChild
+			sliderChild.each(function () {
+				dots.append('<div class="dot"></div>');
+			});
+
+			// Append dots to .ikony.slider
+			$(".ikony.slider").append(dots);
+
+			$(".slider .dot").first().addClass("active");
+
+			$(".slider .dot").click(function () {
+				activeChild = $(this).index();
+				updateSlider();
+				clearInterval(intervalId); // Stop the interval when a dot is clicked
+			});
+
+			function updateSlider() {
+				sliderChild.each(function (index) {
+					$(this).css("transform", "translateX(" + (index - activeChild) * 100 + "%)");
+				});
+
+				$(".slider .dot").each(function (index) {
+					if (index == activeChild) {
+						$(this).addClass("active");
+					} else {
+						$(this).removeClass("active");
+					}
+				});
+			}
+
+			// Increase value of activeChild by 1 every 10 seconds and trigger updateSlider
+			intervalId = setInterval(function () {
+				activeChild = (activeChild + 1) % sliderChildLength; // Use modulus to loop back to 0 when reaching the end
+				updateSlider();
+			}, intervalTime);
+		}
+	}
 }
 
 /*faq*/
