@@ -598,6 +598,7 @@
 	padding: 0;
 	padding-bottom: 1em;
 	margin: 0;
+	margin-bottom: 0;
 }
 .custom-desc .compare h3 {
 	font-size: 4rem;
