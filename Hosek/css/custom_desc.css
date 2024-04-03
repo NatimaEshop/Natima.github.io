@@ -592,11 +592,16 @@
 	line-height: 1.2;
 	font-size: 3rem;
 }
-.custom-desc p,
-.custom-dest h2,
-.custom-desc h3 {
+.custom-desc p {
 	padding: 0;
 	padding-bottom: 1em;
+	margin: 0;
+	margin-bottom: 0;
+}
+.custom-desc h2,
+.custom-desc h3 {
+	padding: 0;
+	padding-bottom: 0.8em;
 	margin: 0;
 	margin-bottom: 0;
 }
