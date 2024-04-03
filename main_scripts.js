@@ -422,7 +422,7 @@ if (document.body.classList.contains("type-detail")) {
 
 			function updateSlider() {
 				sliderChild.each(function (index) {
-					$(this).css("transform", "translateX(" + (index - activeChild) * 100 + "%)");
+					$(this).css("transform", "translateX(" + (index - activeChild * 2) * 100 + "%)");
 				});
 
 				$(".slider .dot").each(function (index) {
