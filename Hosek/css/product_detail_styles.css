@@ -281,7 +281,7 @@ body.user-logged-in .flag.flag-vip {
 	margin-right: 4px;
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1569px) {
 	.extended-description {
 		display: none;
 	}
@@ -289,7 +289,7 @@ body.user-logged-in .flag.flag-vip {
 		overflow-x: hidden;
 	}
 }
-@media (min-width: 1439px) {
+@media (min-width: 1569px) {
 	.description-inner {
 		flex-wrap: nowrap;
 	}
