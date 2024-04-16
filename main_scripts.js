@@ -398,7 +398,7 @@ if (document.body.classList.contains("type-detail")) {
 		let sliderChildLength = sliderChild.length;
 		var activeChild = 0;
 		let intervalId;
-		let intervalTime = 7000;
+		let intervalTime = 4000;
 		console.log(sliderChild);
 		console.log(intervalTime);
 
