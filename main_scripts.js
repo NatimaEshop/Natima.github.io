@@ -393,6 +393,7 @@ if (document.body.classList.contains("type-detail")) {
 
 	/*CUSTOM NATIOS*/
 	if ($(".custom-desc").length >= 1) {
+		$(body).addClass("custom-product");
 		var sliderChild = $(".ikony.slider").children();
 		let sliderChildLength = sliderChild.length;
 		var activeChild = 0;
