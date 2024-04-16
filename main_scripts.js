@@ -393,9 +393,9 @@ if (document.body.classList.contains("type-detail")) {
 
 	/*CUSTOM NATIOS*/
 	if ($(".custom-desc").length >= 1) {
-		var sliderChild = $(".ikony.slider").children();
+		var sliderChild = $(".ikony.slider").children(); /*var kvuli safari*/
 		let sliderChildLength = sliderChild.length;
-		let activeChild = 0;
+		var activeChild = 0; /*var kvuli safari*/
 		let intervalId;
 		let intervalTime = 7000;
 		console.log(sliderChild);
