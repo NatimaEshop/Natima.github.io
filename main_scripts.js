@@ -442,6 +442,32 @@ if (document.body.classList.contains("type-detail")) {
 				}
 			});
 		}
+
+		if ($(".custom-desc .compare").length == 0) {
+		} else {
+			let items = $(".custom-desc .compare p");
+			let items_columns = 2;
+
+			function setMinHeightCompare() {
+				$(items).css("min-height", "");
+				for (let i = 0; i < items.length / items_columns; i++) {
+					index = i * items_columns;
+					let item = items[index];
+					let next = items[index + 1];
+					if (next) {
+						let item_height = $(item).innerHeight();
+						let next_height = $(next).innerHeight();
+						if (item_height > next_height) {
+							$(next).css("min-height", item_height);
+						} else {
+							$(item).css("min-height", next_height);
+						}
+					}
+				}
+			}
+			setMinHeightCompare();
+			window.addEventListener("resize", setMinHeightCompare);
+		}
 	}
 }
 
