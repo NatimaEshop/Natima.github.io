@@ -398,6 +398,7 @@ if (document.body.classList.contains("type-detail")) {
 		let activeChild = 0;
 		let intervalId;
 		let intervalTime = 7000;
+		console.log(sliderChild);
 		console.log(intervalTime);
 
 		// Check if there are more than 1 children
