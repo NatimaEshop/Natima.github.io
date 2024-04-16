@@ -961,4 +961,11 @@
 		padding-bottom: 0.2em;
 		padding-top: 0.2em;
 	}
+	.custom-desc h2,
+	.custom-desc h3 {
+		font-size: 2.5em;
+	}
+	.custom-desc .compare h3 {
+		font-size: 3rem;
+	}
 }
