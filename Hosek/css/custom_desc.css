@@ -620,20 +620,22 @@
 .custom-desc .ikony img {
 	border-radius: var(--border-radius);
 }
+
 .custom-desc .ikony.h-1 img {
-	height: 60px;
-	width: 60px;
-	padding: 12px;
+	width: clamp(45px, 3.125vw, 60px);
+	height: clamp(45px, 3.125vw, 60px);
+	padding: clamp(9px, 0.625vw, 12px);
 }
+
 .custom-desc .ikony.h-2 img {
-	height: 70px;
-	width: 70px;
-	padding: 15px;
+	width: clamp(55px, 3.7vw, 70px);
+	height: clamp(55px, 3.7vw, 70px);
+	padding: clamp(12px, 0.78vw, 15px);
 }
 .custom-desc .ikony.h-3 img {
-	height: 110px;
-	width: 110px;
-	padding: 28px;
+	width: clamp(65px, 5.75vw, 110px);
+	height: clamp(65px, 5.75vw, 110px);
+	padding: clamp(14px, 1.5vw, 28px);
 }
 .custom-desc .ikony.slider {
 	display: flex;
