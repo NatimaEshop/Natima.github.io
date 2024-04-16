@@ -40,40 +40,40 @@
 	margin-bottom: auto;
 }
 .custom-desc .m-top-1 {
-	margin-top: clamp(5px, 0.52vw, 10px) !important;
+	margin-top: clamp(2px, 0.52vw, 10px) !important;
 }
 .custom-desc .m-top-2 {
-	margin-top: clamp(10px, 1.04vw, 20px) !important;
+	margin-top: clamp(5px, 1.04vw, 20px) !important;
 }
 .custom-desc .m-top-3 {
-	margin-top: clamp(15px, 1.56vw, 30px) !important;
+	margin-top: clamp(7px, 1.56vw, 30px) !important;
 }
 .custom-desc .m-top-4 {
-	margin-top: clamp(20px, 2.08vw, 40px) !important;
+	margin-top: clamp(10px, 2.08vw, 40px) !important;
 }
 .custom-desc .m-bottom-1 {
-	margin-bottom: clamp(5px, 0.52vw, 10px) !important;
+	margin-bottom: clamp(2px, 0.52vw, 10px) !important;
 }
 .custom-desc .m-bottom-2 {
-	margin-bottom: clamp(10px, 1.04vw, 20px) !important;
+	margin-bottom: clamp(5px, 1.04vw, 20px) !important;
 }
 .custom-desc .m-bottom-3 {
-	margin-bottom: clamp(15px, 1.56vw, 30px) !important;
+	margin-bottom: clamp(7px, 1.56vw, 30px) !important;
 }
 .custom-desc .m-bottom-4 {
-	margin-bottom: clamp(20px, 2.08vw, 40px) !important;
+	margin-bottom: clamp(10px, 2.08vw, 40px) !important;
 }
 .custom-desc .m-bottom-5 {
-	margin-bottom: clamp(25px, 2.6vw, 50px) !important;
+	margin-bottom: clamp(12px, 2.6vw, 50px) !important;
 }
 .custom-desc .m-bottom-6 {
-	margin-bottom: clamp(30px, 3.12vw, 60px) !important;
+	margin-bottom: clamp(15px, 3.12vw, 60px) !important;
 }
 .custom-desc .m-bottom-7 {
-	margin-bottom: clamp(35px, 3.64vw, 70px) !important;
+	margin-bottom: clamp(17px, 3.64vw, 70px) !important;
 }
 .custom-desc .m-bottom-8 {
-	margin-bottom: clamp(40px, 4.16vw, 80px) !important;
+	margin-bottom: clamp(20px, 4.16vw, 80px) !important;
 }
 /*---------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------POZADI*/
