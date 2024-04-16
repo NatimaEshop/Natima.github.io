@@ -428,21 +428,20 @@ if (document.body.classList.contains("type-detail")) {
 				updateSlider();
 			}, intervalTime);
 		}
-
-		function updateSlider() {
-			sliderChild.each(function (index) {
-				$(this).css("transform", "translateX(" + -activeChild * 100 + "%)");
-			});
-
-			$(".slider .dot").each(function (index) {
-				if (index == activeChild) {
-					$(this).addClass("active");
-				} else {
-					$(this).removeClass("active");
-				}
-			});
-		}
 	}
+}
+function updateSlider() {
+	sliderChild.each(function (index) {
+		$(this).css("transform", "translateX(" + -activeChild * 100 + "%)");
+	});
+
+	$(".slider .dot").each(function (index) {
+		if (index == activeChild) {
+			$(this).addClass("active");
+		} else {
+			$(this).removeClass("active");
+		}
+	});
 }
 
 /*faq*/
