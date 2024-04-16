@@ -393,9 +393,9 @@ if (document.body.classList.contains("type-detail")) {
 
 	/*CUSTOM NATIOS*/
 	if ($(".custom-desc").length >= 1) {
-		var sliderChild = $(".ikony.slider").children(); /*var kvuli safari*/
+		let sliderChild = $(".ikony.slider").children(); /*var kvuli safari*/
 		let sliderChildLength = sliderChild.length;
-		var activeChild = 0; /*var kvuli safari*/
+		let activeChild = 0; /*var kvuli safari*/
 		let intervalId;
 		let intervalTime = 7000;
 		console.log(sliderChild);
@@ -422,25 +422,25 @@ if (document.body.classList.contains("type-detail")) {
 				clearInterval(intervalId); // Stop the interval when a dot is clicked
 			});
 
-			function updateSlider() {
-				sliderChild.each(function (index) {
-					$(this).css("transform", "translateX(" + -activeChild * 100 + "%)");
-				});
-
-				$(".slider .dot").each(function (index) {
-					if (index == activeChild) {
-						$(this).addClass("active");
-					} else {
-						$(this).removeClass("active");
-					}
-				});
-			}
-
 			// Increase value of activeChild by 1 every 10 seconds and trigger updateSlider
 			intervalId = setInterval(function () {
 				activeChild = (activeChild + 1) % sliderChildLength; // Use modulus to loop back to 0 when reaching the end
 				updateSlider();
 			}, intervalTime);
+		}
+
+		function updateSlider() {
+			sliderChild.each(function (index) {
+				$(this).css("transform", "translateX(" + -activeChild * 100 + "%)");
+			});
+
+			$(".slider .dot").each(function (index) {
+				if (index == activeChild) {
+					$(this).addClass("active");
+				} else {
+					$(this).removeClass("active");
+				}
+			});
 		}
 	}
 }
