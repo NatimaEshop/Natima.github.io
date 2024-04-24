@@ -24,11 +24,27 @@
 	border-radius: calc(var(--border-radius) - 2px);
 	padding: 0;
 	transition: background 0.2s ease-out, border-color 0.2s ease-out;
+	position: relative;
 }
 .admin-logged #productsAlternative .products-alternative .product:hover {
-	background: var(--color-primary-100);
 	border-color: var(--color-primary);
 }
+.admin-logged #productsAlternative .products-alternative .product::after {
+	background: var(--color-primary);
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.2s ease-out;
+	pointer-events: none;
+}
+.admin-logged #productsAlternative .products-alternative .product:hover::after {
+	opacity: 0.05;
+}
+
 .admin-logged #productsAlternative .products-alternative .product .image::after {
 	transition: opacity 0.2s ease-out;
 }

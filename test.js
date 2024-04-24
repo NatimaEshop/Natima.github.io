@@ -1,5 +1,5 @@
 if (document.body.classList.contains("admin-logged")) {
-	$("#productsAlternative").insertAfter(".product-top .social-buttons-wrapper");
+	$("#productsAlternative").insertAfter(".p-detail-inner .product-top .social-buttons-wrapper");
 
 	$("#productsAlternative .p .image img").each(function () {
 		var $this = $(this);
