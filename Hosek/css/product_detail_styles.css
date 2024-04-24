@@ -1297,3 +1297,199 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 		gap: 20px;
 	}
 }
+
+/*Podobné produkty - alternative varianty*/
+.shp-tab[data-testid="tabAlternativeProducts"] {
+	display: none !important;
+}
+#productsAlternative {
+	order: 8;
+	transition: none;
+	opacity: 1;
+}
+#productsAlternative::before {
+	content: "Další dostupné varianty:";
+	font-weight: 600;
+}
+.sk #productsAlternative::before {
+	content: "Ďalšie dostupné varianty:";
+}
+#productsAlternative .products-alternative {
+	column-gap: 1.9%;
+	row-gap: var(--gap);
+	margin-bottom: calc(var(--gap) * 2);
+	margin-top: 10px;
+}
+#productsAlternative .products-alternative .product {
+	width: 49%;
+	border-style: solid !important;
+	border-width: 1px;
+	border-color: hsla(203, 7%, 47%, 0.36);
+	border-radius: var(--border-radius);
+	padding: 0;
+	transition: background 0.2s ease-out, border-color 0.2s ease-out;
+	position: relative;
+}
+#productsAlternative .products-block .p a.image:after {
+	display: none;
+}
+#productsAlternative .products-alternative .product:hover {
+	border-color: var(--color-primary);
+}
+#productsAlternative .products-alternative .product::after {
+	background: var(--color-primary);
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.2s ease-out;
+	pointer-events: none;
+}
+#productsAlternative .products-alternative .product:hover::after {
+	opacity: 0.05;
+}
+
+#productsAlternative .products-alternative .product .image::after {
+	transition: opacity 0.2s ease-out;
+}
+#productsAlternative .products-alternative .product:hover .image::after {
+	opacity: 0;
+}
+#productsAlternative .products-alternative .product .image img {
+	transition: filter 0.2s ease-out;
+}
+#productsAlternative .products-alternative .product:hover .image img {
+	filter: brightness(1);
+}
+#productsAlternative .flags,
+#productsAlternative .p-code,
+#productsAlternative .p-in-in > *,
+#productsAlternative .p-bottom > div > *,
+#productsAlternative .dkLabFavouriteProductDiv {
+	display: none;
+}
+#productsAlternative .p-in-in > a {
+	display: block;
+}
+
+#productsAlternative .p-bottom > div > .prices {
+	display: block;
+}
+#productsAlternative .p {
+	display: grid;
+	grid-template-columns: 20% calc(80% - var(--gap));
+	gap: var(--gap);
+}
+#productsAlternative .p .image {
+	display: flex;
+	align-items: center;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+#productsAlternative .p-in {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 60% 40%;
+	margin: 0;
+}
+#productsAlternative .p-in-in {
+	grid-row: 1;
+	grid-column: 1;
+	display: flex;
+	align-items: center;
+	padding-bottom: 3px;
+}
+#productsAlternative .p-in-in > a > span {
+	-webkit-line-clamp: 3;
+	margin: 15px 0;
+}
+#productsAlternative .p-bottom {
+	grid-row: 1;
+	grid-column: 2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: var(--gap);
+	padding-left: 10px;
+	padding-bottom: 3px;
+}
+#productsAlternative .p-bottom > div {
+	display: flex;
+	text-align: right;
+}
+#productsAlternative .p-bottom > div .price-final {
+	text-align: right;
+	font-size: 1.2rem;
+}
+
+#productsAlternative.show-all .product {
+	display: block;
+}
+#show-more-variants {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	color: var(--color-primary);
+}
+#productsAlternative .products > .product {
+	display: none;
+}
+#productsAlternative .products > .product:nth-child(-n + 2) {
+	display: block;
+}
+#productsAlternative.show-all .product {
+	display: block;
+}
+
+#show-more-variants::after {
+	content: "\e90e";
+	speak: none;
+	display: inline-block;
+	font-family: shoptet;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 0;
+	text-decoration: none;
+	text-transform: none;
+	vertical-align: middle;
+	margin-left: 5px;
+	transition: transform 0.3s ease-out;
+}
+#show-more-variants::before {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 90%;
+	height: 1px;
+	background: var(--color-primary);
+}
+.show-all #show-more-variants::after {
+	transform: rotate(180deg);
+}
+
+@media (max-width: 1200px) {
+	#productsAlternative .products-alternative {
+		display: flex;
+		flex-direction: column;
+	}
+	#productsAlternative .products-alternative .product {
+		width: 99%;
+	}
+	#productsAlternative .products-alternative .product img {
+		max-height: 85%;
+	}
+	#productsAlternative .p-in-in > a > span {
+		text-align: left;
+	}
+	#productsAlternative {
+		position: relative;
+	}
+	#show-more-variants {
+		top: 0;
+	}
+}
