@@ -25,13 +25,13 @@ if (document.body.classList.contains("admin-logged")) {
 
 		if ($("#productsAlternative .product").length > 2) {
 			if (document.body.classList.contains("cs")) {
-				$("#productsAlternative").append('<div id="show-more-letiants">Zobrazit všechny letianty</div>');
+				$("#productsAlternative").append('<div id="show-more-variants">Zobrazit všechny varianty</div>');
 			}
 			if (document.body.classList.contains("sk")) {
-				$("#productsAlternative").append('<div id="show-more-letiants">Zobraziť všetky letianty</div>');
+				$("#productsAlternative").append('<div id="show-more-variants">Zobraziť všetky varianty</div>');
 			}
 
-			$("#show-more-letiants").click(function () {
+			$("#show-more-variants").click(function () {
 				$("#productsAlternative").toggleClass("show-all");
 			});
 		}

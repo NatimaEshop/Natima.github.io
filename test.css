@@ -1,4 +1,4 @@
-.admin-logged shp-tab[data-testid="tabAlternativeProducts"] {
+.admin-logged .shp-tab[data-testid="tabAlternativeProducts"] {
 	display: none !important;
 }
 .admin-logged #productsAlternative {
