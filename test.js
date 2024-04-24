@@ -20,7 +20,7 @@ if (document.body.classList.contains("admin-logged")) {
 		}
 	});
 
-	if ($("#productsAlternative .product").length > 4) {
+	if ($("#productsAlternative .product").length > 2) {
 		$("#productsAlternative").append('<div id="show-more-variants">Zobrazit všechny varianty</div>');
 
 		$("#show-more-variants").click(function () {
