@@ -152,6 +152,15 @@
 	margin-left: 5px;
 	transition: transform 0.3s ease-out;
 }
+.admin-logged #show-more-variants::before {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 90%;
+	height: 1px;
+	background: var(--color-primary);
+}
 .admin-logged .show-all #show-more-variants::after {
 	transform: rotate(180deg);
 }
