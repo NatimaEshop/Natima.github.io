@@ -15,4 +15,12 @@ if (document.body.classList.contains("admin-logged")) {
 		var newAnchor = $("<a>").attr("href", href).addClass(classes).html($this.html());
 		$this.replaceWith(newAnchor);
 	});
+
+	if ($("#productsAlternative .product").length > 4) {
+		$("#productsAlternative").append('<div id="show-more-variants">Zobrazit všechny varianty</div>');
+
+		$("#show-more-variants").click(function () {
+			$("#productsAlternative").toggleClass("show-all");
+		});
+	}
 }

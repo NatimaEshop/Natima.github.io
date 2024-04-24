@@ -81,7 +81,7 @@
 }
 .admin-logged #productsAlternative .p-in-in > a > span {
 	-webkit-line-clamp: 3;
-	padding: 15px 0;
+	margin: 15px 0;
 }
 .admin-logged #productsAlternative .p-bottom {
 	grid-row: 1;
