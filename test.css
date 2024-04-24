@@ -170,3 +170,25 @@
 .admin-logged .show-all #show-more-variants::after {
 	transform: rotate(180deg);
 }
+
+@media (max-width: 1200px) {
+	.admin-logged #productsAlternative .products-alternative {
+		display: flex;
+		flex-direction: column;
+	}
+	.admin-logged #productsAlternative .products-alternative .product {
+		width: 99%;
+	}
+	.admin-logged #productsAlternative .products-alternative .product img {
+		max-height: 85%;
+	}
+	.admin-logged #productsAlternative .p-in-in > a > span {
+		text-align: left;
+	}
+	.admin-logged #productsAlternative {
+		position: relative;
+	}
+	.admin-logged #show-more-variants {
+		top: 0;
+	}
+}

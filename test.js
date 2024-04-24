@@ -25,10 +25,10 @@ if (document.body.classList.contains("admin-logged")) {
 
 		if ($("#productsAlternative .product").length > 2) {
 			if (document.body.classList.contains("cs")) {
-				$("#productsAlternative").append('<div id="show-more-variants">Zobrazit všechny varianty</div>');
+				$("#productsAlternative").append('<div id="show-more-variants">Všechny varianty</div>');
 			}
 			if (document.body.classList.contains("sk")) {
-				$("#productsAlternative").append('<div id="show-more-variants">Zobraziť všetky varianty</div>');
+				$("#productsAlternative").append('<div id="show-more-variants">Všetky varianty</div>');
 			}
 
 			$("#show-more-variants").click(function () {
