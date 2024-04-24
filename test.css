@@ -24,10 +24,13 @@
 	border-style: solid !important;
 	border-width: 1px;
 	border-color: hsla(203, 7%, 47%, 0.36);
-	border-radius: (--border-radius);
+	border-radius: var(--border-radius);
 	padding: 0;
 	transition: background 0.2s ease-out, border-color 0.2s ease-out;
 	position: relative;
+}
+#productsAlternative .products-block .p a.image:after {
+	display: none;
 }
 .admin-logged #productsAlternative .products-alternative .product:hover {
 	border-color: var(--color-primary);

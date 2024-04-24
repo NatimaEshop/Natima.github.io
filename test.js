@@ -2,12 +2,6 @@ if (document.body.classList.contains("admin-logged")) {
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$("#productsAlternative").insertAfter(".p-detail-inner .product-top .social-buttons-wrapper");
 
-		$("#productsAlternative .p .image img").each(function () {
-			var $this = $(this);
-			var dataSrc = $this.attr("data-src");
-			$this.attr("src", dataSrc);
-		});
-
 		$("#productsAlternative .product").each(function () {
 			var $this = $(this);
 			var href = $this.find("a").first().attr("href");
@@ -19,6 +13,12 @@ if (document.body.classList.contains("admin-logged")) {
 			if ($this.find(".p-tools > a").length > 0) {
 				newAnchor.remove();
 			}
+		});
+
+		$("#productsAlternative .p .image img").each(function () {
+			var $this = $(this);
+			var dataSrc = $this.attr("data-src");
+			$this.attr("src", dataSrc);
 		});
 
 		if ($("#productsAlternative .product").length > 2) {
