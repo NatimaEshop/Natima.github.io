@@ -1,21 +1,20 @@
 if (document.body.classList.contains("admin-logged")) {
 	document.addEventListener("DOMContentLoaded", function (event) {
+		$("#productsAlternative .product").each(function () {
+			var $this = $(this);
+			var href = $this.find("a").first().attr("href");
+			var classes = $this.attr("class");
+
+			var newAnchor = $("<a>").attr("href", href).addClass(classes).html($this.html());
+			$this.replaceWith(newAnchor);
+
+			if ($this.find(".p-tools > a").length > 0) {
+				newAnchor.remove();
+			}
+		});
+
 		if ($("#productsAlternative .product").length > 0) {
 			$("#productsAlternative").insertAfter(".p-detail-inner .product-top .social-buttons-wrapper");
-
-			$("#productsAlternative .product").each(function () {
-				var $this = $(this);
-				var href = $this.find("a").first().attr("href");
-				var classes = $this.attr("class");
-
-				var newAnchor = $("<a>").attr("href", href).addClass(classes).html($this.html());
-				$this.replaceWith(newAnchor);
-
-				if ($this.find(".p-tools > a").length > 0) {
-					newAnchor.remove();
-				}
-			});
-
 			$("#productsAlternative .p .image img").each(function () {
 				var $this = $(this);
 				var dataSrc = $this.attr("data-src");
