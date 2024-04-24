@@ -7,8 +7,11 @@
 	opacity: 1;
 }
 .admin-logged #productsAlternative::before {
-	content: "Další varianty:";
+	content: "Další dostupné varianty:";
 	font-weight: 600;
+}
+.admin-logged.sk #productsAlternative::before {
+	content: "Ďalšie dostupné varianty:";
 }
 .admin-logged #productsAlternative .products-alternative {
 	column-gap: 1.9%;
@@ -21,7 +24,7 @@
 	border-style: solid !important;
 	border-width: 1px;
 	border-color: hsla(203, 7%, 47%, 0.36);
-	border-radius: calc(var(--border-radius) - 2px);
+	border-radius: (--border-radius);
 	padding: 0;
 	transition: background 0.2s ease-out, border-color 0.2s ease-out;
 	position: relative;

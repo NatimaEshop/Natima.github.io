@@ -17,12 +17,17 @@ if (document.body.classList.contains("admin-logged")) {
 			$this.replaceWith(newAnchor);
 
 			if ($this.find(".p-tools > a").length > 0) {
-				$("#productsAlternative .products").append(newAnchor);
+				newAnchor.remove();
 			}
 		});
 
 		if ($("#productsAlternative .product").length > 2) {
-			$("#productsAlternative").append('<div id="show-more-variants">Zobrazit všechny varianty</div>');
+			if (document.body.classList.contains("cs")) {
+				$("#productsAlternative").append('<div id="show-more-variants">Zobrazit všechny varianty</div>');
+			}
+			if (document.body.classList.contains("sk")) {
+				$("#productsAlternative").append('<div id="show-more-variants">Zobraziť všetky varianty</div>');
+			}
 
 			$("#show-more-variants").click(function () {
 				$("#productsAlternative").toggleClass("show-all");
