@@ -14,6 +14,10 @@ if (document.body.classList.contains("admin-logged")) {
 
 		var newAnchor = $("<a>").attr("href", href).addClass(classes).html($this.html());
 		$this.replaceWith(newAnchor);
+
+		if ($this.find(".p-tools > a").length > 0) {
+			$("#productsAlternative .products").append(newAnchor);
+		}
 	});
 
 	if ($("#productsAlternative .product").length > 4) {
