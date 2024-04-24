@@ -1,25 +1,25 @@
-.admin-logged .shp-tab[data-testid="tabAlternativeProducts"] {
+.shp-tab[data-testid="tabAlternativeProducts"] {
 	display: none !important;
 }
-.admin-logged #productsAlternative {
+#productsAlternative {
 	order: 8;
 	transition: none;
 	opacity: 1;
 }
-.admin-logged #productsAlternative::before {
+#productsAlternative::before {
 	content: "Další dostupné varianty:";
 	font-weight: 600;
 }
-.admin-logged.sk #productsAlternative::before {
+.sk #productsAlternative::before {
 	content: "Ďalšie dostupné varianty:";
 }
-.admin-logged #productsAlternative .products-alternative {
+#productsAlternative .products-alternative {
 	column-gap: 1.9%;
 	row-gap: var(--gap);
 	margin-bottom: calc(var(--gap) * 2);
 	margin-top: 10px;
 }
-.admin-logged #productsAlternative .products-alternative .product {
+#productsAlternative .products-alternative .product {
 	width: 49%;
 	border-style: solid !important;
 	border-width: 1px;
@@ -32,10 +32,10 @@
 #productsAlternative .products-block .p a.image:after {
 	display: none;
 }
-.admin-logged #productsAlternative .products-alternative .product:hover {
+#productsAlternative .products-alternative .product:hover {
 	border-color: var(--color-primary);
 }
-.admin-logged #productsAlternative .products-alternative .product::after {
+#productsAlternative .products-alternative .product::after {
 	background: var(--color-primary);
 	content: "";
 	position: absolute;
@@ -47,65 +47,65 @@
 	transition: opacity 0.2s ease-out;
 	pointer-events: none;
 }
-.admin-logged #productsAlternative .products-alternative .product:hover::after {
+#productsAlternative .products-alternative .product:hover::after {
 	opacity: 0.05;
 }
 
-.admin-logged #productsAlternative .products-alternative .product .image::after {
+#productsAlternative .products-alternative .product .image::after {
 	transition: opacity 0.2s ease-out;
 }
-.admin-logged #productsAlternative .products-alternative .product:hover .image::after {
+#productsAlternative .products-alternative .product:hover .image::after {
 	opacity: 0;
 }
-.admin-logged #productsAlternative .products-alternative .product .image img {
+#productsAlternative .products-alternative .product .image img {
 	transition: filter 0.2s ease-out;
 }
-.admin-logged #productsAlternative .products-alternative .product:hover .image img {
+#productsAlternative .products-alternative .product:hover .image img {
 	filter: brightness(1);
 }
-.admin-logged #productsAlternative .flags,
-.admin-logged #productsAlternative .p-code,
-.admin-logged #productsAlternative .p-in-in > *,
-.admin-logged #productsAlternative .p-bottom > div > *,
-.admin-logged #productsAlternative .dkLabFavouriteProductDiv {
+#productsAlternative .flags,
+#productsAlternative .p-code,
+#productsAlternative .p-in-in > *,
+#productsAlternative .p-bottom > div > *,
+#productsAlternative .dkLabFavouriteProductDiv {
 	display: none;
 }
-.admin-logged #productsAlternative .p-in-in > a {
+#productsAlternative .p-in-in > a {
 	display: block;
 }
 
-.admin-logged #productsAlternative .p-bottom > div > .prices {
+#productsAlternative .p-bottom > div > .prices {
 	display: block;
 }
-.admin-logged #productsAlternative .p {
+#productsAlternative .p {
 	display: grid;
 	grid-template-columns: 20% calc(80% - var(--gap));
 	gap: var(--gap);
 }
-.admin-logged #productsAlternative .p .image {
+#productsAlternative .p .image {
 	display: flex;
 	align-items: center;
 	border-radius: var(--border-radius);
 	overflow: hidden;
 }
-.admin-logged #productsAlternative .p-in {
+#productsAlternative .p-in {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 60% 40%;
 	margin: 0;
 }
-.admin-logged #productsAlternative .p-in-in {
+#productsAlternative .p-in-in {
 	grid-row: 1;
 	grid-column: 1;
 	display: flex;
 	align-items: center;
 	padding-bottom: 3px;
 }
-.admin-logged #productsAlternative .p-in-in > a > span {
+#productsAlternative .p-in-in > a > span {
 	-webkit-line-clamp: 3;
 	margin: 15px 0;
 }
-.admin-logged #productsAlternative .p-bottom {
+#productsAlternative .p-bottom {
 	grid-row: 1;
 	grid-column: 2;
 	display: flex;
@@ -115,35 +115,35 @@
 	padding-left: 10px;
 	padding-bottom: 3px;
 }
-.admin-logged #productsAlternative .p-bottom > div {
+#productsAlternative .p-bottom > div {
 	display: flex;
 	text-align: right;
 }
-.admin-logged #productsAlternative .p-bottom > div .price-final {
+#productsAlternative .p-bottom > div .price-final {
 	text-align: right;
 	font-size: 1.2rem;
 }
 
-.admin-logged #productsAlternative.show-all .product {
+#productsAlternative.show-all .product {
 	display: block;
 }
-.admin-logged #show-more-variants {
+#show-more-variants {
 	cursor: pointer;
 	position: absolute;
 	right: 0;
 	color: var(--color-primary);
 }
-.admin-logged #productsAlternative .products > .product {
+#productsAlternative .products > .product {
 	display: none;
 }
-.admin-logged #productsAlternative .products > .product:nth-child(-n + 2) {
+#productsAlternative .products > .product:nth-child(-n + 2) {
 	display: block;
 }
-.admin-logged #productsAlternative.show-all .product {
+#productsAlternative.show-all .product {
 	display: block;
 }
 
-.admin-logged #show-more-variants::after {
+#show-more-variants::after {
 	content: "\e90e";
 	speak: none;
 	display: inline-block;
@@ -158,7 +158,7 @@
 	margin-left: 5px;
 	transition: transform 0.3s ease-out;
 }
-.admin-logged #show-more-variants::before {
+#show-more-variants::before {
 	content: "";
 	position: absolute;
 	bottom: -1px;
@@ -167,28 +167,28 @@
 	height: 1px;
 	background: var(--color-primary);
 }
-.admin-logged .show-all #show-more-variants::after {
+.show-all #show-more-variants::after {
 	transform: rotate(180deg);
 }
 
 @media (max-width: 1200px) {
-	.admin-logged #productsAlternative .products-alternative {
+	#productsAlternative .products-alternative {
 		display: flex;
 		flex-direction: column;
 	}
-	.admin-logged #productsAlternative .products-alternative .product {
+	#productsAlternative .products-alternative .product {
 		width: 99%;
 	}
-	.admin-logged #productsAlternative .products-alternative .product img {
+	#productsAlternative .products-alternative .product img {
 		max-height: 85%;
 	}
-	.admin-logged #productsAlternative .p-in-in > a > span {
+	#productsAlternative .p-in-in > a > span {
 		text-align: left;
 	}
-	.admin-logged #productsAlternative {
+	#productsAlternative {
 		position: relative;
 	}
-	.admin-logged #show-more-variants {
+	#show-more-variants {
 		top: 0;
 	}
 }

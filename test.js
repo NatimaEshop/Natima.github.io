@@ -1,4 +1,4 @@
-if (document.body.classList.contains("admin-logged")) {
+if (document.body.classList.contains("type-detail")) {
 	document.addEventListener("DOMContentLoaded", function (event) {
 		$("#productsAlternative .products .product:has(.p-tools > a)").each(function () {
 			let $this = $(this);
