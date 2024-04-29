@@ -532,6 +532,7 @@ if (document.body.classList.contains("type-detail")) {
 					activeChild = (activeChild + 1) % sliderChildLength;
 				}
 				updateSlider();
+				clearInterval(intervalId); // Stop the interval when a dot is clicked
 			});
 		}
 
