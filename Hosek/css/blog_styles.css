@@ -81,3 +81,52 @@
 	border-radius: var(--border-radius);
 }
 /*konec ZOBRAZIT VÍCE/ ZOBRAZIT MÉNĚ*/
+
+/*Blog produkty*/
+.blog-products {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+	gap: var(--gap);
+}
+.blog-products a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--gap);
+	max-width: 300px;
+	text-align: center;
+	justify-content: flex-start;
+}
+.blog-products a span {
+	padding: 0 30px;
+	font-weight: 600;
+	font-size: 1.6rem;
+}
+.blog-products a img {
+	transition: transform 0.1s ease-out;
+}
+.blog-products a:hover img {
+	transform: scale(1.05);
+}
+.blog-products a::after {
+	content: "Zobrazit";
+	border-radius: var(--border-radius);
+	border-style: solid;
+	padding: 0.5em 2em;
+	margin-top: 0.5em;
+	border-color: var(--color-primary);
+	transition: background 0.2s ease-out, color 0.2s ease-out;
+}
+.blog-products a:hover::after {
+	background: var(--color-primary);
+	color: white;
+}
+@media (max-width: 768px) {
+	.blog-products {
+		flex-direction: column;
+		align-items: center;
+		gap: calc(var(--gap) * 6);
+	}
+}
