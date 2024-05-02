@@ -110,8 +110,19 @@
 	align-items: center;
 }
 #pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter {
-	justify-content: space-between;
+	justify-content: center;
 	row-gap: 36px;
+}
+.rc-parameter__box-small-left-parameter-icon {
+	width: 80px;
+}
+.widget-projector span {
+	font-size: 16px !important;
+	line-height: 23px !important;
+	font-weight: 400 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	color: #303233 !important;
 }
 #pobo-all-content .widget-projector .rc-parameter-small-left__box .rc-parameter__box-small-left-parameter {
 	width: 32%;
