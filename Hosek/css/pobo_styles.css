@@ -116,7 +116,9 @@
 .rc-parameter__box-small-left-parameter-icon {
 	width: 80px;
 }
-.widget-projector span {
+.rc-advantages-two__ico-container span,
+.rc-advantages-three__ico-container span,
+.rc-advantages-four__ico-container span {
 	font-size: 16px !important;
 	line-height: 23px !important;
 	font-weight: 400 !important;

@@ -860,6 +860,9 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	width: 33.333%;
 	padding: 1.25rem 0.5rem;
 }
+.sekceProduktu > .asset40procent > table > tbody > tr > td {
+	padding: 0;
+}
 /*.sekceProduktu>*>table>tbody>tr>td>*{
   margin:5px;
 }*/
