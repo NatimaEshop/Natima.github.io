@@ -119,6 +119,9 @@
 	border-color: var(--color-primary);
 	transition: background 0.2s ease-out, color 0.2s ease-out;
 }
+.sk .blog-products a::after {
+	content: "Zobraziť";
+}
 .blog-products a:hover::after {
 	background: var(--color-primary);
 	color: white;
