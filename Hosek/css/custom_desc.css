@@ -600,6 +600,9 @@
 	margin: 0;
 	margin-bottom: 0;
 }
+.custom-desc .no-pad {
+	padding: 0;
+}
 .custom-desc h2,
 .custom-desc h3 {
 	padding: 0;
