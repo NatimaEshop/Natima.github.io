@@ -66,10 +66,8 @@
 }
 
 .type-category .products-block.products {
-	/*--product-cat-columns: 1;
-	--product-cat-gap: 0px;*/
-	--product-cat-columns: 2;
-	--product-cat-gap: 12px;
+	--product-cat-columns: 1;
+	--product-cat-gap: 0px;
 	column-gap: var(--product-cat-gap);
 	row-gap: calc(var(--product-cat-gap) * 2);
 }
@@ -292,7 +290,7 @@
 	}
 }
 
-/*@media (max-width: 440px) {
+@media (max-width: 440px) {
 	.type-category .products-block.products {
 		row-gap: 24px !important;
 	}
@@ -303,7 +301,7 @@
 		--product-cat-columns: 2;
 		--product-cat-gap: 12px;
 	}
-}*/
+}
 
 @media (min-width: 768px) {
 	.category-top .subcategories {
@@ -359,10 +357,8 @@
 /*brand*/
 
 .type-manufacturer-detail .products-block.products {
-	--product-brand-columns: 2;
-	--product-brand-gap: 12px;
-	/*--product-brand-columns: 1;
-	--product-brand-gap: 0;*/
+	--product-brand-columns: 1;
+	--product-brand-gap: 0px;
 	column-gap: var(--product-brand-gap);
 	row-gap: calc(var(--product-brand-gap) * 2);
 }
@@ -387,7 +383,7 @@
 .type-manufacturer-detail .content.wide {
 	max-width: none;
 }
-/*@media (max-width: 440px) {
+@media (max-width: 440px) {
 	.type-manufacturer-detail .products-block.products {
 		row-gap: 24px !important;
 	}
@@ -398,7 +394,7 @@
 		--product-brand-columns: 2;
 		--product-brand-gap: 12px;
 	}
-}*/
+}
 
 @media (min-width: 768px) {
 	.type-manufacturer-detail .content.wide {
