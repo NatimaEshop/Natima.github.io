@@ -287,3 +287,12 @@
 		margin: auto !important;
 	}
 }
+
+@media (max-width: 440px) {
+	:root {
+		--productCategoryGrid: 2.6em 0 1.467em 1.2em;
+	}
+	.product .p-bottom .p-desc {
+		display: none;
+	}
+}
