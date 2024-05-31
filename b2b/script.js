@@ -204,3 +204,16 @@ let appendDenDeti =
 if ($(".p-detail-inner .flag-den-deti-s-natios").length > 0) {
 	$(appendDenDeti).insertAfter(".p-detail-inner .detail-parameters");
 }
+
+if ($(body).hasClass("type-datail")) {
+	// Select the span and get its content
+	let $priceFinalHolder = $(".p-detail-inner .price-final-holder");
+	let salePrice = parseFloat($priceFinalHolder.text().trim().replace(" Kč", ""));
+
+	// Calculate the original price (salePrice is 95% of the original price)
+	let originalPrice = Math.ceil(salePrice / 0.95);
+
+	// Format the original price and insert it into the span
+	let originalPriceHtml = `<del>${originalPrice} Kč</del> `;
+	$priceFinalHolder.prepend(originalPriceHtml);
+}
