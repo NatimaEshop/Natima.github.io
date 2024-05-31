@@ -201,19 +201,19 @@ $("#loadNextSearchResults").click(function () {
 /*DEN DETI*/
 let appendDenDeti =
 	'<div class="natios-daruje-blok"><p>Nejen že Natios dnes nakoupíte s <b>5% slevou</b>, ale Natios <b>daruje navíc 5 % z celkové částky objednávky dětské hematoonkologii</b> ve Fakultní nemocnici v Ostravě.</br></br> Léčba každého onkologického pacienta v České republice se odhaduje na přibližně 8&nbsp;000&nbsp;Kč měsíčně. Věříme tedy, že tímto krokem společně dokážeme pomoci několika rodinám.</div>';
-if ($(".p-detail-inner .flag-den-deti-s-natios").length > 0) {
-	$(appendDenDeti).insertAfter(".p-detail-inner .detail-parameters");
-}
-
 if ($(body).hasClass("type-datail")) {
-	// Select the span and get its content
-	let $priceFinalHolder = $(".p-detail-inner .price-final-holder");
-	let salePrice = parseFloat($priceFinalHolder.text().trim().replace(" Kč", ""));
+	if ($(".p-detail-inner .flag-den-deti-s-natios").length > 0) {
+		$(appendDenDeti).insertAfter(".p-detail-inner .detail-parameters");
 
-	// Calculate the original price (salePrice is 95% of the original price)
-	let originalPrice = Math.ceil(salePrice / 0.95);
+		// Select the span and get its content
+		let $priceFinalHolder = $(".p-detail-inner .price-final-holder");
+		let salePrice = parseFloat($priceFinalHolder.text().trim().replace(" Kč", ""));
 
-	// Format the original price and insert it into the span
-	let originalPriceHtml = `<del>${originalPrice} Kč</del> `;
-	$priceFinalHolder.prepend(originalPriceHtml);
+		// Calculate the original price (salePrice is 95% of the original price)
+		let originalPrice = Math.ceil(salePrice / 0.95);
+
+		// Format the original price and insert it into the span
+		let originalPriceHtml = `<del>${originalPrice} Kč</del> `;
+		$priceFinalHolder.prepend(originalPriceHtml);
+	}
 }
