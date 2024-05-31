@@ -200,7 +200,7 @@ $("#loadNextSearchResults").click(function () {
 /*DEN DETI*/
 /*DEN DETI*/
 let appendDenDeti =
-	'<div class="natios-daruje-blok"><p>Natios dnes <b>daruje 5 % z celkové částky objednávky dětské hematoonkologii</b> ve Fakultní nemocnici v Ostravě.</br></br> Léčba každého onkologického pacienta v České republice se odhaduje na přibližně 8&nbsp;000&nbsp;Kč měsíčně. Věříme tedy, že tímto krokem společně dokážeme pomoci několika rodinám.</div>';
+	'<div class="natios-daruje-blok"><p>Nejen že Natios dnes nakoupíte s <b>5% slevou</b>, ale Natios <b>daruje navíc 5 % z celkové částky objednávky dětské hematoonkologii</b> ve Fakultní nemocnici v Ostravě.</br></br> Léčba každého onkologického pacienta v České republice se odhaduje na přibližně 8&nbsp;000&nbsp;Kč měsíčně. Věříme tedy, že tímto krokem společně dokážeme pomoci několika rodinám.</div>';
 if ($(".p-detail-inner .flag-den-deti-s-natios").length > 0) {
 	$(appendDenDeti).insertAfter(".p-detail-inner .detail-parameters");
 }
