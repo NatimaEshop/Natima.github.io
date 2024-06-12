@@ -6,30 +6,23 @@ $("#header .navigation-buttons .cart-count").on("touchstart", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 	if (!window.matchMedia("(min-width: " + "768" + "px)").matches) {
-		$("#navigation").on("click touch", function (event) {
+		$("#navigation").on("click touchstart", function (event) {
 			if (!$(event.target).closest(".menu-level-1").length) {
 				shoptet.menu.hideNavigation();
 			}
 		});
 
-		$(".menu-level-1 >li.ext").on("click touch", function () {
+		$(".menu-level-1 >li.ext").on("click touchstart ", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		$("#navigation .menu-level-1").on("click touch", function (event) {
-			var navigationElement = document.querySelector("#navigation>.navigation-in");
-			if ("scrollTo" in navigationElement) {
-				// For browsers that support scrollTo
-				navigationElement.scrollTo({ top: 0, behavior: "smooth" });
-			} else {
-				// For browsers that support scrollTop
-				navigationElement.scrollTop = 0;
-			}
+		$("#navigation .menu-level-1").on("click touchstart ", function (event) {
+			$("#navigation>.navigation-in").scrollTop(0);
 		});
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
 
-		$(".navigation-back").on("click touch", function () {
+		$(".navigation-back").on("click touchend", function () {
 			$("body").removeClass("submenu-visible");
 			$(".menu-level-1 > li").removeClass("exp");
 		});
