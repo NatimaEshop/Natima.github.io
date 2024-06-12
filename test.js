@@ -15,12 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(".menu-level-1 >li.ext").on("click touch", function () {
 			$("body").addClass("submenu-visible");
 		});
-		let executingMenuClick = false;
-		$("#navigation .menu-level-1 > li > a > .submenu-arrow").on("click touch", function (event) {
-			if (executingMenuClick) {
-				return;
-			}
-			executingMenuClick = true;
+
+		$("#navigation .menu-level-1 > li > a > .submenu-arrow").on("touch", function (event) {
 			event.preventDefault();
 			$(this).closest("li").toggleClass("exp");
 
@@ -31,10 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 				// For browsers that support scrollTop
 				document.querySelector("#navigation>.navigation-in").scrollTop = 0;
 			}
-
-			setTimeout(function () {
-				executingMenuClick = false;
-			}, 100);
 		});
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
