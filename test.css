@@ -71,17 +71,35 @@
 		height: 100%;
 		background: white;
 	}
+
 	.submenu-visible #header #navigation .navigation-in .menu-level-1 li.exp .menu-level-2 {
 		position: absolute;
 		left: 0;
 		top: 0;
-		margin-top: 40px;
+		margin-top: 100px;
 		z-index: 2;
 		border-top-style: solid;
 		border-color: var(--color-gray-600);
 		border-width: 1px;
 		width: 100%;
 		min-height: 100%;
+	}
+	.submenu-visible .menu-level-1 li.exp > a::after {
+		content: "Zobrazit vše z kategorie";
+		color: var(--color-black-600);
+		font-weight: 400;
+		font-size: 14px;
+		position: fixed;
+		top: 45px;
+		left: calc(50% + 10%);
+		transform: translatex(-50%);
+		z-index: 2;
+		background: var(--color-gray-400);
+		padding: 15px 10px;
+		border-radius: var(--border-radius);
+		border-style: solid;
+		border-width: 1px;
+		border-color: var(--color-gray-600);
 	}
 	.navigation-close {
 		z-index: 1;

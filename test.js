@@ -17,9 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 
 		$("#navigation .menu-level-1 > li").on("click touch mouseenter", function (event) {
-			setTimeout(function () {
-				$("#navigation>.navigation-in").scrollTop(0);
-			}, 100);
+			if ($(event.target).is(".submenu-visible .menu-level-1 li.exp a b")) {
+				event.stopPropagation();
+			} else {
+				setTimeout(function () {
+					$("#navigation>.navigation-in").scrollTop(0);
+				}, 100);
+			}
 		});
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
