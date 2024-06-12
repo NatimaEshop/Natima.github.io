@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		$("#navigation .menu-level-1 > li").on("click touch touchstart mouseenter", function (event) {
+		$("#navigation .menu-level-1 > li").on("click touch touchstart", function (event) {
 			$("#navigation>.navigation-in").scrollTop(0);
 			console.log("click");
 		});
