@@ -92,7 +92,9 @@
 	}
 	.submenu-visible .menu-level-1 li.exp a b {
 		position: fixed;
-		left: 50%;
+		left: calc(50% + 10%);
+		transform: translateX(-50%);
+		text-align: center;
 		top: 15px;
 		z-index: 2;
 		color: var(--color-primary);
