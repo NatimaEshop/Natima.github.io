@@ -4,6 +4,7 @@ $("#header .navigation-buttons .cart-count").on("touchstart", function () {
 	window.location.href = "/kosik";
 });
 
+let navigationElement = document.querySelector("#navigation>.navigation-in");
 document.addEventListener("DOMContentLoaded", function () {
 	if (!window.matchMedia("(min-width: " + "768" + "px)").matches) {
 		$("#navigation").on("click touch", function (event) {
@@ -16,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		let navigationElement = document.querySelector("#navigation>.navigation-in");
 		$("#navigation .menu-level-1 > li > a > .submenu-arrow").on("touch", function (event) {
 			event.preventDefault();
 			$(this).closest("li").toggleClass("exp");
