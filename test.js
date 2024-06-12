@@ -28,6 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			$(".menu-level-1 > li").removeClass("exp");
 		});
 
+		let navigationElement = document.querySelector("#navigation>.navigation-in");
+		$("#navigation .menu-level-1 > li").on("click touch", function () {
+			if (navigationElement.scrollTo) {
+				// For browsers that support scrollTo
+				navigationElement.scrollTo(0, 0);
+			} else if (elem.scrollTop) {
+				// For browsers that support scrollTop
+				navigationElement.scrollTop = 0;
+			}
+		});
 		/*NA DETAILU PRODUKTU*/
 		if ($("body").hasClass("type-detail")) {
 			$(".p-detail-inner h1").prependTo(".p-detail-inner .row.product-top");

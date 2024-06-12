@@ -76,10 +76,10 @@
 	}
 	.submenu-visible .navigation-back {
 		position: absolute;
-		left: 5px;
+		left: 10px;
 		top: 9px;
 		transform: rotate(90deg);
-		padding: 10px;
+		padding: 10px 5px;
 		z-index: 1;
 		cursor: pointer;
 	}
