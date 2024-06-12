@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		$("#navigation .menu-level-1 .submenu-arrow").on("click touch", function (event) {
+		$("#navigation .menu-level-1").on("click touch", function (event) {
 			if (document.querySelector("#navigation>.navigation-in").scrollTo) {
 				// For browsers that support scrollTo
 				document.querySelector("#navigation>.navigation-in").scrollTo(0, 0);
