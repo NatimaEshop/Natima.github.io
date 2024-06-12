@@ -437,7 +437,7 @@
 		--product-cat-gap: 12px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		column-gap: var(--product-cat-gap);
+		column-gap: var(--product-cat-gap) !important;
 		grid-row-gap: calc(var(--product-cat-gap) * 2.5) !important;
 	}
 	.products-page.products .product {
