@@ -16,14 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		/*$("#navigation .menu-level-1 > li > a > .submenu-arrow").on("touch", function (event) {
-			console.log("touch0");
-			event.preventDefault();
-			console.log("touch0,5");
-			$(this).closest("li").toggleClass("exp");
-
-			console.log("touch1");
-
+		$("#navigation .menu-level-1 .submenu-arrow").on("click touch", function (event) {
 			if (document.querySelector("#navigation>.navigation-in").scrollTo) {
 				// For browsers that support scrollTo
 				document.querySelector("#navigation>.navigation-in").scrollTo(0, 0);
@@ -31,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				// For browsers that support scrollTop
 				document.querySelector("#navigation>.navigation-in").scrollTop = 0;
 			}
-
-			console.log("touch2");
-		});*/
+		});
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
 
