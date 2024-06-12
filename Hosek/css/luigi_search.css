@@ -185,5 +185,46 @@
 	}
 }
 
-@media (min-width: 1020px) {
+/*luigi 2 produkty vedle sebe na mobilu*/
+@media (max-width: 767px) {
+	#lb-results.lb-results-wrapper .products {
+		display: grid !important;
+		grid-template-columns: 1fr 1fr;
+		--product-cat-gap: 12px;
+		column-gap: var(--product-cat-gap) !important;
+		grid-row-gap: calc(var(--product-cat-gap) * 2.5) !important;
+	}
+	#lb-results.lb-results-wrapper .products .product {
+		width: 100%;
+	}
+	#lb-results.lb-results-wrapper .products .product img {
+		margin: 60px 0 50px !important;
+	}
+	#lb-results.lb-results-wrapper .products .p-in {
+		display: flex;
+		flex-direction: column;
+	}
+	#lb-results.lb-results-wrapper .products .p-in .p-in-in {
+		display: flex;
+		flex-direction: column;
+	}
+	#lb-results.lb-results-wrapper .products .ratings-wrapper {
+		display: flex;
+	}
+	#lb-results.lb-results-wrapper .products-block .product .ratings-wrapper {
+		margin-top: 2px;
+	}
+	#lb-results.lb-results-wrapper .products-block .product .availability {
+		display: block;
+		margin-bottom: 4px;
+		font-size: 1.2rem;
+	}
+	#lb-results.lb-results-wrapper .products .p-in .p-in-in > a {
+		margin-bottom: 0;
+	}
+
+	#lb-results.lb-results-wrapper .p-in-in > a > span {
+		-webkit-line-clamp: 3 !important;
+		font-size: 1.2rem;
+	}
 }
