@@ -944,7 +944,7 @@ body {
 		text-align: center;
 		width: max-content;
 	}
-	.sk .submenu-visible .menu-level-1 li.exp > a::after {
+	.sk.submenu-visible .menu-level-1 li.exp > a::after {
 		content: "Zobraziť všetko z kategórie";
 	}
 	.navigation-close {
