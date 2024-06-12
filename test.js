@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 
 		$("#navigation .menu-level-1 > li > a > .submenu-arrow").on("touch", function (event) {
+			console.log("touch0");
 			event.preventDefault();
+			console.log("touch0,5");
 			$(this).closest("li").toggleClass("exp");
 
 			console.log("touch1");
