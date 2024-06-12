@@ -842,11 +842,13 @@ body {
 	.navigation-in > ul > li > a::before {
 		display: none;
 	}
-
-	.navigation-close {
+	.submenu-visible .navigation-close {
 		background: none;
 		color: var(--color-black-800);
 		opacity: 0.8;
+		top: 5px;
+	}
+	.submenu-visible .navigation-close {
 		top: 30px;
 	}
 	.navigation-close:before {
