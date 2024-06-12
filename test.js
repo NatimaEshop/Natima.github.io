@@ -17,12 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 
 		$("#navigation .menu-level-1").on("click touch", function (event) {
-			if (document.querySelector("#navigation>.navigation-in").scrollTo) {
+			var navigationElement = document.querySelector("#navigation>.navigation-in");
+			if ("scrollTo" in navigationElement) {
 				// For browsers that support scrollTo
-				document.querySelector("#navigation>.navigation-in").scrollTo(0, 0);
-			} else if (document.querySelector("#navigation>.navigation-in").scrollTop) {
+				navigationElement.scrollTo({ top: 0, behavior: "smooth" });
+			} else {
 				// For browsers that support scrollTop
-				document.querySelector("#navigation>.navigation-in").scrollTop = 0;
+				navigationElement.scrollTop = 0;
 			}
 		});
 
