@@ -842,6 +842,9 @@ body {
 	.navigation-in > ul > li > a::before {
 		display: none;
 	}
+	.navigation-in > ul > li > a:first-child::before {
+		display: none;
+	}
 	.navigation-close {
 		background: none;
 		color: var(--color-black-800);
@@ -974,6 +977,26 @@ body {
 		top: 15px;
 		z-index: 2;
 		color: var(--color-primary);
+	}
+
+	/*Zvýraznění první položky v menu v hamburgeru - nákupní rádce*/
+	.navigation-in > ul > li:first-child > a {
+		background: var(--color-black-800);
+		width: 60%;
+	}
+	.navigation-in > ul > li:first-child > a b {
+		color: white;
+		position: relative;
+	}
+	.navigation-in > ul > li:first-child > a b::after {
+		content: "";
+		background-image: url("https://www.natima.cz/user/documents/upload/Natima/icon_helper_2.svg");
+		position: absolute;
+		width: 20px;
+		height: 100%;
+		background-repeat: no-repeat;
+		right: -28px;
+		top: 1px;
 	}
 }
 
