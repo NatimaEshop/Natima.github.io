@@ -176,6 +176,7 @@
 	#lb-results.lb-results-wrapper .products .p-in {
 		display: flex;
 		flex-direction: column;
+		gap: 0;
 	}
 	#lb-results.lb-results-wrapper .products .p-in .p-in-in {
 		display: flex;
@@ -191,6 +192,7 @@
 		display: block;
 		margin-bottom: 4px;
 		font-size: 1.2rem;
+		font-weight: 400;
 	}
 	#lb-results.lb-results-wrapper .products .p-in .p-in-in > a {
 		margin-bottom: 0;
@@ -199,6 +201,13 @@
 	#lb-results.lb-results-wrapper .p-in-in > a > span {
 		-webkit-line-clamp: 3 !important;
 		font-size: 1.2rem;
+		font-weight: 500;
+	}
+	#lb-results.lb-results-wrapper .p-bottom > div {
+		display: flex !important;
+	}
+	#lb-results.lb-results-wrapper .desctiption {
+		display: none !important;
 	}
 }
 
