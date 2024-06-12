@@ -15,11 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(".menu-level-1 >li.ext").on("click touch", function () {
 			$("body").addClass("submenu-visible");
 		});
-
+		let executingMenuClick = false;
 		$("#navigation .menu-level-1 > li > a > .submenu-arrow").on("click touch", function (event) {
+			if (executingMenuClick) {
+				return;
+			}
+			executingMenuClick = true;
 			event.preventDefault();
 			$(this).closest("li").toggleClass("exp");
-			console.log("test1");
+
 			if (document.querySelector("#navigation>.navigation-in").scrollTo) {
 				// For browsers that support scrollTo
 				document.querySelector("#navigation>.navigation-in").scrollTo(0, 0);
@@ -27,7 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				// For browsers that support scrollTop
 				document.querySelector("#navigation>.navigation-in").scrollTop = 0;
 			}
-			console.log("test2");
+
+			setTimeout(function () {
+				executingMenuClick = false;
+			}, 100);
 		});
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
