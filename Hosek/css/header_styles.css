@@ -842,7 +842,7 @@ body {
 	.navigation-in > ul > li > a::before {
 		display: none;
 	}
-	.submenu-visible .navigation-close {
+	.navigation-close {
 		background: none;
 		color: var(--color-black-800);
 		opacity: 0.8;
