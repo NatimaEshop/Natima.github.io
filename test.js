@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			event.preventDefault();
 			$(this).closest("li").toggleClass("exp");
 
+			console.log("touch1");
+
 			if (document.querySelector("#navigation>.navigation-in").scrollTo) {
 				// For browsers that support scrollTo
 				document.querySelector("#navigation>.navigation-in").scrollTo(0, 0);
@@ -27,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				// For browsers that support scrollTop
 				document.querySelector("#navigation>.navigation-in").scrollTop = 0;
 			}
+
+			console.log("touch2");
 		});
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
