@@ -16,11 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		$("#navigation .menu-level-1 li").on("click touch", function (event) {
-			$("#navigation>.navigation-in").scrollTop(0);
-			console.log("click");
-		});
-		$("#navigation .menu-level-1 li a").on("click touch", function (event) {
+		$("#navigation .menu-level-1 > li").on("click touch", function (event) {
 			$("#navigation>.navigation-in").scrollTop(0);
 			console.log("click");
 		});
