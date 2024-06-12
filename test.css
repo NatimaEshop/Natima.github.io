@@ -107,7 +107,7 @@
 	.submenu-visible .navigation-back {
 		position: absolute;
 		left: 10px;
-		top: 6px;
+		top: 30px;
 		transform: rotate(90deg);
 		padding: 10px 5px;
 		z-index: 1;
