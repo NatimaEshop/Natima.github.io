@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 
 		$("#navigation .menu-level-1 > li").on("click touch mouseenter", function (event) {
-			$("#navigation>.navigation-in").scrollTop(0);
-			console.log("click");
+			setTimeout(function () {
+				$("#navigation>.navigation-in").scrollTop(0);
+			}, 50);
 		});
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
