@@ -466,6 +466,24 @@ ol.cart-header li.active strong span::before {
 .in-kosik ul.free-gifts > li .free-gift-name {
 	text-transform: none;
 }
+
+/*kosik 2 produktz vedle sebe*/
+@media (max-width: 440px) {
+	.in-kosik ul.free-gifts > li {
+		width: 48%;
+		margin-left: 1%;
+		margin-right: 1%;
+		align-content: center;
+	}
+	.free-gifts-img > img {
+		width: 45px;
+	}
+	.free-gift-label {
+		padding-left: 5px;
+		font-size: 1.2rem;
+	}
+}
+
 /*schovani natios zasobniku*/
 .in-kosik.cs ul.free-gifts li[data-free-gift-id="10188"] {
 	display: none;

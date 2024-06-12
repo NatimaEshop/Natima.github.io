@@ -854,6 +854,127 @@ body {
 	.navigation-close:before {
 		font-size: 12px;
 	}
+
+	/*Úprava hamburgeru na mobilu a tabletu*/
+	#header #navigation {
+		background: transparent;
+	}
+	#header #navigation::before {
+		content: "";
+		background: rgba(0, 0, 0, 0.3);
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease-out;
+	}
+	.navigation-window-visible #header #navigation::before {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	#header #navigation .navigation-in {
+		background-color: transparent;
+	}
+	#header #navigation .navigation-in .menu-level-1 {
+		margin-left: 20%;
+		background: white;
+	}
+	#header #navigation .navigation-in .menu-level-1 .submenu-arrow {
+		line-height: 20px;
+		color: var(--color-black-800);
+	}
+	#header #navigation .navigation-in .menu-level-1 .submenu-arrow:after {
+		transform: rotate(270deg);
+		position: relative;
+		top: -2px;
+		left: 2px;
+	}
+	#header #navigation .navigation-in .menu-level-1 li.exp > a .submenu-arrow:after {
+		transform: rotate(180deg);
+	}
+	.navigation-window-visible #navigation {
+		width: 100%;
+	}
+	.submenu-visible #header #navigation .navigation-in .menu-level-1 {
+		position: relative;
+	}
+	.submenu-visible #header #navigation .navigation-in .menu-level-1::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: white;
+	}
+
+	.submenu-visible #header #navigation .navigation-in .menu-level-1 li.exp .menu-level-2 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin-top: 100px;
+		z-index: 2;
+		border-top-style: solid;
+		border-color: var(--color-gray-600);
+		border-width: 1px;
+		width: 100%;
+		min-height: 100%;
+	}
+	.submenu-visible .menu-level-1 li.exp > a::after {
+		content: "Zobrazit vše z kategorie";
+		color: var(--color-black-600);
+		font-weight: 400;
+		font-size: 14px;
+		position: fixed;
+		top: 45px;
+		left: calc(50% + 10%);
+		transform: translatex(-50%);
+		z-index: 2;
+		background: var(--color-gray-400);
+		padding: 15px 10px;
+		border-radius: var(--border-radius);
+		border-style: solid;
+		border-width: 1px;
+		border-color: var(--color-gray-600);
+		text-align: center;
+		width: max-content;
+	}
+	.sk .submenu-visible .menu-level-1 li.exp > a::after {
+		content: "Zobraziť všetko z kategórie";
+	}
+	.navigation-close {
+		z-index: 1;
+	}
+	.submenu-visible .navigation-back {
+		position: absolute;
+		left: 10px;
+		top: 30px;
+		transform: rotate(90deg);
+		padding: 10px 5px;
+		z-index: 1;
+		cursor: pointer;
+	}
+	.submenu-visible .navigation-back::before {
+		content: "\e90e";
+		font-family: shoptet;
+		font-weight: 400;
+		font-size: 12px;
+		color: var(--color-black-800);
+	}
+	.submenu-visible .menu-level-1 li.exp a b {
+		position: fixed;
+		left: calc(50% + 10%);
+		transform: translateX(-50%);
+		text-align: center;
+		top: 15px;
+		z-index: 2;
+		color: var(--color-primary);
+	}
 }
 
 @media (max-width: 460px) {
