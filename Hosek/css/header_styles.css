@@ -802,7 +802,7 @@ body {
 	.navigation-in ul li a b {
 		font-weight: 600;
 		color: var(--color-black-800);
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	.navigation-in > ul > li.ext > ul > li .menu-level-3 a {
@@ -836,6 +836,18 @@ body {
 	}
 	#navigation {
 		padding-bottom: 0;
+	}
+	.navigation-in > ul > li {
+		border-style: none;
+	}
+	.navigation-in > ul > li > a::before {
+		display: none;
+	}
+
+	.navigation-close {
+		background: none;
+		color: var(--color-black-800);
+		opacity: 0.9;
 	}
 }
 

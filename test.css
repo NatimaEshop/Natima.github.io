@@ -72,12 +72,12 @@
 		z-index: 2;
 	}
 	.navigation-close {
-		z-index: 2;
+		z-index: 1;
 	}
 	.submenu-visible .navigation-back {
 		position: absolute;
 		left: 10px;
-		top: 9px;
+		top: 6px;
 		transform: rotate(90deg);
 		padding: 10px 5px;
 		z-index: 1;
@@ -92,9 +92,15 @@
 	}
 	.submenu-visible .menu-level-1 li.exp a b {
 		position: fixed;
-		left: 30%;
-		top: 20px;
+		left: 50%;
+		top: 15px;
 		z-index: 2;
+		color: var(--color-primary);
+	}
+	.submenu-visible .menu-level-1 li.exp .menu-level-2 {
+		border-top-style: solid;
+		border-color: var(--color-gray-600);
+		border-width: 1px;
 	}
 	.p-detail-inner .row.product-top > h1 {
 		font-size: 2rem;
