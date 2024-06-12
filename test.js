@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		$("#navigation .menu-level-1 > li > a > .submenu-arrow").on("touch", function (event) {
+		/*$("#navigation .menu-level-1 > li > a > .submenu-arrow").on("touch", function (event) {
 			console.log("touch0");
 			event.preventDefault();
 			console.log("touch0,5");
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 
 			console.log("touch2");
-		});
+		});*/
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
 
