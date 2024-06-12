@@ -78,7 +78,7 @@
 	gap: 0.5em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.carousel-banner-content {
 		padding: 0px 5% calc(5% + 0.6em) 10%;
 	}
@@ -320,7 +320,7 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.carousel-inner .item {
 		min-width: 280px;
 		width: 280px;

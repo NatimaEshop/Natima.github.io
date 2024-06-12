@@ -220,7 +220,7 @@
 	display: none !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.type-manufacturer-detail .sidebar .filters-unveil-button-wrapper,
 	.filters-unveil-button-wrapper {
 		display: flex;

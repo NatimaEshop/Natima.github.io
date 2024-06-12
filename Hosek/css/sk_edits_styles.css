@@ -42,7 +42,7 @@
 	overflow: visible;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.in-krok-1 .checkout-box {
 		width: auto;
 	}

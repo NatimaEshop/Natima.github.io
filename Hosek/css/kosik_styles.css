@@ -318,7 +318,7 @@ ol.cart-header li.active strong span::before {
 	padding: 5px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.ordering-process .cart-table tr {
 		display: grid;
 		grid-template-columns: 20% 26.66% 26.66% 26.66%;
@@ -1325,7 +1325,7 @@ ol.cart-header li.active strong span::before {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.in-kosik #dkLabFavCartWrapper .products {
 		grid-template-columns: repeat(2, 1fr);
 	}

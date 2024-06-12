@@ -668,7 +668,7 @@ body {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	:root {
 		--header-icon-menu-height: 24px;
 		--header-menu-gap: 18px;
@@ -830,7 +830,7 @@ body {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.dkLabFavHeaderIconBtn {
 		height: 35%;
 	}

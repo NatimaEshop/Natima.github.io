@@ -94,7 +94,7 @@ body.in-index .content.wide h1 {
 	text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.show-to-768px {
 		display: block;
 	}

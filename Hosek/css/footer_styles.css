@@ -196,7 +196,7 @@ body footer .container.footer-bottom {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.in-index .copyright {
 		text-align: left;
 	}

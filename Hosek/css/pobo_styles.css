@@ -44,7 +44,7 @@
 #pobo-standard-widget > div:nth-child(odd) {
 	background: #f6f6f6;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#pobo-standard-widget > div {
 		padding: 10px;
 	}
@@ -67,7 +67,7 @@
 	margin: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#pobo-all-content .empty::-webkit-scrollbar {
 		display: none;
 	}
@@ -156,7 +156,7 @@
 		width: 48%;
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#pobo-all-content .widget-projector .rc-parameter-small-left__box {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;

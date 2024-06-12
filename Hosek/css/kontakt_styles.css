@@ -28,7 +28,7 @@
 	height: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.contact-blocks {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(4, 1fr);

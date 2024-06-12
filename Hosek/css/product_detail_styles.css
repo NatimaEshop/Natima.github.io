@@ -1119,7 +1119,7 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	aspect-ratio: 1/1.4;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.cards {
 		flex-direction: column;
 	}
@@ -1183,7 +1183,7 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	z-index: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#product-detail-form > .row {
 		grid-template-columns: 1fr;
 	}
@@ -1241,7 +1241,7 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 		max-width: 80%;
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.natios-daruje-blok {
 		grid-template-columns: 1fr;
 		text-align: center;
@@ -1282,7 +1282,7 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 .product-icons.four .product-icon {
 	width: 25%;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.product-icon.four {
 		width: 50% !important;
 		gap: 20px;

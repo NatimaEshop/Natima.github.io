@@ -278,7 +278,7 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.products-block > div .flags .flag.flag-discount {
 		flex-wrap: wrap;
 		flex-direction: column;
