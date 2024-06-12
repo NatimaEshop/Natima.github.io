@@ -181,6 +181,7 @@
 	#lb-results.lb-results-wrapper .products .p-in .p-in-in {
 		display: flex;
 		flex-direction: column;
+		gap: 0;
 	}
 	#lb-results.lb-results-wrapper .products .ratings-wrapper {
 		display: flex;
@@ -206,7 +207,7 @@
 	#lb-results.lb-results-wrapper .p-bottom > div {
 		display: flex !important;
 	}
-	#lb-results.lb-results-wrapper .desctiption {
+	#lb-results.lb-results-wrapper .p-desc {
 		display: none !important;
 	}
 }
