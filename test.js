@@ -5,7 +5,7 @@ $("#header .navigation-buttons .cart-count").on("touchstart", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-	if (!matchesMedia768) {
+	if (!window.matchMedia("(min-width: " + "768" + "px)").matches;) {
 		$("#navigation").on("click touch", function (event) {
 			if (!$(event.target).closest(".menu-level-1").length) {
 				shoptet.menu.hideNavigation();
