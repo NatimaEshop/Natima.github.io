@@ -55,7 +55,6 @@ body {
 	color: white;
 	border-radius: 50%;
 	padding: 10px;
-	top: 4px;
 }
 
 @media (min-width: 1921px) {
@@ -847,7 +846,11 @@ body {
 	.navigation-close {
 		background: none;
 		color: var(--color-black-800);
-		opacity: 0.9;
+		opacity: 0.8;
+		top: 30px;
+	}
+	.navigation-close:before {
+		font-size: 12px;
 	}
 }
 
