@@ -433,13 +433,15 @@
 
 /*uprava rozližení 2 produktů na mobil, odstraneni popisku*/
 @media (max-width: 767px) {
-	.products-page.products {
+	.type-category .products-page.products,
+	.type-manufacturer-detail .products-page.products {
 		--product-cat-gap: 12px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		column-gap: var(--product-cat-gap) !important;
 		grid-row-gap: calc(var(--product-cat-gap) * 2.5) !important;
 	}
+
 	.products-page.products .product {
 		width: 100% !important;
 		display: flex;
