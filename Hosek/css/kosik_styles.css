@@ -375,7 +375,7 @@ ol.cart-header li.active strong span::before {
 	}
 }
 
-@media (max-width: 500px) {
+/*@media (max-width: 500px) {
 	.ordering-process .cart-table tr {
 		display: grid;
 		grid-template-columns: 0.33fr 0.67fr;
@@ -392,7 +392,7 @@ ol.cart-header li.active strong span::before {
 	.ordering-process .cart-table tr > td.p-total {
 		grid-column: 2;
 	}
-}
+}*/
 
 /*Dárky v košíku*/
 .in-kosik .cart-summary h4,
