@@ -15,7 +15,7 @@
 	}
 	/**/
 	.cart-table tr > td:nth-child(even).p-name {
-		padding: 5px 0 0 10px;
+		padding: 1px 0 0 10px;
 		margin-bottom: auto;
 		background: none;
 		flex: 1;
