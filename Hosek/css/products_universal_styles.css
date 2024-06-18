@@ -78,3 +78,44 @@
 		width: 100%;
 	}
 }
+
+/*Přepsání vlajky Akce na Akce měsíce*/
+.flag.flag-action {
+	font-size: 0px !important;
+	max-width: none;
+	margin-bottom: calc(12px * 0.3) !important;
+}
+.flag.flag-action::after {
+	content: "Akce měsíce⚡";
+	font-size: 12px;
+}
+.sk .flag.flag-action::after {
+	content: "Akcia mesiaca⚡";
+}
+
+#filters label[for="dd[]1"] {
+	font-size: 0;
+	display: flex;
+}
+#filters label[for="dd[]1"] span {
+	padding: 0;
+	margin: 0;
+}
+#filters label[for="dd[]1"] span::before {
+	margin-right: calc(0.75em + 1ex);
+	content: "Akce měsíce⚡" !important;
+	font-size: 14px;
+	font-weight: 400;
+	position: initial;
+	background-color: transparent;
+	inset: 0;
+	transform: none;
+	height: auto;
+	width: auto;
+}
+.sk #filters label[for="dd[]1"] span::before {
+	content: "Akcia mesiaca⚡" !important;
+}
+#filters label[for="dd[]1"].active span::before {
+	font-weight: inherit;
+}
