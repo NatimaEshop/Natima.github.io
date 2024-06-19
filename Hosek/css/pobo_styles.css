@@ -313,14 +313,16 @@
 .rc-advantages-two,
 .rc-advantages-three,
 .rc-advantages-four {
-	display: flex;
+	display: flex !important;
 	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 .rc-advantages-one__item,
 .rc-advantages-two__item,
 .rc-advantages-three__item,
 .rc-advantages-four__item {
 	flex: 1;
-	width: auto;
+	width: auto !important;
 	flex-basis: 180px;
 }
