@@ -307,3 +307,20 @@
 		pointer-events: none;
 	}
 }
+
+/*1-4 fotky pobo*/
+.rc-advantages-one,
+.rc-advantages-two,
+.rc-advantages-three,
+.rc-advantages-four {
+	display: flex;
+	flex-wrap: wrap;
+}
+.rc-advantages-one__item,
+.rc-advantages-two__item,
+.rc-advantages-three__item,
+.rc-advantages-four__item {
+	flex: 1;
+	width: auto;
+	flex-basis: 180px;
+}
