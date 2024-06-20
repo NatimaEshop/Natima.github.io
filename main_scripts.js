@@ -795,6 +795,9 @@ if (document.querySelector("body.in-krok-1")) {
 			removePayment();
 		}
 	});
+	document.addEventListener("DOMContentLoaded", function () {
+		editGifts();
+	});
 	paymentLabels.each(function () {
 		$(this).on("mousedown", function () {
 			checkedPayment = true;
@@ -821,6 +824,21 @@ function removePayment() {
 	$(".recapitulation-shipping-billing-info").eq(1).html("<span>Zvolte platbu</span>Platba");
 }
 
+function editGifts() {
+	let giftItems = $(".gift-items");
+	if (giftItems.length > 1) {
+		giftItems.each(function (index) {
+			if (index > 0) {
+				// Skip the first .gift-items div
+				let span = $(this).find("span").clone();
+				giftItems.first().find("span").last().after(span);
+				$(this).remove();
+			}
+		});
+	}
+}
+
+/*posledn9 krok objednávky*/
 if (document.body.classList.contains("in-krok-2")) {
 	const orderNextStepButton = $(".next-step");
 	const orderCheckoutBox = $(".checkout-box");

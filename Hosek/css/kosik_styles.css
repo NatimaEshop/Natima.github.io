@@ -431,9 +431,34 @@ ol.cart-header li.active strong span::before {
 	cursor: pointer;
 	position: relative;
 }
+.in-kosik .free-gift > .free-product-gifts-wrapper .free-product-gifts {
+	width: calc(33% - 10px);
+	margin: 0 5px;
+	padding: 10px 5px;
+	border-style: solid;
+	border-radius: var(--border-radius);
+	border-width: 1px;
+	border-color: var(--color-secondary);
+	position: relative;
+}
+.in-kosik .free-gift > .free-product-gifts-wrapper .free-product-gifts::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: var(--border-radius);
+	width: 100%;
+	height: 100%;
+	background: var(--color-secondary);
+	transition: none;
+	opacity: 0.03;
+}
 @media (max-width: 1200px) {
 	.in-kosik ul.free-gifts > li {
 		width: calc(50% - var(--giftGap));
+	}
+	.in-kosik .free-gift > .free-product-gifts-wrapper .free-product-gifts {
+		width: calc(50% - 10px);
 	}
 }
 @media (max-width: 440px) {
@@ -903,6 +928,13 @@ ol.cart-header li.active strong span::before {
 	border-top-color: var(--color-secondary);
 	border-top-style: solid;
 	border-width: 3px;
+}
+.in-krok-1 .cart-item-gift .cart-item-name {
+	display: flex;
+	flex-direction: column;
+}
+.in-krok-1 .cart-item-gift .cart-item-name span {
+	margin-bottom: 10px;
 }
 .in-krok-1.ordering-process .order-recapitulation,
 .in-krok-2.ordering-process .order-recapitulation {
