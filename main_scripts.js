@@ -877,6 +877,10 @@ if (document.body.classList.contains("in-krok-2")) {
 			}
 		});
 	});
+
+	document.addEventListener("DOMContentLoaded", function () {
+		editGifts();
+	});
 }
 
 /*posledni krok objednavky*/

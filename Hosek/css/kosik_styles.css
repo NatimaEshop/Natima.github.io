@@ -929,11 +929,13 @@ ol.cart-header li.active strong span::before {
 	border-top-style: solid;
 	border-width: 3px;
 }
-.in-krok-1 .cart-item-gift .cart-item-name {
+.in-krok-1 .cart-item-gift .cart-item-name,
+.in-krok-2 .cart-item-gift .cart-item-name {
 	display: flex;
 	flex-direction: column;
 }
-.in-krok-1 .cart-item-gift .cart-item-name span {
+.in-krok-1 .cart-item-gift .cart-item-name span,
+.in-krok-2 .cart-item-gift .cart-item-name span {
 	margin-bottom: 10px;
 }
 .in-krok-1.ordering-process .order-recapitulation,
