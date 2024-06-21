@@ -1,4 +1,4 @@
-if (document.querySelector("body.in-krok-1")) {
+/*if (document.querySelector("body.in-krok-1")) {
 	$("#order-shipping-methods").append(
 		'<div id="showAllShippingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
 	);
@@ -68,3 +68,4 @@ if (document.querySelector("body.in-krok-1")) {
 		});
 	});
 }
+*/
