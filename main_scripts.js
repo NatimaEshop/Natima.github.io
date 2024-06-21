@@ -799,7 +799,7 @@ if (document.querySelector("body.in-krok-1")) {
 		editGifts();
 	});
 	/*Scroll to bottom when all checked out*/
-	/*
+
 	paymentLabels.each(function () {
 		$(this).on("mousedown", function () {
 			checkedPayment = true;
@@ -813,7 +813,6 @@ if (document.querySelector("body.in-krok-1")) {
 			);
 		});
 	});
-	*/
 }
 function removeDelivery() {
 	$(".co-delivery-method input").prop("checked", false);
