@@ -838,7 +838,7 @@ if (document.querySelector("body.in-krok-1")) {
 		let radioWrappersShipping = $("#order-shipping-methods .radio-wrapper");
 		let radioWrappersBilling = $("#order-billing-methods .radio-wrapper");
 
-		radioWrappersShipping.on("mousedown touchstart", function () {
+		radioWrappersShipping.on("mousedown touch", function () {
 			let eventFunction = function () {
 				$("#order-shipping-methods").addClass("selected");
 
@@ -856,7 +856,7 @@ if (document.querySelector("body.in-krok-1")) {
 			}, 500);
 		});
 
-		radioWrappersBilling.on("mousedown touchstart", function () {
+		radioWrappersBilling.on("mousedown touch", function () {
 			let eventFunction = function () {
 				$("#order-billing-methods").addClass("selected");
 
@@ -874,7 +874,7 @@ if (document.querySelector("body.in-krok-1")) {
 			}, 500);
 		});
 
-		$("#showAllShippingMethods").on("click touchstart", function () {
+		$("#showAllShippingMethods").on("click touch", function () {
 			$("#order-shipping-methods").removeClass("selected");
 			radioWrappersShipping.each(function (index) {
 				$(this).css({
@@ -885,7 +885,7 @@ if (document.querySelector("body.in-krok-1")) {
 			});
 		});
 
-		$("#showAllBillingMethods").on("click touchstart", function () {
+		$("#showAllBillingMethods").on("click touch", function () {
 			$("#order-billing-methods").removeClass("selected");
 			radioWrappersBilling.each(function (index) {
 				$(this).css({
