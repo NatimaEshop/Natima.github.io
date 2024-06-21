@@ -817,22 +817,24 @@ if (document.querySelector("body.in-krok-1")) {
 	});
 
 	/*srolování metod po výberu*/
-	if (document.body.classList.contains("cs")) {
-		$("#order-shipping-methods").append(
-			'<div id="showAllShippingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
-		);
-		$("#order-billing-methods").append(
-			'<div id="showAllBillingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
-		);
-	}
-	if (document.body.classList.contains("sk")) {
-		$("#order-shipping-methods").append(
-			'<div id="showAllShippingMethods" class="showAllOrder">Zobraziť všetky možnosti</div>'
-		);
-		$("#order-billing-methods").append(
-			'<div id="showAllBillingMethods" class="showAllOrder">Zobraziť všetky možnosti</div>'
-		);
-	}
+	document.addEventListener("DOMContentLoaded", function () {
+		if (document.body.classList.contains("cs")) {
+			$("#order-shipping-methods").append(
+				'<div id="showAllShippingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
+			);
+			$("#order-billing-methods").append(
+				'<div id="showAllBillingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
+			);
+		}
+		if (document.body.classList.contains("sk")) {
+			$("#order-shipping-methods").append(
+				'<div id="showAllShippingMethods" class="showAllOrder">Zobraziť všetky možnosti</div>'
+			);
+			$("#order-billing-methods").append(
+				'<div id="showAllBillingMethods" class="showAllOrder">Zobraziť všetky možnosti</div>'
+			);
+		}
+	});
 
 	let radioWrappersShipping = $("#order-shipping-methods .radio-wrapper");
 	let radioWrappersBilling = $("#order-billing-methods .radio-wrapper");
