@@ -1204,6 +1204,20 @@ ol.cart-header li.active strong span::before {
 	justify-content: center;
 }
 
+/*shoptet paz prevod fix*/
+.pisPaymentMethod {
+	position: relative;
+}
+.bankSelection {
+	font-family: var(--ff-main);
+}
+.bankSelection__selected {
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+.bankSelection__button {
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
 @media (max-width: 1000px) {
 	.in-kosik .row.cart-row {
 		flex-direction: column;

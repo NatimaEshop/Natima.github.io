@@ -133,3 +133,9 @@
 		gap: calc(var(--gap) * 6);
 	}
 }
+
+.in-blog #pobo-all-content .widget-typography h2 {
+	padding-top: 2em !important;
+	font-size: 2.25rem !important;
+	margin-bottom: 0 !important;
+}

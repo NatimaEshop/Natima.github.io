@@ -149,3 +149,29 @@
 		text-decoration: underline;
 	}
 }
+
+/*kosik*/
+/*kosik animace*/
+.showAllOrder {
+	display: flex;
+	width: auto;
+	text-align: center;
+	font-weight: 600;
+	color: var(--color-primary);
+	z-index: 90;
+	position: relative;
+	cursor: pointer;
+	margin-top: var(--gap);
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+.showAllOrder::after {
+	content: "\e90e";
+	font-family: "shoptet";
+	font-size: 10px;
+	margin-left: 5px;
+}
+.selected .showAllOrder {
+	display: flex;
+}
