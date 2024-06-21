@@ -798,12 +798,13 @@ if (document.querySelector("body.in-krok-1")) {
 	document.addEventListener("DOMContentLoaded", function () {
 		editGifts();
 	});
-	/*Scroll to bottom when all checked out*/
 
+	/*Scroll to bottom when all checked out*/
 	paymentLabels.each(function () {
 		$(this).on("mousedown", function () {
 			checkedPayment = true;
 		});
+		/*
 		$(this).on("click", function () {
 			$("html, body").animate(
 				{
@@ -812,6 +813,7 @@ if (document.querySelector("body.in-krok-1")) {
 				300
 			);
 		});
+		*/
 	});
 }
 function removeDelivery() {
