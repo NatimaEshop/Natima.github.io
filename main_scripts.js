@@ -834,66 +834,66 @@ if (document.querySelector("body.in-krok-1")) {
 				'<div id="showAllBillingMethods" class="showAllOrder">Zobraziť všetky možnosti</div>'
 			);
 		}
-	});
 
-	let radioWrappersShipping = $("#order-shipping-methods .radio-wrapper");
-	let radioWrappersBilling = $("#order-billing-methods .radio-wrapper");
+		let radioWrappersShipping = $("#order-shipping-methods .radio-wrapper");
+		let radioWrappersBilling = $("#order-billing-methods .radio-wrapper");
 
-	radioWrappersShipping.on("mousedown", function () {
-		console.log("click");
-		let eventFunction = function () {
-			$("#order-shipping-methods").addClass("selected");
+		radioWrappersShipping.on("mousedown", function () {
+			console.log("click");
+			let eventFunction = function () {
+				$("#order-shipping-methods").addClass("selected");
 
-			radioWrappersShipping.each(function () {
-				if (!$(this).hasClass("active")) {
-					$(this).css("overflow", "hidden");
-					$(this).animate({ height: "0px", opacity: 0 }, 300);
-				}
-			});
-		};
+				radioWrappersShipping.each(function () {
+					if (!$(this).hasClass("active")) {
+						$(this).css("overflow", "hidden");
+						$(this).animate({ height: "0px", opacity: 0 }, 300);
+					}
+				});
+			};
 
-		document.addEventListener("ShoptetBillingMethodUpdated", eventFunction, { once: true });
-		setTimeout(function () {
-			document.removeEventListener("ShoptetBillingMethodUpdated", eventFunction);
-		}, 500);
-	});
+			document.addEventListener("ShoptetBillingMethodUpdated", eventFunction, { once: true });
+			setTimeout(function () {
+				document.removeEventListener("ShoptetBillingMethodUpdated", eventFunction);
+			}, 500);
+		});
 
-	radioWrappersBilling.on("mousedown", function () {
-		let eventFunction = function () {
-			$("#order-billing-methods").addClass("selected");
+		radioWrappersBilling.on("mousedown", function () {
+			let eventFunction = function () {
+				$("#order-billing-methods").addClass("selected");
 
-			radioWrappersBilling.each(function () {
-				if (!$(this).hasClass("active")) {
-					$(this).css("overflow", "hidden");
-					$(this).animate({ height: "0px", opacity: 0 }, 300);
-				}
-			});
-		};
+				radioWrappersBilling.each(function () {
+					if (!$(this).hasClass("active")) {
+						$(this).css("overflow", "hidden");
+						$(this).animate({ height: "0px", opacity: 0 }, 300);
+					}
+				});
+			};
 
-		document.addEventListener("ShoptetBillingMethodUpdated", eventFunction, { once: true });
-		setTimeout(function () {
-			document.removeEventListener("ShoptetBillingMethodUpdated", eventFunction);
-		}, 500);
-	});
+			document.addEventListener("ShoptetBillingMethodUpdated", eventFunction, { once: true });
+			setTimeout(function () {
+				document.removeEventListener("ShoptetBillingMethodUpdated", eventFunction);
+			}, 500);
+		});
 
-	$("#showAllShippingMethods").on("click", function () {
-		$("#order-shipping-methods").removeClass("selected");
-		radioWrappersShipping.each(function (index) {
-			$(this).css({
-				overflow: "",
-				height: "auto",
-				opacity: 1,
+		$("#showAllShippingMethods").on("click", function () {
+			$("#order-shipping-methods").removeClass("selected");
+			radioWrappersShipping.each(function (index) {
+				$(this).css({
+					overflow: "",
+					height: "auto",
+					opacity: 1,
+				});
 			});
 		});
-	});
 
-	$("#showAllBillingMethods").on("click", function () {
-		$("#order-billing-methods").removeClass("selected");
-		radioWrappersBilling.each(function (index) {
-			$(this).css({
-				overflow: "",
-				height: "auto",
-				opacity: 1,
+		$("#showAllBillingMethods").on("click", function () {
+			$("#order-billing-methods").removeClass("selected");
+			radioWrappersBilling.each(function (index) {
+				$(this).css({
+					overflow: "",
+					height: "auto",
+					opacity: 1,
+				});
 			});
 		});
 	});
