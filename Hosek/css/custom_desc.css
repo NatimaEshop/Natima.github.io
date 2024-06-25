@@ -161,14 +161,10 @@
 	height: 100%;
 }
 
-.custom-desc .column {
-	display: flex;
-	flex-direction: column;
-}
-.custom-desc .column .center-h {
+.custom-desc .column.center-h {
 	align-items: center;
 }
-.custom-desc .column .center-v {
+.custom-desc .column.center-v {
 	justify-content: center;
 }
 
@@ -807,7 +803,7 @@
 	left: 0;
 	width: 200%;
 	height: 1px;
-	background: var(--desc-color-secondar);
+	background: var(--desc-color-secondary);
 	background: -moz-radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
 	background: -webkit-radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
 	background: radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
