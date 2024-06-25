@@ -4,6 +4,10 @@
     --desc-color-bg-primary: var(--color-primary);
     --desc-color-bg-secondary: var(--color-primary-hover);
 }*/
+:root {
+	--desc-color-primary-blue: hsla(225, 100%, 33%, 1);
+	--desc-color-secondary-blue: hsla(222, 100%, 23%, 1);
+}
 .custom-desc {
 	display: flex;
 	flex-wrap: wrap;
@@ -17,6 +21,9 @@
 	--gap: clamp(12px, 1.04vw, 20px);
 	--border-radius: 20px;
 	--padding-block: clamp(35px, 3.125vw, 60px);
+}
+.custom-desc p {
+	text-wrap: pretty;
 }
 .custom-desc .pad {
 	padding: var(--padding-block) !important;
@@ -96,11 +103,20 @@
 	background: -webkit-radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
 	background: radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
 }
+.custom-desc .bg.bg-gradient.bg-blue {
+	background: var(--desc-color-primary-blue);
+	background: -moz-radial-gradient(circle, var(--desc-color-primary-blue) 0%, var(--desc-color-secondary-blue) 100%);
+	background: -webkit-radial-gradient(circle, var(--desc-color-primary-blue) 0%, var(--desc-color-secondary-blue) 100%);
+	background: radial-gradient(circle, var(--desc-color-primary-blue) 0%, var(--desc-color-secondary-blue) 100%);
+}
 .custom-desc .bg.bg-primary {
 	background: var(--desc-color-bg-primary);
 }
 .custom-desc .bg.bg-secondary {
 	background: var(--desc-color-bg-secondary);
+}
+.custom-desc .bg.bg-blue {
+	background: var(--desc-color-secondary-blue);
 }
 .custom-desc .ikony img {
 	background: -moz-linear-gradient(90deg, var(--desc-color-icon-secondary) 0%, var(--desc-color-icon-primary) 100%);
@@ -148,6 +164,12 @@
 .custom-desc .column {
 	display: flex;
 	flex-direction: column;
+}
+.custom-desc .column .center-h {
+	align-items: center;
+}
+.custom-desc .column .center-v {
+	justify-content: center;
 }
 
 .custom-desc .w-5 {
@@ -274,6 +296,12 @@
 	--column-gap: var(--gap);
 	column-gap: var(--column-gap);
 	align-items: center;
+}
+.custom-desc .prispivame {
+	align-items: center;
+}
+.custom-desc .prispivame > div {
+	padding-top: 0.5em;
 }
 
 .custom-desc .gap-0 {

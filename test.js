@@ -1,71 +1,64 @@
-/*if (document.querySelector("body.in-krok-1")) {
-	$("#order-shipping-methods").append(
-		'<div id="showAllShippingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
-	);
-	$("#order-billing-methods").append(
-		'<div id="showAllBillingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
-	);
+// let discountForm = $(".discount-coupon form");
+// let discountInput = $(".discount-coupon input");
+// let kodKuponu = "test01";
+// let kodProduktu = "D1-NAT0147";
+// let kuponSubmited = false;
 
-	let radioWrappersShipping = $("#order-shipping-methods .radio-wrapper");
-	let radioWrappersBilling = $("#order-billing-methods .radio-wrapper");
+// //event listener to sumbited form
+// $(document).on("submit", ".discount-coupon form", function (e) {
+// 	/*Kupon splnuje strukturu*/
+// 	if (discountInput.val() !== kodKuponu) {
+// 		return;
+// 	}
+// 	/*Proti zacyklení*/
+// 	if (kuponSubmited) {
+// 		return;
+// 	}
+// 	kuponSubmited = true;
 
-	radioWrappersShipping.on("mousedown", function () {
-		console.log("click");
-		let eventFunction = function () {
-			$("#order-shipping-methods").addClass("selected");
+// 	/*Pridat produkt do kosiku*/
+// 	shoptet.cartShared.addToCart({ productCode: kodProduktu });
 
-			radioWrappersShipping.each(function () {
-				if (!$(this).hasClass("active")) {
-					$(this).css("overflow", "hidden");
-					$(this).animate({ height: "0px", opacity: 0 }, 300);
-				}
-			});
-		};
+// 	/*Po pridani znovu aplikovat kupon*/
+// 	document.addEventListener(
+// 		"ShoptetDOMContentLoaded",
+// 		function () {
+// 			discountInput.value = "kodProduktu";
+// 			/*Form submission canceled because the form is not connected*/
+// 			discountForm.submit();
+// 		},
+// 		{ once: true }
+// 	);
 
-		document.addEventListener("ShoptetBillingMethodUpdated", eventFunction, { once: true });
-		setTimeout(function () {
-			document.removeEventListener("ShoptetBillingMethodUpdated", eventFunction);
-		}, 500);
-	});
+// 	/*Kupon je neplatny*/
+// 	document.addEventListener("ShoptetDOMCartContentLoaded", invalidCoupon, { once: true });
 
-	radioWrappersBilling.on("mousedown", function () {
-		let eventFunction = function () {
-			$("#order-billing-methods").addClass("selected");
+// 	/*Kupon je platný*/
+// 	document.addEventListener("ShoptetDOMCartCountUpdated", validCoupon, { once: true });
+// });
 
-			radioWrappersBilling.each(function () {
-				if (!$(this).hasClass("active")) {
-					$(this).css("overflow", "hidden");
-					$(this).animate({ height: "0px", opacity: 0 }, 300);
-				}
-			});
-		};
+// function invalidCoupon() {
+// 	console.log("Kupon je neplatný");
+// 	kuponSubmited = false;
+// 	shoptet.cartShared.removeFromCart({ productCode: kodProduktu });
+// 	console.log("tady bude nějaká hláška");
+// 	return;
+// }
 
-		document.addEventListener("ShoptetBillingMethodUpdated", eventFunction, { once: true });
-		setTimeout(function () {
-			document.removeEventListener("ShoptetBillingMethodUpdated", eventFunction);
-		}, 500);
-	});
+// function validCoupon() {
+// 	console.log("Kupon je platný");
+// 	document.removeEventListener("ShoptetDOMCartContentLoaded", invalidCoupon);
 
-	$("#showAllShippingMethods").on("click", function () {
-		$("#order-shipping-methods").removeClass("selected");
-		radioWrappersShipping.each(function (index) {
-			$(this).css({
-				overflow: "",
-				height: "auto",
-				opacity: 1,
-			});
-		});
-	});
+// 	let productElement = $("table.cart-table tr[data-micro-sku='" + kodProduktu + "']");
+// 	productElement.find("td.p-availability, td.p-quantity").remove();
 
-	$("#showAllBillingMethods").on("click", function () {
-		$("#order-billing-methods").removeClass("selected");
-		radioWrappersBilling.each(function (index) {
-			$(this).css({
-				overflow: "",
-				height: "auto",
-				opacity: 1,
-			});
-		});
-	});
-}
-*/
+// 	let productRemoveForm = productElement.find("td.p-total form");
+// 	productRemoveForm.css("display", "none");
+
+// 	let discountRemoveButton = $(".discount-coupon form");
+// 	discountRemoveButton.on("submit", function () {
+// 		productRemoveForm.submit();
+// 		kuponSubmited = false;
+// 		return;
+// 	});
+// }
