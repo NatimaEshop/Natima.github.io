@@ -807,10 +807,14 @@
 	left: 0;
 	width: 200%;
 	height: 1px;
-	background: var(--desc-color-secondary);
+	background: var(--desc-color-secondar);
 	background: -moz-radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
 	background: -webkit-radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
 	background: radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
+	background: var(--desc-color-compare);
+	background: -moz-radial-gradient(circle, var(--desc-color-compare) 0%, transparent 80%);
+	background: -webkit-radial-gradient(circle, var(--desc-color-compare) 0%, transparent 80%);
+	background: radial-gradient(circle, var(--desc-color-compare) 0%, transparent 80%);
 }
 
 /*---------------------------------------------------------------------------------------------*/
