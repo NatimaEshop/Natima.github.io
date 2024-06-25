@@ -160,6 +160,10 @@
 .custom-desc .row .block {
 	height: 100%;
 }
+.custom-desc .column {
+	display: flex;
+	flex-direction: column;
+}
 
 .custom-desc .column.center-h {
 	align-items: center;
