@@ -666,10 +666,18 @@
 	height: clamp(55px, 3.7vw, 70px);
 	padding: clamp(12px, 0.78vw, 15px);
 }
+.custom-desc .ikony.h-2 img {
+	min-width: 55px;
+	min-height: 55px;
+}
 .custom-desc .ikony.h-3 img {
 	width: clamp(65px, 5.75vw, 110px);
 	height: clamp(65px, 5.75vw, 110px);
 	padding: clamp(14px, 1.5vw, 28px);
+}
+.custom-desc .ikony.h-3 img {
+	min-width: 65px;
+	min-height: 65px;
 }
 .custom-desc .ikony.slider {
 	display: flex;
