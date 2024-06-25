@@ -7,6 +7,7 @@
 :root {
 	--desc-color-primary-blue: hsla(225, 100%, 33%, 1);
 	--desc-color-secondary-blue: hsla(222, 100%, 23%, 1);
+	--desc-color-compare: hsla(197, 91%, 56%, 1);
 }
 .custom-desc {
 	display: flex;
@@ -807,10 +808,7 @@
 	left: 0;
 	width: 200%;
 	height: 1px;
-	background: var(--desc-color-secondary);
-	background: -moz-radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
-	background: -webkit-radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
-	background: radial-gradient(circle, var(--desc-color-secondary) 0%, transparent 80%);
+
 	background: var(--desc-color-compare);
 	background: -moz-radial-gradient(circle, var(--desc-color-compare) 0%, transparent 80%);
 	background: -webkit-radial-gradient(circle, var(--desc-color-compare) 0%, transparent 80%);
