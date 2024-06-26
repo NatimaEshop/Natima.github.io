@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function slevovyKuponDarek() {
 	let discountForm = $(".discount-coupon form");
 	let discountInput = $(".discount-coupon input");
-	let kodKuponu = "test02";
+	let kodKuponu = "test01";
 	let priceId = 12270;
 	let itemId = "";
 	let productsInCart;
