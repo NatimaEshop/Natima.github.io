@@ -1,64 +1,93 @@
-// let discountForm = $(".discount-coupon form");
-// let discountInput = $(".discount-coupon input");
-// let kodKuponu = "test01";
-// let kodProduktu = "D1-NAT0147";
-// let kuponSubmited = false;
+let discountForm = $(".discount-coupon form");
+let discountInput = $(".discount-coupon input");
+let kodKuponu = "test02";
+let priceId = 12270;
+let itemId = "";
+let productsInCart;
+let kuponSubmited = false;
 
-// //event listener to sumbited form
-// $(document).on("submit", ".discount-coupon form", function (e) {
-// 	/*Kupon splnuje strukturu*/
-// 	if (discountInput.val() !== kodKuponu) {
-// 		return;
-// 	}
-// 	/*Proti zacyklení*/
-// 	if (kuponSubmited) {
-// 		return;
-// 	}
-// 	kuponSubmited = true;
+//event listener to sumbited form
+$(document).on("submit", ".discount-coupon form", function (e) {
+	if (discountInput.val() !== kodKuponu) {
+		return;
+	}
+	// Proti zacyklení
+	if (kuponSubmited) {
+		return;
+	}
 
-// 	/*Pridat produkt do kosiku*/
-// 	shoptet.cartShared.addToCart({ productCode: kodProduktu });
+	kuponSubmited = true;
 
-// 	/*Po pridani znovu aplikovat kupon*/
-// 	document.addEventListener(
-// 		"ShoptetDOMContentLoaded",
-// 		function () {
-// 			discountInput.value = "kodProduktu";
-// 			/*Form submission canceled because the form is not connected*/
-// 			discountForm.submit();
-// 		},
-// 		{ once: true }
-// 	);
+	document.addEventListener(
+		"ShoptetDOMCartContentLoaded",
+		function () {
+			// Pridat produkt do kosiku
+			shoptet.cartShared.addToCart({ priceId: priceId });
+			document.addEventListener(
+				"ShoptetDOMCartContentLoaded",
+				function () {
+					//get products data
+					productsInCart = getShoptetDataLayer("cartInfo").cartItems;
 
-// 	/*Kupon je neplatny*/
-// 	document.addEventListener("ShoptetDOMCartContentLoaded", invalidCoupon, { once: true });
+					productsInCart.forEach((product) => {
+						if (product.priceId === priceId) {
+							itemId = product.itemId;
+						}
+					});
+					//apply code again
+					discountForm = $(".discount-coupon form");
+					discountInput = $(".discount-coupon input");
+					discountInput.val(kodKuponu);
+					discountForm.submit();
 
-// 	/*Kupon je platný*/
-// 	document.addEventListener("ShoptetDOMCartCountUpdated", validCoupon, { once: true });
-// });
+					document.addEventListener(
+						"ShoptetDOMCartContentLoaded",
+						function () {
+							//PLATNY
+							if ($(".applied-coupon").length > 0) {
+								validCoupon();
+							}
+							//NEPLATNY
+							else {
+								invalidCoupon();
+							}
+						},
+						{ once: true }
+					);
+				},
+				{ once: true }
+			);
+		},
+		{ once: true }
+	);
+});
 
-// function invalidCoupon() {
-// 	console.log("Kupon je neplatný");
-// 	kuponSubmited = false;
-// 	shoptet.cartShared.removeFromCart({ productCode: kodProduktu });
-// 	console.log("tady bude nějaká hláška");
-// 	return;
-// }
+function invalidCoupon() {
+	if ($(".msg").hasClass("msg-error")) {
+		console.log("Kupon je neplatný");
 
-// function validCoupon() {
-// 	console.log("Kupon je platný");
-// 	document.removeEventListener("ShoptetDOMCartContentLoaded", invalidCoupon);
+		kuponSubmited = false;
+		shoptet.cartShared.removeFromCart({ itemId: itemId });
 
-// 	let productElement = $("table.cart-table tr[data-micro-sku='" + kodProduktu + "']");
-// 	productElement.find("td.p-availability, td.p-quantity").remove();
+		console.log("tady bude nějaká hláška");
+		return;
+	}
+}
 
-// 	let productRemoveForm = productElement.find("td.p-total form");
-// 	productRemoveForm.css("display", "none");
+function validCoupon() {
+	console.log("Kupon je platný");
 
-// 	let discountRemoveButton = $(".discount-coupon form");
-// 	discountRemoveButton.on("submit", function () {
-// 		productRemoveForm.submit();
-// 		kuponSubmited = false;
-// 		return;
-// 	});
-// }
+	document.removeEventListener("ShoptetDOMCartContentLoaded", invalidCoupon);
+
+	let productElement = $("table.cart-table tr[data-micro-sku='" + priceId + "']");
+	productElement.find("td.p-availability, td.p-quantity").remove();
+
+	let productRemoveForm = productElement.find("td.p-total form");
+	productRemoveForm.css("display", "none");
+
+	let discountRemoveButton = $(".discount-coupon form");
+	discountRemoveButton.on("click touch", function (e) {
+		shoptet.cartShared.removeFromCart({ itemId: itemId });
+		kuponSubmited = false;
+	});
+}
