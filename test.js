@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
 	if (document.body.classList.contains("ordering-process")) {
 		slevovyKuponDarek();
 	}
@@ -99,3 +99,4 @@ function slevovyKuponDarek() {
 		});
 	}
 }
+*/
