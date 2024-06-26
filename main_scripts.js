@@ -33,15 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			if ($(event.target).is(".submenu-visible .menu-level-1 li.exp a b")) {
 				event.stopPropagation();
 			} else {
-				$("#navigation .menu-level-1 > li").on(
-					"touchend",
-					function (event) {
-						setTimeout(function () {
-							$("#navigation>.navigation-in").scrollTop(0);
-						}, 200);
-					},
-					{ once: true }
-				);
+				setTimeout(function () {
+					$("#navigation>.navigation-in").scrollTop(0);
+				}, 200);
 			}
 		});
 
