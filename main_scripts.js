@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		$("#navigation .menu-level-1 > li").on("click touch mouseenter", function (event) {
+		$("#navigation .menu-level-1 > li").on("click touchend mouseenter", function (event) {
 			if ($(event.target).is(".submenu-visible .menu-level-1 li.exp a b")) {
 				event.stopPropagation();
 			} else {
