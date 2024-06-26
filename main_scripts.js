@@ -29,15 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
 			$("body").addClass("submenu-visible");
 		});
 
-		$("#navigation .menu-level-1 > li").on("click touch mouseenter", function (event) {
-			if ($(event.target).is(".submenu-visible .menu-level-1 li.exp a b")) {
-				event.stopPropagation();
-			} else {
-				setTimeout(function () {
-					$("#navigation>.navigation-in").scrollTop(0);
-				}, 200);
-			}
-		});
+		/*Slice protože přímé odkazy blbnou na iphonech*/
+		$("#navigation .menu-level-1 > li")
+			.slice(0, -3)
+			.on("click touch mouseenter", function (event) {
+				if ($(event.target).is(".submenu-visible .menu-level-1 li.exp a b")) {
+					event.stopPropagation();
+				} else {
+					setTimeout(function () {
+						$("#navigation>.navigation-in").scrollTop(0);
+					}, 200);
+				}
+			});
 
 		$("#header .menu-level-1").append('<div class="navigation-back"></div>');
 
