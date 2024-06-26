@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-	if ($("body").hasClass("ordering-process")) {
+	if (document.body.classList.contains("ordering-process")) {
 		slevovyKuponDarek();
 	}
 });
