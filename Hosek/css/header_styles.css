@@ -538,9 +538,11 @@ body {
 		height: 100%;
 		display: flex;
 	}
-	.navigation-in > ul > li.ext.exp > a,
-	.navigation-in > ul > li > a:hover,
-	.navigation-in > ul > li:first-child > a:hover {
+	#navigation .navigation-in > ul > li.ext.exp > a,
+	#navigation .navigation-in > ul > li > a:focus,
+	#navigation .navigation-in > ul > li:first-child > a:focus,
+	#navigation .navigation-in > ul > li > a:hover,
+	#navigation .navigation-in > ul > li:first-child > a:hover {
 		padding: 0 10px !important;
 		background-color: inherit;
 		margin: 0;
