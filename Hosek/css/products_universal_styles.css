@@ -79,18 +79,18 @@
 	}
 }
 
-/*Přepsání vlajky Akce na Akce měsíce*/
+/*Přepsání vlajky Akce na Letní výprodej*/
 .flag.flag-action {
 	font-size: 0px !important;
 	max-width: none;
 	margin-bottom: calc(12px * 0.3) !important;
 }
 .flag.flag-action::after {
-	content: "Akce měsíce⚡";
+	content: "Letní výprodej 🏝️";
 	font-size: 12px;
 }
 .sk .flag.flag-action::after {
-	content: "Akcia mesiaca⚡";
+	content: "Letný výpredaj 🏝️";
 }
 
 #filters label[for="dd[]1"] {
@@ -103,7 +103,7 @@
 }
 #filters label[for="dd[]1"] span::before {
 	margin-right: calc(0.75em + 1ex);
-	content: "Akce měsíce⚡" !important;
+	content: "Letní výprodej 🏝️" !important;
 	font-size: 14px;
 	font-weight: 400;
 	position: initial;
@@ -114,7 +114,7 @@
 	width: auto;
 }
 .sk #filters label[for="dd[]1"] span::before {
-	content: "Akcia mesiaca⚡" !important;
+	content: "Letný výpredaj 🏝️" !important;
 }
 #filters label[for="dd[]1"].active span::before {
 	font-weight: inherit;
