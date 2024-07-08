@@ -119,3 +119,8 @@
 #filters label[for="dd[]1"].active span::before {
 	font-weight: inherit;
 }
+
+/*schovani příznaku akce pokud má akci měsíce*/
+.flags:has(> .flag-custom2) > .flag-action {
+	display: none;
+}
