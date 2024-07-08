@@ -124,3 +124,8 @@
 .flags:has(> .flag-akce-mesice) > .flag-action {
 	display: none;
 }
+/*schovani filtru letni vyprodej v akci mesice*/
+.cs.in--akce-mesice label[for="dd[]1"],
+.sk.in---akcie-mesiaca label[for="dd[]1"] {
+	display: none !important;
+}
