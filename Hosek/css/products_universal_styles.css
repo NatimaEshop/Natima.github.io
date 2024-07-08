@@ -120,9 +120,23 @@
 	font-weight: inherit;
 }
 
+/*Prepsani vlajky Akce na Letný výprodej v Luigi*/
+.cs .lb-checkbox[data-color="Akce"] .lb-checkbox__text--original,
+.sk .lb-checkbox[data-color="Akcia"] .lb-checkbox__text--original {
+	font-size: 0;
+}
+.cs .lb-checkbox[data-color="Akce"] .lb-checkbox__text--original::before {
+	content: "Letní výprodej 🏝️" !important;
+	font-size: 14px;
+}
+.sk .lb-checkbox[data-color="Akcia"] .lb-checkbox__text--original::before {
+	content: "Letný výpredaj 🏝️" !important;
+	font-size: 14px;
+}
+
 /*schovani příznaku akce pokud má akci měsíce*/
 .flags:has(> .flag-akce-mesice) > .flag-action {
-	display: none;
+	display: none !important;
 }
 /*schovani filtru letni vyprodej v akci mesice*/
 .cs.in--akce-mesice label[for="dd[]1"],
