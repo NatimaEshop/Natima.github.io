@@ -121,6 +121,6 @@
 }
 
 /*schovani příznaku akce pokud má akci měsíce*/
-.flags:has(> .flag-custom2) > .flag-action {
+.flags:has(> .flag-akce-mesice) > .flag-action {
 	display: none;
 }
