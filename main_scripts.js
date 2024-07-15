@@ -996,3 +996,21 @@ if (document.body.classList.contains("in-krok-2")) {
 	$(".consents").appendTo(".next-step");
 }
 */
+
+/*msg message sucess product added*/
+document.addEventListener("ShoptetCartAddCartItem", function () {
+	document.addEventListener(
+		"ShoptetCartUpdated",
+		function () {
+			setTimeout(function () {
+				if (document.body.classList.contains("cs")) {
+					$(".msg-success").append('<a href="/kosik" class="added-to-cart"><span>Přejít do košíku →</span></a>');
+				}
+				if (document.body.classList.contains("sk")) {
+					$(".msg-success").append('<a href="/kosik" class="added-to-cart"><span>Prejsť do košíka →</span></a>');
+				}
+			}, 50);
+		},
+		{ once: true }
+	);
+});
