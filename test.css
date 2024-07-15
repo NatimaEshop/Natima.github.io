@@ -112,11 +112,8 @@
 		border-top-style: none !important;
 		margin-top: 0 !important;
 	}
-	.ordering-process .search {
-		display: none;
-	}
+
 	.ordering-process .top-navigation-contacts {
-		margin: auto;
 		gap: calc(var(--gap) / 2);
 	}
 	.ordering-process .top-navigation-contacts .project-email:hover {
@@ -144,7 +141,7 @@
 		display: none;
 	}
 	.ordering-process .buy-helper .text {
-		display: block !important;
+		display: flex !important;
 		margin-left: calc(var(--gap) / 1.5) !important;
 		font-size: 16px !important;
 	}
