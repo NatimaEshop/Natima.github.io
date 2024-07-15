@@ -38,6 +38,9 @@
 	min-width: auto !important;
 	font-size: 1em;
 }
+.ordering-process #header .header-top .dropdown {
+	display: none;
+}
 @media (max-width: 420px) {
 	.ordering-process .co-basic-information .row {
 		font-size: 1.4rem;
