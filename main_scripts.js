@@ -681,6 +681,15 @@ if (document.querySelector(".contact-faq")) {
 		$(this).parent().toggleClass("active");
 	});
 }
+
+/*tlacitko zpet v kosiku*/
+if (document.body.classList.contains("ordering-process")) {
+	$(".site-name").prepend('<div class="kosik-zpet"></div>');
+	$(".site-name").addClass("addedBackButton");
+	$(".kosik-zpet").on("click touch", function () {
+		window.history.back();
+	});
+}
 /*krok 1 kosik*/
 if (document.querySelector("body.in-kosik")) {
 	rearangeSummary();

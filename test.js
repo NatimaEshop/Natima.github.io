@@ -1,14 +1,3 @@
-/*kosik*/
-document.addEventListener("DOMContentLoaded", function () {
-	if (document.body.classList.contains("ordering-process")) {
-		$(".site-name").prepend('<div class="kosik-zpet"></div>');
-		$(".site-name").addClass("addedBackButton");
-		$(".kosik-zpet").on("click touch", function () {
-			window.history.back();
-		});
-	}
-});
-
 /*document.addEventListener("DOMContentLoaded", function () {
 	if (document.body.classList.contains("ordering-process")) {
 		slevovyKuponDarek();
