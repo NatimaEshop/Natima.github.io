@@ -517,3 +517,13 @@
 		}
 	}
 }
+
+/*kategorie domeček*/
+.breadcrumbs .navigation-home-icon {
+	min-height: 38px !important;
+	max-width: 30px;
+}
+.breadcrumbs .navigation-home-icon::after,
+.breadcrumbs .navigation-home-icon::before {
+	display: none;
+}
