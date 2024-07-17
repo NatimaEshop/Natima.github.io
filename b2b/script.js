@@ -217,3 +217,110 @@ if ($("body").hasClass("type-detail")) {
 		$priceFinalHolder.prepend(originalPriceHtml);
 	}
 }
+
+/*Custom desc NATIOS JS*/
+
+document.addEventListener("DOMContentLoaded", function (event) {
+	if (document.body.classList.contains("type-detail")) {
+		if ($(".custom-desc").length >= 1) {
+			$("body").addClass("custom-product");
+			var sliderChild = $(".ikony.slider").children();
+			let sliderChildLength = sliderChild.length;
+			var activeChild = 0;
+			let intervalId;
+			let intervalTime = 4000;
+			console.log(sliderChild);
+			console.log(intervalTime);
+
+			// Variables for swipe functionality
+			let startTouchPosition, endTouchPosition;
+
+			// Check if there are more than 1 children
+			if (sliderChildLength > 1) {
+				// Create div dots
+				let dots = $('<div class="dots"></div>');
+
+				// Create a dot for each entry in sliderChild
+				sliderChild.each(function () {
+					dots.append('<div class="dot"></div>');
+				});
+
+				// Append dots to .ikony.slider
+				$(".ikony.slider").append(dots);
+
+				$(".slider .dot").first().addClass("active");
+
+				$(".slider .dot").click(function () {
+					activeChild = $(this).index();
+					updateSlider();
+					clearInterval(intervalId); // Stop the interval when a dot is clicked
+				});
+
+				// Increase value of activeChild by 1 every 10 seconds and trigger updateSlider
+				intervalId = setInterval(function () {
+					activeChild = (activeChild + 1) % sliderChildLength; // Use modulus to loop back to 0 when reaching the end
+					updateSlider();
+				}, intervalTime);
+
+				// Swipe functionality
+				$(".ikony.slider").on("touchstart", function (e) {
+					startTouchPosition = e.originalEvent.touches[0].clientX;
+				});
+
+				$(".ikony.slider").on("touchmove", function (e) {
+					endTouchPosition = e.originalEvent.touches[0].clientX;
+				});
+
+				$(".ikony.slider").on("touchend", function () {
+					if (startTouchPosition < endTouchPosition) {
+						activeChild = activeChild > 0 ? activeChild - 1 : sliderChildLength - 1;
+					} else {
+						activeChild = (activeChild + 1) % sliderChildLength;
+					}
+					updateSlider();
+					clearInterval(intervalId); // Stop the interval when a dot is clicked
+				});
+			}
+
+			function updateSlider() {
+				sliderChild.each(function (index) {
+					$(this).css("transform", "translateX(" + -activeChild * 100 + "%)");
+				});
+
+				$(".slider .dot").each(function (index) {
+					if (index == activeChild) {
+						$(this).addClass("active");
+					} else {
+						$(this).removeClass("active");
+					}
+				});
+			}
+
+			if ($(".custom-desc .compare").length == 0) {
+			} else {
+				let items = $(".custom-desc .compare p");
+				let items_columns = 2;
+
+				function setMinHeightCompare() {
+					$(items).css("min-height", "");
+					for (let i = 0; i < items.length / items_columns; i++) {
+						index = i * items_columns;
+						let item = items[index];
+						let next = items[index + 1];
+						if (next) {
+							let item_height = $(item).innerHeight();
+							let next_height = $(next).innerHeight();
+							if (item_height > next_height) {
+								$(next).css("min-height", item_height);
+							} else {
+								$(item).css("min-height", next_height);
+							}
+						}
+					}
+				}
+				setMinHeightCompare();
+				window.addEventListener("resize", setMinHeightCompare);
+			}
+		}
+	}
+});
