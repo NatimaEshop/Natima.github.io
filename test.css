@@ -70,7 +70,7 @@
 	.luigi-ac {
 		top: calc(var(--search-height) + var(--search-pad) * 2 + var(--header-height)) !important;
 		padding: 0 !important;
-		width: 100%;
+		width: 100% !important;
 		background: white;
 		min-height: calc(100lvh - var(--header-height) - var(--search-height) - var(--search-pad) * 2);
 	}
