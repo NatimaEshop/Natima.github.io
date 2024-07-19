@@ -75,7 +75,8 @@
 		min-height: calc(100lvh - var(--header-height) - var(--search-height) - var(--search-pad) * 2);
 	}
 	.luigi-ac-close,
-	.-webkit-search-cancel-button {
+	::-webkit-search-cancel-button,
+	.luigi-ac div[aria-label="zrušit"] {
 		position: fixed !important;
 		top: calc(var(--search-height) + var(--header-height) - 22px) !important;
 		right: 16px !important;
