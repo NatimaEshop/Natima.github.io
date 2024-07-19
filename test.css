@@ -77,6 +77,8 @@
 	.luigi-ac-close {
 		position: fixed !important;
 		top: calc(var(--search-height) + var(--header-height) - 22px) !important;
+		right: 16px !important;
+		z-index: 999999;
 	}
 	.luigi-ac-ribbon {
 		height: 1px !important;
