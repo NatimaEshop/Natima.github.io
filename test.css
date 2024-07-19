@@ -87,28 +87,25 @@
 	#header .header-top > .search fieldset input.search-input {
 		position: relative;
 	}
-	#header .header-top > .search .search-form::before,
-	#header .header-top > .search .search-form::after {
-		content: "";
+	#header .header-top > .search .search-form::before {
+		content: "\e912";
+		font-family: shoptet;
+		background: none;
+		color: var(--color-black-800);
+		opacity: 0.8;
+		top: 5px;
+		font-size: 14px;
+		height: 14px;
+		line-height: 14px;
+		width: 14px;
 		position: absolute;
-		width: 22px;
-		height: 1px;
 		top: calc(var(--search-height) / 2);
 		right: 15px;
-		background: var(--color-black-400);
-		-webkit-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		transform: rotate(45deg);
 		cursor: pointer;
 		display: none;
 	}
-	#header .header-top > .search .search-form::after {
-		-webkit-transform: rotate(315);
-		-ms-transform: rotate(315deg);
-		transform: rotate(315deg);
-	}
-	.lb-lock-scroll #header .header-top > .search .search-form::before,
-	.lb-lock-scroll #header .header-top > .search .search-form::after {
+
+	.lb-lock-scroll #header .header-top > .search .search-form::before {
 		display: block;
 	}
 	.luigi-ac-ribbon {
