@@ -1,4 +1,4 @@
-@media (max-width: 1020px) {
+/*@media (max-width: 1020px) {
 	:root {
 		--luigiWidth: clamp(50%, 30% + 260px, 85%);
 	}
@@ -183,7 +183,7 @@
 	html body .luigi-ac-heromobile .luigi-ac-result .luigi-ac-inner .luigi-ac-item .luigi-ac-description {
 		position: relative;
 	}
-}
+}*/
 
 /*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
 /*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
