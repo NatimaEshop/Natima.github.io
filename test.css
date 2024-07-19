@@ -37,13 +37,18 @@
 		opacity: 1;
 		pointer-events: auto;
 	}
+
 	#header .search fieldset {
 		height: var(--search-height);
 		border-radius: 12px;
 		box-shadow: none;
-		margin-right: auto;
-		margin-left: 20px;
+		margin-right: 10px;
+		margin-left: 10px;
 		position: relative;
+		width: auto !important;
+	}
+	.lb-lock-scroll #header .search fieldset {
+		margin-right: 40px;
 	}
 	#header .search fieldset input {
 		padding-top: 5px;
@@ -93,20 +98,22 @@
 		background: none;
 		color: var(--color-black-800);
 		opacity: 0.8;
-		top: 5px;
-		font-size: 14px;
-		height: 14px;
-		line-height: 14px;
-		width: 14px;
+		font-size: 16px;
+		height: 16px;
+		padding: 15px;
+		line-height: 16px;
+		width: 16px;
 		position: absolute;
-		top: calc(var(--search-height) / 2);
+		top: calc(var(--search-height) / 2 - 15px);
 		right: 15px;
 		cursor: pointer;
 		display: none;
 	}
 
 	.lb-lock-scroll #header .header-top > .search .search-form::before {
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.luigi-ac-ribbon {
 		height: 1px !important;
