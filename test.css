@@ -7,7 +7,7 @@
 		overflow-y: hidden !important;
 	}
 	body {
-		padding-top: calc(var(--header-height) + 60px);
+		padding-top: calc(var(--header-height) + var(--search-height) + var(--search-pad));
 	}
 	#header .search-form {
 		margin: 0 !important;
@@ -285,5 +285,24 @@
 	.luigi-ac-footer {
 		bottom: 5px !important;
 		right: 0;
+	}
+
+	/*uprava v kosiku*/
+	body.ordering-process {
+		padding-top: calc(var(--header-height));
+	}
+	body.ordering-process #header .header-top > .search {
+		opacity: 0;
+	}
+	body.ordering-process #header .header-top > .search {
+		opacity: 0;
+	}
+	body.ordering-process #header .responsive-tools .toggle-window[data-target="search"] {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	body.search-window-visible.ordering-process #header .header-top > .search,
+	.lb-lock-scroll body.ordering-process #header .header-top > .search {
+		opacity: 1;
 	}
 }
