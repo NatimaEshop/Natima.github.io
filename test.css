@@ -74,12 +74,42 @@
 		background: white;
 		min-height: calc(100lvh - var(--header-height) - var(--search-height) - var(--search-pad) * 2);
 	}
-	.luigi-ac-close,
+	/*.luigi-ac-close,
 	input[type="search"]::-webkit-search-cancel-button {
 		position: fixed !important;
 		top: calc(var(--search-height) + var(--header-height) - 22px) !important;
 		right: 16px !important;
 		z-index: 999999;
+	}*/
+	.luigi-ac-close {
+		display: none !important;
+	}
+	#header .header-top > .search fieldset input.search-input {
+		position: relative;
+	}
+	#header .header-top > .search .search-form::before,
+	#header .header-top > .search .search-form::after {
+		content: "";
+		position: absolute;
+		width: 22px;
+		height: 1px;
+		top: calc(var(--search-height) / 2);
+		right: 15px;
+		background: var(--color-black-400);
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		cursor: pointer;
+		display: none;
+	}
+	#header .header-top > .search .search-form::after {
+		-webkit-transform: rotate(315);
+		-ms-transform: rotate(315deg);
+		transform: rotate(315deg);
+	}
+	.lb-lock-scroll #header .header-top > .search .search-form::before,
+	.lb-lock-scroll #header .header-top > .search .search-form::after {
+		display: block;
 	}
 	.luigi-ac-ribbon {
 		height: 1px !important;
