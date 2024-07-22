@@ -14,14 +14,14 @@
 	display: block;
 }
 .cs .name-billingId-126 .payment-logo::before {
-	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava + platba_Platba_kartou.svg");
+	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Platba_kartou.svg");
 }
 .cs .name-billingId-156 .payment-logo::before {
-	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava + platba_Rychlý_převod.svg");
+	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Rychlý_převod.svg");
 }
 .cs .name-billingId-129 .payment-logo::before {
-	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava + platba_Apple_pay.svg");
+	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Apple_pay.svg");
 }
 .cs .name-billingId-144 .payment-logo::before {
-	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava + platba_Google_pay.svg");
+	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Google_pay.svg");
 }
