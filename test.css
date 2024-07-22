@@ -2,26 +2,38 @@
 .cs .name-billingId-126 .payment-logo img,
 .cs .name-billingId-156 .payment-logo img,
 .cs .name-billingId-129 .payment-logo img,
-.cs .name-billingId-144 .payment-logo img {
+.cs .name-billingId-144 .payment-logo img,
+.sk .name-billingId-98 .payment-logo img,
+.sk .name-billingId-116 .payment-logo img,
+.sk .name-billingId-101 .payment-logo img,
+.sk .name-billingId-110 .payment-logo img {
 	display: none;
 }
 .cs .name-billingId-126 .payment-logo::before,
 .cs .name-billingId-156 .payment-logo::before,
 .cs .name-billingId-129 .payment-logo::before,
-.cs .name-billingId-144 .payment-logo::before {
+.cs .name-billingId-144 .payment-logo::before,
+.sk .name-billingId-98 .payment-logo::before,
+.sk .name-billingId-116 .payment-logo::before,
+.sk .name-billingId-101 .payment-logo::before,
+.sk .name-billingId-110 .payment-logo::before {
 	width: 100%;
 	height: 100%;
 	display: block;
 }
-.cs .name-billingId-126 .payment-logo::before {
+.cs .name-billingId-126 .payment-logo::before,
+.sk .name-billingId-98 .payment-logo::before {
 	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Platba_kartou.svg");
 }
-.cs .name-billingId-156 .payment-logo::before {
+.cs .name-billingId-156 .payment-logo::before,
+.sk .name-billingId-116 .payment-logo::before {
 	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Rychlý_převod.svg");
 }
-.cs .name-billingId-129 .payment-logo::before {
+.cs .name-billingId-129 .payment-logo::before,
+.sk .name-billingId-101 .payment-logo::before {
 	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Apple_pay.svg");
 }
-.cs .name-billingId-144 .payment-logo::before {
+.cs .name-billingId-144 .payment-logo::before,
+.sk .name-billingId-110 .payment-logo::before {
 	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Google_pay.svg");
 }
