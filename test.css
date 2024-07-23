@@ -324,9 +324,13 @@
 }
 /*Luigi vyhledávací okno na PC----------------------------------*/
 @media (min-width: 1021px) {
+	.admin-logged .luigi-ac-hero.luigi-ac-autocomplete.luigi-ac-open {
+		top: calc(var(--header-height) + 15px) !important;
+	}
 	.luigi-ac {
 		left: 50% !important;
 		transform: translatex(-50%) !important;
+		margin: 0 !important;
 	}
 	.luigi-ac .luigi-ac-first-main {
 		width: 40% !important;
@@ -356,7 +360,7 @@
 		margin: 0 !important;
 	}
 	.luigi-ac-first-main .luigi-ac-image img {
-		margin: 15px auto;
+		margin: 15px auto !important;
 	}
 	.luigi-ac-rest-main .luigi-ac-description {
 		margin: 0 0 0 5px !important;
@@ -395,16 +399,22 @@
 		width: auto !important;
 		max-width: none !important;
 	}
+	.luigi-ac-hero .luigi-ac-description .luigi-ac-text {
+		margin: 0 !important;
+	}
 	.luigi-ac-rest-main .luigi-ac-description .luigi-ac-action-hero {
 		right: 1px !important;
-		bottom: 5px;
+		bottom: 0px;
 		width: 32px;
 		height: 32px;
 	}
 	.luigi-ac-rest-main .luigi-ac-button-block {
-		bottom: 9px !important;
+		bottom: 0px !important;
 		margin-bottom: 19px !important;
 		width: 43.7% !important;
 		padding: 0 15px !important;
+	}
+	.luigi-ac-first-main .luigi-ac-action-primary {
+		bottom: 0px !important;
 	}
 }
