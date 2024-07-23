@@ -1229,6 +1229,7 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 
 .natios-daruje-blok img {
 	max-width: 170px;
+	width: 100%;
 	display: block;
 	transition: transform 0.3s ease-in-out;
 }
