@@ -1,6 +1,4 @@
-//Luigi vyhledavací okno obecné změny---------------------------------------------
-//Luigi vyhledavací okno obecné změny---------------------------------------------
-//Luigi vyhledavací okno obecné změny---------------------------------------------
+/*Luigi vyhledavací okno obecné změny---------------------------------------------*/
 .luigi-ac-header {
 	font-weight: 500;
 	color: var(--color-black-600) !important;
@@ -66,9 +64,7 @@
 	background-color: hsla(203, 7%, 47%, 0.06);
 	border-radius: var(--border-radius);
 }
-//Luigi vyhledavaci okno na mobilu---------------------------------------------
-//Luigi vyhledavaci okno na mobilu---------------------------------------------
-//Luigi vyhledavaci okno na mobilu---------------------------------------------
+/*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
 @media (max-width: 1020px) {
 	.lb-lock-scroll body {
 		overflow-y: hidden !important;
@@ -200,7 +196,7 @@
 		right: 0;
 	}
 
-	// uprava v kosiku
+	/*uprava v kosiku*/
 	body.ordering-process {
 		padding-top: calc(var(--header-height));
 	}
@@ -326,9 +322,7 @@
 		align-items: center;
 	}
 }
-//Luigi vyhledávací okno na PC----------------------------------
-//Luigi vyhledávací okno na PC----------------------------------
-//Luigi vyhledávací okno na PC----------------------------------
+/*Luigi vyhledávací okno na PC----------------------------------*/
 @media (min-width: 1021px) {
 	.luigi-ac {
 		left: 50% !important;
