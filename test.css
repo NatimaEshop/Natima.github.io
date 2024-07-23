@@ -346,8 +346,8 @@
 	}
 	.luigi-ac-first-main .luigi-ac-header,
 	.luigi-ac-rest-main .luigi-ac-header {
-		padding-left: 15px;
-		margin-bottom: 10px;
+		padding-left: 15px !important;
+		margin-bottom: 10px !important;
 	}
 	.luigi-ac-first-main .luigi-ac-image {
 		height: auto !important;
@@ -367,18 +367,18 @@
 	}
 	.luigi-ac-rest-main .luigi-ac-price {
 		display: flex;
-		flex-direction: row;
+		flex-direction: row !important;
 		gap: 10px;
 	}
 	.luigi-ac-rest-main .luigi-ac-price-new {
-		margin: 0;
+		margin: 0 !important;
 	}
 	.luigi-ac-rest-main .luigi-ac-price-old {
-		font-size: 15px;
+		font-size: 15px !important;
 		color: var(--color-gray-700);
 	}
 	.luigi-ac-rest-main .luigi-ac-product {
-		width: 100%;
+		width: 100% !important;
 	}
 	.luigi-ac-rest-main > .luigi-ac-product:nth-of-type(6) {
 		display: none;
@@ -404,7 +404,7 @@
 	.luigi-ac-rest-main .luigi-ac-button-block {
 		bottom: 9px !important;
 		margin-bottom: 19px !important;
-		width: 43.7%;
-		padding: 0 15px;
+		width: 43.7% !important;
+		padding: 0 15px !important;
 	}
 }
