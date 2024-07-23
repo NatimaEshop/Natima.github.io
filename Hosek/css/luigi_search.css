@@ -188,7 +188,7 @@
 /*Luigi vyhledavací okno obecné změny---------------------------------------------*/
 /*Luigi vyhledavací okno obecné změny---------------------------------------------*/
 /*Luigi vyhledavací okno obecné změny---------------------------------------------*/
-.luigi-ac-header {
+/*.luigi-ac-header {
 	font-weight: 500;
 	color: var(--color-black-600) !important;
 }
@@ -199,12 +199,12 @@
 .luigi-ac-result .luigi-ac-name,
 .luigi-ac-price {
 	color: var(--color-black-600) !important;
-}
+}*/
 
 /*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
 /*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
 /*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
 	:root {
 		--search-height: 50px;
 		--search-pad: 15px;
@@ -473,9 +473,232 @@
 	.luigi-ac-footer {
 		bottom: 5px !important;
 		right: 0;
+	}*/
+
+/*uprava v kosiku*/
+/*body.ordering-process {
+		padding-top: calc(var(--header-height));
+	}
+	body.ordering-process #header .header-top > .search {
+		opacity: 0;
+	}
+	body.ordering-process #header .header-top > .search {
+		opacity: 0;
+	}
+	body.ordering-process #header .responsive-tools .toggle-window[data-target="search"] {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	body.search-window-visible.ordering-process #header .header-top > .search,
+	.lb-lock-scroll body.ordering-process #header .header-top > .search {
+		opacity: 1;
+	}
+}*/
+
+//Luigi vyhledavací okno obecné změny---------------------------------------------
+//Luigi vyhledavací okno obecné změny---------------------------------------------
+//Luigi vyhledavací okno obecné změny---------------------------------------------
+.luigi-ac-header {
+	font-weight: 500;
+	color: var(--color-black-600) !important;
+}
+.luigi-ac-other-content {
+	color: var(--color-primary) !important;
+	font-weight: 400;
+}
+.luigi-ac-result .luigi-ac-name,
+.luigi-ac-price {
+	color: var(--color-black-600) !important;
+}
+.luigi-ac .flag {
+	border-radius: var(--border-radius);
+	margin: 8px 0 0 8px;
+}
+.luigi-ac-query {
+	border-radius: var(--border-radius);
+}
+.luigi-ac-first-main .luigi-ac-button-action,
+.luigi-ac-rest-main .luigi-ac-button {
+	border-radius: var(--border-radius);
+	padding: 10px 32px !important;
+}
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero {
+	border-radius: var(--border-radius);
+	width: 36px;
+	height: 36px;
+}
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero img {
+	display: none;
+}
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero::after {
+	content: "";
+	background-image: url("https://www.natima.cz/user/documents/upload/Natima/addToCartIcon.svg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 60%;
+	height: 100%;
+	position: absolute;
+	left: 47%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.luigi-ac-first-main .luigi-ac-product .luigi-ac-image::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: hsla(203, 7%, 47%, 0.06);
+	border-radius: var(--border-radius);
+}
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-image::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: hsla(203, 7%, 47%, 0.06);
+	border-radius: var(--border-radius);
+}
+
+//Luigi vyhledávací okno na mobilu--------------------------------------------
+//Luigi vyhledávací okno na mobilu--------------------------------------------
+//Luigi vyhledávací okno na mobilu--------------------------------------------
+@media (max-width: 1020px) {
+	.lb-lock-scroll body {
+		overflow-y: hidden !important;
+	}
+	.luigi-ac-hero.luigi-ac-hero--right.luigi-ac {
+		left: 0 !important;
+		transform: none !important;
+		top: var(--header-height) !important;
+		padding: 0 !important;
+		width: 100% !important;
+		background: white;
+		min-height: calc(100lvh - var(--header-height));
+	}
+	.admin-logged .luigi-ac-hero.luigi-ac-autocomplete.luigi-ac-open {
+		top: calc(var(--header-height) + 30px) !important;
+		min-height: calc(100lvh - var(--header-height) - 30px);
 	}
 
-	/*uprava v kosiku*/
+	.luigi-ac-ribbon {
+		height: 1px !important;
+		background-color: var(--color-gray-550) !important;
+		position: fixed;
+		top: calc(var(--search-height) + var(--header-height) + 2 * var(--search-pad)) !important;
+		width: 100%;
+	}
+	.luigi-ac-caret {
+		display: none;
+	}
+	.luigi-ac-others {
+		background: white !important;
+		border-style: none !important;
+		padding-bottom: 12px !important;
+	}
+	.luigi-ac-products {
+		border-style: none !important;
+		padding-bottom: 40px !important;
+	}
+
+	.luigi-ac-first-main .luigi-ac-product {
+		flex-direction: column !important;
+		padding-right: 15px !important;
+	}
+	.luigi-ac-first-main .luigi-ac-product .luigi-ac-image {
+		max-width: none !important;
+		height: auto;
+		width: 100% !important;
+		padding: 20px 0;
+	}
+
+	.luigi-ac-first-main .luigi-ac-product .luigi-ac-image img {
+		max-width: 90% !important;
+		height: auto;
+		width: auto;
+	}
+	.luigi-ac-first-main .luigi-ac-text {
+		padding: 0 !important;
+	}
+	.luigi-ac-first-main .luigi-ac-text .luigi-ac-name {
+		display: -webkit-box !important;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+	}
+	.luigi-ac-first-main .luigi-ac-action-primary {
+		width: 100% !important;
+	}
+
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero {
+		position: absolute;
+		top: -8px;
+		right: 8px;
+		transform: translatey(-100%);
+	}
+	.luigi-ac-rest-main .luigi-ac-product {
+		width: 50% !important;
+		flex-direction: column;
+		padding-right: 5px !important;
+		margin-top: 5px;
+	}
+	.luigi-ac-rest-main .luigi-ac-product:nth-child(odd) {
+		padding-right: 15px !important;
+		padding-left: 5px !important;
+	}
+	@media (min-width: 541px) {
+		.luigi-ac .luigi-ac-rest-main .luigi-ac-product {
+			width: 33.3% !important;
+			padding-right: 5px !important;
+			padding-left: 5px !important;
+		}
+		.luigi-ac .luigi-ac-rest-main .luigi-ac-product:nth-child(3n + 1) {
+			padding-right: 15px !important;
+		}
+		.luigi-ac .luigi-ac-rest-main .luigi-ac-product:nth-child(3n-1) {
+			padding-left: 10px !important;
+		}
+	}
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-image {
+		margin: 0;
+		padding: 10px 0;
+		max-height: none !important;
+		height: auto !important;
+	}
+
+	.luigi-ac-rest-main .luigi-ac-product img {
+		max-width: none !important;
+		max-height: 100px !important;
+	}
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-image {
+		margin: 0;
+		padding: 10px 0;
+		max-height: none !important;
+		height: auto !important;
+	}
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-description {
+		position: relative;
+		width: 100%;
+	}
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-description .luigi-ac-name {
+		text-overflow: clip !important;
+		white-space: wrap !important;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+	}
+
+	.luigi-ac-footer {
+		bottom: 5px !important;
+		right: 0;
+	}
+
+	//v kosiku
 	body.ordering-process {
 		padding-top: calc(var(--header-height));
 	}
@@ -492,5 +715,201 @@
 	body.search-window-visible.ordering-process #header .header-top > .search,
 	.lb-lock-scroll body.ordering-process #header .header-top > .search {
 		opacity: 1;
+	}
+}
+@media (max-width: 768px) {
+	:root {
+		--search-height: 50px;
+		--search-pad: 15px;
+	}
+	.luigi-ac-hero.luigi-ac-hero--right.luigi-ac,
+	.admin-logged .luigi-ac-hero.luigi-ac-hero--right.luigi-ac {
+		top: calc(var(--search-height) + var(--search-pad) * 2 + var(--header-height)) !important;
+		min-height: calc(100lvh - var(--header-height) - var(--search-height) - var(--search-pad) * 2);
+	}
+
+	body {
+		padding-top: calc(var(--header-height) + var(--search-height) + var(--search-pad));
+	}
+	#header .search-form {
+		margin: 0 !important;
+		display: block !important;
+	}
+	#header .responsive-tools .toggle-window[data-target="search"] {
+		opacity: 0;
+		transition: opacity 0.2s ease-in;
+		pointer-events: none;
+	}
+	#header .hidden-categories .responsive-tools .toggle-window[data-target="search"] {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	#header .header-top > .search {
+		background: white;
+		transition: opacity 0.2s ease-in;
+		display: block !important;
+		padding: var(--search-pad) 0;
+	}
+	#header .hidden-categories .header-top > .search {
+		opacity: 0;
+		pointer-events: none;
+	}
+	.search-window-visible #header .hidden-categories .header-top > .search,
+	.lb-lock-scroll #header .hidden-categories .header-top > .search {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	#header .search fieldset {
+		height: var(--search-height);
+		border-radius: 12px;
+		box-shadow: none;
+		margin-right: 15px;
+		margin-left: 15px;
+		position: relative;
+		width: auto !important;
+		transition: margin-right 0.2s ease-out;
+	}
+	.lb-lock-scroll #header .search fieldset {
+		margin-right: 55px;
+	}
+	#header .search fieldset input {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: rgb(247, 247, 248);
+		font-size: 14px;
+		padding-left: 55px;
+		color: var(--color-gray-700);
+		position: relative;
+	}
+	#header .search fieldset button[data-testid="searchBtn"] {
+		padding: 0;
+		position: absolute;
+		left: 0;
+		width: 55px;
+		max-width: 45px;
+		overflow: hidden;
+		height: var(--search-height);
+		opacity: 0;
+	}
+	#header .search fieldset button[data-testid="searchBtn"]::before {
+		display: none;
+	}
+	.luigi-ac-close {
+		display: none !important;
+	}
+	#header .header-top > .search fieldset input.search-input {
+		position: relative;
+	}
+
+	#header .header-top > .search .search-form::before {
+		content: "\e912";
+		font-family: shoptet;
+		background: none;
+		color: var(--color-black-800);
+		opacity: 0.8;
+		font-size: 16px;
+		height: 16px;
+		padding: 15px;
+		line-height: 16px;
+		width: 16px;
+		position: absolute;
+		top: calc(var(--search-height) / 2 - 15px);
+		right: 15px;
+		cursor: pointer;
+		display: none;
+	}
+	.lb-lock-scroll #header .header-top > .search .search-form::before {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+//Luigi vyhledávací okno na PC
+//Luigi vyhledávací okno na PC
+//Luigi vyhledávací okno na PC
+@media (min-width: 1021px) {
+	.luigi-ac {
+		left: 50% !important;
+		transform: translatex(-50%) !important;
+	}
+	.luigi-ac .luigi-ac-first-main {
+		width: 40% !important;
+	}
+	.luigi-ac .luigi-ac-rest-main {
+		width: 60% !important;
+	}
+	.luigi-ac-rest-main {
+		border-right-style: none !important;
+	}
+	.luigi-ac-products {
+		border-style: none !important;
+	}
+	.luigi-ac .luigi-ac-rest-main .luigi-ac-item,
+	.luigi-ac .luigi-ac-first-main .luigi-ac-item {
+		padding: 5px var(--gap) !important;
+	}
+	.luigi-ac-first-main .luigi-ac-header,
+	.luigi-ac-rest-main .luigi-ac-header {
+		padding-left: 15px;
+		margin-bottom: 10px;
+	}
+	.luigi-ac-first-main .luigi-ac-image {
+		height: auto !important;
+		width: 100% !important;
+		max-width: none !important;
+		margin: 0 !important;
+	}
+	.luigi-ac-first-main .luigi-ac-image img {
+		margin: 15px auto;
+	}
+	.luigi-ac-rest-main .luigi-ac-description {
+		margin: 0 0 0 5px !important;
+		max-width: 100% !important;
+		justify-content: space-between;
+		padding: 5px 30px 0 0;
+		position: relative;
+	}
+	.luigi-ac-rest-main .luigi-ac-price {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+	}
+	.luigi-ac-rest-main .luigi-ac-price-new {
+		margin: 0;
+	}
+	.luigi-ac-rest-main .luigi-ac-price-old {
+		font-size: 15px;
+		color: var(--color-gray-700);
+	}
+	.luigi-ac-rest-main .luigi-ac-product {
+		width: 100%;
+	}
+	.luigi-ac-rest-main > .luigi-ac-product:nth-of-type(6) {
+		display: none;
+	}
+	.luigi-ac-rest-main .luigi-ac-product .flag {
+		display: none;
+	}
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-image {
+		height: auto !important;
+	}
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-image img {
+		margin: 10px 5px !important;
+		max-height: 52px !important;
+		width: auto !important;
+		max-width: none !important;
+	}
+	.luigi-ac-rest-main .luigi-ac-description .luigi-ac-action-hero {
+		right: 1px !important;
+		bottom: 5px;
+		width: 32px;
+		height: 32px;
+	}
+	.luigi-ac-rest-main .luigi-ac-button-block {
+		bottom: 9px !important;
+		margin-bottom: 19px !important;
+		width: 43.7%;
+		padding: 0 15px;
 	}
 }
