@@ -185,6 +185,22 @@
 	}
 }*/
 
+/*Luigi vyhledavací okno obecné změny---------------------------------------------*/
+/*Luigi vyhledavací okno obecné změny---------------------------------------------*/
+/*Luigi vyhledavací okno obecné změny---------------------------------------------*/
+.luigi-ac-header {
+	font-weight: 500;
+	color: var(--color-black-600) !important;
+}
+.luigi-ac-other-content {
+	color: var(--color-primary) !important;
+	font-weight: 400;
+}
+.luigi-ac-result .luigi-ac-name,
+.luigi-ac-price {
+	color: var(--color-black-600) !important;
+}
+
 /*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
 /*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
 /*Luigi vyhledavaci okno na mobilu---------------------------------------------*/
@@ -321,18 +337,7 @@
 	.luigi-ac-query {
 		border-radius: var(--border-radius);
 	}
-	.luigi-ac-header {
-		font-weight: 500;
-		color: var(--color-black-600) !important;
-	}
-	.luigi-ac-other-content {
-		color: var(--color-primary) !important;
-		font-weight: 400;
-	}
-	.luigi-ac-result .luigi-ac-name,
-	.luigi-ac-price {
-		color: var(--color-black-600) !important;
-	}
+
 	.luigi-ac-first-main .luigi-ac-product {
 		flex-direction: column !important;
 		padding-right: 15px !important;
