@@ -52,14 +52,14 @@ body > .overall-wrapper > .breadcrumbs-wrapper {
 }
 
 /*Nadpisy na hl stránce*/
-.content-wrapper .h4 {
+.in-index .content-wrapper .h4 {
 	font-size: 2.4rem;
 	width: fit-content;
 	padding-bottom: 4px;
 	margin-bottom: 20px;
 	position: relative;
 }
-.content-wrapper .h4::after {
+.in-index .content-wrapper .h4::before {
 	content: "";
 	background: var(--color-primary);
 	display: block;
