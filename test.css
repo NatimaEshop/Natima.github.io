@@ -325,7 +325,10 @@
 /*Luigi vyhledávací okno na PC----------------------------------*/
 @media (min-width: 1021px) {
 	.admin-logged .luigi-ac-hero.luigi-ac-autocomplete.luigi-ac-open {
-		top: calc(var(--header-height) + 15px) !important;
+		top: calc(var(--header-height) + 5px) !important;
+	}
+	.luigi-ac-hero.luigi-ac-autocomplete.luigi-ac-open {
+		top: calc(var(--header-height) - 10px) !important;
 	}
 	.luigi-ac {
 		left: 50% !important;
@@ -416,5 +419,8 @@
 	}
 	.luigi-ac-first-main .luigi-ac-action-primary {
 		bottom: 0px !important;
+	}
+	.luigi-ac-ribbon {
+		display: none;
 	}
 }
