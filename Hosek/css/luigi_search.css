@@ -325,7 +325,7 @@
 /*Luigi vyhledávací okno na PC----------------------------------*/
 @media (min-width: 1021px) {
 	.admin-logged .luigi-ac-hero.luigi-ac-autocomplete.luigi-ac-open {
-		top: calc(var(--header-height) + 5px) !important;
+		top: calc(var(--header-height) + 15px) !important;
 	}
 	.luigi-ac-hero.luigi-ac-autocomplete.luigi-ac-open {
 		top: calc(var(--header-height) - 10px) !important;
