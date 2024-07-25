@@ -22,10 +22,10 @@ if (document.querySelector("body.in-index")) {
 	productSlidersJQ = $(".in-index .products-block");
 
 	/*APPEND BLOG*/
-	if (document.querySelector(".homepage-blog-wrapper") !== null) {
+	/*if (document.querySelector(".homepage-blog-wrapper") !== null) {
 		productSlidersJQ.add($(".homepage-blog-wrapper"));
 		productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
-	}
+	}*/
 
 	productSlidersJQ.wrap("<div class='sliderWrap'></div>");
 	productSlidersJQ.wrap("<div class='slider'></div>");
