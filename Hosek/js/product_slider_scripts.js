@@ -64,6 +64,12 @@ if (document.querySelector("body.in-index")) {
 	productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
 	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
 
+	/*APPEND BLOG*/
+	if (document.querySelector(".homepage-blog-wrapper").length > 0) {
+		productSlidersJQ.add($(".homepage-blog-wrapper"));
+		productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
+	}
+
 	for (let i = 0; i < productSliderJS.length; i++) {
 		translates[i] = 0;
 		translateIteration[i] = 1;
