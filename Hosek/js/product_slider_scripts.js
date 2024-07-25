@@ -1,3 +1,28 @@
+let carouselArrowRight;
+let carouselArrowLeft;
+let productImageHeight; /*property to set arrow in the middle of img*/
+const root = document.querySelector(":root");
+
+/*carousel*/
+let carouselSliderElementJS;
+let carouselSliderElementParentJQ;
+let amountOfBannersInSlider;
+let realNumberOfBannersInSlider;
+let numberOfScrolledItemsInSlider;
+let carouselTranslateId = 0;
+let translateCarousel = 0;
+
+/*produkt slider*/
+let productSliderElement;
+let productSliderImage;
+let productSlidersJQ;
+let appendElement;
+let amountOfProductsInSlider;
+let productSliderJS;
+let productsArrowsRight;
+let productsArrowsLeft;
+
+/*translate slideru*/
 let translates = [];
 let translateIteration = [];
 let realNumProductsInSlider = [];
@@ -18,15 +43,7 @@ if (document.querySelector("body.in-index")) {
 	window.addEventListener("resize", getSliderProductHeight);
 
 	/*arrows slider*/
-	productSliderJS = document.querySelectorAll(".in-index .products-block");
 	productSlidersJQ = $(".in-index .products-block");
-
-	/*APPEND BLOG*/
-	/*if (document.querySelector(".homepage-blog-wrapper") !== null) {
-		productSlidersJQ.add($(".homepage-blog-wrapper"));
-		productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
-	}*/
-
 	productSlidersJQ.wrap("<div class='sliderWrap'></div>");
 	productSlidersJQ.wrap("<div class='slider'></div>");
 	appendElement = $(".sliderWrap");
@@ -43,8 +60,15 @@ if (document.querySelector("body.in-index")) {
 	window.addEventListener("resize", numberOfProductsInSlider);
 	numberOfProductsInSlider();
 
+	productSliderJS = document.querySelectorAll(".in-index .products-block");
 	productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
 	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
+
+	/*APPEND BLOG*/
+	/*if (document.querySelector(".homepage-blog-wrapper").length > 0) {
+		productSlidersJQ.add($(".homepage-blog-wrapper"));
+		productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
+	}*/
 
 	for (let i = 0; i < productSliderJS.length; i++) {
 		translates[i] = 0;
