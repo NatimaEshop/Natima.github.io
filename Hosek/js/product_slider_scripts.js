@@ -48,10 +48,21 @@ if (document.querySelector("body.in-index")) {
 	productSlidersJQ.wrap("<div class='slider'></div>");
 	appendElement = $(".sliderWrap");
 
+	productSliderJS = document.querySelectorAll(".in-index .products-block");
+
+	/*APPEND BLOG*/
+	if (document.querySelector(".homepage-blog-wrapper") !== null) {
+		productSlidersJQ.add($(".homepage-blog-wrapper"));
+		productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
+	}
+
 	for (let i = 0; i < productSlidersJQ.length; i++) {
 		$("<div class='slider-arrow right'></div>").appendTo(appendElement[i]);
 		$("<div class='slider-arrow left'></div>").appendTo(appendElement[i]);
 	}
+
+	productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
+	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
 
 	/*pocet produktu a overflow v slideru*/
 	function numberOfProductsInSlider() {
@@ -59,16 +70,6 @@ if (document.querySelector("body.in-index")) {
 	}
 	window.addEventListener("resize", numberOfProductsInSlider);
 	numberOfProductsInSlider();
-
-	productSliderJS = document.querySelectorAll(".in-index .products-block");
-	productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
-	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
-
-	/*APPEND BLOG*/
-	if (document.querySelector(".homepage-blog-wrapper") !== null) {
-		productSlidersJQ.add($(".homepage-blog-wrapper"));
-		productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
-	}
 
 	for (let i = 0; i < productSliderJS.length; i++) {
 		translates[i] = 0;
