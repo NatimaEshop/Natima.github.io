@@ -1,28 +1,3 @@
-let carouselArrowRight;
-let carouselArrowLeft;
-let productImageHeight; /*property to set arrow in the middle of img*/
-const root = document.querySelector(":root");
-
-/*carousel*/
-let carouselSliderElementJS;
-let carouselSliderElementParentJQ;
-let amountOfBannersInSlider;
-let realNumberOfBannersInSlider;
-let numberOfScrolledItemsInSlider;
-let carouselTranslateId = 0;
-let translateCarousel = 0;
-
-/*produkt slider*/
-let productSliderElement;
-let productSliderImage;
-let productSlidersJQ;
-let appendElement;
-let amountOfProductsInSlider;
-let productSliderJS;
-let productsArrowsRight;
-let productsArrowsLeft;
-
-/*translate slideru*/
 let translates = [];
 let translateIteration = [];
 let realNumProductsInSlider = [];
@@ -43,12 +18,8 @@ if (document.querySelector("body.in-index")) {
 	window.addEventListener("resize", getSliderProductHeight);
 
 	/*arrows slider*/
-	productSlidersJQ = $(".in-index .products-block");
-	productSlidersJQ.wrap("<div class='sliderWrap'></div>");
-	productSlidersJQ.wrap("<div class='slider'></div>");
-	appendElement = $(".sliderWrap");
-
 	productSliderJS = document.querySelectorAll(".in-index .products-block");
+	productSlidersJQ = $(".in-index .products-block");
 
 	/*APPEND BLOG*/
 	if (document.querySelector(".homepage-blog-wrapper") !== null) {
@@ -56,13 +27,14 @@ if (document.querySelector("body.in-index")) {
 		productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
 	}
 
+	productSlidersJQ.wrap("<div class='sliderWrap'></div>");
+	productSlidersJQ.wrap("<div class='slider'></div>");
+	appendElement = $(".sliderWrap");
+
 	for (let i = 0; i < productSlidersJQ.length; i++) {
 		$("<div class='slider-arrow right'></div>").appendTo(appendElement[i]);
 		$("<div class='slider-arrow left'></div>").appendTo(appendElement[i]);
 	}
-
-	productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
-	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
 
 	/*pocet produktu a overflow v slideru*/
 	function numberOfProductsInSlider() {
@@ -70,6 +42,9 @@ if (document.querySelector("body.in-index")) {
 	}
 	window.addEventListener("resize", numberOfProductsInSlider);
 	numberOfProductsInSlider();
+
+	productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
+	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
 
 	for (let i = 0; i < productSliderJS.length; i++) {
 		translates[i] = 0;
