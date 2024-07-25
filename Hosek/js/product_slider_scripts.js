@@ -44,6 +44,7 @@ if (document.querySelector("body.in-index")) {
 
 	/*arrows slider*/
 	productSlidersJQ = $(".in-index .products-block");
+	productSlidersJQ.add($(".homepage-blog-wrapper"));
 	productSlidersJQ.wrap("<div class='sliderWrap'></div>");
 	productSlidersJQ.wrap("<div class='slider'></div>");
 	appendElement = $(".sliderWrap");
@@ -60,7 +61,8 @@ if (document.querySelector("body.in-index")) {
 	window.addEventListener("resize", numberOfProductsInSlider);
 	numberOfProductsInSlider();
 
-	productSliderJS = document.querySelectorAll(".in-index .products-block");
+	/*productSliderJS = document.querySelectorAll(".in-index .products-block");*/
+	productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
 	productsArrowsRight = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.right");
 	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
 
