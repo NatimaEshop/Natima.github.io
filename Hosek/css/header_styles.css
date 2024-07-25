@@ -77,6 +77,8 @@ body {
 }
 
 .site-name-wrapper img {
+	min-width: 145px;
+	min-height: 39px;
 	width: 100%;
 	filter: brightness(0) invert(1);
 	transition: opacity 0.3s ease;
