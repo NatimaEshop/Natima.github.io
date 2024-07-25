@@ -65,7 +65,7 @@ if (document.querySelector("body.in-index")) {
 	productsArrowsLeft = document.querySelectorAll(".in-index .sliderWrap .slider-arrow.left");
 
 	/*APPEND BLOG*/
-	if (document.querySelector(".homepage-blog-wrapper").length() > 0) {
+	if (document.querySelector(".homepage-blog-wrapper") !== null) {
 		productSlidersJQ.add($(".homepage-blog-wrapper"));
 		productSliderJS = document.querySelectorAll(".in-index .products-block, .homepage-blog-wrapper");
 	}
