@@ -106,10 +106,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		/*Odkazy na kategorie na hlavní stránce*/
 		let links = [];
 		if (document.body.classList.contains("cs")) {
-			links = ["/novinky/", "/-akce-mesice/", "/dle-zamereni/"];
+			links = ["/novinky/", "/-akce-mesice/", "/dle-zamereni/", "/blog/"];
 		}
 		if (document.body.classList.contains("sk")) {
-			links = ["/novinky/", "/--akcie-mesiaca/", "/dla-zamerania/"];
+			links = ["/novinky/", "/--akcie-mesiaca/", "/dla-zamerania/", "/blog/"];
 		}
 		$(".homepage-group-title.h4").each(function (index) {
 			if (index < links.length) {
@@ -132,5 +132,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			.html(oblibeneZnacky.html());
 
 		oblibeneZnacky.replaceWith(novyOdkaz);
+
+		/*Presunuti blogu*/
+		$(".homepage-blog-wrapper > .h4").insertBefore(".homepage-blog-wrapper");
 	}
 });
