@@ -112,6 +112,8 @@
 		overflow-y: hidden;
 		margin-bottom: 20px;
 		padding-bottom: 20px;
+		margin-left: 0 !important;
+		margin-right: -15px !important;
 	}
 	.homepage-blog-wrapper > div {
 		width: clamp(160px, 140px + 12vw, 350px) !important;
