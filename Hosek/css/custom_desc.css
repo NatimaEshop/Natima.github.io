@@ -89,6 +89,9 @@
 .custom-desc .bg.bg-gray {
 	background: #f6f6f6;
 }
+.custom-desc .bg.bg-gray.bg-important {
+	background: #f6f6f6 !important;
+}
 .custom-desc .bg.bg-white {
 	background: #ffffff;
 }
@@ -718,6 +721,12 @@
 	transition: transform 0.1s ease, outline-color 0.2s ease-in-out;
 	outline-color: transparent;
 }
+.custom-desc .slider.bg-gray .dots .dot {
+	background: var(--desc-color-bg-primary);
+	background: -moz-radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
+	background: -webkit-radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
+	background: radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
+}
 .custom-desc .slider .dots .dot:hover {
 	transform: scale(1.1);
 }
@@ -727,6 +736,9 @@
 	outline-offset: 5px;
 	outline-width: 3px;
 	transform: scale(1);
+}
+.custom-desc .slider.bg-gray .dots .dot.active {
+	outline-color: var(--desc-color-bg-secondary);
 }
 
 .custom-desc .slider .dots .dot::before {
