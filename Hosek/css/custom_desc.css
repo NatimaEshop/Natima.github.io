@@ -275,6 +275,7 @@
 .custom-desc .col-2-7-1,
 .custom-desc .col-3-1-6,
 .custom-desc .col-3-2-5,
+.custom-desc .col-3-3-3,
 .custom-desc .col-3-3-4,
 .custom-desc .col-3-4-3,
 .custom-desc .col-3-5-2,
@@ -450,6 +451,11 @@
 .col-3-2-5 {
 	grid-template-columns: calc(30% - var(--column-gap) / 3) calc(20% - var(--column-gap) / 3) calc(
 			50% - var(--column-gap) / 3
+		);
+}
+.col-3-3-3 {
+	grid-template-columns: calc(33.3% - var(--column-gap) / 3) calc(33.3% - var(--column-gap) / 3) calc(
+			33.3% - var(--column-gap) / 3
 		);
 }
 .col-3-3-4 {
@@ -914,6 +920,7 @@
 	.custom-desc .col-2-7-1,
 	.custom-desc .col-3-1-6,
 	.custom-desc .col-3-2-5,
+	.custom-desc .col-3-3-3,
 	.custom-desc .col-3-3-4,
 	.custom-desc .col-3-4-3,
 	.custom-desc .col-3-5-2,
