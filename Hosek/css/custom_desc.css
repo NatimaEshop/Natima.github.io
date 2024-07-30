@@ -303,6 +303,7 @@
 .custom-desc .col-7-1-2,
 .custom-desc .col-7-2-1,
 .custom-desc .col-8-1-1,
+.custom-desc .col-25-25-25-25,
 .compare {
 	display: grid;
 	gap: var(--gap);
@@ -560,6 +561,11 @@
 	grid-template-columns: calc(80% - var(--column-gap) / 3) calc(10% - var(--column-gap) / 3) calc(
 			10% - var(--column-gap) / 3
 		);
+}
+.col-25-25-25-25 {
+	grid-template-columns:
+		calc(25% - var(--column-gap) / 4) calc(25% - var(--column-gap) / 4) calc(25% - var(--column-gap) / 4)
+		calc(25% - var(--column-gap) / 4);
 }
 
 /*---------------------------------------------------------------------------------------------*/
@@ -950,6 +956,9 @@
 	.custom-desc .col-8-1-1 {
 		grid-template-columns: 1fr;
 	}
+	.custom-desc .col-25-25-25-25 {
+		grid-template-columns: calc(50% - var(--column-gap) / 2) calc(50% - var(--column-gap) / 2);
+	}
 	.custom-desc .w-5,
 	.custom-desc .w-10,
 	.custom-desc .w-15,
@@ -1029,5 +1038,10 @@
 	}
 	.custom-desc .compare h3 {
 		font-size: 3rem;
+	}
+}
+@media (max-width: 380px) {
+	.custom-desc .col-25-25-25-25 {
+		grid-template-columns: 1fr;
 	}
 }
