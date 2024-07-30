@@ -115,6 +115,12 @@
 	background: -webkit-radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
 	background: radial-gradient(circle, var(--desc-color-bg-primary) 0%, var(--desc-color-bg-secondary) 100%);
 }
+.custom-desc .bg.bg-gradient.bg-135 {
+	background: var(--desc-color-bg-primary);
+	background: -moz-linear-gradient(135deg, var(--desc-color-icon-primary) 0%, var(--desc-color-icon-secondary) 100%);
+	background: -webkit-linear-gradient(135deg, var(--desc-color-icon-primary) 0%, var(--desc-color-icon-secondary) 100%);
+	background: linear-gradient(135deg, var(--desc-color-icon-primary) 0%, var(--desc-color-icon-secondary) 100%);
+}
 .custom-desc .bg.bg-gradient.bg-blue {
 	background: var(--desc-color-primary-blue);
 	background: -moz-radial-gradient(circle, var(--desc-color-primary-blue) 0%, var(--desc-color-secondary-blue) 100%);
