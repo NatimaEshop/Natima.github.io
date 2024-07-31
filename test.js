@@ -13,60 +13,79 @@ function slevovyKuponDarek() {
 	let productsInCart;
 	let kuponSubmited = false;
 
-	//event listener to sumbited form
-	$(document).on("submit", ".discount-coupon form", function (e) {
-		if (discountInput.val() !== kodKuponu) {
-			return;
+	$(document).ready(function() {
+		// Select the <time> element
+		var timeElement = $('time[datetime]');
+
+		// Extract the date from the datetime attribute
+		var dateStr = timeElement.attr('datetime');
+
+		// Parse the date
+		var date = new Date(dateStr);
+		var comparisonDate = new Date('2024-07-31');
+
+		// Check if the date is before 31.07.2024
+		if (date < comparisonDate) {
+			console.log("The date is before 31.07.2024");
+		} else {
+			console.log("The date is on or after 31.07.2024");
 		}
-		// Proti zacyklení
-		if (kuponSubmited) {
-			return;
-		}
 
-		kuponSubmited = true;
+		//event listener to sumbited form
+		$(document).on("submit", ".discount-coupon form", function (e) {
+			if (discountInput.val() !== kodKuponu) {
+				return;
+			}
+			// Proti zacyklení
+			if (kuponSubmited) {
+				return;
+			}
 
-		document.addEventListener(
-			"ShoptetDOMCartContentLoaded",
-			function () {
-				// Pridat produkt do kosiku
-				shoptet.cartShared.addToCart({ priceId: priceId });
-				document.addEventListener(
-					"ShoptetDOMCartContentLoaded",
-					function () {
-						//get products data
-						productsInCart = getShoptetDataLayer("cartInfo").cartItems;
+			kuponSubmited = true;
 
-						productsInCart.forEach((product) => {
-							if (product.priceId === priceId) {
-								itemId = product.itemId;
-							}
-						});
-						//apply code again
-						discountForm = $(".discount-coupon form");
-						discountInput = $(".discount-coupon input");
-						discountInput.val(kodKuponu);
-						discountForm.submit();
+			document.addEventListener(
+				"ShoptetDOMCartContentLoaded",
+				function () {
+					// Pridat produkt do kosiku
+					shoptet.cartShared.addToCart({ priceId: priceId });
+					document.addEventListener(
+						"ShoptetDOMCartContentLoaded",
+						function () {
+							//get products data
+							productsInCart = getShoptetDataLayer("cartInfo").cartItems;
 
-						document.addEventListener(
-							"ShoptetDOMCartContentLoaded",
-							function () {
-								//PLATNY
-								if ($(".applied-coupon").length > 0) {
-									validCoupon();
+							productsInCart.forEach((product) => {
+								if (product.priceId === priceId) {
+									itemId = product.itemId;
 								}
-								//NEPLATNY
-								else {
-									invalidCoupon();
-								}
-							},
-							{ once: true }
-						);
-					},
-					{ once: true }
-				);
-			},
-			{ once: true }
-		);
+							});
+							//apply code again
+							discountForm = $(".discount-coupon form");
+							discountInput = $(".discount-coupon input");
+							discountInput.val(kodKuponu);
+							discountForm.submit();
+
+							document.addEventListener(
+								"ShoptetDOMCartContentLoaded",
+								function () {
+									//PLATNY
+									if ($(".applied-coupon").length > 0) {
+										validCoupon();
+									}
+									//NEPLATNY
+									else {
+										invalidCoupon();
+									}
+								},
+								{ once: true }
+							);
+						},
+						{ once: true }
+					);
+				},
+				{ once: true }
+			);
+		});
 	});
 
 	function invalidCoupon() {
@@ -100,3 +119,17 @@ function slevovyKuponDarek() {
 	}
 }
 */
+
+document.addEventListener("DOMContentLoaded", function () {
+	if (document.body.classList.contains("in-blog")) {
+		let timeElement = $(".news-item-detail time[datetime]");
+		let dateStr = timeElement.attr("datetime");
+		let [day, month, year] = dateStr.split(".").map(Number);
+		let date = new Date(year, month - 1, day);
+		let comparisonDate = new Date(2024, 6, 31);
+
+		if (date < comparisonDate) {
+			$("body").addClass("old-blog");
+		}
+	}
+});

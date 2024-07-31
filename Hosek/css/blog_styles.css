@@ -1,3 +1,4 @@
+/*Blog katalog*/
 .in-blog .news-item {
 	margin-bottom: 40px;
 	padding-bottom: 0;
@@ -25,12 +26,14 @@
 	bottom: -6px;
 	left: 0;
 }
-
 .type-posts-listing .content-inner > hr,
 .type-posts-listing .content-inner > p {
 	display: none;
 }
 
+/*OLD BLOG-------------------------------------------------------------------------------*/
+/*OLD BLOG-------------------------------------------------------------------------------*/
+/*OLD BLOG-------------------------------------------------------------------------------*/
 .type-post .text p {
 	text-align: justify;
 }
