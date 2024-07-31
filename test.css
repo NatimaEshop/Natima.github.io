@@ -14,10 +14,14 @@
 	text-align: left;
 }
 .in-blog.type-post:not(.old-blog) #content {
-	max-width: 80rem;
+	max-width: 86rem; /*80 rem a 3 rem padding na PC*/
 	padding: 0 1.5rem;
 	font-size: 1.6rem;
 	text-wrap: pretty;
+}
+
+.in-blog.type-post:not(.old-blog) #content img {
+	border-radius: var(--border-radius);
 }
 
 .in-blog.type-post:not(.old-blog) #content p {
@@ -114,6 +118,15 @@
 	.in-blog.type-post:not(.old-blog) #content h1 {
 		font-size: 3.2rem;
 	}
+	.in-blog.type-post:not(.old-blog) #content h2 {
+		font-size: 3.2rem;
+		margin-top: 4.8rem;
+		margin-bottom: 2.4rem;
+	}
+	.in-blog.type-post:not(.old-blog) #content h3 {
+		margin-top: 4rem;
+	}
+
 	.in-blog.type-post:not(.old-blog) #content ul,
 	.in-blog.type-post:not(.old-blog) #content ol {
 		margin: 4rem 0;

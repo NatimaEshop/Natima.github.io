@@ -122,14 +122,27 @@ function slevovyKuponDarek() {
 
 document.addEventListener("DOMContentLoaded", function () {
 	if (document.body.classList.contains("in-blog")) {
-		let timeElement = $(".news-item-detail time[datetime]");
-		let dateStr = timeElement.attr("datetime");
-		let [day, month, year] = dateStr.split(".").map(Number);
-		let date = new Date(year, month - 1, day);
-		let comparisonDate = new Date(2024, 6, 31);
-
-		if (date < comparisonDate) {
-			$("body").addClass("old-blog");
-		}
+		oldBlog();
+		blogAutor();
 	}
 });
+
+function oldBlog() {
+	let timeElement = $(".news-item-detail time[datetime]");
+	let dateStr = timeElement.attr("datetime");
+	let [day, month, year] = dateStr.split(".").map(Number);
+	let date = new Date(year, month - 1, day);
+	let comparisonDate = new Date(2024, 6, 31);
+
+	if (date < comparisonDate) {
+		$("body").addClass("old-blog");
+	}
+}
+
+function blogAutor() {
+	$("#content p").each(function () {
+		if (/##AUTOR KT##/i.test($(this).text())) {
+			$(this).css("background-color", "yellow");
+		}
+	});
+}
