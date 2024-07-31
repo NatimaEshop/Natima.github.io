@@ -12,6 +12,43 @@ if (document.body.classList.contains("in-index")) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+	if (document.body.classList.contains("in-index")) {
+		/*Odkazy na kategorie na hlavní stránce*/
+		let links = [];
+		if (document.body.classList.contains("cs")) {
+			links = ["/novinky/", "/-akce-mesice/", "/dle-zamereni/", "/blog/"];
+		}
+		if (document.body.classList.contains("sk")) {
+			links = ["/novinky/", "/--akcie-mesiaca/", "/dla-zamerania/", "/blog/"];
+		}
+		$(".homepage-group-title.h4").each(function (index) {
+			if (index < links.length) {
+				let novyOdkaz = $("<a></a>").attr("href", links[index]).addClass($(this).attr("class")).html($(this).html());
+				$(this).replaceWith(novyOdkaz);
+			}
+		});
+		/*Odkaz na oblíbené značky na hlavní stránce*/
+		let oblibeneZnazkyOdkaz = "";
+		if (document.body.classList.contains("cs")) {
+			oblibeneZnazkyOdkaz = "/favorite-znacky/";
+		}
+		if (document.body.classList.contains("sk")) {
+			oblibeneZnazkyOdkaz = "/oblubene-znacky/";
+		}
+		let oblibeneZnacky = $(".footer-banner .h4");
+		let novyOdkaz = $("<a></a>")
+			.attr("href", oblibeneZnazkyOdkaz)
+			.addClass(oblibeneZnacky.attr("class"))
+			.html(oblibeneZnacky.html());
+
+		oblibeneZnacky.replaceWith(novyOdkaz);
+
+		/*Presunuti blogu*/
+		$(".homepage-blog-wrapper > .h4").insertBefore(".homepage-blog-wrapper");
+	}
+});
+
+document.addEventListener("DOMContentLoaded", function () {
 	/*Vypnutí mezikroku zobrazení košíku na click na mobilu*/
 	$("#header .navigation-buttons .cart-count").on("touchstart", function () {
 		$(".popup-widget.cart-widget").css("display", "none");
@@ -886,7 +923,7 @@ function editGifts() {
 	}
 }
 
-/*posledn9 krok objednávky*/
+/*poslední krok objednávky*/
 if (document.body.classList.contains("in-krok-2")) {
 	const orderNextStepButton = $(".next-step");
 	const orderCheckoutBox = $(".checkout-box");
@@ -930,22 +967,6 @@ if (document.body.classList.contains("in-krok-2")) {
 		editGifts();
 	});
 }
-
-/*posledni krok objednavky*/
-/*
-if (document.body.classList.contains("in-krok-2")) {
-	$(".next-step").appendTo(".order-summary-inner");
-	$(".cart-items").last().removeClass("cart-items").addClass("order-recapitulation");
-	$(".checkout-box").appendTo(".order-summary-inner");
-	$(".consents-first").appendTo(".order-summary-inner");
-	$(".next-step").appendTo(".order-summary-inner");
-	$("<div class='summary-background'></div>").appendTo(".order-summary-inner");
-	$("<div class='rekapitulace-background'></div>").appendTo(".order-summary-inner");
-	$(".co-box.co-box-additional").appendTo(".co-contact-information");
-	$(".company-shopping").insertAfter(".co-billing-address > fieldset");
-	$(".consents").appendTo(".next-step");
-}
-*/
 
 /*msg message sucess product added*/
 document.addEventListener("ShoptetCartAddCartItem", function () {
