@@ -169,16 +169,20 @@ document.addEventListener("DOMContentLoaded", function () {
 				let relatedBlogsDiv = $("<div>", { class: "blog-fetched-related" });
 				let blogURL = "";
 				let showBlogText = "";
+				let showBlogHeadingText = "";
 
 				if (document.body.classList.contains("cs")) {
 					blogURL = "/blog/";
 					showBlogText = "Zobrazit všechny články";
+					showBlogHeadingText = "Mohlo by vás také zajímat";
 				}
 				if (document.body.classList.contains("sk")) {
 					blogURL = "/blog/";
 					showBlogText = "Zobraziť všetky články";
+					showBlogHeadingText = "Mohlo by vás tiež zaujímať";
 				}
 				let showBlogButton = $("<a>", { href: blogURL, class: "show-blog-btn" }).text(showBlogText);
+				let showBlogHeading = $("<h2>", { class: "show-blog-heading" }).text(showBlogHeadingText);
 
 				for (let url of blogURLs) {
 					try {
@@ -221,8 +225,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 
 				// Append the relatedBlogsDiv to the body
+				$(".content-wrapper-in").append(showBlogHeading);
 				$(".content-wrapper-in").append(relatedBlogsDiv);
-				relatedBlogsDiv.append(showBlogButton);
+				$(".content-wrapper-in").append(showBlogButton);
 				$(".content-wrapper-in").append($(".messages"));
 				$(".content-wrapper-in").append($(".share"));
 			}
