@@ -34,16 +34,16 @@
 /*OLD BLOG-------------------------------------------------------------------------------*/
 /*OLD BLOG-------------------------------------------------------------------------------*/
 /*OLD BLOG-------------------------------------------------------------------------------*/
-.type-post .text p {
+.old-blog.type-post .text p {
 	text-align: justify;
 }
-.type-post h5 {
+.old-blog.type-post h5 {
 	font-size: 22px;
 	font-weight: 700;
 	padding-top: 10px;
 	padding-bottom: 5px;
 }
-.type-post h6 {
+.old-blog.type-post h6 {
 	font-size: 18px;
 	padding-top: 5px;
 }
