@@ -121,28 +121,205 @@ function slevovyKuponDarek() {
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-	if (document.body.classList.contains("in-blog")) {
+	if (document.body.classList.contains("in-blog") && document.body.classList.contains("type-post")) {
 		oldBlog();
-		blogAutor();
+		function oldBlog() {
+			let timeElement = $(".news-item-detail time[datetime]");
+			let dateStr = timeElement.attr("datetime");
+			let [day, month, year] = dateStr.split(".").map(Number);
+			let date = new Date(year, month - 1, day);
+			let comparisonDate = new Date(2024, 6, 31);
+
+			if (date < comparisonDate) {
+				$("body").addClass("old-blog");
+			} else {
+				blogAutor();
+				fetchAndAppendRelatedBlogs();
+				fetchAndAppendBlogProducts();
+				fetchAndAppendBlogCategory();
+			}
+		}
+
+		function blogAutor() {
+			$("#content p").each(function () {
+				if (/##AUTOR KT##/i.test($(this).text())) {
+					$(this).replaceWith(
+						'<div id="blog-author"><div class="author-image"><img src="images/author.jpg" alt="Kateřina Tránová"></div><div class="author-text"><p class="author-label">Autor</p><p class="author-name">Kateřina Tránová</p><div class="expandale author-text"><div class="expanding"><p>Zajímám se o zdravý životní styl, sport, kosmetiku a zdravou stravu. Mým cílem je inspirovat ostatní, aby pečovali o své tělo i mysl a stali se tou nejlepší verzí sebe samých. Pravidelně se věnuji různým sportovním aktivitám a hledám nové cesty, jak optimalizovat svou fyzickou kondici i duševní pohodu.</p><p>Zdravá strava je pro mě klíčovým prvkem, který podporuje mé zdraví a energii. Kromě sportu a výživy mě baví objevovat nové kosmetické trendy a produkty, které podporují přirozenou krásu a zdraví. Ve volném čase si ráda přečtu dobrou knihu, která mi poskytne nejen odpočinek, ale i nové poznatky. Na blogu se s vámi podělím o své zkušenosti, tipy a rady, jak žít zdravěji a spokojeněji.</p></div></div></div></div>'
+					);
+				}
+			});
+		}
+
+		async function fetchAndAppendRelatedBlogs() {
+			let blogURLs = [];
+
+			$("#content p").each(function () {
+				let text = $(this).text();
+				if (/##BLOG##/i.test(text)) {
+					let urlMatch = text.match(/https?:\/\/[^\s]+/);
+					if (urlMatch) {
+						blogURLs.push(urlMatch[0]);
+					}
+					$(this).remove();
+					$("#content .next-prev").remove();
+				}
+			});
+
+			if (blogURLs.length > 0) {
+				let relatedBlogsDiv = $("<div>", { class: "blog-fetched-related" });
+
+				for (let url of blogURLs) {
+					try {
+						const response = await fetch(url);
+						const text = await response.text();
+						const parser = new DOMParser();
+						const doc = parser.parseFromString(text, "text/html");
+						const metaImage = doc.querySelector('meta[property="og:image"]').getAttribute("content");
+						const metaSection = doc.querySelector('meta[property="article:section"]').getAttribute("content");
+						let metaDescription = doc.querySelector('meta[itemprop="description"]').getAttribute("content");
+
+						if (metaImage && metaSection && metaDescription) {
+							// Create an anchor element
+							let anchorElement = $("<a>", { href: url, target: "_blank" });
+
+							// Create an img element
+							let blogImage = $("<img>", {
+								src: metaImage,
+								alt: "Blog Image",
+							});
+
+							// Create a paragraph element for the meta section content
+							let blogName = $("<p>").text(metaSection);
+
+							// Create a paragraph element for the meta description content
+							metaDescription = metaDescription.replace(/&nbsp;/g, " ");
+							let blogDescdription = $("<p>").text(metaDescription);
+
+							// Append the img, section paragraph, and description paragraph elements to the anchor element
+							anchorElement.append(blogImage);
+							anchorElement.append(blogName);
+							anchorElement.append(blogDescdription);
+
+							// Append the anchor element to the relatedBlogsDiv
+							relatedBlogsDiv.append(anchorElement);
+						}
+					} catch (error) {
+						console.error("Error fetching related blog data:", error);
+					}
+				}
+
+				// Append the relatedBlogsDiv to the body
+				$("#content .share").before(relatedBlogsDiv);
+			}
+		}
+
+		async function fetchAndAppendBlogProducts() {
+			let productURLs = [];
+			let firstProductParagraph = null;
+
+			$("#content p").each(function () {
+				let text = $(this).text();
+				if (/##PRODUKT##/i.test(text)) {
+					if (!firstProductParagraph) {
+						firstProductParagraph = $(this);
+					}
+					let urlMatch = text.match(/https?:\/\/[^\s]+/);
+					if (urlMatch) {
+						productURLs.push(urlMatch[0]);
+					}
+				}
+			});
+
+			if (productURLs.length > 0 && firstProductParagraph) {
+				let blogProductsDiv = $("<div>", { class: "blog-fetched-products" });
+
+				for (let url of productURLs) {
+					try {
+						const response = await fetch(url);
+						const text = await response.text();
+						const parser = new DOMParser();
+						const doc = parser.parseFromString(text, "text/html");
+						const metaImage = doc.querySelector('meta[property="og:image"]');
+						const metaName = doc.querySelector('meta[itemprop="name"]');
+
+						if (metaImage && metaName) {
+							// Create an anchor element
+							let anchorElement = $("<a>", { href: url, target: "_blank" });
+
+							// Create an img element
+							let blogImage = $("<img>", {
+								src: metaImage.getAttribute("content"),
+								alt: "Product Image",
+							});
+
+							// Create a paragraph element for the meta name content
+							let productName = $("<p>").text(metaName.getAttribute("content"));
+
+							// Append the img element and the paragraph element to the anchor element
+							anchorElement.append(blogImage);
+							anchorElement.append(productName);
+
+							// Append the anchor element to the blogProductsDiv
+							blogProductsDiv.append(anchorElement);
+						}
+					} catch (error) {
+						console.error("Error fetching product data:", error);
+					}
+				}
+
+				// Insert the blogProductsDiv before the first found paragraph
+				firstProductParagraph.before(blogProductsDiv);
+
+				// Remove the paragraphs containing ##PRODUKT##
+				$("p").each(function () {
+					let text = $(this).text();
+					if (/##PRODUKT##/i.test(text)) {
+						$(this).remove();
+					}
+				});
+			}
+		}
+
+		async function fetchAndAppendBlogCategory() {
+			let productRequests = [];
+
+			$("#content p").each(function () {
+				let text = $(this).text();
+				if (/##KATEGORIE##/i.test(text)) {
+					let match = text.match(/##KATEGORIE##(\d+)\s+(https?:\/\/[^\s]+)/);
+					if (match) {
+						let numberOfProducts = parseInt(match[1], 10);
+						let url = match[2];
+						productRequests.push({ numberOfProducts, url, paragraph: $(this) });
+					}
+				}
+			});
+
+			if (productRequests.length > 0) {
+				for (let request of productRequests) {
+					let blogProductsDiv = $("<div>", { class: "blog-fetched-category" });
+
+					try {
+						const response = await fetch(request.url);
+						const text = await response.text();
+						const parser = new DOMParser();
+						const doc = parser.parseFromString(text, "text/html");
+						const products = doc.querySelectorAll("#products > .product");
+
+						for (let i = 0; i < request.numberOfProducts && i < products.length; i++) {
+							blogProductsDiv.append(products[i].cloneNode(true));
+						}
+
+						// Insert the blogProductsDiv before the paragraph containing ##KATEGORIE##
+						request.paragraph.before(blogProductsDiv);
+
+						// Remove the paragraph containing ##KATEGORIE##
+						request.paragraph.remove();
+					} catch (error) {
+						console.error("Error fetching blog products:", error);
+					}
+				}
+			}
+		}
 	}
 });
-
-function oldBlog() {
-	let timeElement = $(".news-item-detail time[datetime]");
-	let dateStr = timeElement.attr("datetime");
-	let [day, month, year] = dateStr.split(".").map(Number);
-	let date = new Date(year, month - 1, day);
-	let comparisonDate = new Date(2024, 6, 31);
-
-	if (date < comparisonDate) {
-		$("body").addClass("old-blog");
-	}
-}
-
-function blogAutor() {
-	$("#content p").each(function () {
-		if (/##AUTOR KT##/i.test($(this).text())) {
-			$(this).css("background-color", "yellow");
-		}
-	});
-}

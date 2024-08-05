@@ -656,7 +656,8 @@ if (document.body.classList.contains("type-detail")) {
 					}
 				}
 			}
-			setMinHeightCompare();
+			document.addEventListener("DOMContentLoaded", setMinHeightCompare);
+			/*setMinHeightCompare();*/
 			window.addEventListener("resize", setMinHeightCompare);
 		}
 	}
