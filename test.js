@@ -181,8 +181,10 @@ document.addEventListener("DOMContentLoaded", function () {
 					showBlogText = "Zobraziť všetky články";
 					showBlogHeadingText = "Mohlo by vás tiež zaujímať";
 				}
-				let showBlogButton = $("<a>", { href: blogURL, class: "show-blog-btn" }).text(showBlogText);
-				let showBlogHeading = $("<h2>", { class: "show-blog-heading" }).text(showBlogHeadingText);
+				let showBlogButton = $("<div>", { class: "show-blog-btn" }).append(
+					$("<a>", { href: blogURL }).text(showBlogText)
+				);
+				let showBlogHeading = $("<h3>", { class: "show-blog-heading" }).text(showBlogHeadingText);
 
 				for (let url of blogURLs) {
 					try {
@@ -205,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
 							});
 
 							// Create a paragraph element for the meta section content
-							let blogName = $("<p>").text(metaSection);
+							let blogName = $("<h4>").text(metaSection);
 
 							// Create a paragraph element for the meta description content
 							metaDescription = metaDescription.replace(/&nbsp;/g, " ");
@@ -228,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				$(".content-wrapper-in").append(showBlogHeading);
 				$(".content-wrapper-in").append(relatedBlogsDiv);
 				$(".content-wrapper-in").append(showBlogButton);
-				$(".content-wrapper-in").append($(".messages"));
+				$(".content-wrapper-in").append($(".comments"));
 				$(".content-wrapper-in").append($(".share"));
 			}
 		}
