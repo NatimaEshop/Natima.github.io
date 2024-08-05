@@ -167,6 +167,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			if (blogURLs.length > 0) {
 				let relatedBlogsDiv = $("<div>", { class: "blog-fetched-related" });
+				let blogURL = "";
+				let showBlogText = "";
+
+				if (document.body.classList.contains("cs")) {
+					blogURL = "/blog/";
+					showBlogText = "Zobrazit všechny články";
+				}
+				if (document.body.classList.contains("sk")) {
+					blogURL = "/blog/";
+					showBlogText = "Zobraziť všetky články";
+				}
+				let showBlogButton = $("<a>", { href: blogURL, class: "show-blog-btn" }).text(showBlogText);
 
 				for (let url of blogURLs) {
 					try {
@@ -209,7 +221,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 
 				// Append the relatedBlogsDiv to the body
-				$("#content .share").before(relatedBlogsDiv);
+				$(".content-wrapper-in").append(relatedBlogsDiv);
+				relatedBlogsDiv.append(showBlogButton);
+				$(".content-wrapper-in").append($(".messages"));
+				$(".content-wrapper-in").append($(".share"));
 			}
 		}
 
