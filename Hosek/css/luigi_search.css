@@ -1,3 +1,8 @@
+/*fix přeblikávání stareho vzhledávání*/
+.in-vyhledavani #content-wrapper > .content-wrapper-in {
+	visibility: hidden;
+}
+
 /*Luigi vyhledavací okno obecné změny---------------------------------------------*/
 .luigi-ac-header {
 	font-weight: 500;
