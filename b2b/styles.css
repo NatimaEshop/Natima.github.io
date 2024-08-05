@@ -333,6 +333,7 @@ body:not(
 .welcome {
 	text-align: center;
 }
-label[for="dd[]44"] /*BENU*/ {
+label[for="dd[]44"], /*BENU*/
+label[for="dd[]47"] /*FILTR*/ {
 	display: none !important;
 }
