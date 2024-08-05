@@ -1,0 +1,338 @@
+body:has(
+		.overall-wrapper header .header-top-wrapper .user-action .user-action-in .user-action-login .popup-widget-inner h2
+	)
+	.overall-wrapper
+	* {
+	display: none;
+}
+body:has(
+		.overall-wrapper header .header-top-wrapper .user-action .user-action-in .user-action-login .popup-widget-inner h2
+	)
+	.b2b-login {
+	display: block !important;
+}
+body:not(
+		.overall-wrapper header .header-top-wrapper .user-action .user-action-in .user-action-login .popup-widget-inner h2
+	)
+	.b2b-login {
+	display: none;
+}
+.in-registrace #b2b-login,
+.in-zapomenute-heslo #b2b-login,
+.in-obchodni-podminky #b2b-login,
+.in-podminky-ochrany-osobnich-udaju #b2b-login {
+	display: none !important;
+}
+.in-registrace .site-name,
+.in-zapomenute-heslo .site-name,
+.in-obchodni-podminky .site-name,
+.in-podminky-ochrany-osobnich-udaju .site-name,
+.b2b-login .site-name {
+	width: clamp(150px, 80%, 400px);
+	margin: auto;
+	margin-top: 40px;
+}
+.in-registrace > #content,
+.in-zapomenute-heslo > #content {
+	margin: auto;
+	width: clamp(300px, 70%, 800px);
+	margin-top: 5vh;
+	padding-bottom: 10px;
+}
+.in-registrace,
+.in-zapomenute-heslo {
+	background: #9068be;
+}
+@media (max-width: 768px) {
+	.in-registrace .content,
+	.in-zapomenute-heslo .content {
+		background-color: #fff;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+		padding: 20px;
+		border-radius: 10px;
+	}
+}
+.in-obchodni-podminky:has(
+		.overall-wrapper header .header-top-wrapper .user-action .user-action-in .user-action-login .popup-widget-inner h2
+	)
+	.content-wrapper,
+.in-obchodni-podminky:has(
+		.overall-wrapper header .header-top-wrapper .user-action .user-action-in .user-action-login .popup-widget-inner h2
+	)
+	.content-wrapper
+	.content-wrapper-in,
+.in-obchodni-podminky:has(
+		.overall-wrapper header .header-top-wrapper .user-action .user-action-in .user-action-login .popup-widget-inner h2
+	)
+	.content-wrapper
+	.content-wrapper-in
+	.content,
+.in-obchodni-podminky:has(
+		.overall-wrapper header .header-top-wrapper .user-action .user-action-in .user-action-login .popup-widget-inner h2
+	)
+	.content-wrapper
+	.content-wrapper-in
+	.content
+	*,
+.in-podminky-ochrany-osobnich-udaju:has(
+		.overall-wrapper .header-top-wrapper .user-action .user-action-login .popup-widget-inner h2
+	)
+	.content-wrapper,
+.in-podminky-ochrany-osobnich-udaju:has(
+		.overall-wrapper .header-top-wrapper .user-action .user-action-login .popup-widget-inner h2
+	)
+	.content-wrapper
+	.content-wrapper-in,
+.in-podminky-ochrany-osobnich-udaju:has(
+		.overall-wrapper .header-top-wrapper .user-action .user-action-login .popup-widget-inner h2
+	)
+	.content-wrapper
+	.content-wrapper-in
+	.content,
+.in-podminky-ochrany-osobnich-udaju:has(
+		.overall-wrapper .header-top-wrapper .user-action .user-action-login .popup-widget-inner h2
+	)
+	.content-wrapper
+	.content-wrapper-in
+	.content
+	* {
+	display: block !important;
+}
+#b2b-login .no-display {
+	display: none !important;
+}
+#b2b-login {
+	min-width: 100%;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #9068be;
+	z-index: 999;
+}
+#b2b-login > .user-action-login {
+	width: 100%;
+	margin-top: 100px;
+	position: static;
+	padding-bottom: 10%;
+}
+#b2b-login > .user-action-login > .popup-widget-inner {
+	width: clamp(300px, 70%, 800px);
+	position: relative;
+	margin: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+}
+/*popup*/
+.displayNoneImportant {
+	display: none !important;
+}
+@media (min-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+}
+#header {
+	background-color: #faf7fd;
+}
+.navigation-in.menu {
+	background-color: transparent;
+}
+.navigation-buttons > * {
+	background-color: transparent !important;
+}
+#header .site-name > a > img {
+	max-height: 70px !important;
+}
+[class^="icon-"]::after,
+[class*=" icon-"]::after {
+	display: none;
+}
+#category-header input[type="radio"]:checked + label {
+	box-shadow: 2px 0 6px 2px rgb(0 0 0 / 9%);
+}
+.category-header > form > fieldset > label {
+	border-radius: 8px;
+}
+#content .products-inline > .product {
+	border-width: 1px;
+	border-color: #dedede;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.p-in-in > .name {
+	text-align: left;
+}
+.p-in-in > .name span {
+	font-size: 16px;
+	font-weight: bold;
+	transition: color 0.2s ease-in-out;
+}
+.p-in-in > .name:hover span {
+	color: var(--color-primary-hover);
+}
+.quantity {
+	border-color: #dedede;
+	margin-right: 20px !important;
+	height: 54px;
+}
+.quantity input {
+	height: 54px;
+}
+.increase,
+.decrease {
+	background-color: white !important;
+}
+.search-results .increase,
+.search-results .decrease {
+	min-height: 49px;
+	margin-top: 2px;
+}
+.search-results-groups {
+	display: none;
+}
+.footer-newsletter {
+	display: none;
+}
+.overlay.spinner {
+	display: none !important;
+}
+.pridanoDoKosiku {
+	position: fixed;
+	bottom: 50px;
+	right: -500px;
+	padding: 10px 15px;
+	background: rgb(27, 163, 85);
+	background: -moz-linear-gradient(270deg, rgba(27, 163, 85, 1) 0%, rgba(0, 152, 65, 1) 100%);
+	background: -webkit-linear-gradient(270deg, rgba(27, 163, 85, 1) 0%, rgba(0, 152, 65, 1) 100%);
+	background: linear-gradient(270deg, rgba(27, 163, 85, 1) 0%, rgba(0, 152, 65, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1ba355",endColorstr="#009841",GradientType=1);
+	border-radius: 10px;
+	color: white;
+	opacity: 0;
+	transition: all 0.6s ease-out, bottom 300ms;
+	z-index: 999;
+	width: 350px;
+	max-width: calc(100% - 20px);
+	text-align: center;
+}
+.activePridanoDoKosiku {
+	right: 10px;
+	opacity: 1;
+}
+.pridanoDoKosiku span {
+	font-size: 2rem;
+}
+.nazevPridanehoProduktu {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-size: 1.35rem;
+}
+.pridanoDoKosiku > .pokracovatDoKosiku {
+	color: white;
+	text-decoration: underline;
+}
+.pridanoDoKosiku > .pokracovatDoKosiku:hover {
+	color: var(--color-secondary-hover);
+}
+.secondaryPridanoDoKosiku {
+	bottom: 70px !important;
+	transition: all 0.6s ease-out, bottom 0.1s;
+}
+.navigation-in.menu {
+	background: var(--color-primary-hover);
+}
+.navigation-in > ul > li > a {
+	border-radius: 0px;
+	color: white;
+}
+.navigation-in > ul > li > a:hover {
+	background: #f6f3fa;
+}
+.subcategories {
+	justify-content: flex-start;
+}
+.link-icon.print,
+.link-icon.share.js-share-buttons-trigger,
+.detail-parameters > .shipping-options {
+	display: none;
+}
+.offers > .prices {
+	display: flex;
+	flex-direction: column;
+}
+.brand-wrapper::before {
+	content: "Značka:";
+}
+.flag.flag-discount,
+.standard-price-label {
+	display: none;
+}
+.price-standard {
+	display: flex;
+}
+.price-standard > span {
+	text-decoration: none;
+}
+.p-detail-inner .p-price-wrapper .price-save {
+	padding-left: 0;
+}
+.price-save::before {
+	content: "Marže:";
+}
+.p-bottom .prices > *,
+.p-bottom .prices > .price-standard > span > strong {
+	font-size: 14px !important;
+	color: black !important;
+	font-weight: 400 !important;
+}
+.p-bottom .price-final strong {
+	font-weight: bold !important;
+}
+.p-bottom .price-final strong::before {
+	content: "Cena:";
+}
+.products-block > div .p .p-in .p-bottom > div .prices {
+	flex-direction: column;
+}
+.price-standard::before {
+	content: "Min. prodejní cena:";
+	padding-right: 4px;
+}
+#productDiscussion,
+.shp-tab,
+.shp-tabs-holder,
+.description-inner .basic-description > h4:first-child {
+	display: none !important;
+}
+@media (min-width: 768px) {
+	h1,
+	.h1 {
+		font-size: 32px;
+	}
+}
+.radio-wrapper[data-id="billing-73"],
+.radio-wrapper[data-id="billing-76"] {
+	display: none;
+}
+.displayBlock {
+	display: block;
+}
+.displayFlex {
+	display: flex !important;
+}
+.navigation-in > .menu-level-1 > li:nth-child(2n + 1) {
+	background: rgba(255 255 255 / 0.05);
+}
+.sidebar {
+	width: 290px;
+}
+.product-slider > *:hover {
+	cursor: auto;
+}
+.welcome {
+	text-align: center;
+}
+label[for="dd[]44"] /*BENU*/ {
+	display: none !important;
+}
