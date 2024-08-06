@@ -1,3 +1,7 @@
+.in-blog.type-post:not(.old-blog) .content-wrapper-in {
+	display: block;
+}
+
 .in-blog.type-post:not(.old-blog) #content p,
 .in-blog.type-post:not(.old-blog) #content h1,
 .in-blog.type-post:not(.old-blog) #content h2,
@@ -186,10 +190,7 @@
 	line-height: 1.5 !important;
 }
 
-/*SOUVISEJICI ČLÁNKY*/
-.in-blog.type-post:not(.old-blog) .content-wrapper-in {
-	display: block;
-}
+/*------------------------------------------------------------------------------Související články blog*/
 .show-blog-heading {
 	font-family: var(--ff-main) !important;
 	font-size: 2.2rem;
@@ -205,6 +206,7 @@
 	display: flex;
 	justify-content: flex-start;
 	overflow-x: auto;
+	margin-bottom: 1.6rem;
 }
 .blog-fetched-related > * {
 	padding: calc(var(--gap) / 1.5);
@@ -243,31 +245,6 @@
 	overflow: hidden;
 	margin: 0;
 }
-.show-blog-btn {
-	width: auto;
-	display: flex;
-	justify-content: center;
-}
-
-.show-blog-btn a {
-	margin: 10px auto 60px 7px;
-	text-align: center;
-	font-size: 2rem;
-	font-weight: 500;
-	color: var(--color-primary);
-	border-radius: var(--border-radius);
-	border-style: solid;
-	border-width: 1px;
-	border-color: var(--color-primary);
-	padding: 0.6em 1em;
-	transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-.show-blog-btn a:hover,
-.show-blog-btn a:focus-within {
-	background: var(--color-primary);
-	border-color: var(--color-primary);
-	color: white;
-}
 
 @media (min-width: 1200px) {
 	.show-blog-heading {
@@ -278,22 +255,161 @@
 	}
 	.blog-fetched-related {
 		justify-content: center;
+		margin-bottom: 2.4rem;
 	}
 	.blog-fetched-related > * {
 		max-width: 25%;
+		min-width: auto;
 	}
 	.show-blog-heading {
 		padding-left: 0;
 	}
-	.show-blog-btn a {
-		margin: 20px auto 60px;
+}
+
+/*------------------------------------------------------------------------------Blog produkty z kategorie a produkty z detailu*/
+.blog-fetched-category .p-in .p-in-in .ratings-wrapper,
+.blog-fetched-category .p-in .p-bottom,
+.blog-fetched-category .p-code,
+.blog-fetched-category .flags {
+	display: none;
+}
+
+.blog-fetched-products,
+.blog-fetched-category {
+	display: flex;
+	overflow-x: auto;
+	justify-content: flex-start;
+	margin-top: 2.4rem;
+	margin-bottom: 2.4rem;
+	margin-left: calc(var(--gap) / -2);
+	margin-right: calc(var(--gap) / -2);
+}
+
+.blog-fetched-products > a,
+.blog-fetched-category > .product {
+	max-width: 60%;
+	width: 300px;
+	flex-shrink: 0;
+	padding: calc(var(--gap) / 1.5);
+	margin-bottom: 4rem;
+	position: relative;
+}
+.blog-fetched-products > a,
+.blog-fetched-category > .product a {
+	text-decoration: none !important;
+	color: var(--color-black-800) !important;
+}
+.blog-fetched-products > a::before,
+.blog-fetched-category > .product::before {
+	display: block;
+	content: "";
+	position: absolute;
+	width: calc(100% - var(--gap));
+	height: calc(100% + 4rem);
+	top: 0;
+	left: calc(var(--gap) / 2);
+	pointer-events: none;
+	background-color: hsla(204, 5%, 60%, 0.06);
+	border-radius: var(--border-radius);
+	transition: opacity 0.1s ease;
+}
+.blog-fetched-products > a::after,
+.blog-fetched-category > .product::after {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 80%;
+	max-width: 200px;
+	transform: translate(-50%, -50%);
+	pointer-events: auto;
+	background-color: var(--color-primary);
+	border-radius: var(--border-radius);
+	color: white;
+	font-size: 1.6rem !important;
+	padding: 0.75em 0.25em;
+	text-align: center;
+	transition: background-color 0.1s ease;
+}
+.blog-fetched-products > a:hover,
+.blog-fetched-category > .product:hover a {
+	text-decoration: underline !important;
+}
+.blog-fetched-products > a:hover::after,
+.blog-fetched-category > .product:hover::after {
+	background-color: var(--color-primary-hover);
+}
+.blog-fetched-products > a:hover::before,
+.blog-fetched-category > .product:hover::before {
+	opacity: 0.6;
+}
+.cs .blog-fetched-products > a::after,
+.cs .blog-fetched-category > .product::after {
+	content: "Zobrazit produkt";
+}
+.sk .blog-fetched-products > a::after,
+.sk .blog-fetched-category > .product::after {
+	content: "Zobraziť produkt";
+}
+.blog-fetched-products > a p,
+.blog-fetched-category > .product .name span {
+	text-align: center !important;
+	line-height: 1.6 !important;
+	text-decoration: none !important;
+	font-weight: 600;
+	display: -webkit-box !important;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	padding: 0 10px;
+	margin-bottom: 2em !important;
+	margin-top: 1em !important;
+}
+@media (min-width: 1200px) {
+	.blog-fetched-products,
+	.blog-fetched-category {
+		display: flex;
+		justify-content: center;
+	}
+	.blog-fetched-products > a,
+	.blog-fetched-category > .product {
+		max-width: 50%;
+		min-width: 25%;
+		width: auto;
+		flex-shrink: 1;
 	}
 }
 
-/*BLOG PRODUKTY*/
-.blog-fetched-products {
+/*------------------------------------------------------------------------------Blog Zobrazit všechny články a produkty tlačítko*/
+.show-all-blog-btn {
+	width: auto;
 	display: flex;
+	justify-content: center;
 }
-.blog-fetched-products > * {
-	max-width: 33.3%;
+
+.show-all-blog-btn a {
+	margin: 0px auto 1.6rem 7px;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 500;
+	color: var(--color-primary) !important;
+	border-radius: var(--border-radius);
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--color-primary);
+	padding: 0.6em 1em;
+	transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+	text-decoration: none !important;
+}
+.show-all-blog-btn a:hover,
+.show-all-blog-btn a:focus-within {
+	background: var(--color-primary);
+	border-color: var(--color-primary);
+	color: white !important;
+}
+
+@media (min-width: 1200px) {
+	.show-all-blog-btn a {
+		margin: 0px auto 1.6rem auto;
+	}
 }

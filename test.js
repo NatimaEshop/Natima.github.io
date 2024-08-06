@@ -152,12 +152,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		async function fetchAndAppendRelatedBlogs() {
 			let blogURLs = [];
+			let maxNumberOfBlogs = 5;
 
 			$("#content p").each(function () {
 				let text = $(this).text();
 				if (/##BLOG##/i.test(text)) {
 					let urlMatch = text.match(/https?:\/\/[^\s]+/);
-					if (urlMatch) {
+					if (urlMatch && blogURLs.length < maxNumberOfBlogs) {
 						blogURLs.push(urlMatch[0]);
 					}
 					$(this).remove();
@@ -181,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					showBlogText = "Zobraziť všetky články";
 					showBlogHeadingText = "Mohlo by vás tiež zaujímať";
 				}
-				let showBlogButton = $("<div>", { class: "show-blog-btn" }).append(
+				let showBlogButton = $("<div>", { class: "show-all-blog-btn" }).append(
 					$("<a>", { href: blogURL }).text(showBlogText)
 				);
 				let showBlogHeading = $("<h3>", { class: "show-blog-heading" }).text(showBlogHeadingText);
@@ -390,21 +391,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 						let showCategoryText = "";
 						if (document.body.classList.contains("cs")) {
-							showCategoryText = "Zobrazit vše;";
+							showCategoryText = "Zobrazit vše";
 						}
 						if (document.body.classList.contains("sk")) {
-							showCategoryText = "Zobraziť všetko;";
+							showCategoryText = "Zobraziť všetko";
 						}
 
-						// Create the show-blog-btn div with an anchor inside
-						let showBlogButtonDiv = $("<div>", { class: "show-blog-btn" }).append(
+						// Create the show-all-blog-btn div with an anchor inside
+						let showBlogButtonDiv = $("<div>", { class: "show-all-blog-btn" }).append(
 							$("<a>", { href: request.url }).text(showCategoryText)
 						);
 
 						// Insert the blogProductsDiv before the paragraph containing ##KATEGORIE##
 						request.paragraph.before(blogProductsDiv);
 
-						// Insert the show-blog-btn div before the paragraph containing ##KATEGORIE##
+						// Insert the show-all-blog-btn div before the paragraph containing ##KATEGORIE##
 						request.paragraph.before(showBlogButtonDiv);
 
 						// Remove the paragraph containing ##KATEGORIE##
