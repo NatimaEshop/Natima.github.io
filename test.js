@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					showBlogHeadingText = "Mohlo by vás tiež zaujímať";
 				}
 				let showBlogButton = $("<div>", { class: "show-all-blog-btn" }).append(
-					$("<a>", { href: url, target: "_blank" }).text(showBlogText)
+					$("<a>", { href: blogURL, target: "_blank" }).text(showBlogText)
 				);
 				let showBlogHeading = $("<h3>", { class: "show-blog-heading" }).text(showBlogHeadingText);
 
