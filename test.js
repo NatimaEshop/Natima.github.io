@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
 						firstProductParagraph = $(this);
 					}
 					let urlMatch = text.match(/https?:\/\/[^\s]+/);
-					if (urlMatch.length < maxNumberOfProducts) {
+					if (urlMatch && productURLs.length < maxNumberOfProducts) {
 						productURLs.push(urlMatch[0]);
 					}
 				}
@@ -354,14 +354,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (/##KATEGORIE##/i.test(text)) {
 					let match = text.match(/##KATEGORIE##(\d+)\s+(https?:\/\/[^\s]+)/);
 					if (match) {
-						let numberOfProducts = parseInt(match[1], 10);
+						let numberOfProducts = Math.min(parseInt(match[1], 10), maxNumberOfProducts);
 						let url = match[2];
-						if (productRequests.length < maxNumberOfProducts - 1) {
-							productRequests.push({ numberOfProducts, url, paragraph: $(this) });
-							console.log(maxNumberOfProducts);
-							console.log(productRequests.length);
-							console.log(productRequests);
-						}
+						productRequests.push({ numberOfProducts, url, paragraph: $(this) });
 					}
 				}
 			});
