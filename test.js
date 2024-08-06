@@ -358,6 +358,9 @@ document.addEventListener("DOMContentLoaded", function () {
 						let url = match[2];
 						if (productRequests.length < maxNumberOfProducts - 1) {
 							productRequests.push({ numberOfProducts, url, paragraph: $(this) });
+							console.log(maxNumberOfProducts);
+							console.log(productRequests.length);
+							console.log(productRequests);
 						}
 					}
 				}
