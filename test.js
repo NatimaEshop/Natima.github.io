@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					if (match) {
 						let numberOfProducts = parseInt(match[1], 10);
 						let url = match[2];
-						if (productRequests.length < maxNumberOfProducts) {
+						if (productRequests.length < maxNumberOfProducts - 1) {
 							productRequests.push({ numberOfProducts, url, paragraph: $(this) });
 						}
 					}
