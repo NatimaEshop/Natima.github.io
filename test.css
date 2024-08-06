@@ -17,9 +17,12 @@
 	font-family: var(--ff-main) !important;
 	text-align: left;
 }
-.in-blog.type-post:not(.old-blog) #content {
+
+.in-blog.type-post:not(.old-blog) {
 	--maxWidth: 86rem;
 	--contentPad: 1.5rem;
+}
+.in-blog.type-post:not(.old-blog) #content {
 	max-width: var(--maxWidth); /*80 rem a 3 rem padding na PC*/
 	padding: 0 var(--contentPad);
 	font-size: 1.6rem;
