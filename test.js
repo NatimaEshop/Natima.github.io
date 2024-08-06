@@ -346,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			}
 		}*/
+		fetchAndAppendBlogCategory();
 		async function fetchAndAppendBlogCategory() {
 			let productRequests = [];
 			let maxNumberOfProducts = 4;
@@ -399,7 +400,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 						// Create the show-all-blog-btn div with an anchor inside
 						let showBlogButtonDiv = $("<div>", { class: "show-all-blog-btn" }).append(
-							$("<a>", { href: url, target: "_blank" }).text(showCategoryText)
+							$("<a>", { href: request.url, target: "_blank" }).text(showCategoryText)
 						);
 
 						// Insert the blogProductsDiv before the paragraph containing ##KATEGORIE##
