@@ -18,8 +18,10 @@
 	text-align: left;
 }
 .in-blog.type-post:not(.old-blog) #content {
-	max-width: 86rem; /*80 rem a 3 rem padding na PC*/
-	padding: 0 1.5rem;
+	--maxWidth: 86rem;
+	--contentPad: 1.5rem;
+	max-width: var(--maxWidth); /*80 rem a 3 rem padding na PC*/
+	padding: 0 var(--contentPad);
 	font-size: 1.6rem;
 	text-wrap: pretty;
 }
@@ -157,7 +159,7 @@
 	gap: 2.4rem;
 	background: var(--color-gray-200);
 	border-radius: var(--border-radius);
-	padding: 2.4rem 3.6rem;
+	padding: 2.4rem 3.6rem 0.9rem 3.6rem;
 	align-items: start;
 }
 
@@ -188,6 +190,9 @@
 .author-text {
 	font-size: 1.5rem !important;
 	line-height: 1.5 !important;
+}
+#blog-author .author-text p {
+	margin-bottom: 1.5rem !important;
 }
 
 /*------------------------------------------------------------------------------Související články blog*/
@@ -388,7 +393,7 @@
 }
 
 .show-all-blog-btn a {
-	margin: 0px auto 1.6rem 7px;
+	margin: 0px auto 0px 7px;
 	text-align: center;
 	font-size: 2rem;
 	font-weight: 500;
@@ -410,6 +415,16 @@
 
 @media (min-width: 1200px) {
 	.show-all-blog-btn a {
-		margin: 0px auto 1.6rem auto;
+		margin: 0px auto 0px auto;
 	}
+}
+
+/**/
+.in-blog.type-post:not(.old-blog) .comments,
+.in-blog.type-post:not(.old-blog) .share {
+	max-width: var(--maxWidth); /*80 rem a 3 rem padding na PC*/
+	padding: 0 var(--contentPad);
+}
+.in-blog.type-post:not(.old-blog) .comments {
+	margin: 2.4rem 0 1.6rem 0;
 }

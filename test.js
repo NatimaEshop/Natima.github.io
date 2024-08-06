@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					showBlogHeadingText = "Mohlo by vás tiež zaujímať";
 				}
 				let showBlogButton = $("<div>", { class: "show-all-blog-btn" }).append(
-					$("<a>", { href: blogURL }).text(showBlogText)
+					$("<a>", { href: url, target: "_blank" }).text(showBlogText)
 				);
 				let showBlogHeading = $("<h3>", { class: "show-blog-heading" }).text(showBlogHeadingText);
 
@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 						// Create the show-all-blog-btn div with an anchor inside
 						let showBlogButtonDiv = $("<div>", { class: "show-all-blog-btn" }).append(
-							$("<a>", { href: request.url }).text(showCategoryText)
+							$("<a>", { href: url, target: "_blank" }).text(showCategoryText)
 						);
 
 						// Insert the blogProductsDiv before the paragraph containing ##KATEGORIE##
