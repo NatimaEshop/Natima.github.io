@@ -1,4 +1,5 @@
 .benefitBanner {
+	display: flex;
 	max-width: 1920px;
 	width: 100%;
 	padding: 0 var(--padding-sides) !important;
@@ -22,7 +23,7 @@
 	.benefitBanner {
 		margin-top: var(--gap);
 		margin-bottom: calc(var(--gap) * 1.5);
-		padding-bottom: var(--gap);
+		padding-bottom: var(--gap) !important;
 		overflow-x: scroll;
 		flex-wrap: nowrap;
 		gap: var(--gap);
