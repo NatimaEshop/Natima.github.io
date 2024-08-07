@@ -1,3 +1,9 @@
+.benefitBanner {
+	max-width: 1920px;
+	width: 100%;
+	padding: 0 var(--padding-sides) !important;
+	margin: auto;
+}
 .benefitBanner__item {
 	flex: 1 1 20%;
 	flex-direction: column;
