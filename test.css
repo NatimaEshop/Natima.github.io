@@ -3,7 +3,7 @@
 	max-width: 1920px;
 	width: 100%;
 	padding: 0 var(--padding-sides) !important;
-	margin: auto;
+	margin: calc(var(--gap) * 2) auto;
 }
 .benefitBanner__item {
 	flex: 1 1 20%;
