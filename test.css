@@ -8,15 +8,12 @@
 }
 .benefitBanner__item {
 	flex: 1 1 20%;
-	flex-direction: column;
-	text-align: center;
 	margin-bottom: 0;
-}
-.benefitBanner__item {
-	flex-direction: row !important;
+	flex-direction: row;
 	text-align: left;
 	gap: var(--gap);
 }
+
 .benefitBanner__picture {
 	max-width: 90px;
 	margin: 0;
@@ -36,5 +33,7 @@
 	}
 	.benefitBanner__item {
 		min-width: 220px;
+		flex-direction: column;
+		text-align: center;
 	}
 }
