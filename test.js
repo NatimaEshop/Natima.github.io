@@ -130,6 +130,13 @@ $(".cs .menu-item-2612").remove();
 $(".sk .menu-item-2384").remove();
 $(".sk .menu-item-2387").remove();
 
+document.addEventListener("DOMContentLoaded", function () {
+	//timeout 500ms
+	setTimeout(function () {
+		shoptet.menu.splitMenu();
+	}, 500);
+});
+
 /*function removeLastSplitted() {
 	let splitted = $(".menu-helper .splitted");
 	splitted.last().removeClass("splitted");
