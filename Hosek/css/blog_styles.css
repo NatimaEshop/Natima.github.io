@@ -257,6 +257,8 @@
 .in-blog.type-post:not(.old-blog) #content a {
 	transition: color 0.1s ease;
 	text-decoration: underline;
+
+	word-break: break-word;
 }
 .in-blog.type-post:not(.old-blog) #content a:hover {
 	color: var(--color-primary-hover);
@@ -342,6 +344,21 @@
 }
 #blog-author .author-text p {
 	margin-bottom: 1.5rem !important;
+}
+@media (max-width: 767px) {
+	#blog-author {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+	.author-image {
+		max-width: 120px;
+		margin: auto;
+	}
+	#blog-author .author-label,
+	#blog-author .author-name {
+		text-align: center !important;
+		margin-top: 0 !important;
+	}
 }
 
 /*------------------------------------------------------------------------------Související články blog*/

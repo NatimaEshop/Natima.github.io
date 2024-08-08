@@ -124,32 +124,3 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(".middle-banners-wrapper").before($(".benefitBanner"));
 	}
 });
-
-$(".cs .menu-item-2607").remove();
-$(".cs .menu-item-2612").remove();
-$(".sk .menu-item-2384").remove();
-$(".sk .menu-item-2387").remove();
-
-document.addEventListener("DOMContentLoaded", function () {
-	//timeout 500ms
-	setTimeout(function () {
-		shoptet.menu.splitMenu();
-	}, 500);
-});
-
-/*function removeLastSplitted() {
-	let splitted = $(".menu-helper .splitted");
-	splitted.last().removeClass("splitted");
-}
-
-let removedLastSplitted = false;
-document.addEventListener("shoptet.menu.showMenuHelper", function () {
-	if (!removedLastSplitted) {
-		removedLastSplitted = true;
-		removeLastSplitted();
-	}
-});
-
-window.addEventListener("resize", function () {
-	removedLastSplitted = false;
-});*/
