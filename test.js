@@ -132,3 +132,13 @@ function removeLastSplitted() {
 
 document.addEventListener("DOMContentLoaded", removeLastSplitted);
 window.addEventListener("resize", removeLastSplitted);
+
+document.addEventListener("shoptet.menu.splitHelperMenu", function () {
+	console.log("splitHelperMenu");
+
+	console.log("splitHelperMenu");
+
+	console.log("splitHelperMenu");
+
+	console.log("splitHelperMenu");
+});
