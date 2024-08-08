@@ -130,15 +130,4 @@ function removeLastSplitted() {
 	splitted.last().removeClass("splitted");
 }
 
-document.addEventListener("DOMContentLoaded", removeLastSplitted);
-window.addEventListener("resize", removeLastSplitted);
-
-document.addEventListener("shoptet.menu.splitHelperMenu", function () {
-	console.log("splitHelperMenu");
-
-	console.log("splitHelperMenu");
-
-	console.log("splitHelperMenu");
-
-	console.log("splitHelperMenu");
-});
+document.addEventListener("shoptet.menu.splitHelperMenu", removeLastSplitted);
