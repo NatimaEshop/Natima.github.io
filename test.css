@@ -31,7 +31,7 @@
 		gap: var(--gap);
 	}
 	.benefitBanner__item {
-		min-width: 220px;
+		min-width: 175px;
 		flex-direction: column;
 		text-align: center;
 		justify-content: flex-start;
