@@ -130,7 +130,7 @@ $(".cs .menu-item-2612").remove();
 $(".sk .menu-item-2384").remove();
 $(".sk .menu-item-2387").remove();
 
-function removeLastSplitted() {
+/*function removeLastSplitted() {
 	let splitted = $(".menu-helper .splitted");
 	splitted.last().removeClass("splitted");
 }
@@ -145,4 +145,4 @@ document.addEventListener("shoptet.menu.showMenuHelper", function () {
 
 window.addEventListener("resize", function () {
 	removedLastSplitted = false;
-});
+});*/
