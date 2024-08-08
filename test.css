@@ -1,8 +1,6 @@
 .benefitBanner {
 	display: flex;
-	max-width: 1920px;
 	width: 100%;
-	padding: 0 var(--padding-sides) !important;
 	margin: calc(var(--gap) * 2) auto;
 	flex-direction: row;
 }
@@ -12,6 +10,7 @@
 	flex-direction: row;
 	text-align: left;
 	gap: var(--gap);
+	justify-content: center;
 }
 
 .benefitBanner__picture {
@@ -35,5 +34,6 @@
 		min-width: 220px;
 		flex-direction: column;
 		text-align: center;
+		justify-content: flex-start;
 	}
 }
