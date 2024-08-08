@@ -124,3 +124,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(".middle-banners-wrapper").before($(".benefitBanner"));
 	}
 });
+
+function removeLastSplitted() {
+	let splitted = $(".menu-helper .splitted");
+	splitted.last().removeClass("splitted");
+}
+
+document.addEventListener("DOMContentLoaded", removeLastSplitted);
+window.addEventListener("resize", removeLastSplitted);
