@@ -130,4 +130,14 @@ function removeLastSplitted() {
 	splitted.last().removeClass("splitted");
 }
 
-document.addEventListener("shoptet.menu.splitHelperMenu", removeLastSplitted);
+let removedLastSplitted = false;
+document.addEventListener("shoptet.menu.showMenuHelper", function () {
+	if (!removedLastSplitted) {
+		removedLastSplitted = true;
+		removeLastSplitted();
+	}
+});
+
+window.addEventListener("resize", function () {
+	removedLastSplitted = false;
+});
