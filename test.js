@@ -135,6 +135,15 @@ if (document.body.classList.contains("in-kosik")) {
 		getGiftItemID();
 		if (containsFreeGift) {
 			changeDiscountFormContent();
+
+			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
+				getGiftItemID();
+				if (containsFreeGift) {
+					changeDiscountFormContent();
+				} else {
+					changeDiscountFormContentToOriginal();
+				}
+			});
 		}
 	});
 
