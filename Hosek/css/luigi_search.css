@@ -1,5 +1,6 @@
-/*fix přeblikávání stareho vzhledávání*/
-.in-vyhledavani #content-wrapper > .content-wrapper-in {
+/*fix přeblikávání stareho vzhledávání cs a sk*/
+.in-vyhledavani #content-wrapper > .content-wrapper-in,
+.in-vyhladavanie #content-wrapper > .content-wrapper-in {
 	visibility: hidden;
 }
 
