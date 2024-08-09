@@ -1,8 +1,8 @@
 .benefitBanner {
 	display: flex;
 	width: 100%;
-	padding-top: var(--gap);
-	padding-bottom: var(--gap);
+	padding-top: calc(var(--gap) * 2.5);
+	padding-bottom: calc(var(--gap) * 2);
 	flex-direction: row;
 	margin: 0;
 }
@@ -30,7 +30,8 @@
 		flex-wrap: nowrap;
 		gap: var(--gap);
 		margin-top: 0;
-		margin-bottom: var(--gap);
+		padding-top: calc(var(--gap) * 1.5);
+		margin-bottom: calc(var(--gap) * 2);
 	}
 	.benefitBanner__item {
 		min-width: 175px;
