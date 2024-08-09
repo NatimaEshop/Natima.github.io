@@ -124,3 +124,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(".body-banners").before($(".benefitBanner"));
 	}
 });
+
+$(".cs .menu-item-2607").remove();
+$(".cs .menu-item-2612").remove();
+$(".sk .menu-item-2384").remove();
+$(".sk .menu-item-2387").remove();
