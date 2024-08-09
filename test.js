@@ -14,22 +14,6 @@ function slevovyKuponDarek() {
 	let kuponSubmited = false;
 
 	$(document).ready(function() {
-		// Select the <time> element
-		var timeElement = $('time[datetime]');
-
-		// Extract the date from the datetime attribute
-		var dateStr = timeElement.attr('datetime');
-
-		// Parse the date
-		var date = new Date(dateStr);
-		var comparisonDate = new Date('2024-07-31');
-
-		// Check if the date is before 31.07.2024
-		if (date < comparisonDate) {
-			console.log("The date is before 31.07.2024");
-		} else {
-			console.log("The date is on or after 31.07.2024");
-		}
 
 		//event listener to sumbited form
 		$(document).on("submit", ".discount-coupon form", function (e) {
@@ -119,3 +103,88 @@ function slevovyKuponDarek() {
 	}
 }
 */
+
+/*Nový způsob dárky pomocí kupónu*/
+let kodKuponuDarekTaskaNatios = "darekzdarma";
+let kodProduktuDarekTaskaNatios = "NAT1229D";
+
+let discountFormInput = "";
+let discountFormHTML = "";
+
+let itemID = "";
+let containsFreeGift = false;
+
+if (document.body.classList.contains("in-kosik")) {
+	$(document).on("submit", ".discount-coupon form", function (e) {
+		discountFormInput = $(".discount-coupon input");
+		if (discountFormInput.val().toLowerCase() == kodKuponuDarekTaskaNatios.toLowerCase()) {
+			vlozeniKuponuNaDarekZdarma();
+
+			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
+				getGiftItemID();
+				if (containsFreeGift) {
+					changeDiscountFormContent();
+				} else {
+					changeDiscountFormContentToOriginal();
+				}
+			});
+		}
+	});
+
+	document.addEventListener("DOMContentLoaded", function () {
+		getGiftItemID();
+		if (containsFreeGift) {
+			changeDiscountFormContent();
+		}
+	});
+
+	function vlozeniKuponuNaDarekZdarma() {
+		$("body").addClass("free-gift-added");
+		shoptet.cartShared.addToCart({ productCode: kodProduktuDarekTaskaNatios });
+		setTimeout(function () {
+			$("body").removeClass("free-gift-added");
+		}, 3000);
+	}
+
+	function changeDiscountFormContent() {
+		let appliedFreeGiftCouponHTMLcz =
+			'<span>Vložený slevový kupón</span><div class="applied-coupon gift-coupon"><strong>Dárek zdarma</strong><div id="removeGift">x</div></div>';
+		let appliedFreeGiftCouponHTMLsk =
+			'<span>Vložený slevový kupón</span><div class="applied-coupon gift-coupon"><strong>Dárek zdarma</strong><div id="removeGift">x</div></div>';
+
+		if (document.body.classList.contains("cs")) {
+			$(".discount-coupon").html(appliedFreeGiftCouponHTMLcz);
+		}
+		if (document.body.classList.contains("sk")) {
+			$(".discount-coupon").html(appliedFreeGiftCouponHTMLsk);
+		}
+		$("#removeGift").on("click touch", function () {
+			shoptet.cartShared.removeFromCart({ itemId: itemID });
+			$(".discount-coupon").html(discountFormHTML);
+			containsFreeGift = false;
+		});
+	}
+	function changeDiscountFormContentToOriginal() {
+		let originalCouponHTMLcz =
+			'<form method="post" action="/action/Cart/addDiscountCoupon/" class="input-group csrf-enabled" data-testid="formDiscountCoupon"><input type="text" name="discountCouponCode" id="discountCouponCode" class="form-control" required="" placeholder="Vložit slevový kupón" aria-label="Slevový kupón" data-testid="inputDiscountCoupon"><button type="submit" class="btn btn-secondary" data-testid="buttonSubmitDiscountCoupon">Přidat</button><input type="hidden" name="__csrf__" value="csrf_PpXrf0fm842f7cda8f98a645"></form>';
+		let originalCouponHTMLsk =
+			'<form method="post" action="/action/Cart/addDiscountCoupon/" class="input-group csrf-enabled" data-testid="formDiscountCoupon"><input type="text" name="discountCouponCode" id="discountCouponCode" class="form-control" required="" placeholder="Vložit slevový kupón" aria-label="Slevový kupón" data-testid="inputDiscountCoupon"><button type="submit" class="btn btn-secondary" data-testid="buttonSubmitDiscountCoupon">Přidat</button><input type="hidden" name="__csrf__" value="csrf_PpXrf0fm842f7cda8f98a645"></form>';
+		if (document.body.classList.contains("cs")) {
+			$(".discount-coupon").html(originalCouponHTMLcz);
+		}
+		if (document.body.classList.contains("sk")) {
+			$(".discount-coupon").html(originalCouponHTMLsk);
+		}
+	}
+
+	function getGiftItemID() {
+		containsFreeGift = false;
+		let cartItems = dataLayer[0].shoptet.cartInfo.cartItems;
+		for (let item of cartItems) {
+			if (item.code === kodProduktuDarekTaskaNatios) {
+				itemID = item.itemId;
+				containsFreeGift = true;
+			}
+		}
+	}
+}

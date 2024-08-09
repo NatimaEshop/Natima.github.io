@@ -40,3 +40,24 @@
 		justify-content: flex-start;
 	}
 }
+
+/*slevovy kupon*/
+.free-gift-added .messages {
+	display: none !important;
+}
+
+#removeGift {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translatey(-50%);
+	cursor: pointer;
+	padding: 7px 10px;
+	color: white;
+	background: var(--color-primary);
+	border-radius: var(--border-radius);
+	transition: background 0.2s ease-out;
+}
+#removeGift:hover {
+	background: var(--color-primary-hover);
+}
