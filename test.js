@@ -119,13 +119,3 @@ function slevovyKuponDarek() {
 	}
 }
 */
-document.addEventListener("DOMContentLoaded", function () {
-	if (document.body.classList.contains("in-index")) {
-		$(".body-banners").before($(".benefitBanner"));
-	}
-});
-
-$(".cs .menu-item-2607").remove();
-$(".cs .menu-item-2612").remove();
-$(".sk .menu-item-2384").remove();
-$(".sk .menu-item-2387").remove();

@@ -13,6 +13,9 @@ if (document.body.classList.contains("in-index")) {
 
 document.addEventListener("DOMContentLoaded", function () {
 	if (document.body.classList.contains("in-index")) {
+		/*konkurenční výhody přesunutí*/
+		$(".body-banners").before($(".benefitBanner"));
+
 		/*Odkazy na kategorie na hlavní stránce*/
 		let links = [];
 		if (document.body.classList.contains("cs")) {
@@ -986,3 +989,9 @@ document.addEventListener("ShoptetCartAddCartItem", function () {
 		{ once: true }
 	);
 });
+
+/*odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
+$(".cs .menu-item-2607").remove();
+$(".cs .menu-item-2612").remove();
+$(".sk .menu-item-2384").remove();
+$(".sk .menu-item-2387").remove();
