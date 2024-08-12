@@ -48,9 +48,9 @@ if (document.body.classList.contains("in-kosik")) {
 
 	function changeDiscountFormContent() {
 		let appliedFreeGiftCouponHTMLcz =
-			'<span>Vložený slevový kupón</span><div class="applied-coupon gift-coupon"><strong>Dárek zdarma</strong><div id="removeGift">x</div></div>';
+			'<span>Vložený slevový kupón</span><div class="applied-coupon gift-coupon"><strong>Dárek zdarma - Taška NATIOS</strong><div id="removeGift">x</div></div>';
 		let appliedFreeGiftCouponHTMLsk =
-			'<span>Vložený zľavový kupón</span><div class="applied-coupon gift-coupon"><strong>Darček zadarmo</strong><div id="removeGift">x</div></div>';
+			'<span>Vložený zľavový kupón</span><div class="applied-coupon gift-coupon"><strong>Darček zadarmo - Taška NATIOS</strong><div id="removeGift">x</div></div>';
 
 		if (document.body.classList.contains("cs")) {
 			$(".discount-coupon").html(appliedFreeGiftCouponHTMLcz);
