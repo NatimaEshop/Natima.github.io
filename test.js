@@ -107,6 +107,7 @@ function slevovyKuponDarek() {
 /*Nový způsob dárky pomocí kupónu*/
 let kodKuponuDarekTaskaNatios = "darekzdarma";
 let kodProduktuDarekTaskaNatios = "NAT1229D";
+let kodyKuponuDarekTaskaNatios = ["darekzdarma", "darekzdarma2", "darekzdarma3"];
 
 let discountFormInput = "";
 let discountFormHTML = "";
@@ -117,7 +118,7 @@ let containsFreeGift = false;
 if (document.body.classList.contains("in-kosik")) {
 	$(document).on("submit", ".discount-coupon form", function (e) {
 		discountFormInput = $(".discount-coupon input");
-		if (discountFormInput.val().toLowerCase() == kodKuponuDarekTaskaNatios.toLowerCase()) {
+		if (kodyKuponuDarekTaskaNatios.includes(discountFormInput.val().toLowerCase())) {
 			vlozeniKuponuNaDarekZdarma();
 
 			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
@@ -129,6 +130,19 @@ if (document.body.classList.contains("in-kosik")) {
 				}
 			});
 		}
+
+		/*		if (discountFormInput.val().toLowerCase() == kodKuponuDarekTaskaNatios.toLowerCase()) {
+			vlozeniKuponuNaDarekZdarma();
+
+			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
+				getGiftItemID();
+				if (containsFreeGift) {
+					changeDiscountFormContent();
+				} else {
+					changeDiscountFormContentToOriginal();
+				}
+			});
+		}*/
 	});
 
 	document.addEventListener("DOMContentLoaded", function () {
