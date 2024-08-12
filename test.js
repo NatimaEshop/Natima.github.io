@@ -1,7 +1,7 @@
 /*Přidání dárku do košíku zdarma*/
 if (document.body.classList.contains("in-kosik")) {
 	let kodProduktuDarekTaskaNatios = "NAT1229D";
-	let kodyKuponuDarekTaskaNatios = ["taska", "tašta"];
+	let kodyKuponuDarekTaskaNatios = ["taska", "taška"];
 	let discountFormInput = "";
 	let discountFormHTML = "";
 	let itemID = "";
