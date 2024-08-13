@@ -160,6 +160,9 @@
 }
 
 @media (max-width: 767px) {
+	.contact-faq-box {
+		grid-template-columns: 1fr;
+	}
 	.contact-faq-question > p::after {
 		right: -10px;
 	}

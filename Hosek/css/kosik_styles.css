@@ -1796,3 +1796,25 @@ ol.cart-header li.active strong span::before {
 .sk .name-billingId-110 .payment-logo::before {
 	content: url("https://www.natima.cz/user/documents/upload/Doprava a platba/Loga doprava_Google_pay.svg");
 }
+
+/*-------------------------------------------------------------custom slevovy kupon*/
+.free-gift-added .messages {
+	display: none !important;
+}
+
+#removeGift {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translatey(-50%);
+	cursor: pointer;
+	padding: 7px 10px;
+	color: white;
+	background: var(--color-primary);
+	border-radius: var(--border-radius);
+	transition: background 0.2s ease-out;
+}
+#removeGift:hover {
+	background: var(--color-primary-hover);
+}
+/*-------------------------------------------------------KONEC custom slevovy kupon*/
