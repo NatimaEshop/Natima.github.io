@@ -1,0 +1,41 @@
+/*	nové menu*/
+/*
+
+body::before{
+	content:"";
+	background: black;
+	opacity: 0.2;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	top: 0;
+	display: none;
+}
+body.submenu-visible::before{
+	display: block;
+}
+
+#header #navigation .menu-level-2 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	columns: 6!important;
+	max-width: calc(100vw - 4vw);
+	border-style: solid!important;
+	border-top-style: none!important;
+	border-width: 1px!important;
+	left: 2vw;
+}
+.menu-level-3 li {
+	padding: 4px 0!important
+}
+.menu-level-3 li {
+	font-size: 0;
+	line-height: 0;
+}
+.menu-level-3 li a {
+	font-size: 14px;
+	line-height: 1.15;
+}
+
+*/
