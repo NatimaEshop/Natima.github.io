@@ -1559,3 +1559,10 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 		display: block;
 	}
 }
+
+.bio-block {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap);
+	margin-bottom: var(--gap);
+}
