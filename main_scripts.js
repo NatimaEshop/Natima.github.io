@@ -51,6 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 });
 
+/*-----------------------------------------------------------odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
+$(".cs .menu-item-2607").remove();
+$(".cs .menu-item-2612").remove();
+$(".sk .menu-item-2384").remove();
+$(".sk .menu-item-2387").remove();
+/*------------------------------------------------------KONEC odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
+
+/*------------------------------------------------------Menu na mobilu a košík přímo do košíku*/
 document.addEventListener("DOMContentLoaded", function () {
 	/*Vypnutí mezikroku zobrazení košíku na click na mobilu*/
 	$("#header .navigation-buttons .cart-count").on("touchstart", function () {
@@ -90,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 });
+/*------------------------------------------------------KONEC Menu na mobilu a košík přímo do košíku*/
 
 /*for logged in*/
 let containsFavorites = false;
@@ -1081,10 +1090,3 @@ if (document.body.classList.contains("in-kosik")) {
 	}
 }
 /*---------------------------------------------------------------------------------------------------KONEC Přidání dárku do košíku zdarma*/
-
-/*-----------------------------------------------------------odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
-$(".cs .menu-item-2607").remove();
-$(".cs .menu-item-2612").remove();
-$(".sk .menu-item-2384").remove();
-$(".sk .menu-item-2387").remove();
-/*------------------------------------------------------KONEC odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
