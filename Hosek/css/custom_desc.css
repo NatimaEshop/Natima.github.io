@@ -310,6 +310,7 @@
 .custom-desc .col-7-2-1,
 .custom-desc .col-8-1-1,
 .custom-desc .col-25-25-25-25,
+.custom-desc .col-100,
 .compare {
 	display: grid;
 	gap: var(--gap);
@@ -572,6 +573,9 @@
 	grid-template-columns:
 		calc(25% - var(--column-gap) / 4) calc(25% - var(--column-gap) / 4) calc(25% - var(--column-gap) / 4)
 		calc(25% - var(--column-gap) / 4);
+}
+.col-100 {
+	grid-template-columns: 100%;
 }
 
 /*---------------------------------------------------------------------------------------------*/
