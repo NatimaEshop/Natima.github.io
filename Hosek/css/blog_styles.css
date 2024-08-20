@@ -167,7 +167,7 @@
 }
 
 .in-blog.type-post:not(.old-blog) {
-	--maxWidth: 86rem;
+	--maxWidth: 92rem;
 	--contentPad: 1.5rem;
 }
 .in-blog.type-post:not(.old-blog) #content {
