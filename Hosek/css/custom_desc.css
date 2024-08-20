@@ -988,7 +988,8 @@
 		width: 100%;
 		padding: var(--padding-block);
 	}
-	.custom-desc .ikony.col-5-5 {
+	.custom-desc .ikony.col-5-5,
+	.custom-desc .ikony.col-100 {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -998,6 +999,14 @@
 		flex: 1;
 		flex-basis: 160px;
 		max-width: 250px;
+		flex-direction: column;
+		text-align: center;
+		gap: var(--gap);
+	}
+	.custom-desc .ikony.col-100 > div {
+		flex: 1;
+		flex-basis: 160px;
+		max-width: 100%;
 		flex-direction: column;
 		text-align: center;
 		gap: var(--gap);
