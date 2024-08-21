@@ -207,7 +207,8 @@
 	font-size: 2rem;
 }
 .in-blog.type-post:not(.old-blog) #content ul,
-.in-blog.type-post:not(.old-blog) #content ol .custom-desc ol.zdroje {
+.in-blog.type-post:not(.old-blog) #content ol,
+.custom-desc ol.zdroje {
 	margin: 2.4rem 0;
 	font-size: 1.6rem;
 	line-height: 1.8;
@@ -291,7 +292,8 @@
 	}
 
 	.in-blog.type-post:not(.old-blog) #content ul,
-	.in-blog.type-post:not(.old-blog) #content ol {
+	.in-blog.type-post:not(.old-blog) #content ol,
+	.custom-desc ol.zdroje {
 		margin: 4rem 0;
 	}
 	.in-blog.type-post:not(.old-blog) #content ul li {
