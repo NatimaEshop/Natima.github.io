@@ -1071,3 +1071,6 @@
 		grid-template-columns: 1fr;
 	}
 }
+.zdroje li {
+	padding: 0.5em 0;
+}
