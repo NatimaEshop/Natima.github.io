@@ -705,6 +705,9 @@
 	height: clamp(65px, 5.75vw, 110px);
 	padding: clamp(14px, 1.5vw, 28px);
 }
+.custom-desc .ikony.h-3 img.smaller-pad-icon {
+	padding: clamp(10px, 1vw, 18px);
+}
 .custom-desc .ikony.h-3 img.half-pad-icon {
 	padding: clamp(7px, 0.75vw, 14px);
 }
