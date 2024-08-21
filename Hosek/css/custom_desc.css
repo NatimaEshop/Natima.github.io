@@ -1067,6 +1067,7 @@
 	}
 	.aspect-ratio-mob {
 		aspect-ratio: 1/1;
+		max-width: 100%;
 	}
 }
 @media (max-width: 380px) {
