@@ -884,15 +884,16 @@
 
 .custom-desc .ingredients th,
 .custom-desc .ingredients td {
-	border: 1px solid var(--color-gray-700);
-}
-.custom-desc .ingredients th,
-.custom-desc .ingredients td {
 	padding: 1em;
 	text-align: left;
+	border: 1px solid var(--color-gray-700);
+}
+.custom-desc .ingredients td * {
+	display: inline;
+	width: auto;
 }
 .custom-desc .ingredients th *,
-.custom-desc .ingredients td * {
+.custom-desc .ingredients tbody > tr:last-child td * {
 	display: block;
 	width: 100%;
 }
