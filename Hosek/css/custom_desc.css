@@ -1065,6 +1065,9 @@
 	.custom-desc .compare h3 {
 		font-size: 3rem;
 	}
+	.aspect-ratio-mob {
+		aspect-ratio: 1/1;
+	}
 }
 @media (max-width: 380px) {
 	.custom-desc .col-25-25-25-25 {
