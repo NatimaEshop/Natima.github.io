@@ -48,7 +48,6 @@
 .slevovy-kod-popis {
 	width: 500px;
 	text-align: center;
-	margin: auto;
 	max-width: 45vw;
 	border-radius: var(--border-radius);
 	padding: 10px 20px;
