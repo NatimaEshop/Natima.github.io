@@ -108,6 +108,7 @@ h4.homepage-group-title,
 	margin-bottom: 25px !important;
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
+	justify-content: flex-start;
 }
 .homepage-blog-wrapper .homepage-group-title {
 	width: 100% !important;
