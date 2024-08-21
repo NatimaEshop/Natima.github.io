@@ -455,7 +455,7 @@ if (document.body.classList.contains("type-detail")) {
 					$(this).html("více než 3&nbsp;ks");
 				}
 			});
-			if ($(".flag-zpatky-do-skoly").length > 0) {
+			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
 				$(".p-short-description").append(
 					'<div class="slevovy-kod-popis skola-10"><p>Zadejte v košíku slevový kód <b>SKOLA10</b> a využijte 10% slevu na všechny produkty v kategorii <a href="/zpatky-do-skoly/">Zpátky do školy</a>.</p><p>*nelze kombinovat s dalšími slevovými kupóny</p></div>'
 				);
@@ -472,7 +472,7 @@ if (document.body.classList.contains("type-detail")) {
 					$(this).html("viac ako 3&nbsp;ks");
 				}
 			});
-			if ($(".flag-zpatky-do-skoly").length > 0) {
+			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
 				$(".p-short-description").append(
 					'<div class="slevovy-kod-popis skola-10"><p>Zadajte v košíku zľavový kód <b>SKOLA10</b> a využite 10% zľavu na všetky produkty v kategórii <a href="/naspat-do-skoly/">Naspäť do školy</a>.</p><p>*nemožno kombinovať s ďalšími zľavovými kupónmi</p></div>'
 				);
