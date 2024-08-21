@@ -207,23 +207,26 @@
 	font-size: 2rem;
 }
 .in-blog.type-post:not(.old-blog) #content ul,
-.in-blog.type-post:not(.old-blog) #content ol {
+.in-blog.type-post:not(.old-blog) #content ol .custom-desc ol.zdroje {
 	margin: 2.4rem 0;
 	font-size: 1.6rem;
 	line-height: 1.8;
 	list-style-type: none;
 	padding: 0;
 }
-.in-blog.type-post:not(.old-blog) #content ol {
+.in-blog.type-post:not(.old-blog) #content ol,
+.custom-desc ol.zdroje {
 	counter-reset: section;
 }
 .in-blog.type-post:not(.old-blog) #content ul li,
-.in-blog.type-post:not(.old-blog) #content ol li {
+.in-blog.type-post:not(.old-blog) #content ol li,
+.custom-desc ol.zdroje li {
 	position: relative;
 	margin-bottom: 2rem;
 	padding-left: 2rem;
 }
-.in-blog.type-post:not(.old-blog) #content ol li {
+.in-blog.type-post:not(.old-blog) #content ol li,
+.custom-desc ol.zdroje li {
 	padding-left: 4.4rem;
 	counter-increment: section;
 }
@@ -238,7 +241,8 @@
 	border-radius: 50%;
 	background-color: var(--color-black-800);
 }
-.in-blog.type-post:not(.old-blog) #content ol li::before {
+.in-blog.type-post:not(.old-blog) #content ol li::before,
+.custom-desc ol.zdroje li::before {
 	content: counter(section);
 	width: 3.2rem;
 	height: 3.2rem;
@@ -297,10 +301,12 @@
 		left: 2.4rem;
 		transform: translate(-50%, -50%);
 	}
-	.in-blog.type-post:not(.old-blog) #content ol li {
+	.in-blog.type-post:not(.old-blog) #content ol li,
+	.custom-desc ol.zdroje li {
 		padding-left: 5.6rem;
 	}
-	.in-blog.type-post:not(.old-blog) #content ol li::before {
+	.in-blog.type-post:not(.old-blog) #content ol li::before,
+	.custom-desc ol.zdroje li::before {
 		left: 1.2rem;
 	}
 }
