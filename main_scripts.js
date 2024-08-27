@@ -186,7 +186,14 @@ if (document.querySelector(".type-category")) {
 	});
 
 	/*radit dle mobil*/
-	$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
+
+	if (document.body.classList.contains("cs")) {
+		$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
+	}
+	if (document.body.classList.contains("sk")) {
+		$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Radit podľa</span></div>");
+	}
+
 	$(".raditPodle").on("click tap", function () {
 		$(".category-header").toggleClass("active");
 	});
