@@ -79,6 +79,16 @@
 /*-----------------------------------------------------------------------------Konec Slevový kód v popisku*/
 
 /*-----------------------------------------------------------------------------Selekce státu*/
+.in-krok-1.ordering-process .co-basic-information .row {
+	background: none !important;
+	padding: 0 !important;
+}
+.in-krok-1.ordering-process .co-basic-information {
+	margin-bottom: 0 !important;
+}
+.in-krok-1 .cart-content form.order-delivery-payment-form {
+	border-top-style: none;
+}
 .in-krok-1.ordering-process .co-basic-information .col-sm-12 {
 	padding: 0;
 }
