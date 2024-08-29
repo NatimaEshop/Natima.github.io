@@ -1211,20 +1211,63 @@ ol.cart-header li.active strong span::before {
 	}
 	.in-dekujeme .p-name,
 	.in-dakujeme .p-name {
-		padding: 0 5% !important;
-		text-align: center;
+		padding: 0 5% 0.25em 5% !important;
+		text-align: center !important;
 		font-weight: 600;
 		flex-basis: 100% !important;
 	}
 	.in-dekujeme .p-cell,
 	.in-dakujeme .p-cell {
-		flex-basis: 50% !important;
+		flex-basis: 100% !important;
 		margin: 0 !important;
 		padding: 0 !important;
+		text-align: center !important;
+		justify-content: center !important;
+	}
+	.in-dekujeme .p-quantity.p-cell strong,
+	.in-dakujeme .p-quantity.p-cell strong {
+		font-weight: 400 !important;
+	}
+	.in-dekujeme .p-price.p-cell,
+	.in-dakujeme .p-price.p-cell {
+		font-weight: 600 !important;
+	}
+	.in-dekujeme h4,
+	.in-dakujeme h4 {
+		margin-left: -5px;
+		padding-left: 55px;
+		line-height: 1.5;
+	}
+	.in-dekujeme .co-order,
+	.in-dakujeme .co-order {
+		padding: 20px 40px 30px 40px;
+	}
+
+	.in-dekujeme .co-box.co-payment-method .row,
+	.in-dakujeme .co-box.co-payment-method .row {
+		background: var(--color-gray-200);
+		border-radius: calc(var(--border-radius) * 2);
+		margin-left: -10px;
+		margin-right: -10px;
+		width: calc(100% + 20px);
+		padding: var(--gap);
 		text-align: center;
 	}
+	.in-dekujeme .recapitulation-table th,
+	.in-dakujeme .recapitulation-table th {
+		text-align: center !important;
+		margin-top: var(--gap);
+	}
+	.in-dekujeme .co-box.co-order .cart-table,
+	.in-dakujeme .co-box.co-order .cart-table {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	.in-dekujeme .order-complete-links a,
+	.in-dakujeme .order-complete-links a {
+		border-radius: var(--border-radius);
+	}
 }
-
 /*shoptet paz prevod fix*/
 .pisPaymentMethod {
 	position: relative;
