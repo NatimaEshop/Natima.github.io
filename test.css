@@ -87,7 +87,8 @@
 	margin-bottom: 0 !important;
 }
 @media (min-width: 768px) {
-	.in-krok-1.ordering-process .co-basic-information {
+	/*pouze cz protoze na slovensku neni mozne zvolit jiny stat*/
+	.cs.in-krok-1.ordering-process .co-basic-information {
 		padding-top: var(--gap) !important;
 	}
 }
