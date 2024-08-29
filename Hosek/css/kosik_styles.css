@@ -1203,6 +1203,27 @@ ol.cart-header li.active strong span::before {
 	display: flex;
 	justify-content: center;
 }
+@media (max-width: 767px) {
+	.in-dekujeme .recapitulation-wrapper .cart-table .cart-p-image,
+	.in-dakujeme .recapitulation-wrapper .cart-table .cart-p-image {
+		width: 100%;
+		flex-basis: 100%;
+	}
+	.in-dekujeme .p-name,
+	.in-dakujeme .p-name {
+		padding: 0 5% !important;
+		text-align: center;
+		font-weight: 600;
+		flex-basis: 100% !important;
+	}
+	.in-dekujeme .p-cell,
+	.in-dakujeme .p-cell {
+		flex-basis: 50% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		text-align: center;
+	}
+}
 
 /*shoptet paz prevod fix*/
 .pisPaymentMethod {
