@@ -85,9 +85,12 @@
 }
 .in-krok-1.ordering-process .co-basic-information {
 	margin-bottom: 0 !important;
+	padding-top: var(--gap) !important;
 }
+
 .in-krok-1 .cart-content form.order-delivery-payment-form {
 	border-top-style: none;
+	padding-top: var(--gap) !important;
 }
 .in-krok-1.ordering-process .co-basic-information .col-sm-12 {
 	padding: 0;
@@ -105,7 +108,7 @@
 .in-krok-1.ordering-process .co-basic-information .row > div > div > #deliveryCountryId {
 	width: auto;
 	flex: 0;
-	padding: 10px 30px 10px 25px;
+	padding: 10px 30px 10px 35px;
 	margin: 0 !important;
 	border-style: none;
 	background-image: none;
@@ -132,7 +135,7 @@
 	width: 16px;
 	height: 12px;
 	position: absolute;
-	left: 0;
+	left: 10px;
 	top: 47%;
 	transform: translatey(-50%);
 	z-index: 1;
