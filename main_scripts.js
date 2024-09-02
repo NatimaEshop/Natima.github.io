@@ -1051,6 +1051,9 @@ if (document.body.classList.contains("in-kosik")) {
 
 	document.addEventListener("DOMContentLoaded", function () {
 		getGiftItemID();
+		console.log(containsFreeGift);
+		console.log(hodnotaKosiku);
+		console.log(hodnotaKosikuProUplatneni);
 		if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
 			changeDiscountFormContent();
 
