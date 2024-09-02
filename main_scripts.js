@@ -1058,13 +1058,18 @@ if (document.body.classList.contains("in-kosik")) {
 				getGiftItemID();
 				if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
 					changeDiscountFormContent();
+					console.log("1");
+					console.log(hodnotaKosiku);
 				} else if (containsFreeGift) {
 					shoptet.cartShared.removeFromCart({ itemId: itemID });
-					$(".discount-coupon").html(discountFormHTML);
 					containsFreeGift = false;
 					changeDiscountFormContentToOriginal();
+					console.log("2");
+					console.log(hodnotaKosiku);
 				} else {
 					changeDiscountFormContentToOriginal();
+					console.log("3");
+					console.log(hodnotaKosiku);
 				}
 			});
 		}
