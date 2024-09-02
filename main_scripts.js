@@ -1053,7 +1053,7 @@ if (document.body.classList.contains("in-kosik")) {
 			setTimeout(function () {
 				if (document.body.classList.contains("cs")) {
 					$(".msg-error span[data-testid='notifierMessage']").text(
-						"Tento kód je možné uplatnit až od " + hodnotaKosikuProUplatneni + " Kč."
+						"Tento kód je možné uplatnit až od " + hodnotaKosikuProUplatneni + "&nbsp;Kč."
 					);
 				}
 				if (document.body.classList.contains("sk")) {
