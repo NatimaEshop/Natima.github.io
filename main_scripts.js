@@ -1040,8 +1040,12 @@ if (document.body.classList.contains("in-kosik")) {
 
 			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
 				getGiftItemID();
-				if (containsFreeGift) {
+				if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
 					changeDiscountFormContent();
+				} else if (containsFreeGift) {
+					shoptet.cartShared.removeFromCart({ itemId: itemID });
+					containsFreeGift = false;
+					changeDiscountFormContentToOriginal();
 				} else {
 					changeDiscountFormContentToOriginal();
 				}
