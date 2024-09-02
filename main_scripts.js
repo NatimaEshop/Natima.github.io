@@ -1046,6 +1046,22 @@ if (document.body.classList.contains("in-kosik")) {
 					changeDiscountFormContentToOriginal();
 				}
 			});
+		} else if (
+			kodyKuponuDarekTaskaNatios.includes(discountFormInput.val().toLowerCase()) &&
+			hodnotaKosiku < hodnotaKosikuProUplatneni
+		) {
+			setTimeout(function () {
+				if (document.body.classList.contains("cs")) {
+					$(".msg-error span[data-testid='notifierMessage']").text(
+						"Tento kód je možné uplatnit až od " + hodnotaKosikuProUplatneni + " Kč."
+					);
+				}
+				if (document.body.classList.contains("sk")) {
+					$(".msg-error span[data-testid='notifierMessage']").text(
+						"Tento kód je možné uplatniť až od " + hodnotaKosikuProUplatneni + " €."
+					);
+				}
+			}, 200);
 		}
 	});
 
