@@ -1051,9 +1051,7 @@ if (document.body.classList.contains("in-kosik")) {
 
 	document.addEventListener("DOMContentLoaded", function () {
 		getGiftItemID();
-		console.log(containsFreeGift);
-		console.log(hodnotaKosiku);
-		console.log(hodnotaKosikuProUplatneni);
+
 		if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
 			changeDiscountFormContent();
 
@@ -1061,20 +1059,18 @@ if (document.body.classList.contains("in-kosik")) {
 				getGiftItemID();
 				if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
 					changeDiscountFormContent();
-					console.log("1");
-					console.log(hodnotaKosiku);
 				} else if (containsFreeGift) {
 					shoptet.cartShared.removeFromCart({ itemId: itemID });
 					containsFreeGift = false;
 					changeDiscountFormContentToOriginal();
-					console.log("2");
-					console.log(hodnotaKosiku);
 				} else {
 					changeDiscountFormContentToOriginal();
-					console.log("3");
-					console.log(hodnotaKosiku);
 				}
 			});
+		} else if (containsFreeGift) {
+			shoptet.cartShared.removeFromCart({ itemId: itemID });
+			containsFreeGift = false;
+			changeDiscountFormContentToOriginal();
 		}
 	});
 
