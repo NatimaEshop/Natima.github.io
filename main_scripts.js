@@ -1057,12 +1057,12 @@ if (document.body.classList.contains("in-kosik")) {
 			setTimeout(function () {
 				if (document.body.classList.contains("cs")) {
 					$(".msg-error span[data-testid='notifierMessage']").text(
-						"Tento kód je možné uplatnit až od " + hodnotaKosikuProUplatneni + "&nbsp;Kč."
+						"Tento kód je možné pouze při objednávce nad " + hodnotaKosikuProUplatneni + "&nbsp;Kč."
 					);
 				}
 				if (document.body.classList.contains("sk")) {
 					$(".msg-error span[data-testid='notifierMessage']").text(
-						"Tento kód je možné uplatniť až od " + hodnotaKosikuProUplatneni + " €."
+						"Tento kód je možné iba pri objednávke nad " + hodnotaKosikuProUplatneni + " €."
 					);
 				}
 			}, 200);
