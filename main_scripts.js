@@ -1024,9 +1024,18 @@ if (document.body.classList.contains("in-kosik")) {
 	let discountFormHTML = "";
 	let itemID = "";
 	let containsFreeGift = false;
+	let hodnotaKosiku = 0;
+	let hodnotaKosikuProUplatneni = 1000;
+	if (document.body.classList.contains("sk")) {
+		hodnotaKosikuProUplatneni = 40;
+	}
 	$(document).on("submit", ".discount-coupon form", function (e) {
+		hodnotaKosiku = dataLayer[0].shoptet.cartInfo.getNoBillingShippingPrice.withVat;
 		discountFormInput = $(".discount-coupon input");
-		if (kodyKuponuDarekTaskaNatios.includes(discountFormInput.val().toLowerCase())) {
+		if (
+			kodyKuponuDarekTaskaNatios.includes(discountFormInput.val().toLowerCase()) &&
+			hodnotaKosiku >= hodnotaKosikuProUplatneni
+		) {
 			vlozeniKuponuNaDarekZdarma();
 
 			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
@@ -1042,12 +1051,12 @@ if (document.body.classList.contains("in-kosik")) {
 
 	document.addEventListener("DOMContentLoaded", function () {
 		getGiftItemID();
-		if (containsFreeGift) {
+		if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
 			changeDiscountFormContent();
 
 			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
 				getGiftItemID();
-				if (containsFreeGift) {
+				if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
 					changeDiscountFormContent();
 				} else {
 					changeDiscountFormContentToOriginal();
@@ -1096,6 +1105,7 @@ if (document.body.classList.contains("in-kosik")) {
 	}
 
 	function getGiftItemID() {
+		hodnotaKosiku = dataLayer[0].shoptet.cartInfo.getNoBillingShippingPrice.withVat;
 		containsFreeGift = false;
 		let cartItems = dataLayer[0].shoptet.cartInfo.cartItems;
 		for (let item of cartItems) {
