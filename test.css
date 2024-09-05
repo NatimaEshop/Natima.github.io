@@ -260,12 +260,7 @@
 }
 /*-----------------------------------------------------------------------------KONEC Blog Page*/
 
-/*Blog pocet precteni a cas čtení*/
-
-#applypark_addon03_articleReadStats {
-	display: none !important;
-}
-
+/* --doba cteni až nebude pobo
 .news-item .text .description img,
 .news-item .description img,
 .news-item .text .description table,
@@ -303,6 +298,12 @@
 .news-item .text .description .rc-image-left,
 .news-item .description .rc-image-left {
 	display: none;
+}
+*/
+
+/*Blog pocet precteni a cas čtení*/
+#applypark_addon03_articleReadStats {
+	display: none !important;
 }
 
 .blog-read {
