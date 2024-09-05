@@ -73,7 +73,7 @@ if (document.body.classList.contains("type-posts-listing")) {
 		getViewCountCustom();
 	});
 }
-
+/*
 if (document.body.classList.contains("type-posts-listing")) {
 	!(function (a, b, c) {
 		var d = a("html").attr("lang"),
@@ -160,3 +160,4 @@ if (document.body.classList.contains("type-posts-listing")) {
 		}
 	})(window.jQuery, window, document);
 }
+*/
