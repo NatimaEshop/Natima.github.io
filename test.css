@@ -261,9 +261,50 @@
 /*-----------------------------------------------------------------------------KONEC Blog Page*/
 
 /*Blog pocet precteni a cas čtení*/
+
 #applypark_addon03_articleReadStats {
 	display: none !important;
 }
+
+.news-item .text .description img,
+.news-item .description img,
+.news-item .text .description table,
+.news-item .description table,
+.news-item .text .description ul,
+.news-item .description ul,
+.news-item .text .description li,
+.news-item .description li,
+.news-item .text .description ol,
+.news-item .description ol,
+.news-item .text .description h1,
+.news-item .description h1,
+.news-item .text .description h2,
+.news-item .description h2,
+.news-item .text .description h3,
+.news-item .description h3,
+.news-item .text .description h4,
+.news-item .description h4,
+.news-item .text .description h5,
+.news-item .description h5,
+.news-item .text .description h6,
+.news-item .description h6,
+.news-item .text .description hr,
+.news-item .description hr,
+.news-item .text .description blockquote,
+.news-item .description blockquote,
+.news-item .text .description figure,
+.news-item .description figure,
+.news-item .text .description .rc-image-half-right,
+.news-item .description .rc-image-half-right,
+.news-item .text .description .rc-image-half-left,
+.news-item .description .rc-image-half-left,
+.news-item .text .description .rc-image-right,
+.news-item .description .rc-image-right,
+.news-item .text .description .rc-image-left,
+.news-item .description .rc-image-left {
+	display: none;
+}
+
 .blog-read {
 	display: inline-block;
 	margin-left: 10px;
