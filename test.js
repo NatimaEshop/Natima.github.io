@@ -52,7 +52,7 @@ if (document.body.classList.contains("type-posts-listing")) {
 		var delayChanged = false;
 
 		if (data.response == 200) {
-			newsItem.find("description").before('<div class="blog_read"><span>' + data.publicStats + "</span></div>");
+			newsItem.find(".description").before('<div class="blog_read"><span>' + data.publicStats + "</span></div>");
 		}
 		if (data.response == 404) {
 			setTimeout(getViewCountCustom, delayChanged ? updatedDelay : initialDelay);
