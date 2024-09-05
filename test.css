@@ -256,3 +256,15 @@
 	color: var(--color-black-200);
 }
 /*-----------------------------------------------------------------------------KONEC Blog Page*/
+
+/*Blog pocet precteni a cas čtení*/
+#applypark_addon03_articleReadStats {
+	display: none !important;
+}
+.blog-read {
+	display: inline-block;
+	margin-left: 10px;
+}
+.blog-read::before {
+	content: "Počet přečtení: ";
+}
