@@ -255,7 +255,6 @@
 .in-blog.type-posts-listing .news-item time,
 .news-item-detail time {
 	margin-bottom: calc(var(--gap) - 2px);
-	padding-top: 1px;
 	color: var(--color-black-200);
 }
 /*-----------------------------------------------------------------------------KONEC Blog Page*/
@@ -300,6 +299,46 @@
 	display: none;
 }
 */
+
+.cs .news-info {
+	display: flex;
+	font-size: 5px;
+	line-height: 1em;
+	font-weight: 400;
+	font-size: 14px;
+	margin-bottom: 8px;
+	color: var(--color-black-800);
+	gap: var(--gap);
+	opacity: 0.7;
+}
+.cs .news-info > *::after {
+	content: "";
+}
+.cs .news-info > *:last-child()::after {
+	display: none !important;
+}
+.cs .blog-read {
+	display: flex;
+	align-items: flex-end;
+	gap: 0.3em;
+}
+.cs .blog-read::before {
+	content: "";
+	width: 1.3em;
+	height: 100%;
+	background: url("https://www.natima.cz/user/documents/upload/Blog/read_number.svg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: -1px;
+}
+.cs .news-info * {
+	color: inherit !important;
+	font-size: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+	margin: 0 !important;
+}
 
 /*Blog pocet precteni a cas čtení*/
 #applypark_addon03_articleReadStats {
