@@ -73,3 +73,56 @@ if (document.body.classList.contains("type-posts-listing")) {
 		getViewCountCustom();
 	});
 }
+
+/* 
+!function(a, b, c) {
+    var d = a("html").attr("lang")
+      , e = "";
+    if ("cs" === d && (e = "čtení"),
+    "en" === d && (e = "reading"),
+    "de" === d && (e = "lesen"),
+    "sk" === d && (e = "čítanie"),
+    "hu" === d && (e = "olvasás"),
+    "ru" === d && (e = "чтения"),
+    "vi" === d && (e = "đọc"),
+    "pl" === d && (e = "czytania"),
+    a(b).load(function() {
+        var b = function() {
+            a(".news-item").length && a(".news-item").each(function() {
+                var b = a(this)
+                  , c = a(this).find(".description").text()
+                  , d = c.replace(/[^\w ]/g, "").split(/\s+/).length
+                  , f = Math.floor(d / 200) + 1
+                  , g = f + " min";
+                if (b.find(".reading-time").length || (b.find("time").length ? a('<div class="reading-time"><img src="https://cdn.myshoptet.com/usr/shoptet.tomashlad.eu/user/documents/extras/reading-time/img/clock.svg?v3" />' + g + " " + e + "</div>").insertAfter(b.find("time")) : a('<div class="reading-time"><img src="https://cdn.myshoptet.com/usr/shoptet.tomashlad.eu/user/documents/extras/reading-time/img/clock.svg?v3" />' + g + " " + e + "</div>").insertAfter(b.find(".title"))),
+                b.find("#pobo-all-content").length) {
+                    var h = b.find("#pobo-all-content").text()
+                      , i = h.replace(/\n/g, "");
+                    b.find(".description").html("<p>" + i + "</p>")
+                }
+                if (b.find(".rc-image-right").length) {
+                    var j = b.find(".description").text()
+                      , k = j.replace(/\n/g, "");
+                    b.find(".description").html("<p>" + k + "</p>")
+                }
+                if (b.find(".rc-image-half-right").length) {
+                    var l = b.find(".description").text()
+                      , m = l.replace(/\n/g, "");
+                    b.find(".description").html("<p>" + m + "</p>")
+                }
+            })
+        };
+        b(),
+        c.addEventListener("ShoptetDOMContentLoaded", function() {
+            b()
+        })
+    }),
+    a(".type-post").length) {
+        var f = a(".news-item-detail .text").text()
+          , g = f.replace(/[^\w ]/g, "").split(/\s+/).length
+          , h = Math.floor(g / 200) + 1
+          , i = h + " min";
+        a(".type-post").find("time").length ? a('<div class="reading-time"><img src="https://cdn.myshoptet.com/usr/shoptet.tomashlad.eu/user/documents/extras/reading-time/img/clock.svg?v3" />' + i + " " + e + "</div>").insertAfter(a("time")) : a('<div class="reading-time"><img src="https://cdn.myshoptet.com/usr/shoptet.tomashlad.eu/user/documents/extras/reading-time/img/clock.svg?v3" />' + i + " " + e + "</div>").insertAfter(a('h1[itemprop="headline"]'))
+    }
+}(window.jQuery, window, document);
+*/
