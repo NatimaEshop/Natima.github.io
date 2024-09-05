@@ -9,11 +9,7 @@
 .in-blog .news-item .title {
 	font-weight: 500;
 }
-@media (min-width: 768px) {
-	.in-blog .news-item .title {
-		min-height: 2.65em;
-	}
-}
+
 .in-blog #newsWrapper {
 	margin-top: 30px;
 }
