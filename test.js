@@ -65,4 +65,7 @@ if (document.body.classList.contains("type-posts-listing")) {
 	}
 
 	getViewCountCustom();
+	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
+		getViewCountCustom();
+	});
 }
