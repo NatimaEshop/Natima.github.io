@@ -358,11 +358,3 @@
 #applypark_addon03_articleReadStats {
 	display: none !important;
 }
-
-.blog-read {
-	display: inline-block;
-	margin-left: 10px;
-}
-.blog-read::before {
-	content: "Počet přečtení: ";
-}
