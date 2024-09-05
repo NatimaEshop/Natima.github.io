@@ -12,6 +12,9 @@
 */
 
 if (document.body.classList.contains("type-posts-listing")) {
+	//every <time> wrap in div with class news-info
+	$("time").wrap("<div class='news-info'></div>");
+
 	function isAdminCheckCustom() {
 		if (getShoptetDataLayer("traffic_type") === "internal") {
 			return false;
@@ -52,7 +55,7 @@ if (document.body.classList.contains("type-posts-listing")) {
 		var delayChanged = false;
 
 		if (data.response == 200) {
-			newsItem.find(".description").before('<div class="blog-read"><span>' + data.publicStats + "</span></div>");
+			newsItem.find(".news-info").append('<div class="blog-read"><span>' + data.publicStats + "</span></div>");
 		}
 		if (data.response == 404) {
 			setTimeout(getViewCountCustom, delayChanged ? updatedDelay : initialDelay);
@@ -66,6 +69,7 @@ if (document.body.classList.contains("type-posts-listing")) {
 
 	getViewCountCustom();
 	document.addEventListener("ShoptetDOMPageContentLoaded", function () {
+		$("time").wrap("<div class='news-info'></div>");
 		getViewCountCustom();
 	});
 }
