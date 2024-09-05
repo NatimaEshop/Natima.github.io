@@ -833,16 +833,6 @@ if (document.querySelector("body.in-krok-1")) {
 		$(this).on("mousedown", function () {
 			checkedPayment = true;
 		});
-		/*
-		$(this).on("click", function () {
-			$("html, body").animate(
-				{
-					scrollTop: $("#checkoutSidebar").offset().top,
-				},
-				300
-			);
-		});
-		*/
 	});
 
 	/*srolování metod po výberu*/
@@ -926,6 +916,17 @@ if (document.querySelector("body.in-krok-1")) {
 		});
 	});
 	/*konec srolování*/
+
+	/*Dorucujeme také na slovensko*/
+	if (document.body.classList.contains("cs")) {
+		if ($('option[value="151"][selected="selected"]').length) {
+			$("body").addClass("hiddenCartOptions");
+			let appendElement = $(
+				"<div class='also-deliver-country'><p>Doručujeme také na Slovensko. Je ovšem potřeba nakoupit na natima.sk. <a href='https://www.natima.sk'>Přejít na natima.sk</a></p></div>"
+			);
+			appendElement.insertAfter("#select-country-payment");
+		}
+	}
 }
 function removeDelivery() {
 	$(".co-delivery-method input").prop("checked", false);
