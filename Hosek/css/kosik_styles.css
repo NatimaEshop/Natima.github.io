@@ -1882,3 +1882,125 @@ ol.cart-header li.active strong span::before {
 	background: var(--color-primary-hover);
 }
 /*-------------------------------------------------------KONEC custom slevovy kupon*/
+
+/*-----------------------------------------------------------------------------Selekce státu*/
+.in-krok-1.ordering-process .co-basic-information .row {
+	background: none !important;
+	padding: 0 !important;
+}
+.in-krok-1.ordering-process .co-basic-information {
+	margin-bottom: 0 !important;
+}
+@media (min-width: 768px) {
+	/*pouze cz protoze na slovensku neni mozne zvolit jiny stat*/
+	.cs.in-krok-1.ordering-process .co-basic-information {
+		padding-top: var(--gap) !important;
+	}
+}
+
+.in-krok-1 .cart-content form.order-delivery-payment-form {
+	border-top-style: none;
+	padding-top: var(--gap) !important;
+}
+.in-krok-1.ordering-process .co-basic-information .col-sm-12 {
+	padding: 0;
+}
+
+.in-krok-1.ordering-process .co-basic-information .row > div > div {
+	width: max-content;
+	margin-left: auto;
+	justify-content: flex-end;
+	min-width: 0;
+}
+.in-krok-1.ordering-process .co-basic-information .row > div > div > label {
+	display: none;
+}
+.in-krok-1.ordering-process .co-basic-information .row > div > div > #deliveryCountryId {
+	width: auto;
+	flex: 0;
+	padding: 10px 30px 10px 35px;
+	margin: 0 !important;
+	border-style: none;
+	background-image: none;
+	height: auto;
+	position: relative;
+	cursor: pointer;
+}
+.in-krok-1.ordering-process .co-basic-information .row > div > div::after {
+	display: block;
+	content: "\e910";
+	font-size: 10px;
+	font-weight: 400;
+	position: absolute;
+	right: 10px;
+	font-family: shoptet;
+	transform: rotate(90deg);
+	pointer-events: none;
+}
+.in-krok-1.ordering-process .co-basic-information .row > div > div::before {
+	display: block;
+	content: "";
+	background-repeat: no-repeat;
+	pointer-events: none;
+	width: 16px;
+	height: 12px;
+	position: absolute;
+	left: 10px;
+	top: 47%;
+	transform: translatey(-50%);
+	z-index: 1;
+}
+.cs.in-krok-1.ordering-process .co-basic-information .row > div > div:has(option[value="43"]:checked)::before {
+	background-image: url("https://www.natima.cz/user/documents/upload/flag_cz.svg");
+}
+.cs.in-krok-1.ordering-process .co-basic-information .row > div > div:has(option[value="151"]:checked)::before {
+	background-image: url("https://www.natima.cz/user/documents/upload/flag_sk.svg");
+}
+.hiddenCartOptions #order-form,
+.hiddenCartOptions #checkoutSidebar {
+	display: none;
+}
+.also-deliver-country {
+	background: var(--color-red-400);
+	font-size: 18px;
+	color: white;
+	padding: 2em 1em;
+	border-radius: var(--border-radius);
+	position: relative;
+}
+.also-deliver-country p {
+	margin: 0;
+	position: relative;
+	padding-left: 1.75em;
+}
+.also-deliver-country p::before {
+	content: "i";
+	width: 1em;
+	text-align: center;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+}
+.also-deliver-country p::after {
+	content: "";
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 50%;
+	width: 1.2em;
+	height: 1.2em;
+	text-align: center;
+	margin-bottom: 5px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-10%, 2%);
+}
+
+.also-deliver-country a {
+	font-weight: 600;
+	color: white;
+	text-decoration: underline;
+}
+/*-----------------------------------------------------------------------------Konec Selekce státu*/

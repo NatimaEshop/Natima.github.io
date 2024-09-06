@@ -1566,3 +1566,37 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	gap: var(--gap);
 	margin-bottom: var(--gap);
 }
+
+/*-----------------------------------------------------------------------------Slevový kód v popisku*/
+.slevovy-kod-popis {
+	width: 500px;
+	text-align: center;
+	max-width: 45vw;
+	border-radius: var(--border-radius);
+	padding: 10px 20px;
+	margin-bottom: calc(var(--gap) * 2);
+}
+.slevovy-kod-popis p {
+	margin: 8px 0;
+}
+.slevovy-kod-popis > p:last-child {
+	font-size: 0.75em;
+}
+.slevovy-kod-popis a {
+	text-decoration: underline;
+}
+@media (max-width: 768px) {
+	.slevovy-kod-popis {
+		width: 100%;
+		max-width: 100%;
+		text-align: left;
+	}
+}
+.slevovy-kod-popis.skola-10 {
+	background: #c11332;
+	color: white;
+}
+.slevovy-kod-popis.skola-10 a {
+	color: white;
+}
+/*-----------------------------------------------------------------------------Konec Slevový kód v popisku*/

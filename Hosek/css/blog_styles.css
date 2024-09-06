@@ -599,3 +599,121 @@
 	margin-top: 2.4rem;
 	margin-bottom: 1.6rem;
 }
+
+/*-----------------------------------------------------------------------------Blog Page*/
+.in-blog.type-posts-listing .title {
+	color: var(--color-black-800);
+}
+
+.in-blog.type-posts-listing #newsWrapper.news-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: calc(var(--gap) * 2);
+	row-gap: calc(var(--gap) * 4);
+	padding: 0;
+}
+.in-blog.type-posts-listing .description {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+}
+
+@media (max-width: 1199px) {
+	.in-blog.type-posts-listing #newsWrapper.news-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 767px) {
+	.in-blog.type-posts-listing #newsWrapper.news-wrapper {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.in-blog.type-posts-listing .description {
+		-webkit-line-clamp: 3;
+	}
+}
+
+.in-blog.type-posts-listing .news-item {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+	margin-bottom: 0 !important;
+}
+
+.in-blog.type-posts-listing #content-wrapper.container.content-wrapper {
+	max-width: 1440px;
+}
+
+.in-blog.type-posts-listing .content.wide {
+	max-width: 100%;
+}
+
+.in-blog.type-posts-listing .image {
+	width: auto !important;
+	margin: 0 !important;
+}
+.in-blog.type-posts-listing .news-item time,
+.news-item-detail time {
+	margin-bottom: calc(var(--gap) - 2px);
+	color: var(--color-black-200);
+}
+.news-info > *:last-child::after {
+	display: none !important;
+}
+
+.news-info {
+	display: flex;
+	font-size: 5px;
+	line-height: 1em;
+	font-weight: 400;
+	font-size: 14px;
+	margin-bottom: 8px;
+	color: var(--color-black-800);
+	gap: calc(var(--gap) * 1.5);
+	opacity: 0.7;
+}
+.news-info > * {
+	position: relative;
+}
+
+.news-info > *::after {
+	content: "";
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	background: var(--color-black-800);
+	opacity: 0.7;
+	right: calc(var(--gap) / -1.25);
+}
+.news-info > *:last-child()::after {
+	display: none !important;
+}
+.blog-read {
+	display: flex;
+	align-items: flex-end;
+	gap: 0.3em;
+}
+.blog-read::before {
+	content: "";
+	width: 1.3em;
+	height: 100%;
+	background: url("https://www.natima.cz/user/documents/upload/Blog/read_number.svg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: -1px;
+}
+.news-info * {
+	color: inherit !important;
+	font-size: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+	margin: 0 !important;
+}
+
+/*Blog pocet precteni a cas čtení*/
+#applypark_addon03_articleReadStats {
+	display: none !important;
+}
+
+/*-----------------------------------------------------------------------------KONEC Blog Page*/
