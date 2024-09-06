@@ -38,6 +38,17 @@ if (document.body.classList.contains("type-category") || document.body.classList
 		{ once: true }
 	);
 }
+
+if (document.body.classList.contains("in-vyhledavani")) {
+	document.addEventListener(
+		"resizeEnd",
+		function () {
+			loadNextPageOfProducts();
+		},
+		{ once: true }
+	);
+}
+
 document.addEventListener(
 	"ShoptetDOMSearchResultsLoaded",
 	function () {
