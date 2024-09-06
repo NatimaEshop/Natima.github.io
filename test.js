@@ -8,7 +8,7 @@ function loadNextPageOfProducts() {
 
 	if (loadProducts) {
 		const observer = new IntersectionObserver(
-			(entries) => {
+			(entries, observer) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						const viewportHeight = window.innerHeight;
@@ -16,6 +16,7 @@ function loadNextPageOfProducts() {
 
 						if (elementTop > (viewportHeight * 2) / 3) {
 							loadProducts.click();
+							observer.unobserve(loadProducts); // Unobserve after the click event
 						}
 					}
 				});
@@ -29,7 +30,7 @@ function loadNextPageOfProducts() {
 	}
 }
 
-if (document.body.classList.contains("type-category") || document.body.classList.contains("in-vyhledavani")) {
+if (document.body.classList.contains("type-category")) {
 	document.addEventListener(
 		"DOMContentLoaded",
 		function () {
