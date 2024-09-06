@@ -9,8 +9,8 @@ function loadNextPageOfProducts() {
 	if (loadProducts) {
 		const observerOptions = {
 			root: null, // Use the viewport as the root
-			rootMargin: "0px",
-			threshold: 0.5, // Trigger when 50% of the element is visible
+			rootMargin: "-50% 0px", // Adjust the margin to trigger when the element is in the middle of the screen
+			threshold: 0, // Trigger as soon as any part of the element is visible within the rootMargin
 		};
 
 		const observerCallback = (entries, observer) => {
