@@ -11,13 +11,18 @@ function loadNextPageOfProducts() {
 			(entries, observer) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						loadProducts.click();
-						observer.unobserve(loadProducts); // Unobserve after the click event
+						const viewportHeight = window.innerHeight;
+						const elementTop = entry.boundingClientRect.top;
+
+						if (elementTop > viewportHeight / 2 && elementTop < viewportHeight / 2 + entry.boundingClientRect.height) {
+							loadProducts.click();
+							observer.unobserve(loadProducts); // Unobserve after the click event
+						}
 					}
 				});
 			},
 			{
-				threshold: 0.5,
+				threshold: 0.1,
 			}
 		);
 
