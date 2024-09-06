@@ -1,10 +1,6 @@
 if (document.body.classList.contains("type-category")) {
 	document.addEventListener("DOMContentLoaded", function () {
 		loadNextPageOfProducts();
-
-		document.addEventListener("ShoptetDOMContentLoaded", function () {
-			loadNextPageOfProducts();
-		});
 	});
 
 	function loadNextPageOfProducts() {
