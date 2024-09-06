@@ -707,7 +707,7 @@ if (document.body.classList.contains("ordering-process")) {
 		window.history.back();
 	});
 }
-/*krok 1 kosik*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------krok 1 kosik*/
 if (document.querySelector("body.in-kosik")) {
 	rearangeSummary();
 	function rearangeSummary() {
@@ -1066,7 +1066,7 @@ if (document.body.classList.contains("in-kosik")) {
 						"Tento kód je možné iba pri objednávke nad " + hodnotaKosikuProUplatneni + " €."
 					);
 				}
-			}, 200);
+			}, 300);
 		}
 	});
 
