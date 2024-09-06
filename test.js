@@ -14,7 +14,7 @@ function loadNextPageOfProducts() {
 						const viewportHeight = window.innerHeight;
 						const elementTop = entry.boundingClientRect.top;
 
-						if (elementTop > viewportHeight / 2 && elementTop < viewportHeight / 2 + entry.boundingClientRect.height) {
+						if (elementTop > viewportHeight / 3) {
 							loadProducts.click();
 							observer.unobserve(loadProducts); // Unobserve after the click event
 						}
