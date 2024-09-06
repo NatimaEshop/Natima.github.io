@@ -39,8 +39,8 @@ if (document.body.classList.contains("type-category")) {
 		{ once: true }
 	);
 }
-
-if (document.body.classList.contains("in-vyhledavani")) {
+/*cz a sk varianta*/
+if (document.body.classList.contains("in-vyhledavani") || document.body.classList.contains("in-vyhledavanie")) {
 	document.addEventListener(
 		"resizeEnd",
 		function () {
