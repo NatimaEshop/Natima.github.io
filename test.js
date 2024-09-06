@@ -29,14 +29,22 @@ function loadNextPageOfProducts() {
 	}
 }
 
-if (document.body.classList.contains("type-category")) {
-	document.addEventListener("DOMContentLoaded", function () {
-		loadNextPageOfProducts();
-	});
+if (document.body.classList.contains("type-category") || document.body.classList.contains("in-vyhledavani")) {
+	document.addEventListener(
+		"DOMContentLoaded",
+		function () {
+			loadNextPageOfProducts();
+		},
+		{ once: true }
+	);
 }
-document.addEventListener("ShoptetDOMSearchResultsLoaded", function () {
-	loadNextPageOfProducts();
-});
+document.addEventListener(
+	"ShoptetDOMSearchResultsLoaded",
+	function () {
+		loadNextPageOfProducts();
+	},
+	{ once: true }
+);
 
 /*
 if (document.body.classList.contains("type-posts-listing")) {
