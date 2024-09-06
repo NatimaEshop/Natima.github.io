@@ -1,3 +1,39 @@
+if (document.body.classList.contains("type-category")) {
+	document.addEventListener("DOMContentLoaded", function () {
+		loadNextPageOfProducts();
+
+		document.addEventListener("ShoptetDOMContentLoaded", function () {
+			loadNextPageOfProducts();
+		});
+	});
+
+	function loadNextPageOfProducts() {
+		const loadProducts = document.querySelector(".load-products");
+
+		if (loadProducts) {
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							const viewportHeight = window.innerHeight;
+							const elementTop = entry.boundingClientRect.top;
+
+							if (elementTop > (viewportHeight * 2) / 3) {
+								loadProducts.click();
+							}
+						}
+					});
+				},
+				{
+					threshold: 0.1,
+				}
+			);
+
+			observer.observe(loadProducts);
+		}
+	}
+}
+
 /*
 if (document.body.classList.contains("type-posts-listing")) {
 	!(function (a, b, c) {
