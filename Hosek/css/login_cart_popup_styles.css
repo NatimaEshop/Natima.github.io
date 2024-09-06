@@ -6,7 +6,7 @@
 .user-action-login.popup-widget {
 	position: fixed;
 	top: calc(var(--header-height) + 0px) !important;
-	right: 190px !important;
+	right: 120px !important;
 	left: auto;
 }
 
@@ -54,7 +54,7 @@
 	width: clamp(400px, 30vw, 700px);
 	position: fixed;
 	top: calc(var(--header-height) + -20px) !important;
-	right: 80px;
+	right: 10px;
 	left: auto;
 	border-style: none;
 	border-radius: var(--border-radius);
