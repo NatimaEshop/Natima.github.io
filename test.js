@@ -9,20 +9,24 @@ function loadNextPageOfProducts() {
 	if (loadProducts) {
 		const observer = new IntersectionObserver(
 			(entries, observer) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						const viewportHeight = window.innerHeight;
-						const elementTop = entry.boundingClientRect.top;
+				const entry = entries[0];
+				if (entry.isIntersecting) {
+					const viewportHeight = window.innerHeight;
+					const elementTop = entry.boundingClientRect.top;
+					const elementBottom = entry.boundingClientRect.bottom;
 
-						if (elementTop > viewportHeight / 3) {
-							loadProducts.click();
-							observer.unobserve(loadProducts); // Unobserve after the click event
-						}
+					// Check if the element is fully in the middle of the viewport
+					if (
+						elementTop >= viewportHeight / 2 &&
+						elementBottom <= viewportHeight / 2 + entry.boundingClientRect.height
+					) {
+						loadProducts.click();
+						observer.unobserve(loadProducts); // Unobserve after the click event
 					}
-				});
+				}
 			},
 			{
-				threshold: 0.1,
+				threshold: 0.5, // Adjust threshold to ensure the element is more than halfway visible
 			}
 		);
 
