@@ -74,7 +74,7 @@
 	top: -5px;
 	left: 0;
 	transform: translatey(-100%);
-	background: red;
+	background: var(--color-red-400);
 	color: white;
 	border-radius: var(--border-radius);
 	padding: 0.5em 1em;
