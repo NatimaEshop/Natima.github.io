@@ -1,3 +1,4 @@
+/*-----------------------------------------------------------------------Automatické načtení 2. stránku produktů při scrollingu*/
 function loadNextPageOfProducts() {
 	let loadProducts;
 	loadProducts = document.querySelector(".load-products");
@@ -8,16 +9,16 @@ function loadNextPageOfProducts() {
 
 	if (loadProducts) {
 		const observerOptions = {
-			root: null, // Use the viewport as the root
-			rootMargin: "-50% 0px", // Adjust the margin to trigger when the element is in the middle of the screen
-			threshold: 0, // Trigger as soon as any part of the element is visible within the rootMargin
+			root: null,
+			rootMargin: "-50% 0px",
+			threshold: 0,
 		};
 
 		const observerCallback = (entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					loadProducts.click();
-					observer.unobserve(loadProducts); // Stop observing after the click
+					observer.unobserve(loadProducts);
 				}
 			});
 		};
@@ -54,6 +55,7 @@ document.addEventListener(
 	},
 	{ once: true }
 );
+/*-----------------------------------------------------------------------KONEC Automatické načtení 2. stránku produktů při scrollingu*/
 
 /*
 if (document.body.classList.contains("type-posts-listing")) {

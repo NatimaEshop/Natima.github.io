@@ -57,3 +57,44 @@
 .lb-btn.lb-pagination__btn:hover {
 	background: var(--color-primary-hover) !important;
 }
+
+/*-----------------------------------------------------------------------Objednavka telefonni cislo pouze s danou předvolbou*/
+#checkoutContent .phone-combined-input {
+	position: relative;
+}
+#checkoutContent .country-flags {
+	cursor: help;
+	border-style: none !important;
+	box-shadow: none !important;
+	position: initial;
+}
+#checkoutContent .country-flags::before {
+	content: "Při doručování zásilky dopravci vyžadují telefonní číslo s českou předvolbou.";
+	position: absolute;
+	top: -5px;
+	left: 0;
+	transform: translatey(-100%);
+	background: red;
+	color: white;
+	border-radius: var(--border-radius);
+	padding: 0.5em 1em;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.2s ease-out;
+}
+.sk #checkoutContent .country-flags::before {
+	content: "Pri doručovaní zásielky dopravcovia vyžadujú telefónne číslo so slovenskou predvoľbou.";
+}
+#checkoutContent .country-flags:hover::before {
+	opacity: 1;
+}
+#checkoutContent .country-flags-inner {
+	pointer-events: none !important;
+}
+#checkoutContent .shp-flag-label::before {
+	display: none;
+}
+#checkoutContent .shp-flag-label {
+	padding-left: 8px;
+}
+/*----------------------------------------------------------------------- KONEC Objednavka telefonni cislo pouze s danou předvolbou*/
