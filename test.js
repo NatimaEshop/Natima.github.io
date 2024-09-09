@@ -28,7 +28,7 @@ function loadNextPageOfProducts() {
 	}
 }
 
-if (document.body.classList.contains("type-category")) {
+if (document.body.classList.contains("type-category") || document.body.classList.contains("type-manufacturer-detail")) {
 	document.addEventListener(
 		"DOMContentLoaded",
 		function () {
