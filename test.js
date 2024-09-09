@@ -10,13 +10,13 @@ function loadNextPageOfProducts() {
 	if (loadProducts) {
 		const observerOptions = {
 			root: null,
-			rootMargin: "-50% 0px",
+			rootMargin: "-40% 0px",
 			threshold: 0,
 		};
 
 		const observerCallback = (entries, observer) => {
 			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
+				if (entry.isIntersecting || entry.boundingClientRect.top <= 0) {
 					loadProducts.click();
 					observer.unobserve(loadProducts);
 				}

@@ -287,3 +287,24 @@
 		margin: auto !important;
 	}
 }
+
+/*------------------------------------------------------------------------------uprava tlacitka strankovani*/
+.pagination-wrapper {
+	margin: calc(var(--gap) * 3) 0;
+}
+.load-products.btn,
+.lb-btn.lb-pagination__btn {
+	border-radius: var(--border-radius) !important;
+	border-style: none!;
+	background: var(--color-primary);
+	font-size: 1.5rem !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.2px;
+	padding: 0.85em 4em !important;
+	transition: background 0.2s ease;
+}
+.load-products.btn:hover,
+.lb-btn.lb-pagination__btn:hover {
+	background: var(--color-primary-hover) !important;
+}
+/*------------------------------------------------------------------------------KONEC uprava tlacitka strankovani*/
