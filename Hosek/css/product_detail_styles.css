@@ -1565,6 +1565,12 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	flex-wrap: wrap;
 	gap: var(--gap);
 	margin-bottom: var(--gap);
+	height: 80px;
+}
+
+.bio-block * {
+	max-height: 100%;
+	width: auto;
 }
 
 /*-----------------------------------------------------------------------------Slevový kód v popisku*/
