@@ -39,6 +39,24 @@
 }
 */
 
+.error-shoptet {
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	background: var(--color-primary);
+	color: white;
+	font-size: 1.2rem;
+	padding: 0.75em 1em;
+	width: 100vw;
+	max-width: 440px;
+	text-align: center;
+	right: 0;
+}
+.error-shoptet a {
+	color: inherit;
+	text-decoration: underline;
+}
+
 #error-shoptet-close {
 	position: fixed;
 	z-index: 999;
@@ -63,4 +81,19 @@
 	content: "x";
 	color: var(--color-primary);
 	font-size: 1.7em;
+}
+@media (max-width: 768px) {
+	.error-shoptet {
+		max-width: none;
+		font-size: 1rem;
+	}
+	#error-shoptet-close {
+		bottom: 3em;
+	}
+}
+
+@media (max-width: 319px) {
+	#error-shoptet-close {
+		bottom: 4em;
+	}
 }
