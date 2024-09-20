@@ -91,10 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Attach the click event to the #error-shoptet-close element
 	document.querySelector("#error-shoptet-close").addEventListener("click", handleShoptetErrorClose);
 
-	if (getSessionCookie("errorClosed") === "true") {
+	if (getSessionCookie("errorClosed") !== "true") {
 		const errorDiv = document.querySelector(".error-shoptet");
 		if (errorDiv) {
-			errorDiv.classList.add("display-none");
+			errorDiv.classList.remove("display-none");
 		}
 	}
 });
