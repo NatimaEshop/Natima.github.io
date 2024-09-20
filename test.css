@@ -58,42 +58,43 @@
 }
 
 #error-shoptet-close {
-	position: fixed;
+	position: absolute;
 	z-index: 999;
-	bottom: 3.6em;
-	background: none;
-	display: flex;
+	top: 0;
+	left: 0;
 	border-radius: 50%;
 	color: white;
-	font-size: 1.2rem;
-	padding: 0.5em 1em;
-	text-align: center;
-	right: -0.3em;
+	transform: translate(-50%, -50%);
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	transition: transform 0.2s ease-out;
+	height: 1.8em;
+	width: 1.8em;
+	border-style: solid;
+	border-width: 1px;
+	background: black;
 }
-#error-shoptet-close:hover {
-	transform: scale(1.2);
+#error-shoptet-close::before,
+#error-shoptet-close::after {
+	content: "";
+	width: 2px;
+	height: 60%;
+	position: absolute;
+	background: white;
+	transform: rotate(45deg);
 }
-#error-shoptet-close::before {
-	content: "x";
-	color: var(--color-primary);
-	font-size: 1.7em;
+#error-shoptet-close::after {
+	transform: rotate(315deg);
 }
+
 @media (max-width: 768px) {
 	.error-shoptet {
 		max-width: none;
 		font-size: 1rem;
 	}
 	#error-shoptet-close {
-		bottom: 3em;
-	}
-}
-
-@media (max-width: 319px) {
-	#error-shoptet-close {
-		bottom: 4em;
+		top: 0;
+		left: 100%;
+		transform: translate(-110%, -70%);
 	}
 }
