@@ -61,12 +61,12 @@ homeWelcome.parent().parent().remove();*/
 
 /*-----------------------------------------------------------------------Zavření shoptet error message*/
 // Function to set a session cookie
-function setSessionShoptetErrorCookie(name, value) {
+function setSessionCookie(name, value) {
 	document.cookie = name + "=" + value + "; path=/";
 }
 
 // Function to get a session cookie
-function getSessionShoptetErrorCookie(name) {
+function getSessionCookie(name) {
 	let nameEQ = name + "=";
 	let ca = document.cookie.split(";");
 	for (let i = 0; i < ca.length; i++) {
@@ -82,7 +82,7 @@ function handleShoptetErrorClose() {
 	const errorDiv = document.querySelector(".error-shoptet");
 	if (errorDiv) {
 		errorDiv.classList.add("display-none");
-		setSessionShoptetErrorCookie("errorClosed", "true");
+		setSessionCookie("errorClosed", "true");
 	}
 }
 
@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Attach the click event to the #error-shoptet-close element
 	document.querySelector("#error-shoptet-close").addEventListener("click", handleShoptetErrorClose);
 
-	if (getSessionShoptetErrorCookie("errorClosed") === "true") {
-		const errorDiv = document.querySelector("div.error-shoptet");
+	if (getSessionCookie("errorClosed") === "true") {
+		const errorDiv = document.querySelector(".error-shoptet");
 		if (errorDiv) {
 			errorDiv.classList.add("display-none");
 		}
