@@ -79,18 +79,18 @@ function getSessionShoptetErrorCookie(name) {
 
 // Function to handle the click event
 function handleShoptetErrorClose() {
-	const errorDiv = document.querySelector("div.error-shoptet");
+	const errorDiv = document.querySelector(".error-shoptet");
 	if (errorDiv) {
 		errorDiv.classList.add("display-none");
 		setSessionShoptetErrorCookie("errorClosed", "true");
 	}
 }
 
-// Attach the click event to the #error-shoptet-close element
-document.querySelector("#error-shoptet-close").addEventListener("click", handleShoptetErrorClose);
-
 // On page load, check if the session cookie exists and hide the error message if it does
 document.addEventListener("DOMContentLoaded", function () {
+	// Attach the click event to the #error-shoptet-close element
+	document.querySelector("#error-shoptet-close").addEventListener("click", handleShoptetErrorClose);
+
 	if (getSessionShoptetErrorCookie("errorClosed") === "true") {
 		const errorDiv = document.querySelector("div.error-shoptet");
 		if (errorDiv) {
