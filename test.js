@@ -56,6 +56,49 @@ document.addEventListener(
 	{ once: true }
 );
 /*-----------------------------------------------------------------------KONEC Automatické načtení 2. stránku produktů při scrollingu*/
+/*let homeWelcome = $(".home-welcome");
+homeWelcome.parent().parent().remove();*/
+
+/*-----------------------------------------------------------------------Zavření shoptet error message*/
+// Function to set a session cookie
+function setSessionShoptetErrorCookie(name, value) {
+	document.cookie = name + "=" + value + "; path=/";
+}
+
+// Function to get a session cookie
+function getSessionShoptetErrorCookie(name) {
+	let nameEQ = name + "=";
+	let ca = document.cookie.split(";");
+	for (let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == " ") c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+	}
+	return null;
+}
+
+// Function to handle the click event
+function handleShoptetErrorClose() {
+	const errorDiv = document.querySelector("div.error-shoptet");
+	if (errorDiv) {
+		errorDiv.classList.add("display-none");
+		setSessionShoptetErrorCookie("errorClosed", "true");
+	}
+}
+
+// Attach the click event to the #error-shoptet-close element
+document.querySelector("#error-shoptet-close").addEventListener("click", handleShoptetErrorClose);
+
+// On page load, check if the session cookie exists and hide the error message if it does
+document.addEventListener("DOMContentLoaded", function () {
+	if (getSessionShoptetErrorCookie("errorClosed") === "true") {
+		const errorDiv = document.querySelector("div.error-shoptet");
+		if (errorDiv) {
+			errorDiv.classList.add("display-none");
+		}
+	}
+});
+/*-----------------------------------------------------------------------KONEC Zavření shoptet error message*/
 
 /*
 if (document.body.classList.contains("type-posts-listing")) {
