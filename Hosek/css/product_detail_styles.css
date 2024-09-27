@@ -1608,7 +1608,7 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 /*-----------------------------------------------------------------------------Konec Slevový kód v popisku*/
 
 /*Hodnocení produktu fix*/
-.type-product.votes-wrap {
+.type-product .votes-wrap {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding: 0;
@@ -1616,11 +1616,11 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	margin: auto;
 }
 @media (max-width: 768px) {
-	.type-product.votes-wrap {
+	.type-product .votes-wrap {
 		grid-template-columns: 1fr;
 	}
 }
-.type-product.vote-wrap {
+.type-product .vote-wrap {
 	background: white;
 	margin: 0;
 	padding: calc(var(--gap) * 1.5) calc(var(--gap) * 2.5);
@@ -1630,7 +1630,7 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	border-color: var(--color-gray-500);
 }
 @media (min-width: 769px) {
-	.type-product.votes-wrap > .vote-wrap:nth-child(odd) {
+	.type-product .votes-wrap > .vote-wrap:nth-child(odd) {
 		border-right-style: solid;
 	}
 }
