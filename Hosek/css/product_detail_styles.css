@@ -1606,3 +1606,35 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	color: white;
 }
 /*-----------------------------------------------------------------------------Konec Slevový kód v popisku*/
+
+/*Hodnocení produktu fix*/
+.type-product.votes-wrap {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 0;
+	max-width: 1440px;
+	margin: auto;
+}
+@media (max-width: 768px) {
+	.type-product.votes-wrap {
+		grid-template-columns: 1fr;
+	}
+}
+.type-product.vote-wrap {
+	background: white;
+	margin: 0;
+	padding: calc(var(--gap) * 1.5) calc(var(--gap) * 2.5);
+	border-top-style: none !important;
+	border-block-end-style: solid;
+	border-width: 1px;
+	border-color: var(--color-gray-500);
+}
+@media (min-width: 769px) {
+	.type-product.votes-wrap > .vote-wrap:nth-child(odd) {
+		border-right-style: solid;
+	}
+}
+
+.type-product #rate-form {
+	overflow: hidden;
+}
