@@ -412,6 +412,7 @@ if (document.body.classList.contains("type-detail")) {
 			});
 
 			if ($(".p-detail-inner>form>.product-top .p-thumbnails-inner > div > a.p-thumbnail").length > 1) {
+				let productFlags = $(".product-top .p-image .flags").eq(0);
 				$(".p-image").empty();
 				$(".p-image").addClass("p-image-carousel");
 				$(".p-detail-inner>form>.product-top .p-thumbnails-inner > div > a.p-thumbnail").each(function () {
@@ -420,6 +421,9 @@ if (document.body.classList.contains("type-detail")) {
 					let img = $(`<img src="${href}" alt="${h1}">`);
 					$(".p-image").append($("<div>").append(img));
 				});
+				if (productFlags.length > 0) {
+					$(".p-image-carousel > div").eq(0).prepend(productFlags);
+				}
 
 				/*scroll images with mouse drag*/
 				let isDown = false;
