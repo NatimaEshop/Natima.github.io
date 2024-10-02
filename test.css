@@ -44,14 +44,8 @@
 	text-decoration: none !important;
 	color: var(--color-primary) !important;
 }
-.article-content > ul > li > ul > li {
+.article-content > ul > li li {
 	padding-left: 3.8rem !important;
-}
-.article-content > ul > li > ul > li > ul > li {
-	padding-left: 7.6rem !important;
-}
-.article-content > ul > li > ul > li > ul > li > ul > li {
-	padding-left: 11.4rem !important;
 }
 .article-content > ul > li > a {
 	font-weight: 600;
