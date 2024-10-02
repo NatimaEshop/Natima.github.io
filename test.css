@@ -109,6 +109,14 @@
 .article-nav.open .hide-article {
 	display: inline-block;
 }
+@media (max-width: 767px) {
+	.article-content ul li::before {
+		left: 1.2rem !important;
+	}
+	.article-content > ul > li li {
+		padding-left: 2.8rem !important;
+	}
+}
 /*----------------------------------------------------------------------------------KONEC BLOG NAVIGACE*/
 
 /* --doba cteni až nebude pobo
