@@ -11,6 +11,7 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 			if (date < comparisonDate) {
 				$("body").addClass("old-blog");
 			} else {
+				articleNav();
 				blogAutor();
 				fetchAndAppendRelatedBlogs();
 				fetchAndAppendBlogProducts();
@@ -25,6 +26,112 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 						'<div id="blog-author"><div class="author-image"><img src="https://www.natima.cz/user/documents/upload/Blog/autori/KaterinaTranova.webp" alt="Kateřina" width="500" height="500"></div><div class="author-text"><p class="author-label">Autor</p><p class="author-name">Kateřina</p><div class="expandale author-text"><div class="expanding"><p>Zajímám se o zdravý životní styl, sport, kosmetiku a zdravou stravu. Mým cílem je inspirovat ostatní, aby pečovali o své tělo i mysl a stali se tou nejlepší verzí sebe samých. Pravidelně se věnuji různým sportovním aktivitám a hledám nové cesty, jak optimalizovat svou fyzickou kondici i duševní pohodu.</p><p>Zdravá strava je pro mě klíčovým prvkem, který podporuje mé zdraví a energii. Kromě sportu a výživy mě baví objevovat nové kosmetické trendy a produkty, které podporují přirozenou krásu a zdraví. Ve volném čase si ráda přečtu dobrou knihu, která mi poskytne nejen odpočinek, ale i nové poznatky. Na blogu se s vámi podělím o své zkušenosti, tipy a rady, jak žít zdravěji a spokojeněji.</p></div></div></div></div>'
 					);
 				}
+			});
+		}
+
+		function generateId(text) {
+			return text
+				.normalize("NFD")
+				.replace(/[\u0300-\u036f]/g, "")
+				.replace(/\s+/g, "-")
+				.toLowerCase();
+		}
+
+		function articleNav() {
+			const content = document.querySelector("#content");
+			const headings = Array.from(content.querySelectorAll("h2, h3, h4, h5"));
+			const nav = document.createElement("div");
+			nav.classList.add("article-nav");
+			const navList = document.createElement("ul");
+
+			let currentUl = navList;
+			let lastLevel = 2;
+
+			// Remove the last h3 from the list
+			const lastH3Index = headings.map((h) => h.tagName).lastIndexOf("H3");
+			if (lastH3Index !== -1) {
+				headings.splice(lastH3Index, 1);
+			}
+
+			headings.forEach((heading) => {
+				const level = parseInt(heading.tagName.substring(1));
+				const id = generateId(heading.textContent);
+				heading.id = id;
+
+				const li = document.createElement("li");
+				const a = document.createElement("a");
+				a.href = `#${id}`;
+				a.textContent = heading.textContent;
+				li.appendChild(a);
+
+				if (level > lastLevel) {
+					const newUl = document.createElement("ul");
+					currentUl.lastElementChild.appendChild(newUl);
+					currentUl = newUl;
+				} else if (level < lastLevel) {
+					currentUl = navList;
+					for (let i = 2; i < level; i++) {
+						currentUl = currentUl.lastElementChild.querySelector("ul");
+					}
+				}
+
+				currentUl.appendChild(li);
+				lastLevel = level;
+			});
+
+			const articleContent = document.createElement("div");
+			articleContent.classList.add("article-content");
+			articleContent.appendChild(navList);
+
+			const whatFind = document.createElement("div");
+			whatFind.id = "open-article-nav";
+
+			const span1whatFind = document.createElement("span");
+			span1whatFind.textContent = "Co v článku najdete:";
+			whatFind.appendChild(span1whatFind);
+
+			const span2whatFind = document.createElement("span");
+
+			const spanShow = document.createElement("span");
+			spanShow.textContent = "Zobrazit seznam";
+			spanShow.classList.add("show-article");
+			span2whatFind.appendChild(spanShow);
+
+			const spanHide = document.createElement("span");
+			spanHide.textContent = "Skrýt seznam";
+			spanHide.classList.add("hide-article");
+			span2whatFind.appendChild(spanHide);
+
+			whatFind.appendChild(span2whatFind);
+
+			nav.appendChild(whatFind);
+			nav.appendChild(articleContent);
+
+			whatFind.addEventListener("click", function () {
+				nav.classList.toggle("open");
+			});
+
+			// Insert after the first img in #content
+			const firstImg = content.querySelector("img");
+			if (firstImg) {
+				const parent = firstImg.parentElement;
+				parent.insertAdjacentElement("afterend", nav);
+			} else {
+				content.insertBefore(nav, content.firstChild);
+			}
+
+			document.querySelectorAll(".article-nav a").forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+					const targetId = this.getAttribute("href").substring(1);
+					const targetElement = document.getElementById(targetId);
+					const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 160;
+
+					window.scrollTo({
+						top: offsetPosition,
+						behavior: "smooth",
+					});
+				});
 			});
 		}
 
