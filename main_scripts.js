@@ -1179,7 +1179,8 @@ if (document.body.classList.contains("type-posts-listing")) {
 		$(".news-item").each(function () {
 			let newsItem = $(this);
 			let articleUrl = newsItem.find(".image a").attr("href");
-			let strippedUrl = articleUrl.replace(shopUrl, "");
+			/* let strippedUrl = articleUrl.replace(shopUrl, ""); */
+			let strippedUrl = articleUrl.replace(window.location.origin, "");
 
 			$.ajax({
 				url: "https://doplnky.applypark.cz/shoptet/pocet-precteni-clanku/api/getPublicView/",
