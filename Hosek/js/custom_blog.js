@@ -125,8 +125,12 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 					e.preventDefault();
 					const targetId = this.getAttribute("href").substring(1);
 					const targetElement = document.getElementById(targetId);
-					const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 160;
-
+					let offsetPosition = 0;
+					if (matchesMedia768) {
+						offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 80;
+					} else {
+						offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 150;
+					}
 					window.scrollTo({
 						top: offsetPosition,
 						behavior: "smooth",
