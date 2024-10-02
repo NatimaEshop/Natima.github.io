@@ -1164,9 +1164,11 @@ if (document.body.classList.contains("type-posts-listing")) {
 			return true;
 		}
 	}
-	let shopUrl = window.location.origin;
+	let shopUrl;
+	shopUrl = window.location.origin;
+	console.log(shopUrl);
 
-	if (!shopUrl) {
+	if (shopUrl.length === 0) {
 		shopUrl =
 			window.location.protocol +
 			"//" +
