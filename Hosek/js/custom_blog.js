@@ -87,18 +87,26 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 			whatFind.id = "open-article-nav";
 
 			const span1whatFind = document.createElement("span");
-			span1whatFind.textContent = "Co v článku najdete:";
+			const span2whatFind = document.createElement("span");
+			const spanShow = document.createElement("span");
+			const spanHide = document.createElement("span");
+
+			if (document.body.classList.contains("cs")) {
+				span1whatFind.textContent = "Co v článku najdete?";
+				spanShow.textContent = "Zobrazit seznam";
+				spanHide.textContent = "Skrýt seznam";
+			}
+			if (document.body.classList.contains("sk")) {
+				span1whatFind.textContent = "Čo v článku nájdete?";
+				spanShow.textContent = "Zobraziť zoznam";
+				spanHide.textContent = "Skryť zoznam";
+			}
+
 			whatFind.appendChild(span1whatFind);
 
-			const span2whatFind = document.createElement("span");
-
-			const spanShow = document.createElement("span");
-			spanShow.textContent = "Zobrazit seznam";
 			spanShow.classList.add("show-article");
 			span2whatFind.appendChild(spanShow);
 
-			const spanHide = document.createElement("span");
-			spanHide.textContent = "Skrýt seznam";
 			spanHide.classList.add("hide-article");
 			span2whatFind.appendChild(spanHide);
 
