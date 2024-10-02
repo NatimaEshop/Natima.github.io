@@ -1165,6 +1165,14 @@ if (document.body.classList.contains("type-posts-listing")) {
 		}
 	}
 	let shopUrl = window.location.origin;
+
+	if (!shopUrl) {
+		shopUrl =
+			window.location.protocol +
+			"//" +
+			window.location.hostname +
+			(window.location.port ? ":" + window.location.port : "");
+	}
 	function getViewCountCustom() {
 		$(".news-item").each(function () {
 			let newsItem = $(this);
