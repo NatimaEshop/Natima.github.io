@@ -1164,22 +1164,11 @@ if (document.body.classList.contains("type-posts-listing")) {
 			return true;
 		}
 	}
-	let shopUrl;
-	shopUrl = window.location.origin;
-	console.log(shopUrl);
 
-	if (shopUrl.length === 0) {
-		shopUrl =
-			window.location.protocol +
-			"//" +
-			window.location.hostname +
-			(window.location.port ? ":" + window.location.port : "");
-	}
 	function getViewCountCustom() {
 		$(".news-item").each(function () {
 			let newsItem = $(this);
 			let articleUrl = newsItem.find(".image a").attr("href");
-			/* let strippedUrl = articleUrl.replace(shopUrl, ""); */
 			let strippedUrl = articleUrl.replace(window.location.origin, "");
 
 			$.ajax({
