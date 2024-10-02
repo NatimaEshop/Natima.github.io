@@ -91,7 +91,7 @@
 #open-article-nav > span:first-child {
 	font-weight: 700;
 	font-size: 1.1em;
-	margin-right: 7em;
+	margin-right: 2em;
 }
 #open-article-nav > span:nth-child(2)::after {
 	content: "\e910";
