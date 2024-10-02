@@ -1241,7 +1241,10 @@ function handleShoptetErrorClose() {
 // On page load, check if the session cookie exists and hide the error message if it does
 document.addEventListener("DOMContentLoaded", function () {
 	// Attach the click event to the #error-shoptet-close element
-	document.querySelector("#error-shoptet-close").addEventListener("click", handleShoptetErrorClose);
+	errorCloseElement = document.querySelector("#error-shoptet-close");
+	if (errorCloseElement) {
+		errorCloseElement.addEventListener("click", handleShoptetErrorClose);
+	}
 
 	if (getSessionCookie("errorClosed") !== "true") {
 		const errorDiv = document.querySelector(".error-shoptet");
