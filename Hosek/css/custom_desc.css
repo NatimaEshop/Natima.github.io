@@ -872,7 +872,7 @@
 .custom-desc .compare.items-2.wide-product > img:nth-of-type(2) {
 	grid-row: 2;
 	grid-column: 2;
-	width: 22%;
+	width: 24%;
 	text-align: center;
 	margin: auto auto 20px;
 }
@@ -1089,11 +1089,13 @@
 		width: 100%;
 	}
 	.custom-desc .compare.items-2 > img:nth-of-type(1),
-	.custom-desc .compare.items-2 > img:nth-of-type(2),
-	.custom-desc .compare.items-2.wide-product > img:nth-of-type(1),
-	.custom-desc .compare.items-2.wide-product > img:nth-of-type(2) {
+	.custom-desc .compare.items-2 > img:nth-of-type(2) {
 		grid-row: 2;
 		width: 75%;
+	}
+
+	.custom-desc .compare.items-2.wide-product > img:nth-of-type(2) {
+		width: 42%;
 	}
 	.custom-desc .ingredients tr th span {
 		padding-bottom: 0.2em;
