@@ -969,6 +969,7 @@
 	.custom-desc .ingredients tr td:nth-child(3),
 	.custom-desc .ingredients tr th:nth-child(3) {
 		text-align: center;
+		padding: 1em 0.2em 1em 0.2em;
 	}
 }
 @media (max-width: 992px) {
