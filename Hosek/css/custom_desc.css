@@ -953,6 +953,23 @@
 	.custom-desc {
 		--padding-block: 20px;
 	}
+	/*Fix prepsani row > div default ye shoptetu*/
+	.custom-desc .row > div {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	/*uprava tabulky na mobilu*/
+	.custom-desc .ingredients th,
+	.custom-desc .ingredients td {
+		padding: 1em 0.2em 1em 0.5em;
+	}
+	.custom-desc .ingredients .tab {
+		padding-left: 1em !important;
+	}
+	.custom-desc .ingredients tr td:nth-child(3),
+	.custom-desc .ingredients tr th:nth-child(3) {
+		text-align: center;
+	}
 }
 @media (max-width: 992px) {
 	.custom-desc {
