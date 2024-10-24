@@ -54,8 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
 /*-----------------------------------------------------------odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
 $(".cs .menu-item-2607").remove();
 $(".cs .menu-item-2612").remove();
+$(".cs .menu-item-2639").remove(); /*houby*/
 $(".sk .menu-item-2384").remove();
 $(".sk .menu-item-2387").remove();
+$(".sk .menu-item-2404").remove(); /*houby*/
 /*------------------------------------------------------KONEC odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
 
 /*------------------------------------------------------Menu na mobilu a košík přímo do košíku*/
