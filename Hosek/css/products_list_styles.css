@@ -184,6 +184,8 @@
 	gap: 2px;
 	max-width: none;
 	transition: transform 0.4s ease;
+	min-width: auto;
+	min-height: auto;
 }
 .flags-extra .flag.flag-discount span {
 	font-size: 1em !important;
