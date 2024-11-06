@@ -214,12 +214,15 @@ if (document.body.classList.contains("admin-logged")) {
 					natiosProducts = natiosLocalStorage;
 
 					giftPackagingDivSelector.addClass("active");
+					$("#giftPackagingInput").prop("checked", true);
+
 					return;
 				}
 				console.log("natiosProducts and natiosLocalStorage are not equal");
 				removeGiftPackagingFromLocalStorage();
 				removeAllGiftPackagingFromCart();
 				giftPackagingDivSelector.removeClass("active");
+				$("#giftPackagingInput").prop("checked", false);
 				/*porovnani arrayu*/
 				function arraysEqual(arr1, arr2) {
 					if (arr1.length !== arr2.length) return false;
