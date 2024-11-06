@@ -299,6 +299,10 @@ if (document.body.classList.contains("admin-logged")) {
 						});
 					}
 				}
+				console.log("------------------------------------------");
+				console.log("numberOfPackages:");
+				console.log(numberOfPackages);
+				console.log("------------------------------------------");
 			}
 		}
 	}
