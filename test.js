@@ -47,10 +47,18 @@ if (document.body.classList.contains("admin-logged")) {
 					let pName = $(this).find(".p-name .main-link").text();
 					if (pName.includes("NATIOS")) {
 						if (pName.includes("kapsl") || pName.includes("tablet")) {
-							let quantity = $(this).find(".quantity input").val();
-							//for each quantity create an object and push it to natiosProducts array
-							for (let i = 0; i < quantity; i++) {
-								natiosAmountOfGiftProducts += 1;
+							if ($(this).attr("data-micro-sku") == "NAT1168") {
+								$("#omega-gift").removeClass("display-none");
+							} else if ($(this).attr("data-micro-sku") == "NAT1540") {
+								$("#calcium-gift").removeClass("display-none");
+							} else if ($(this).attr("data-micro-sku") == "NAT1694") {
+								$("#probiotic-gift").removeClass("display-none");
+							} else {
+								let quantity = $(this).find(".quantity input").val();
+								//for each quantity create an object and push it to natiosProducts array
+								for (let i = 0; i < quantity; i++) {
+									natiosAmountOfGiftProducts += 1;
+								}
 							}
 						}
 					}
