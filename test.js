@@ -1,6 +1,10 @@
 if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
 		document.addEventListener("DOMContentLoaded", function () {
+			let natiosLocalStorage = JSON.parse(localStorage.getItem("natiosProducts"));
+			console.log("natiosLocalStorage:");
+			console.log(natiosLocalStorage);
+
 			let giftPackagingDiv =
 				'<div class="gift-packaging"><div class="gift-packaging-agree"><div class="gift-packaging-checkbox"><input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true"><label for="giftPackagingInput"><span>Přeji si dárkově zabilit doplňky NATIOS.</span><span>39,- Kč</span></label></div></div></div>';
 			let giftPackagingModalDiv =
@@ -162,7 +166,7 @@ if (document.body.classList.contains("admin-logged")) {
 				//save natiosProducts to localStorage
 				localStorage.setItem("natiosProducts", JSON.stringify(natiosProducts));
 
-				let natiosLocalStorage = JSON.parse(localStorage.getItem("natiosProducts"));
+				natiosLocalStorage = JSON.parse(localStorage.getItem("natiosProducts"));
 				console.log("natiosLocalStorage:");
 				console.log(natiosLocalStorage);
 			}
