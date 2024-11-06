@@ -8,7 +8,7 @@ if (document.body.classList.contains("admin-logged")) {
 		});
 		function natiosGiftPackaging() {
 			let giftPackagingDivHTML = `
-			<div class="gift-packaging">
+		<div class="gift-packaging">
 	<div class="gift-packaging-agree">
 		<div class="gift-packaging-checkbox">
 			<input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true">
@@ -24,10 +24,11 @@ if (document.body.classList.contains("admin-logged")) {
 					dárkové krabičky nevlezou.</div>
 				<div class="display-none" id="maximum-gift">
 					<b>Pozor:</b> Z vaší objednávky lze do dárkových krabiček vložit <b><span
-							id="maximum-product-amount-gift">XXX</span></b> produktů. Máte zvoleno <span
+							id="maximum-product-amount-gift">XXX</span></b> <span
+							id="produkty-sklonovani-maximum">produktů</span>. Máte zvoleno <span
 						id="selected-amount-of-gift-packaging">XXX</span> dárkových krabiček pro <span
 						id="selected-amount-of-gift-packaging-products">XXX</span> <span
-						id="produkty-sklonovani">produktů</span>.
+						id="produkty-sklonovani-zvoleno">produktů</span>.
 				</div>
 			</div>
 			<span id="gift-quantity" class="quantity">
