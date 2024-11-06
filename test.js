@@ -1,10 +1,5 @@
 if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
-		let editedNatiosPackaging = false;
-		let hasNatiosGiftPackaging = false;
-		let hasOmega = false;
-		let hasCalcium = false;
-		let hasProbiotic = false;
 		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
 			natiosGiftPackaging();
 		});
@@ -18,6 +13,12 @@ if (document.body.classList.contains("admin-logged")) {
 			$(giftPackagingDivHTML).insertAfter($(".discount-coupon"));
 
 			let giftPackaging = $(".gift-packaging");
+
+			let editedNatiosPackaging = false;
+			let hasNatiosGiftPackaging = false;
+			let hasOmega = false;
+			let hasCalcium = false;
+			let hasProbiotic = false;
 
 			let natiosAmountOfGiftProducts = 0;
 			let natiosAmountOfGiftBoxes = 1;
