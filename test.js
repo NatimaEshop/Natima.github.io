@@ -7,6 +7,14 @@ if (document.body.classList.contains("admin-logged")) {
 			natiosGiftPackaging();
 		});
 		function natiosGiftPackaging() {
+			let natiosAmountOfGiftProducts = 0;
+			let natiosAmountOfGiftBoxes = 1;
+			getAllNatiosGiftPackagingProducts();
+
+			if (natiosAmountOfGiftProducts < 2) {
+				return;
+			}
+
 			let giftPackagingDivHTML = `
 		<div class="gift-packaging">
 	<div class="gift-packaging-agree">
@@ -60,10 +68,6 @@ if (document.body.classList.contains("admin-logged")) {
 			let hasOmega = false;
 			let hasCalcium = false;
 			let hasProbiotic = false;
-
-			let natiosAmountOfGiftProducts = 0;
-			let natiosAmountOfGiftBoxes = 1;
-			getAllNatiosGiftPackagingProducts();
 
 			$("#giftPackagingInput").on("change", function () {
 				if (this.checked) {
