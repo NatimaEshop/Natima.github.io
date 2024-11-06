@@ -60,6 +60,9 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 
 			function removeAllGiftPackagingFromCart() {
+				let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
+					"value"
+				);
 				if (giftPackagingItemId) {
 					shoptet.cartShared.removeFromCart({ itemId: giftPackagingItemId });
 				}
