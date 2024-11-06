@@ -63,8 +63,12 @@ if (document.body.classList.contains("admin-logged")) {
 						}
 					}
 				});
-				console.log("natiosAmountOfGiftProducts:");
-				console.log(natiosAmountOfGiftProducts);
+				if (natiosAmountOfGiftBoxes * 2 > natiosAmountOfGiftProducts) {
+					$("#maximum-gift").removeClass("display-none");
+					$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
+					$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
+					$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
+				}
 			}
 
 			function removeAllGiftPackagingFromCart() {
@@ -88,13 +92,6 @@ if (document.body.classList.contains("admin-logged")) {
 					},
 					{ once: true }
 				);
-
-				if (natiosAmountOfGiftBoxes * 2 > natiosAmountOfGiftProducts) {
-					$("#maximum-gift").removeClass("display-none");
-					$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
-					$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
-					$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
-				}
 
 				let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
 					"value"
