@@ -1,6 +1,10 @@
 if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
 		let editedNatiosPackaging = false;
+		let hasNatiosGiftPackaging = false;
+		let hasOmega = false;
+		let hasCalcium = false;
+		let hasProbiotic = false;
 		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
 			natiosGiftPackaging();
 		});
@@ -9,7 +13,7 @@ if (document.body.classList.contains("admin-logged")) {
 		});
 		function natiosGiftPackaging() {
 			let giftPackagingDivHTML =
-				'<div class="gift-packaging"><div class="gift-packaging-agree"><div class="gift-packaging-checkbox"><input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true"><label for="giftPackagingInput"><span>Přidat dárkovou krabičku NATIOS.</span></label><div class="packaging-price"><span>39</span>,- Kč / ks</div><div id="packaging-poznamky"><span class="nadpis">Poznámky:</span><span>Krabička je určena na 2 doplňky stravy značky Natios.</span><div class="display-none" id="calcium-gift"><b>Pozor:</b> NATIOS Calcium se kvůli většího balení do dárkové krabičky nevleze.</div><div class="display-none" id="omega-gift"><b>Pozor:</b> NATIOS Omega-3 se kvůli většího balení do dárkové krabičky nevleze.</div><div class="display-none" id="probiotic-gift"><b>Pozor:</b> NATIOS Probiotika se kvůli většího balení do dárkové krabičky nevlezou.</div><div class="display-none" id="maximum-gift"><b>Pozor:</b> Z vaší objednávky lze do dárkových krabiček vložit <b><span id="maximum-product-amount-gift">XXX</span></b> produktů. Máte zvoleno <span id="selected-amount-of-gift-packaging">XXX</span>dárkových krabiček pro <span id="selected-amount-of-gift-packaging-products">XXX</span> produktů.</div></div><span id="gift-quantity" class="quantity"><span class="increase-tooltip js-increase-tooltip" data-trigger="manual" data-container="body"data-original-title="Není možné zakoupit více než 9999 ks." aria-hidden="true" role="tooltip"data-testid="tooltip"></span><span class="decrease-tooltip js-decrease-tooltip" data-trigger="manual" data-container="body"data-original-title="Minimální množství, které lze zakoupit, je 1 ks." aria-hidden="true"role="tooltip" data-testid="tooltip"></span><input type="number" name="amount" value="1" class="amount" autocomplete="off" data-decimals="0"data-max="9999" data-min="1" step="any" min="1" max="9999" data-testid="cartAmount"aria-label="Množství"><span class="increase" aria-label="Zvýšit množství" tabindex="0" role="button"data-testid="increase"></span><span class="decrease" aria-label="Snížit množství" tabindex="0" role="button"data-testid="decrease"></span></span></div></div></div>';
+				'<div class="gift-packaging"><div class="gift-packaging-agree"><div class="gift-packaging-checkbox"><input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true"><label for="giftPackagingInput"><span>Přidat dárkovou krabičku NATIOS.</span></label><div class="packaging-price"><span>39</span>,- Kč / ks</div><div id="packaging-poznamky"><span class="nadpis">Poznámky:</span><span>Krabička je určena na 2 doplňky stravy značky Natios.</span><div class="display-none" id="calcium-gift"><b>Pozor:</b> NATIOS Calcium se kvůli většího balení do dárkové krabičky nevleze.</div><div class="display-none" id="omega-gift"><b>Pozor:</b> NATIOS Omega-3 se kvůli většího balení do dárkové krabičky nevleze.</div><div class="display-none" id="probiotic-gift"><b>Pozor:</b> NATIOS Probiotika se kvůli většího balení do dárkové krabičky nevlezou.</div><div class="display-none" id="maximum-gift"><b>Pozor:</b> Z vaší objednávky lze do dárkových krabiček vložit <b><span id="maximum-product-amount-gift">XXX</span></b> produktů. Máte zvoleno <span id="selected-amount-of-gift-packaging">XXX</span> dárkových krabiček pro <b><span id="selected-amount-of-gift-packaging-products">XXX</span></b> produktů.</div></div><span id="gift-quantity" class="quantity"><span class="increase-tooltip js-increase-tooltip" data-trigger="manual" data-container="body"data-original-title="Není možné zakoupit více než 9999 ks." aria-hidden="true" role="tooltip"data-testid="tooltip"></span><span class="decrease-tooltip js-decrease-tooltip" data-trigger="manual" data-container="body"data-original-title="Minimální množství, které lze zakoupit, je 1 ks." aria-hidden="true"role="tooltip" data-testid="tooltip"></span><input type="number" name="amount" value="1" class="amount" autocomplete="off" data-decimals="0"data-max="9999" data-min="1" step="any" min="1" max="9999" data-testid="cartAmount"aria-label="Množství"><span class="increase" aria-label="Zvýšit množství" tabindex="0" role="button"data-testid="increase"></span><span class="decrease" aria-label="Snížit množství" tabindex="0" role="button"data-testid="decrease"></span></span></div></div></div>';
 
 			$(giftPackagingDivHTML).insertAfter($(".discount-coupon"));
 
@@ -31,6 +35,7 @@ if (document.body.classList.contains("admin-logged")) {
 			});
 
 			if ($("tr.removeable[data-micro-sku='NATDK-1']").length > 0) {
+				hasNatiosGiftPackaging = true;
 				natiosAmountOfGiftBoxes = $("tr.removeable[data-micro-sku='NATDK-1'] .quantity input").val();
 				giftPackaging.addClass("active");
 				$("#giftPackagingInput").prop("checked", true);
@@ -42,7 +47,10 @@ if (document.body.classList.contains("admin-logged")) {
 				updateAmountOfGiftPackagingInCart();
 			});
 
-			maximumGiftPackaging();
+			if (hasNatiosGiftPackaging) {
+				giftProductsWarnings();
+				maximumGiftPackaging();
+			}
 
 			function getAllNatiosGiftPackagingProducts() {
 				$(".removeable").each(function () {
@@ -50,11 +58,11 @@ if (document.body.classList.contains("admin-logged")) {
 					if (pName.includes("NATIOS")) {
 						if (pName.includes("kapsl") || pName.includes("tablet")) {
 							if ($(this).attr("data-micro-sku") == "NAT1168") {
-								$("#omega-gift").removeClass("display-none");
+								hasOmega = true;
 							} else if ($(this).attr("data-micro-sku") == "NAT1540") {
-								$("#calcium-gift").removeClass("display-none");
+								hasCalcium = true;
 							} else if ($(this).attr("data-micro-sku") == "NAT1694") {
-								$("#probiotic-gift").removeClass("display-none");
+								hasProbiotic = true;
 							} else {
 								let quantity = $(this).find(".quantity input").val();
 								//for each quantity create an object and push it to natiosProducts array
@@ -112,6 +120,18 @@ if (document.body.classList.contains("admin-logged")) {
 					$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
 					$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
 					$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
+				}
+			}
+
+			function giftProductsWarnings() {
+				if (hasOmega) {
+					$("#omega-gift").removeClass("display-none");
+				}
+				if (hasCalcium) {
+					$("#calcium-gift").removeClass("display-none");
+				}
+				if (hasProbiotic) {
+					$("#probiotic-gift").removeClass("display-none");
 				}
 			}
 		}
