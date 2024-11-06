@@ -1,4 +1,4 @@
-#gift-packaging-modal {
+/*#gift-packaging-modal {
 	position: fixed;
 	top: var(--header-height);
 	left: 0;
@@ -38,9 +38,9 @@
 }
 #gift-packaging-options,
 #gift-packaging-chosen-combinations {
-	-webkit-user-select: none; /* Safari */
-	-ms-user-select: none; /* IE 10 and IE 11 */
-	user-select: none; /* Standard syntax */
+	-webkit-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none; 
 }
 #gift-packaging-options {
 	display: grid;
@@ -151,3 +151,4 @@
 #gift-packaging-confirm:hover {
 	background-color: var(--color-secondary);
 }
+*/

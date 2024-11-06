@@ -81,6 +81,7 @@ if (document.body.classList.contains("admin-logged")) {
 				);
 				if (giftPackagingItemId) {
 					shoptet.cartShared.removeFromCart({ itemId: giftPackagingItemId });
+					hasNatiosGiftPackaging = false;
 				}
 			}
 
