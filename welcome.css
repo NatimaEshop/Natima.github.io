@@ -1,0 +1,145 @@
+/* --doba cteni až nebude pobo
+.news-item .text .description img,
+.news-item .description img,
+.news-item .text .description table,
+.news-item .description table,
+.news-item .text .description ul,
+.news-item .description ul,
+.news-item .text .description li,
+.news-item .description li,
+.news-item .text .description ol,
+.news-item .description ol,
+.news-item .text .description h1,
+.news-item .description h1,
+.news-item .text .description h2,
+.news-item .description h2,
+.news-item .text .description h3,
+.news-item .description h3,
+.news-item .text .description h4,
+.news-item .description h4,
+.news-item .text .description h5,
+.news-item .description h5,
+.news-item .text .description h6,
+.news-item .description h6,
+.news-item .text .description hr,
+.news-item .description hr,
+.news-item .text .description blockquote,
+.news-item .description blockquote,
+.news-item .text .description figure,
+.news-item .description figure,
+.news-item .text .description .rc-image-half-right,
+.news-item .description .rc-image-half-right,
+.news-item .text .description .rc-image-half-left,
+.news-item .description .rc-image-half-left,
+.news-item .text .description .rc-image-right,
+.news-item .description .rc-image-right,
+.news-item .text .description .rc-image-left,
+.news-item .description .rc-image-left {
+	display: none;
+}
+*/
+
+/*------------------------------------------------------------------------------WELCOMEBLOCK NA HOMEPAGE*/
+/* 
+.welcome-wrapper {
+    display: block;
+    margin: 0 !important;
+
+}
+.homepage-box.welcome-wrapper {
+    max-width: 1920px;
+    padding: 0 var(--padding-sides) !important;
+    margin: 50px auto 20px !important;
+
+}
+.homepage-box.welcome-wrapper .container {
+    padding: 0 !important;
+}
+.welcome-wrapper div {
+    max-width: none;
+}
+
+.welcome-block {
+    display: grid;
+    align-items: center;
+    border-radius: calc(var(--border-radius) * 2.5);
+    overflow: hidden;
+}
+
+.home-welcome-image {
+    grid-column: 1;
+    grid-row: 1;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.welcome-block-text {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    width: clamp(500px, 70%, 1000px);
+    z-index: 1;
+    font-size: 16px;
+    padding: 4em 6em;
+    margin-left: 5em !important;
+    margin-right: auto !important;
+
+}
+.welcome-block-text::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
+    background: hsla(0,0%,100%, 85%);
+    border-radius: calc(var(--border-radius) * 2);
+
+}
+.welcome-block-text h1 {
+    max-width: none!important;
+    font-family: var(--ff-main) !important;
+    font-weight: 800;
+
+}
+.welcome::after,
+.welcome::before {
+    display: none;
+}
+.home-welcome-image.mobile {
+    display: none;
+}
+.home-welcome-image.pc {
+    display: block;
+}
+@media(max-width: 1200px) {
+    .welcome-block {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+    }
+    .home-welcome-image {
+        max-height: none;
+        border-radius: var(--border-radius);
+    }
+    .welcome-block-text {
+        padding: 0;
+        margin: 0 !important;
+        width: 100%;
+    }
+
+}
+@media(max-width: 767px) {
+    .home-welcome-image.mobile {
+        display: block;
+    }
+    .home-welcome-image.pc {
+        display: none;
+    }
+}
+*/
+/*------------------------------------------------------------------------------KONEC WELCOMEBLOCK NA HOMEPAGE*/
