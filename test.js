@@ -165,11 +165,17 @@ if (document.body.classList.contains("admin-logged")) {
 						$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
 
 						if (natiosAmountOfGiftProducts > 4) {
-							$(".produkty-sklonovani").text("produktů");
+							$("#produkty-sklonovani-maximum").text("produktů");
 						} else if (natiosAmountOfGiftProducts == 1) {
-							$(".produkty-sklonovani").text("produkt");
+							$("#produkty-sklonovani-maximum").text("produkt");
 						} else {
-							$(".produkty-sklonovani").text("produkty");
+							$("#produkty-sklonovani-maximum").text("produkty");
+						}
+
+						if (natiosAmountOfGiftBoxes * 2 > 4) {
+							$("#produkty-sklonovani-zvoleno").text("produktů");
+						} else {
+							$("#produkty-sklonovani-zvoleno").text("produkty");
 						}
 					}
 				}
