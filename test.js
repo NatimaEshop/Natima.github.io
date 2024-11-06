@@ -175,15 +175,14 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 
 			function checkIfRemoveGiftPackaging() {
-				natiosProductsNames = natiosProducts.map((product) => product.name);
-				if (natiosLocalStorage) {
-					natiosLocalStorageNames = natiosLocalStorage.map((product) => product.name);
-				}
+				let natiosProductsNames = natiosProducts.map((product) => product.name);
+				let natiosLocalStorageNames = natiosLocalStorage.map((product) => product.name);
 
 				console.log("natiosProductsNames:");
 				console.log(natiosProductsNames);
 				console.log("natiosLocalStorageNames:");
 				console.log(natiosLocalStorageNames);
+
 				if (natiosProductsNames === natiosLocalStorageNames) {
 					return;
 				}
