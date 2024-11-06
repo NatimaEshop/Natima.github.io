@@ -188,8 +188,14 @@ if (document.body.classList.contains("admin-logged")) {
 				console.log(natiosLocalStorageNames);
 
 				if (arraysEqual(natiosProductsNames, natiosLocalStorageNames)) {
+					console.log("------------------------------------------------------");
 					console.log("natiosProducts and natiosLocalStorage are equal");
+					console.log("natiosProducts:");
+					console.log(natiosProducts);
 					natiosProducts = natiosLocalStorage;
+					console.log("natiosProducts:");
+					console.log(natiosProducts);
+					console.log("------------------------------------------------------");
 					return;
 				}
 				console.log("natiosProducts and natiosLocalStorage are not equal");
