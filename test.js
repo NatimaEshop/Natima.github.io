@@ -157,7 +157,16 @@ if (document.body.classList.contains("admin-logged")) {
 				});
 			}
 
-			function saveGiftPackagingProducts() {}
+			function saveGiftPackagingProducts() {
+				let numberOfPackages = 0;
+				natiosProducts.forEach((product) => {
+					if (product.selected) {
+						numberOfPackages += 1;
+					}
+				});
+				numberOfPackages = numberOfPackages / 2;
+				shoptet.cartShared.addToCart({ productCode: "183/GSB", amount: numberOfPackages });
+			}
 		});
 	}
 }
