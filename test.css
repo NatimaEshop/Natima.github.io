@@ -11,16 +11,17 @@
 	max-width: 80px;
 	margin-left: auto;
 	margin-right: 0;
+	margin-top: var(--gap);
 }
 .gift-packaging.active #gift-quantity {
 	display: flex;
 }
-.gift-packaging.active {
+.gift-packaging {
+	padding-bottom: calc(var(--gap) * 1.5);
 	position: relative;
-	margin-bottom: var(--gap);
-	padding-top: var(--gap);
-	padding-bottom: var(--gap);
+	margin-bottom: calc(var(--gap) * 1.5);
 }
+
 .gift-packaging.active::before {
 	content: "";
 	position: absolute;
@@ -29,7 +30,7 @@
 	background-color: var(--color-gray-600);
 	top: 0px;
 }
-.gift-packaging.active::after {
+.gift-packaging::after {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -49,158 +50,3 @@
 .gift-packaging.active #packaging-poznamky {
 	display: flex;
 }
-
-/*#gift-packaging-modal {
-	position: fixed;
-	top: var(--header-height);
-	left: 0;
-	height: calc(100% - var(--header-height));
-	width: 100vw;
-	background-color: hsla(0, 0%, 100%, 90%);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-.admin-logged #gift-packaging-modal {
-	top: calc(var(--header-height) + 24px);
-}
-
-.gift-packaging-modal-content {
-	width: clamp(200px, 80%, 1440px);
-	margin: auto;
-	position: relative;
-}
-.gift-packaging-modal-close {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	cursor: pointer;
-	padding: 10px;
-}
-.gift-packaging-modal-close::before {
-	content: "\e912";
-	font-size: 20px;
-	font-family: shoptet;
-	font-style: normal;
-}
-
-.gift-packaging-modal-close:hover {
-	color: var(--color-red-400);
-}
-#gift-packaging-options,
-#gift-packaging-chosen-combinations {
-	-webkit-user-select: none; 
-	-ms-user-select: none; 
-	user-select: none; 
-}
-#gift-packaging-options {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: var(--gap);
-}
-.gift-product-option {
-	border-style: solid;
-	border-radius: var(--border-radius);
-	border-color: var(--color-primary-200);
-	border-width: 1px;
-	overflow: hidden;
-	cursor: pointer;
-}
-.gift-product-option:hover {
-	border-color: var(--color-primary);
-	background-color: var(--color-primary-150);
-}
-.gift-product-option.selected {
-	border-color: var(--color-primary);
-	background-color: var(--color-secondary);
-}
-#gift-packaging-chosen-combinations {
-	margin-top: calc(var(--gap) * 3);
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: var(--gap);
-}
-.gift-package-combination {
-	position: relative;
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	border-style: solid;
-	border-radius: var(--border-radius);
-	border-color: var(--color-primary-200);
-	border-width: 1px;
-	overflow: hidden;
-	background-color: var(--color-primary-100);
-	gap: var(--gap);
-}
-.gift-product-combination {
-	position: relative;
-}
-.gift-package-combination > .gift-product-combination::after {
-	content: "";
-	position: absolute;
-	width: calc(30%);
-	height: 1px;
-	bottom: calc(var(--gap) / -2);
-	left: 35%;
-
-	background-color: var(--color-primary-200);
-	z-index: 9;
-}
-.gift-product-option,
-.gift-product-combination {
-	display: grid;
-	grid-template-columns: 120px 1fr;
-	align-items: center;
-	gap: var(--gap);
-	position: relative;
-}
-.gift-product-option span,
-.gift-product-combination span {
-	padding-right: 20px;
-}
-.remove-combination {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	cursor: pointer;
-	padding: 5px 10px 10px;
-	z-index: 2;
-}
-.remove-combination::before {
-	content: "\e912";
-	font-size: 10px;
-	font-family: shoptet;
-	font-style: normal;
-}
-
-.remove-combination:hover {
-	color: var(--color-red-400);
-}
-.gift-packaging-confirm-wrapper {
-	display: flex;
-}
-#gift-packaging-confirm {
-	margin-left: auto;
-	padding: 0.75em 1.5em 0.75em 1.75em;
-	border-radius: var(--border-radius);
-	border-style: none;
-	background-color: var(--color-tertiary-hover);
-	color: white;
-	transition: none;
-	margin-top: var(--gap);
-	font-size: 1.6rem;
-}
-#gift-packaging-confirm::after {
-	content: "\e910";
-	font-family: shoptet;
-	font-style: normal;
-	position: relative;
-
-	top: 0.1em;
-	padding-left: 0.7em;
-}
-#gift-packaging-confirm:hover {
-	background-color: var(--color-secondary);
-}
-*/
