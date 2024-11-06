@@ -1,4 +1,4 @@
-if (document.body.classList.contains("xadmin-logged")) {
+if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
 		let editedNatiosPackaging = false;
 		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
