@@ -2,9 +2,7 @@ if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
 		let editedNatiosPackaging = false;
 		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
-			if (!editedNatiosPackaging) {
-				natiosGiftPackaging();
-			}
+			natiosGiftPackaging();
 		});
 		document.addEventListener("DOMContentLoaded", function () {
 			natiosGiftPackaging();
@@ -245,14 +243,6 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 
 			function removeAllGiftPackagingFromCart() {
-				editedNatiosPackaging = true;
-				document.addEventListener(
-					"ShoptetDOMCartContentLoaded",
-					function () {
-						editedNatiosPackaging = false;
-					},
-					{ once: true }
-				);
 				let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
 					"value"
 				);
@@ -263,6 +253,9 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 
 			function updateAmountOfGiftPackagingInCart() {
+				if (editedNatiosPackaging) {
+					return;
+				}
 				editedNatiosPackaging = true;
 				document.addEventListener(
 					"ShoptetDOMCartContentLoaded",
