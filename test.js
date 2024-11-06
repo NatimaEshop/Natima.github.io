@@ -46,12 +46,19 @@ if (document.body.classList.contains("admin-logged")) {
 
 			$(".gift-packaging-modal-close").on("click", function () {
 				giftPackagingModal.addClass("display-none");
-				$("#giftPackagingInput").prop("checked", false);
-				giftPackagingDivSelector.removeClass("active");
+				let giftPackagingPriceId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='priceId']").attr(
+					"value"
+				);
+				if (!giftPackagingPriceId) {
+					$("#giftPackagingInput").prop("checked", false);
+					giftPackagingDivSelector.removeClass("active");
+				}
 			});
 
 			$("#gift-packaging-edit").on("click", function () {
 				giftPackagingModal.removeClass("display-none");
+				addGiftPackagingProductOptions();
+				addSelectedOptionsToChosenCombinations();
 			});
 
 			$("#gift-packaging-confirm").on("click", function () {
