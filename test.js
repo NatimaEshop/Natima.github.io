@@ -175,7 +175,9 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 
 			function checkIfRemoveGiftPackaging() {
-				if (natiosProducts === natiosLocalStorage) {
+				natiosProductsNames = natiosProducts.map((product) => product.name);
+				natiosLocalStorageNames = natiosLocalStorage.map((product) => product.name);
+				if (natiosProductsNames === natiosLocalStorageNames) {
 					return;
 				}
 				removeGiftPackagingFromLocalStorage();
