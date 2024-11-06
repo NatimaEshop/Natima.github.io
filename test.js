@@ -19,7 +19,7 @@ if (document.body.classList.contains("admin-logged")) {
 
 			let natiosProducts = [];
 			getAllNatiosGiftPackagingProducts();
-			removeGiftPackagingFromLocalStorage();
+			checkIfRemoveGiftPackaging();
 
 			$("#giftPackagingInput").on("change", function () {
 				if (this.checked) {
@@ -45,7 +45,7 @@ if (document.body.classList.contains("admin-logged")) {
 					});
 				}
 				saveGiftPackagingProducts();
-				addGiftPackagingToCart();
+				updateAmountOfGiftPackagingInCart();
 			});
 
 			function getAllNatiosGiftPackagingProducts() {
@@ -70,6 +70,7 @@ if (document.body.classList.contains("admin-logged")) {
 							}
 						}
 				});
+				console.log("natiosProducts:");
 				console.log(natiosProducts);
 			}
 
@@ -173,16 +174,37 @@ if (document.body.classList.contains("admin-logged")) {
 				console.log(natiosLocalStorage);
 			}
 
-			function removeGiftPackagingFromLocalStorage() {
+			function checkIfRemoveGiftPackaging() {
 				if (natiosProducts === natiosLocalStorage) {
 					return;
-				} else {
-					localStorage.removeItem("natiosProducts");
-					console.log("natiosProducts removed from localStorage");
+				}
+				removeGiftPackagingFromLocalStorage();
+				removeAllGiftPackagingFromCart();
+			}
+
+			function removeGiftPackagingFromLocalStorage() {
+				localStorage.removeItem("natiosProducts");
+				console.log("natiosProducts removed from localStorage");
+			}
+
+			function removeAllGiftPackagingFromCart() {
+				let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
+					"value"
+				);
+
+				if (giftPackagingItemId) {
+					shoptet.cartShared.removeFromCart({ itemId: giftPackagingItemId });
 				}
 			}
 
-			function addGiftPackagingToCart() {
+			function updateAmountOfGiftPackagingInCart() {
+				let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
+					"value"
+				);
+				let giftPackagingPriceId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='priceId']").attr(
+					"value"
+				);
+
 				let numberOfPackages = 0;
 				natiosProducts.forEach((product) => {
 					if (product.selected) {
@@ -190,7 +212,20 @@ if (document.body.classList.contains("admin-logged")) {
 					}
 				});
 				numberOfPackages = numberOfPackages / 2;
-				shoptet.cartShared.addToCart({ productCode: "NATDK-1", amount: numberOfPackages });
+
+				if (!giftPackagingItemId) {
+					shoptet.cartShared.addToCart({ productCode: "NATDK-1", amount: numberOfPackages });
+				} else if (giftPackagingItemId) {
+					if (numberOfPackages === 0) {
+						shoptet.cartShared.removeFromCart({ itemId: giftPackagingItemId });
+					} else {
+						shoptet.cartShared.updateQuantityInCart({
+							itemId: giftPackagingItemId,
+							priceId: giftPackagingPriceId,
+							amount: numberOfPackages,
+						});
+					}
+				}
 			}
 		});
 	}
