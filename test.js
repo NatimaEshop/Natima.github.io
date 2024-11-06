@@ -11,7 +11,7 @@ if (document.body.classList.contains("admin-logged")) {
 			let giftPackagingModal = $("#gift-packaging-modal");
 			let giftOptionsContainer = $("#gift-packaging-options");
 			let chosenCombinationsContainer = $("#gift-packaging-chosen-combinations");
-			let packageNumber = 0;
+			let packageId = "";
 
 			let natiosLocalStorage = JSON.parse(localStorage.getItem("natiosProducts"));
 			console.log("natiosLocalStorage:");
@@ -65,7 +65,7 @@ if (document.body.classList.contains("admin-logged")) {
 									image: image,
 									selected: false,
 									currentlySelected: false,
-									packageNumber: 0,
+									packageId: "",
 								});
 							}
 						}
@@ -109,12 +109,12 @@ if (document.body.classList.contains("admin-logged")) {
 					console.log(natiosProducts);
 
 					if (natiosProducts.filter((product) => product.currentlySelected).length == 2) {
-						packageNumber += 1;
+						packageId = makePackageId(7);
 						natiosProducts
 							.filter((product) => product.currentlySelected)
 							.forEach((product) => {
 								product.selected = true;
-								product.packageNumber = packageNumber;
+								product.packageId = packageId;
 							});
 
 						addSelectedOptionsToChosenCombinations();
@@ -129,17 +129,29 @@ if (document.body.classList.contains("admin-logged")) {
 				});
 			}
 
+			function makePackageId(length) {
+				let result = "";
+				const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+				const charactersLength = characters.length;
+				let counter = 0;
+				while (counter < length) {
+					result += characters.charAt(Math.floor(Math.random() * charactersLength));
+					counter += 1;
+				}
+				return result;
+			}
+
 			function addSelectedOptionsToChosenCombinations() {
 				chosenCombinationsContainer.empty(); // Clear any existing options
 
 				natiosProducts.forEach((product) => {
 					if (product.selected) {
-						let currentPackageNumber = product.packageNumber;
-						//create a div with packageNumberDiv value and class gift-package-combination
-						//if packegeNumberDiv with currentPackageNumber does not exist create it
-						if ($(`.gift-package-combination[currentPackageNumber="${currentPackageNumber}"]`).length == 0) {
-							let packageNumberDiv = `<div class="gift-package-combination" currentPackageNumber="${currentPackageNumber}"><div class="remove-combination"></div></div>`;
-							chosenCombinationsContainer.append(packageNumberDiv);
+						let currentPackageId = product.packageId;
+						//create a div with packageIdDiv value and class gift-package-combination
+						//if packageIdDiv with currentPackageId does not exist create it
+						if ($(`.gift-package-combination[currentPackageId="${currentPackageId}"]`).length == 0) {
+							let packageIdDiv = `<div class="gift-package-combination" currentPackageId="${currentPackageId}"><div class="remove-combination"></div></div>`;
+							chosenCombinationsContainer.append(packageIdDiv);
 						}
 
 						const productDiv = `
@@ -148,16 +160,16 @@ if (document.body.classList.contains("admin-logged")) {
                     <span>${product.name}</span>
                 </div>
             `;
-						$(`.gift-package-combination[currentPackageNumber="${currentPackageNumber}"]`).append(productDiv);
+						$(`.gift-package-combination[currentPackageId="${currentPackageId}"]`).append(productDiv);
 					}
 				});
 
 				$(".remove-combination").on("click", function () {
-					let currentPackageNumber = $(this).parent().attr("currentPackageNumber");
+					let currentPackageId = $(this).parent().attr("currentPackageId");
 					natiosProducts.forEach((product) => {
-						if (product.packageNumber == currentPackageNumber) {
+						if (product.packageId == currentPackageId) {
 							product.selected = false;
-							product.packageNumber = 0;
+							product.packageId = "";
 						}
 					});
 					addSelectedOptionsToChosenCombinations();
