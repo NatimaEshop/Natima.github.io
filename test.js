@@ -1,4 +1,94 @@
-if (document.body.classList.contains("admin-logged")) {
+if (document.body.classList.contains("xadmin-logged")) {
+	if (document.body.classList.contains("ordering-process")) {
+		let editedNatiosPackaging = false;
+		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
+			natiosGiftPackaging();
+		});
+		document.addEventListener("DOMContentLoaded", function () {
+			natiosGiftPackaging();
+		});
+		function natiosGiftPackaging() {
+			let giftPackagingDivHTML =
+				'<div class="gift-packaging"><div class="gift-packaging-agree"><div class="gift-packaging-checkbox"><input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true"><label for="giftPackagingInput"><span>Přidat dárkovou krabičku NATIOS.</span></label><span class="quantity"><span class="increase-tooltip js-increase-tooltip" data-trigger="manual" data-container="body"data-original-title="Není možné zakoupit více než 9999 ks." aria-hidden="true" role="tooltip"data-testid="tooltip"></span><span class="decrease-tooltip js-decrease-tooltip" data-trigger="manual" data-container="body"data-original-title="Minimální množství, které lze zakoupit, je 1 ks." aria-hidden="true"role="tooltip" data-testid="tooltip"></span><input type="number" name="amount" value="2" class="amount" autocomplete="off" data-decimals="0"data-max="9999" data-min="1" step="any" min="1" max="9999" data-testid="cartAmount"aria-label="Množství"><span class="increase" aria-label="Zvýšit množství" tabindex="0" role="button"data-testid="increase"></span><span class="decrease" aria-label="Snížit množství" tabindex="0" role="button"data-testid="decrease"></span></span><div class="packaging-price"><span>39</span>,- Kč</div></div></div></div>';
+
+			$(giftPackagingDivHTML).insertAfter($(".discount-coupon"));
+
+			let giftPackaging = $(".gift-packaging");
+
+			let natiosAmountOfGiftProducts = 0;
+			getAllNatiosGiftPackagingProducts();
+
+			$("#giftPackagingInput").on("change", function () {
+				if (this.checked) {
+					giftPackaging.addClass("active");
+					updateAmountOfGiftPackagingInCart();
+				} else {
+					giftPackaging.removeClass("active");
+					removeAllGiftPackagingFromCart();
+				}
+			});
+
+			function getAllNatiosGiftPackagingProducts() {
+				$(".removeable").each(function () {
+					let pName = $(this).find(".p-name .main-link").text();
+					if (pName.includes("NATIOS")) {
+						if (pName.includes("kapsl") || pName.includes("tablet")) {
+							natiosAmountOfGiftProducts += 1;
+						}
+					}
+				});
+				console.log("natiosAmountOfGiftProducts:");
+				console.log(natiosAmountOfGiftProducts);
+			}
+
+			function removeAllGiftPackagingFromCart() {
+				let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
+					"value"
+				);
+
+				if (giftPackagingItemId) {
+					shoptet.cartShared.removeFromCart({ itemId: giftPackagingItemId });
+				}
+			}
+
+			function updateAmountOfGiftPackagingInCart() {
+				if (editedNatiosPackaging) {
+					return;
+				}
+				editedNatiosPackaging = true;
+				document.addEventListener(
+					"ShoptetDOMCartContentLoaded",
+					function () {
+						editedNatiosPackaging = false;
+					},
+					{ once: true }
+				);
+				let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
+					"value"
+				);
+				let giftPackagingPriceId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='priceId']").attr(
+					"value"
+				);
+
+				if (!giftPackagingItemId) {
+					shoptet.cartShared.addToCart({ productCode: "NATDK-1", amount: natiosAmountOfGiftProducts });
+				} else if (giftPackagingItemId) {
+					if (natiosAmountOfGiftProducts === 0) {
+						shoptet.cartShared.removeFromCart({ itemId: giftPackagingItemId });
+					} else {
+						shoptet.cartShared.updateQuantityInCart({
+							itemId: giftPackagingItemId,
+							priceId: giftPackagingPriceId,
+							amount: natiosAmountOfGiftProducts,
+						});
+					}
+				}
+			}
+		}
+	}
+}
+
+if (document.body.classList.contains("xadmin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
 		let editedNatiosPackaging = false;
 		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
