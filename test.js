@@ -25,6 +25,7 @@ if (document.body.classList.contains("admin-logged")) {
 				if (this.checked) {
 					giftPackagingModal.removeClass("display-none");
 					addGiftPackagingProductOptions();
+					addSelectedOptionsToChosenCombinations();
 				} else {
 					giftPackagingModal.addClass("display-none");
 				}
