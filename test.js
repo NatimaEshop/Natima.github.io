@@ -37,6 +37,7 @@ if (document.body.classList.contains("admin-logged")) {
 					});
 				}
 				saveGiftPackagingProducts();
+				addGiftPackagingToCart();
 			});
 
 			let natiosProducts = [];
@@ -158,8 +159,16 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 
 			function saveGiftPackagingProducts() {
+				//save natiosProducts to localStorage
+				localStorage.setItem("natiosProducts", JSON.stringify(natiosProducts));
+
+				let natiosLocalStorage = JSON.parse(localStorage.getItem("natiosProducts"));
+				console.log("natiosLocalStorage:");
+				console.log(natiosLocalStorage);
+			}
+
+			function addGiftPackagingToCart() {
 				let numberOfPackages = 0;
-				/**/
 				natiosProducts.forEach((product) => {
 					if (product.selected) {
 						numberOfPackages += 1;
