@@ -33,7 +33,11 @@ if (document.body.classList.contains("admin-logged")) {
 					let pName = $(this).find(".p-name .main-link").text();
 					if (pName.includes("NATIOS")) {
 						if (pName.includes("kapsl") || pName.includes("tablet")) {
-							natiosAmountOfGiftProducts += 1;
+							let quantity = $(this).find(".quantity input").val();
+							//for each quantity create an object and push it to natiosProducts array
+							for (let i = 0; i < quantity; i++) {
+								natiosAmountOfGiftProducts += 1;
+							}
 						}
 					}
 				});
