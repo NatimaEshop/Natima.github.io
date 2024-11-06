@@ -1,6 +1,12 @@
 if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
+		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
+			natiosGiftPackaging();
+		});
 		document.addEventListener("DOMContentLoaded", function () {
+			natiosGiftPackaging();
+		});
+		function natiosGiftPackaging() {
 			let giftPackagingDiv =
 				'<div class="gift-packaging"><div class="gift-packaging-agree"><div class="gift-packaging-checkbox"><input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true"><label for="giftPackagingInput"><span>Přeji si dárkově zabilit doplňky NATIOS.</span><span>39,- Kč</span></label></div></div></div>';
 			let giftPackagingModalDiv =
@@ -269,6 +275,6 @@ if (document.body.classList.contains("admin-logged")) {
 					}
 				}
 			}
-		});
+		}
 	}
 }
