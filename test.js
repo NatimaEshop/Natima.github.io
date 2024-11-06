@@ -31,12 +31,16 @@ if (document.body.classList.contains("admin-logged")) {
 			$("#giftPackagingInput").on("change", function () {
 				if (this.checked) {
 					giftPackagingModal.removeClass("display-none");
+
 					addGiftPackagingProductOptions();
 					addSelectedOptionsToChosenCombinations();
 					giftPackagingDivSelector.addClass("active");
 				} else {
 					giftPackagingModal.addClass("display-none");
 					giftPackagingDivSelector.removeClass("active");
+					natiosProducts = [];
+					removeGiftPackagingFromLocalStorage();
+					removeAllGiftPackagingFromCart();
 				}
 			});
 
