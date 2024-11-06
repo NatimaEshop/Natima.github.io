@@ -16,7 +16,17 @@ if (document.body.classList.contains("admin-logged")) {
 			let giftPackaging = $(".gift-packaging");
 
 			let natiosAmountOfGiftProducts = 0;
+			let natiosAmountOfGiftBoxes = 1;
 			getAllNatiosGiftPackagingProducts();
+
+			let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
+				"value"
+			);
+
+			if (giftPackagingItemId) {
+				giftPackaging.addClass("active");
+				$("#giftPackagingInput").prop("checked", true);
+			}
 
 			$("#giftPackagingInput").on("change", function () {
 				if (this.checked) {
@@ -46,10 +56,6 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 
 			function removeAllGiftPackagingFromCart() {
-				let giftPackagingItemId = $("tr.removeable[data-micro-sku='NATDK-1'] .p-total input[name='itemId']").attr(
-					"value"
-				);
-
 				if (giftPackagingItemId) {
 					shoptet.cartShared.removeFromCart({ itemId: giftPackagingItemId });
 				}
@@ -75,18 +81,14 @@ if (document.body.classList.contains("admin-logged")) {
 				);
 
 				if (!giftPackagingItemId) {
-					shoptet.cartShared.addToCart({ productCode: "NATDK-1", amount: natiosAmountOfGiftProducts });
-				} else if (giftPackagingItemId) {
-					if (natiosAmountOfGiftProducts === 0) {
-						shoptet.cartShared.removeFromCart({ itemId: giftPackagingItemId });
-					} else {
-						shoptet.cartShared.updateQuantityInCart({
-							itemId: giftPackagingItemId,
-							priceId: giftPackagingPriceId,
-							amount: natiosAmountOfGiftProducts,
-						});
-					}
+					shoptet.cartShared.addToCart({ productCode: "NATDK-1", amount: natiosAmountOfGiftBoxes });
+					return;
 				}
+				shoptet.cartShared.updateQuantityInCart({
+					itemId: giftPackagingItemId,
+					priceId: giftPackagingPriceId,
+					amount: natiosAmountOfGiftBoxes,
+				});
 			}
 		}
 	}
