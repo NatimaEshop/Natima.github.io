@@ -42,6 +42,8 @@ if (document.body.classList.contains("admin-logged")) {
 				updateAmountOfGiftPackagingInCart();
 			});
 
+			maximumGiftPackaging();
+
 			function getAllNatiosGiftPackagingProducts() {
 				$(".removeable").each(function () {
 					let pName = $(this).find(".p-name .main-link").text();
@@ -63,12 +65,6 @@ if (document.body.classList.contains("admin-logged")) {
 						}
 					}
 				});
-				if (natiosAmountOfGiftBoxes * 2 > natiosAmountOfGiftProducts) {
-					$("#maximum-gift").removeClass("display-none");
-					$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
-					$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
-					$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
-				}
 			}
 
 			function removeAllGiftPackagingFromCart() {
@@ -109,6 +105,14 @@ if (document.body.classList.contains("admin-logged")) {
 					priceId: giftPackagingPriceId,
 					amount: natiosAmountOfGiftBoxes,
 				});
+			}
+			function maximumGiftPackaging() {
+				if (natiosAmountOfGiftBoxes * 2 > natiosAmountOfGiftProducts) {
+					$("#maximum-gift").removeClass("display-none");
+					$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
+					$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
+					$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
+				}
 			}
 		}
 	}
