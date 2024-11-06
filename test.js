@@ -159,6 +159,7 @@ if (document.body.classList.contains("admin-logged")) {
 
 			function saveGiftPackagingProducts() {
 				let numberOfPackages = 0;
+				/**/
 				natiosProducts.forEach((product) => {
 					if (product.selected) {
 						numberOfPackages += 1;
