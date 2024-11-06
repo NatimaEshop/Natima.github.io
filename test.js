@@ -115,23 +115,27 @@ if (document.body.classList.contains("admin-logged")) {
 				});
 			}
 			function maximumGiftPackaging() {
-				if (natiosAmountOfGiftBoxes * 2 > natiosAmountOfGiftProducts) {
-					$("#maximum-gift").removeClass("display-none");
-					$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
-					$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
-					$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
+				if (hasNatiosGiftPackaging) {
+					if (natiosAmountOfGiftBoxes * 2 > natiosAmountOfGiftProducts) {
+						$("#maximum-gift").removeClass("display-none");
+						$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
+						$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
+						$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
+					}
 				}
 			}
 
 			function giftProductsWarnings() {
-				if (hasOmega) {
-					$("#omega-gift").removeClass("display-none");
-				}
-				if (hasCalcium) {
-					$("#calcium-gift").removeClass("display-none");
-				}
-				if (hasProbiotic) {
-					$("#probiotic-gift").removeClass("display-none");
+				if (hasNatiosGiftPackaging) {
+					if (hasOmega) {
+						$("#omega-gift").removeClass("display-none");
+					}
+					if (hasCalcium) {
+						$("#calcium-gift").removeClass("display-none");
+					}
+					if (hasProbiotic) {
+						$("#probiotic-gift").removeClass("display-none");
+					}
 				}
 			}
 		}
