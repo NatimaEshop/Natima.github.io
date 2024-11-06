@@ -187,11 +187,21 @@ if (document.body.classList.contains("admin-logged")) {
 				console.log("natiosLocalStorageNames:");
 				console.log(natiosLocalStorageNames);
 
-				if (natiosProductsNames === natiosLocalStorageNames) {
+				if (arraysEqual(natiosProductsNames, natiosLocalStorageNames)) {
+					console.log("natiosProducts and natiosLocalStorage are equal");
 					return;
 				}
+				console.log("natiosProducts and natiosLocalStorage are not equal");
 				removeGiftPackagingFromLocalStorage();
 				removeAllGiftPackagingFromCart();
+				/*porovnani arrayu*/
+				function arraysEqual(arr1, arr2) {
+					if (arr1.length !== arr2.length) return false;
+					for (let i = 0; i < arr1.length; i++) {
+						if (arr1[i] !== arr2[i]) return false;
+					}
+					return true;
+				}
 			}
 
 			function removeGiftPackagingFromLocalStorage() {
