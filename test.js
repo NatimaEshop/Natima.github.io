@@ -300,6 +300,8 @@ if (document.body.classList.contains("admin-logged")) {
 					}
 				}
 				console.log("------------------------------------------");
+				console.log("Natios products:");
+				console.log(natiosProducts);
 				console.log("numberOfPackages:");
 				console.log(numberOfPackages);
 				console.log("------------------------------------------");
