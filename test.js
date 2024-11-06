@@ -165,7 +165,7 @@ if (document.body.classList.contains("admin-logged")) {
 					}
 				});
 				numberOfPackages = numberOfPackages / 2;
-				shoptet.cartShared.addToCart({ productCode: "183/GSB", amount: numberOfPackages });
+				shoptet.cartShared.addToCart({ productCode: "NATDK-1", amount: numberOfPackages });
 			}
 		});
 	}
