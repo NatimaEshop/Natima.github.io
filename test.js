@@ -8,12 +8,13 @@ if (document.body.classList.contains("admin-logged")) {
 		});
 		function natiosGiftPackaging() {
 			let giftPackagingDiv =
-				'<div class="gift-packaging"><div class="gift-packaging-agree"><div class="gift-packaging-checkbox"><input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true"><label for="giftPackagingInput"><span>Přeji si dárkově zabilit doplňky NATIOS.</span><span>39,- Kč</span></label></div></div></div>';
+				'<div class="gift-packaging"><div class="gift-packaging-agree"><div class="gift-packaging-checkbox"><input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true"><label for="giftPackagingInput"><span>Přeji si dárkově zabilit doplňky NATIOS.</span><span>39,-Kč</span></label></div><span id="gift-packaging-edit">Upravit</span></div></div>';
 			let giftPackagingModalDiv =
 				'<div id="gift-packaging-modal" class="display-none"><div class="gift-packaging-modal-content"><div class="gift-packaging-modal-header"><h2>Dárkové balení doplňků NATIOS</h2><div class="gift-packaging-modal-close"></div></div><div class="gift-packaging-modal-body"><p>Do dárkové krabičky NATIOS lze vložit 2 produkty. Zvolte prosím, které 2 produkty chcete do krabičkyvložit.</p><div id="gift-packaging-options"></div><div id="gift-packaging-chosen-combinations"></div><div class="gift-packaging-confirm-wrapper"><div id="gift-packaging-confirm" class="btn"><span>Potvrdit balíčky</span></div></div></div></div></div>';
 
 			$(giftPackagingDiv).insertAfter($(".discount-coupon"));
 			$("body").append(giftPackagingModalDiv);
+			let giftPackagingDivSelector = $(".gift-packaging");
 			let giftPackagingModal = $("#gift-packaging-modal");
 			let giftOptionsContainer = $("#gift-packaging-options");
 			let chosenCombinationsContainer = $("#gift-packaging-chosen-combinations");
@@ -32,25 +33,27 @@ if (document.body.classList.contains("admin-logged")) {
 					giftPackagingModal.removeClass("display-none");
 					addGiftPackagingProductOptions();
 					addSelectedOptionsToChosenCombinations();
+					giftPackagingDivSelector.addClass("active");
 				} else {
 					giftPackagingModal.addClass("display-none");
+					giftPackagingDivSelector.removeClass("active");
 				}
 			});
 
 			$(".gift-packaging-modal-close").on("click", function () {
 				giftPackagingModal.addClass("display-none");
 				$("#giftPackagingInput").prop("checked", false);
-				$("#gift-packaging-edit").remove();
+				giftPackagingDivSelector.removeClass("active");
+			});
+
+			$("#gift-packaging-edit").on("click", function () {
+				giftPackagingModal.removeClass("display-none");
 			});
 
 			$("#gift-packaging-confirm").on("click", function () {
 				giftPackagingModal.addClass("display-none");
-				if ($("#gift-packaging-edit").length === 0) {
-					$(".gift-packaging-checkbox").append('<span id="gift-packaging-edit">Upravit</span>');
-					$("#gift-packaging-edit").on("click", function () {
-						giftPackagingModal.removeClass("display-none");
-					});
-				}
+				giftPackagingDivSelector.addClass("active");
+
 				saveGiftPackagingProducts();
 				updateAmountOfGiftPackagingInCart();
 			});
@@ -207,19 +210,16 @@ if (document.body.classList.contains("admin-logged")) {
 				console.log(natiosLocalStorageNames);
 
 				if (arraysEqual(natiosProductsNames, natiosLocalStorageNames)) {
-					console.log("------------------------------------------------------");
 					console.log("natiosProducts and natiosLocalStorage are equal");
-					console.log("natiosProducts:");
-					console.log(natiosProducts);
 					natiosProducts = natiosLocalStorage;
-					console.log("natiosProducts:");
-					console.log(natiosProducts);
-					console.log("------------------------------------------------------");
+
+					giftPackagingDivSelector.addClass("active");
 					return;
 				}
 				console.log("natiosProducts and natiosLocalStorage are not equal");
 				removeGiftPackagingFromLocalStorage();
 				removeAllGiftPackagingFromCart();
+				giftPackagingDivSelector.removeClass("active");
 				/*porovnani arrayu*/
 				function arraysEqual(arr1, arr2) {
 					if (arr1.length !== arr2.length) return false;
