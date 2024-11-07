@@ -2,9 +2,11 @@ if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
 		let editedNatiosPackaging = false;
 		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
+			natiosGiftPackagingMagnesium();
 			natiosGiftPackaging();
 		});
 		document.addEventListener("DOMContentLoaded", function () {
+			natiosGiftPackagingMagnesium();
 			natiosGiftPackaging();
 		});
 
