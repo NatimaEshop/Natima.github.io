@@ -182,6 +182,15 @@ if (document.body.classList.contains("admin-logged")) {
 			if (natiosAmountOfGiftProducts - 1 <= natiosMagnesiumMalateAmount + natiosMagnesiumBisglycinateAmount) {
 				return;
 			}
+			console.log("--------------------------");
+			console.log("--------------------------");
+			console.log("--------------------------");
+			console.log("Natios malate " + natiosMagnesiumMalateAmount);
+			console.log("Natios bisglycinate " + natiosMagnesiumBisglycinateAmount);
+			console.log("Natios gift products " + natiosAmountOfGiftProducts);
+			console.log("--------------------------");
+			console.log("--------------------------");
+			console.log("--------------------------");
 
 			let giftPackagingDivHTML = `
 				<div class="gift-packaging universal">
