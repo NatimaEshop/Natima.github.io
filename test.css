@@ -8,13 +8,15 @@
 .gift-packaging-checkbox label {
 	font-weight: 600;
 	padding-right: 80px;
+	min-height: 74px;
+	display: flex !important;
+	align-items: center;
 }
 .gift-packaging-checkbox .gift-packaging-image {
 	position: absolute;
 	width: 80px;
 	right: 0;
 	top: 0;
-	transform: translateY(-15%);
 }
 .gift-packaging-checkbox .gift-packaging-image:hover {
 	width: 250px;
@@ -24,19 +26,24 @@
 	border-style: solid;
 	border-width: 1px;
 	border-color: var(--color-gray-600);
-	transform: translatey(-5%);
 	z-index: 2;
 }
-.gift-packaging #gift-quantity {
+.gift-select-quantity {
 	display: none;
+	flex-direction: column;
+	gap: var(--gap);
+}
+.gift-packaging.active .gift-select-quantity {
+	display: flex;
+}
+.gift-packaging #gift-quantity {
+	display: flex;
 	max-width: 80px;
 	margin-left: auto;
 	margin-right: 0;
 	margin-top: var(--gap);
 }
-.gift-packaging.active #gift-quantity {
-	display: flex;
-}
+
 .gift-packaging {
 	padding-bottom: calc(var(--gap) * 1.5);
 	position: relative;
@@ -72,4 +79,9 @@
 }
 .gift-packaging.active #packaging-poznamky {
 	display: flex;
+}
+.packaging-price {
+	position: absolute;
+	bottom: 0;
+	transform: translatey(100%);
 }
