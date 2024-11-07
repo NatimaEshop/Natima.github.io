@@ -27,15 +27,6 @@ if (document.body.classList.contains("admin-logged")) {
 				}
 			});
 
-			console.log("------------------------------------------");
-			console.log("------------------------------------------");
-			console.log("------------------------------------------");
-			console.log("sessionStorage");
-			console.log(sessionStorage.getItem("changedMagnesiumForBoxes"));
-			console.log("------------------------------------------");
-			console.log("------------------------------------------");
-			console.log("------------------------------------------");
-
 			if (natiosMalateAmount < 1 || natiosBisglycinateAmount < 1) {
 				if (!sessionStorage.getItem("changedMagnesiumForBoxes")) {
 					{
@@ -80,6 +71,12 @@ if (document.body.classList.contains("admin-logged")) {
 				`;
 			$(giftPackagingDivHTML).insertAfter($(".discount-coupon"));
 
+			if (sessionStorage.getItem("changedMagnesiumForBoxes")) {
+				if (magnesiumGiftPackagingAmount > 0) {
+					$("#magnesium-giftPackagingInput").prop("checked", true);
+				}
+			}
+
 			$("#magnesium-giftPackagingInput").on("change", function () {
 				if (this.checked) {
 					changeMagnesiumForBoxes();
@@ -90,13 +87,7 @@ if (document.body.classList.contains("admin-logged")) {
 				function changeMagnesiumForBoxes() {
 					magnesiumGiftPackagingAmount =
 						natiosMalateAmount < natiosBisglycinateAmount ? natiosMalateAmount : natiosBisglycinateAmount;
-					console.log("------------------------------------------");
-					console.log("------------------------------------------");
-					console.log("------------------------------------------");
-					console.log("magnesiumGiftPackagingAmount: ", magnesiumGiftPackagingAmount);
-					console.log("------------------------------------------");
-					console.log("------------------------------------------");
-					console.log("------------------------------------------");
+
 					//remove malate
 					if (natiosMalateAmount === magnesiumGiftPackagingAmount) {
 						shoptet.cartShared.removeFromCart({ itemId: malateGiftPackagingItemId });
@@ -120,10 +111,12 @@ if (document.body.classList.contains("admin-logged")) {
 					}
 
 					//add balicek
-					shoptet.cartShared.addToCart({
-						productCode: magnesiumGiftPackagingCode,
-						amount: magnesiumGiftPackagingAmount,
-					});
+					if (magnesiumGiftPackagingAmount > 0) {
+						shoptet.cartShared.addToCart({
+							productCode: magnesiumGiftPackagingCode,
+							amount: magnesiumGiftPackagingAmount,
+						});
+					}
 				}
 			});
 		}
