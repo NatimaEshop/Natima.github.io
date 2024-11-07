@@ -44,8 +44,7 @@ if (document.body.classList.contains("admin-logged")) {
 			//smaller of the two
 			let magnesiumGiftPackagingAmount =
 				natiosMalateAmount < natiosBisglycinateAmount ? natiosMalateAmount : natiosBisglycinateAmount;
-			console.log("magnesiumGiftPackagingAmount-------------------------");
-			console.log(magnesiumGiftPackagingAmount);
+
 			let magnesiumGiftPackagingCode = "NATBAL13";
 
 			let giftPackagingDivHTML = `
@@ -70,6 +69,10 @@ if (document.body.classList.contains("admin-logged")) {
 					changeBoxesForMagnesium();
 				}
 				function changeMagnesiumForBoxes() {
+					console.log("---------------------");
+					console.log("Malate amount: " + natiosMalateAmount);
+					console.log("Bisglycinate amount: " + natiosBisglycinateAmount);
+					console.log("Amount of boxes: " + magnesiumGiftPackagingAmount);
 					//remove malate
 					if (natiosMalateAmount === magnesiumGiftPackagingAmount) {
 						shoptet.cartShared.removeFromCart({ itemId: malateGiftPackagingItemId });
