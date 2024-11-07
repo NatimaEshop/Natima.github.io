@@ -171,15 +171,15 @@ if (document.body.classList.contains("admin-logged")) {
 			let natiosAmountOfGiftProducts = 0;
 			let natiosAmountOfGiftBoxes = 1;
 
-			let natiosMagnesiumMalateAmount = 0;
-			let natiosMagnesiumBisglycinateAmount = 0;
+			let natiosMagnesiumMalateAmountCheck = 0;
+			let natiosMagnesiumBisglycinateAmountCheck = 0;
 			getAllNatiosGiftPackagingProducts();
 
 			if (natiosAmountOfGiftProducts < 2) {
 				return;
 			}
 
-			if (natiosAmountOfGiftProducts - 1 <= natiosMagnesiumMalateAmount + natiosMagnesiumBisglycinateAmount) {
+			if (natiosAmountOfGiftProducts - 1 <= natiosMagnesiumMalateAmountCheck + natiosMagnesiumBisglycinateAmountCheck) {
 				return;
 			}
 			console.log("--------------------------");
@@ -279,14 +279,11 @@ if (document.body.classList.contains("admin-logged")) {
 
 			function getAllNatiosGiftPackagingProducts() {
 				$(".removeable").each(function () {
-					console.log("test1");
 					if ($(this).attr("data-micro-sku") == "NAT0406") {
-						natiosMalateAmount = $(this).find(".quantity input").val();
-						console.log("malate amount: " + natiosMalateAmount);
-						console.log("test2");
+						natiosMagnesiumMalateAmountCheck = $(this).find(".quantity input").val();
 					}
 					if ($(this).attr("data-micro-sku") == "NAT0147") {
-						natiosBisglycinateAmount = $(this).find(".quantity input").val();
+						natiosMagnesiumBisglycinateAmountCheck = $(this).find(".quantity input").val();
 					}
 					let pName = $(this).find(".p-name .main-link").text();
 					if (pName.includes("NATIOS")) {
