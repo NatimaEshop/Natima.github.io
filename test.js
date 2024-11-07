@@ -29,7 +29,11 @@ if (document.body.classList.contains("admin-logged")) {
 	<div class="gift-packaging-agree">
 		<div class="gift-packaging-checkbox">
 			<input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true">
-			<label for="giftPackagingInput"><span>Přidat dárkovou krabičku NATIOS.</span></label>
+			<label for="giftPackagingInput"><span>V košíku máte doplňky stravy NATIOS. Chcete přidat také dárkovou
+					krabičku?</span></label>
+			<div class="gift-packaging-image"><img
+					src="https://cdn.myshoptet.com/usr/www.natima.cz/user/shop/big/12028_natios-darkova-krabicka.jpg?6729fc0a"
+					alt="Natios krabička" width="1024" height="768" loading="lazy"></div>
 			<div class="packaging-price"><span>39</span>,- Kč / ks</div>
 			<div id="packaging-poznamky">
 				<span>Krabička je určena na 2 doplňky stravy značky Natios.</span>
@@ -40,12 +44,12 @@ if (document.body.classList.contains("admin-logged")) {
 				<div class="display-none" id="probiotic-gift"><b>Pozor:</b> NATIOS Probiotika se kvůli většího balení do
 					dárkové krabičky nevlezou.</div>
 				<div class="display-none" id="maximum-gift">
-					<b>Pozor:</b> Z vaší objednávky lze do dárkových krabiček vložit <b><span
+					<b>Pozor:</b> Z vaší objednávky lze do dárkové krabičky vložit pouze <b><span
 							id="maximum-product-amount-gift">XXX</span></b> <span
-							id="produkty-sklonovani-maximum">produktů</span>. Máte zvoleno <span
-						id="selected-amount-of-gift-packaging">XXX</span> dárkových krabiček pro <span
+						id="produkty-sklonovani-maximum">produktů</span>. Pro naplnění <span
+						id="selected-amount-of-gift-packaging">XXX</span> dárkových krabiček můžete nakoupit ještě <span
 						id="selected-amount-of-gift-packaging-products">XXX</span> <span
-						id="produkty-sklonovani-zvoleno">produktů</span>.
+						id="produkty-sklonovani-zvoleno"> NATIOS produktů</span>.
 				</div>
 			</div>
 			<span id="gift-quantity" class="quantity">
