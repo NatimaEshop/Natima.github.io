@@ -35,7 +35,7 @@ if (document.body.classList.contains("admin-logged")) {
 					src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova krabicka_nahled.png"
 					alt="Natios krabička" width="600" height="550" loading="lazy"></div>
 			<div id="packaging-poznamky">
-
+				<span>Cena dárkové krabičky: 39,- Kč / ks</span>
 				<span>Krabička je určena na 2 doplňky stravy značky Natios.</span>
 				<div class="display-none" id="calcium-gift"><b>Pozor:</b> NATIOS Calcium se kvůli většího balení do
 					dárkové krabičky nevleze.</div>
@@ -68,7 +68,7 @@ if (document.body.classList.contains("admin-logged")) {
 					<span class="decrease" aria-label="Snížit množství" tabindex="0" role="button"
 						data-testid="decrease"></span>
 				</span>
-				<div class="packaging-price"><span>39</span>,- Kč / ks</div>
+
 			</div>
 		</div>
 	</div>
@@ -177,7 +177,9 @@ if (document.body.classList.contains("admin-logged")) {
 						$("#maximum-gift").removeClass("display-none");
 						$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
 						$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
-						$("#selected-amount-of-gift-packaging-products").text(natiosAmountOfGiftBoxes * 2);
+						$("#selected-amount-of-gift-packaging-products").text(
+							natiosAmountOfGiftProducts * 2 - natiosAmountOfGiftBoxes * 2
+						);
 
 						if (natiosAmountOfGiftProducts > 4) {
 							$("#produkty-sklonovani-maximum").text("produktů");
@@ -187,7 +189,7 @@ if (document.body.classList.contains("admin-logged")) {
 							$("#produkty-sklonovani-maximum").text("produkty");
 						}
 
-						if (natiosAmountOfGiftBoxes * 2 > 4) {
+						if (natiosAmountOfGiftProducts * 2 - natiosAmountOfGiftBoxes * 2 > 4) {
 							$("#produkty-sklonovani-zvoleno").text("produktů");
 						} else {
 							$("#produkty-sklonovani-zvoleno").text("produkty");
