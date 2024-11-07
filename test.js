@@ -179,7 +179,7 @@ if (document.body.classList.contains("admin-logged")) {
 				return;
 			}
 
-			if (natiosAmountOfGiftProducts >= natiosMagnesiumMalateAmountCheck + natiosMagnesiumBisglycinateAmountCheck + 1) {
+			if (natiosAmountOfGiftProducts <= natiosMagnesiumMalateAmountCheck + natiosMagnesiumBisglycinateAmountCheck + 1) {
 				console.log("Gifts:" + natiosAmountOfGiftProducts);
 				console.log("Malate:" + natiosMagnesiumMalateAmountCheck);
 				console.log("Bisglycinate:" + natiosMagnesiumBisglycinateAmountCheck);
