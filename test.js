@@ -92,8 +92,23 @@ if (document.body.classList.contains("admin-logged")) {
 				}
 
 				function changeMagnesiumForBoxes() {
-					magnesiumGiftPackagingAmount =
-						natiosMalateAmount < natiosBisglycinateAmount ? natiosMalateAmount : natiosBisglycinateAmount;
+					if (natiosMalateAmount < natiosBisglycinateAmount) {
+						magnesiumGiftPackagingAmount = natiosMalateAmount;
+					}
+					if (natiosMalateAmount > natiosBisglycinateAmount) {
+						magnesiumGiftPackagingAmount = natiosBisglycinateAmount;
+					} else {
+						magnesiumGiftPackagingAmount = natiosMalateAmount;
+					}
+					console.log("--------------------------");
+					console.log("--------------------------");
+					console.log("--------------------------");
+					console.log("Natios malate " + natiosMalateAmount);
+					console.log("Natios bisglycinate " + natiosBisglycinateAmount);
+					console.log("Magnesium gift packaging " + magnesiumGiftPackagingAmount);
+					console.log("--------------------------");
+					console.log("--------------------------");
+					console.log("--------------------------");
 
 					//remove malate
 					if (natiosMalateAmount === magnesiumGiftPackagingAmount) {
