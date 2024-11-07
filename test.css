@@ -31,17 +31,19 @@
 .gift-select-quantity {
 	display: none;
 	flex-direction: column;
-	gap: var(--gap);
 }
 .gift-packaging.active .gift-select-quantity {
 	display: flex;
+	max-width: 90px;
 }
 .gift-packaging #gift-quantity {
 	display: flex;
-	max-width: 80px;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: 0;
-	margin-top: var(--gap);
+	margin-top: calc(var(--gap) * 1.25);
+	width: 100%;
+	margin-bottom: 0;
 }
 
 .gift-packaging {
@@ -71,17 +73,13 @@
 
 #packaging-poznamky {
 	display: none;
-	max-width: calc(100% - 80px);
+	max-width: calc(100% - 90px);
 	padding-right: 20px;
 	margin-top: var(--gap);
 	flex-direction: column;
+	justify-content: center;
 	gap: calc(var(--gap) / 2);
 }
 .gift-packaging.active #packaging-poznamky {
 	display: flex;
-}
-.packaging-price {
-	position: absolute;
-	bottom: 0;
-	transform: translatey(100%);
 }
