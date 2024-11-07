@@ -36,7 +36,9 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 			if (sessionStorage.getItem("changedMagnesiumForBoxes")) {
 				if (magnesiumGiftPackagingAmount < 1) {
-					return;
+					if (natiosMalateAmount < 1 || natiosBisglycinateAmount < 1) {
+						return;
+					}
 				}
 			}
 
