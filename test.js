@@ -1,6 +1,5 @@
 if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
-		let editedNatiosPackaging = false;
 		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
 			natiosGiftPackaging();
 		});
@@ -9,6 +8,7 @@ if (document.body.classList.contains("admin-logged")) {
 		});
 
 		function natiosGiftPackaging() {
+			let editedNatiosPackaging = false;
 			let hasNatiosGiftPackaging = false;
 			let hasOmega = false;
 			let hasCalcium = false;
@@ -16,9 +16,6 @@ if (document.body.classList.contains("admin-logged")) {
 
 			let natiosAmountOfGiftProducts = 0;
 			let natiosAmountOfGiftBoxes = 1;
-
-			let natiosMagnesiumMalateAmountCheck = 0;
-			let natiosMagnesiumBisglycinateAmountCheck = 0;
 
 			getAllNatiosGiftPackagingProducts();
 
