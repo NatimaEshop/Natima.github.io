@@ -92,13 +92,10 @@ if (document.body.classList.contains("admin-logged")) {
 				}
 
 				function changeMagnesiumForBoxes() {
-					if (natiosMalateAmount < natiosBisglycinateAmount) {
+					if (natiosMalateAmount < natiosBisglycinateAmount || natiosMalateAmount == natiosBisglycinateAmount) {
 						magnesiumGiftPackagingAmount = natiosMalateAmount;
-					}
-					if (natiosMalateAmount > natiosBisglycinateAmount) {
-						magnesiumGiftPackagingAmount = natiosBisglycinateAmount;
 					} else {
-						magnesiumGiftPackagingAmount = natiosMalateAmount;
+						magnesiumGiftPackagingAmount = natiosBisglycinateAmount;
 					}
 					console.log("--------------------------");
 					console.log("--------------------------");
