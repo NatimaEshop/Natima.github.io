@@ -178,7 +178,7 @@ if (document.body.classList.contains("admin-logged")) {
 						$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
 						$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
 						$("#selected-amount-of-gift-packaging-products").text(
-							natiosAmountOfGiftBoxes * 2 - natiosAmountOfGiftProducts * 2
+							natiosAmountOfGiftBoxes * 2 - natiosAmountOfGiftProducts
 						);
 
 						if (natiosAmountOfGiftProducts > 4) {
@@ -189,10 +189,10 @@ if (document.body.classList.contains("admin-logged")) {
 							$("#produkty-sklonovani-maximum").text("produkty");
 						}
 
-						if (natiosAmountOfGiftBoxes * 2 - natiosAmountOfGiftProducts * 2 > 4) {
-							$("#produkty-sklonovani-zvoleno").text("produktů");
+						if (natiosAmountOfGiftBoxes * 2 - natiosAmountOfGiftProducts > 4) {
+							$("#produkty-sklonovani-zvoleno").text("NATIOS doplňků");
 						} else {
-							$("#produkty-sklonovani-zvoleno").text("produkty");
+							$("#produkty-sklonovani-zvoleno").text("NATIOS doplňky");
 						}
 					}
 				}
