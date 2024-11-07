@@ -173,17 +173,26 @@ if (document.body.classList.contains("admin-logged")) {
 
 			let natiosMagnesiumMalateAmountCheck = 0;
 			let natiosMagnesiumBisglycinateAmountCheck = 0;
+			let natiosProductsWOMagnesiums = 0;
+			let totalMagnesiumAmountCheck = 0;
 			getAllNatiosGiftPackagingProducts();
 
 			if (natiosAmountOfGiftProducts < 2) {
 				return;
 			}
 
-			if (natiosAmountOfGiftProducts - natiosMagnesiumMalateAmountCheck - natiosMagnesiumBisglycinateAmountCheck < 2) {
-				console.log("Gifts:" + natiosAmountOfGiftProducts);
-				console.log("Malate:" + natiosMagnesiumMalateAmountCheck);
-				console.log("Bisglycinate:" + natiosMagnesiumBisglycinateAmountCheck);
-				return;
+			if (totalMagnesiumAmountCheck >= 1) {
+				if (
+					natiosMagnesiumMalateAmountCheck - natiosMagnesiumBisglycinateAmountCheck + natiosProductsWOMagnesiums >=
+					2
+				) {
+				} else if (
+					natiosMagnesiumBisglycinateAmountCheck - natiosMagnesiumMalateAmountCheck + natiosProductsWOMagnesiums >=
+					2
+				) {
+				} else {
+					return;
+				}
 			}
 
 			let giftPackagingDivHTML = `
@@ -297,6 +306,9 @@ if (document.body.classList.contains("admin-logged")) {
 							}
 						}
 					}
+					natiosProductsWOMagnesiums =
+						natiosAmountOfGiftProducts - natiosMagnesiumMalateAmountCheck - natiosMagnesiumBisglycinateAmountCheck;
+					totalMagnesiumAmountCheck = natiosMagnesiumMalateAmountCheck + natiosMagnesiumBisglycinateAmountCheck;
 				});
 			}
 
