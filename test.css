@@ -10,7 +10,14 @@
 	padding-right: 80px;
 	min-height: 74px;
 	display: flex !important;
-	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 1em;
+}
+.gift-cena {
+	width: 100%;
+	font-weight: 400;
+	font-size: 0.9em;
 }
 .gift-packaging-checkbox .gift-packaging-image {
 	position: absolute;
