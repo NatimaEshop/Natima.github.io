@@ -279,6 +279,14 @@ if (document.body.classList.contains("admin-logged")) {
 
 			function getAllNatiosGiftPackagingProducts() {
 				$(".removeable").each(function () {
+					console.log("test1");
+					if ($(this).attr("data-micro-sku") == "NAT0406") {
+						natiosMalateAmount = $(this).find(".quantity input").val();
+						console.log("test2");
+					}
+					if ($(this).attr("data-micro-sku") == "NAT0147") {
+						natiosBisglycinateAmount = $(this).find(".quantity input").val();
+					}
 					let pName = $(this).find(".p-name .main-link").text();
 					if (pName.includes("NATIOS")) {
 						if (pName.includes("kapsl") || pName.includes("tablet")) {
@@ -296,12 +304,6 @@ if (document.body.classList.contains("admin-logged")) {
 								}
 							}
 						}
-					}
-					if ($(this).attr("data-micro-sku") == "NAT0406") {
-						natiosMalateAmount = $(this).find(".quantity input").val();
-					}
-					if ($(this).attr("data-micro-sku") == "NAT0147") {
-						natiosBisglycinateAmount = $(this).find(".quantity input").val();
 					}
 				});
 			}
