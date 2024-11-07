@@ -34,8 +34,8 @@ if (document.body.classList.contains("admin-logged")) {
 			<div class="gift-packaging-image"><img
 					src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova krabicka_nahled.png"
 					alt="Natios krabička" width="600" height="550" loading="lazy"></div>
-			<div class="packaging-price"><span>39</span>,- Kč / ks</div>
 			<div id="packaging-poznamky">
+				<div class="packaging-price"><span>39</span>,- Kč / ks</div>
 				<span>Krabička je určena na 2 doplňky stravy značky Natios.</span>
 				<div class="display-none" id="calcium-gift"><b>Pozor:</b> NATIOS Calcium se kvůli většího balení do
 					dárkové krabičky nevleze.</div>
