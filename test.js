@@ -59,17 +59,20 @@ if (document.body.classList.contains("admin-logged")) {
 			let magnesiumGiftPackagingCode = "NATBAL13";
 
 			let giftPackagingDivHTML = `
-				<div class="gift-packaging magnesium">
-					<div class="gift-packaging-agree">
-						<div class="gift-packaging-checkbox">
-							<input type="checkbox" id="magnesium-giftPackagingInput" name="giftPackagingInput" value="true">
-							<label for="magnesium-giftPackagingInput"><span>V košíku máte kombinaci NATIOS Magnesium Malate a NATIOS Magnesium Bisglycinate. Chcete tyto produkty obdržet v dárkové krabičce ZDARMA?</span></label>
-							<div class="gift-packaging-image"><img
-									src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova magnesium-krabicka_nahled.png"
-									alt="Natios Magnesium krabička" width="600" height="550" loading="lazy"></div>
-						</div>
-					</div>
-				</div>
+<div class="gift-packaging magnesium">
+	<div class="gift-packaging-agree">
+		<div class="gift-packaging-checkbox">
+			<input type="checkbox" id="magnesium-giftPackagingInput" name="giftPackagingInput" value="true">
+			<label for="magnesium-giftPackagingInput"><span>V košíku máte kombinaci:<br><b>NATIOS Magnesium Malate a
+						Magnesium Bisglycinate</b>. Chcete tyto produkty obdržet v <b>dárkové krabičce
+						ZDARMA?</b></span></label>
+			<div class="gift-packaging-image"><img
+					src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova magnesium-krabicka_nahled.png"
+					alt="Natios Magnesium krabička" width="600" height="550" loading="lazy"></div>
+		</div>
+	</div>
+</div>
+
 				`;
 			$(giftPackagingDivHTML).insertAfter($(".discount-coupon"));
 
@@ -162,53 +165,54 @@ if (document.body.classList.contains("admin-logged")) {
 
 			let giftPackagingDivHTML = `
 				<div class="gift-packaging universal">
-					<div class="gift-packaging-agree">
-						<div class="gift-packaging-checkbox">
-							<input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true">
-							<label for="giftPackagingInput"><span>V košíku máte doplňky stravy NATIOS. Chcete přidat také dárkovou
-									krabičku?</span></label>
-							<div class="gift-packaging-image"><img
-									src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova krabicka_nahled.png"
-									alt="Natios krabička" width="600" height="550" loading="lazy"></div>
-							<div id="packaging-poznamky">
-								<span>Cena dárkové krabičky: 39,- Kč / ks</span>
-								<span>Krabička je určena na 2 doplňky stravy značky Natios.</span>
-								<div class="display-none" id="calcium-gift"><b>Pozor:</b> NATIOS Calcium se kvůli většího balení do
-									dárkové krabičky nevleze.</div>
-								<div class="display-none" id="omega-gift"><b>Pozor:</b> NATIOS Omega-3 se kvůli většího balení do
-									dárkové krabičky nevleze.</div>
-								<div class="display-none" id="probiotic-gift"><b>Pozor:</b> NATIOS Probiotika se kvůli většího balení do
-									dárkové krabičky nevlezou.</div>
-								<div class="display-none" id="maximum-gift">
-									<b>Pozor:</b> Z vaší objednávky lze do dárkové krabičky vložit pouze <b><span
-											id="maximum-product-amount-gift">XXX</span></b> <span
-										id="produkty-sklonovani-maximum">produktů</span>. Pro naplnění <span
-										id="selected-amount-of-gift-packaging">XXX</span> dárkových krabiček můžete nakoupit ještě <span
-										id="selected-amount-of-gift-packaging-products">XXX</span> <span
-										id="produkty-sklonovani-zvoleno"> NATIOS produktů</span>.
-								</div>
-							</div>
-							<div class="gift-select-quantity">
-								<span id="gift-quantity" class="quantity">
-									<span class="increase-tooltip js-increase-tooltip" data-trigger="manual" data-container="body"
-										data-original-title="Není možné zakoupit více než 9999 ks." aria-hidden="true" role="tooltip"
-										data-testid="tooltip"></span>
-									<span class="decrease-tooltip js-decrease-tooltip" data-trigger="manual" data-container="body"
-										data-original-title="Minimální množství, které lze zakoupit, je 1 ks." aria-hidden="true"
-										role="tooltip" data-testid="tooltip"></span>
-									<input type="number" name="amount" value="1" class="amount" autocomplete="off" data-decimals="0"
-										data-max="9999" data-min="1" step="any" min="1" max="9999" data-testid="cartAmount"
-										aria-label="Množství">
-									<span class="increase" aria-label="Zvýšit množství" tabindex="0" role="button"
-										data-testid="increase"></span>
-									<span class="decrease" aria-label="Snížit množství" tabindex="0" role="button"
-										data-testid="decrease"></span>
-								</span>
-
-							</div>
-						</div>
-					</div>
+	<div class="gift-packaging-agree">
+		<div class="gift-packaging-checkbox">
+			<input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true">
+			<label for="giftPackagingInput"><span>V košíku máte doplňky stravy <b>NATIOS</b>. Chcete přidat také
+					<b>dárkovou
+						krabičku?</b></span></label>
+			<div class="gift-packaging-image"><img
+					src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova krabicka_nahled.png"
+					alt="Natios krabička" width="600" height="550" loading="lazy"></div>
+			<div id="packaging-poznamky">
+				<span>Cena dárkové krabičky: 39,- Kč / ks</span>
+				<span>Krabička je určena na 2 doplňky stravy značky Natios.</span>
+				<div class="display-none" id="calcium-gift"><b>Pozor:</b> NATIOS Calcium se kvůli většího balení do
+					dárkové krabičky nevleze.</div>
+				<div class="display-none" id="omega-gift"><b>Pozor:</b> NATIOS Omega-3 se kvůli většího balení do
+					dárkové krabičky nevleze.</div>
+				<div class="display-none" id="probiotic-gift"><b>Pozor:</b> NATIOS Probiotika se kvůli většího balení do
+					dárkové krabičky nevlezou.</div>
+				<div class="display-none" id="maximum-gift">
+					<b>Pozor:</b> Z vaší objednávky lze do dárkové krabičky vložit pouze <b><span
+							id="maximum-product-amount-gift">XXX</span></b> <span
+						id="produkty-sklonovani-maximum">produktů</span>. Pro naplnění <span
+						id="selected-amount-of-gift-packaging">XXX</span> dárkových krabiček můžete nakoupit ještě <span
+						id="selected-amount-of-gift-packaging-products">XXX</span> <span
+						id="produkty-sklonovani-zvoleno">NATIOS doplňků</span>.
 				</div>
+			</div>
+			<div class="gift-select-quantity">
+				<span id="gift-quantity" class="quantity">
+					<span class="increase-tooltip js-increase-tooltip" data-trigger="manual" data-container="body"
+						data-original-title="Není možné zakoupit více než 9999 ks." aria-hidden="true" role="tooltip"
+						data-testid="tooltip"></span>
+					<span class="decrease-tooltip js-decrease-tooltip" data-trigger="manual" data-container="body"
+						data-original-title="Minimální množství, které lze zakoupit, je 1 ks." aria-hidden="true"
+						role="tooltip" data-testid="tooltip"></span>
+					<input type="number" name="amount" value="1" class="amount" autocomplete="off" data-decimals="0"
+						data-max="9999" data-min="1" step="any" min="1" max="9999" data-testid="cartAmount"
+						aria-label="Množství">
+					<span class="increase" aria-label="Zvýšit množství" tabindex="0" role="button"
+						data-testid="increase"></span>
+					<span class="decrease" aria-label="Snížit množství" tabindex="0" role="button"
+						data-testid="decrease"></span>
+				</span>
+
+			</div>
+		</div>
+	</div>
+</div>
 				`;
 
 			$(giftPackagingDivHTML).insertAfter($(".discount-coupon"));
