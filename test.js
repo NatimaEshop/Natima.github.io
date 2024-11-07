@@ -11,6 +11,7 @@ if (document.body.classList.contains("admin-logged")) {
 		});
 
 		function natiosGiftPackagingMagnesium() {
+			let returnBol = false;
 			let natiosMalateAmount = 0;
 			let natiosBisglycinateAmount = 0;
 			let magnesiumGiftPackagingAmount = 0;
@@ -37,29 +38,35 @@ if (document.body.classList.contains("admin-logged")) {
 			console.log("------------------------------------------");
 
 			if (natiosMalateAmount < 1 || natiosBisglycinateAmount < 1) {
-				if (!sessionStorage.getItem("changedMagnesiumForBoxes") && magnesiumGiftPackagingAmount < 1) {
+				if (!sessionStorage.getItem("changedMagnesiumForBoxes")) {
 					{
 						return;
 					}
 				}
+			}
+			if (sessionStorage.getItem("changedMagnesiumForBoxes")) {
+				if (magnesiumGiftPackagingAmount < 1) {
+					return;
+				}
+			}
 
-				let malateGiftPackagingItemId = $("tr.removeable[data-micro-sku='NAT0406'] .p-total input[name='itemId']").attr(
-					"value"
-				);
-				let malateGiftPackagingPriceId = $(
-					"tr.removeable[data-micro-sku='NAT0406'] .p-total input[name='priceId']"
-				).attr("value");
+			let malateGiftPackagingItemId = $("tr.removeable[data-micro-sku='NAT0406'] .p-total input[name='itemId']").attr(
+				"value"
+			);
+			let malateGiftPackagingPriceId = $("tr.removeable[data-micro-sku='NAT0406'] .p-total input[name='priceId']").attr(
+				"value"
+			);
 
-				let bisglycinateGiftPackagingItemId = $(
-					"tr.removeable[data-micro-sku='NAT0147'] .p-total input[name='itemId']"
-				).attr("value");
-				let bisglycinateGiftPackagingPriceId = $(
-					"tr.removeable[data-micro-sku='NAT0147'] .p-total input[name='priceId']"
-				).attr("value");
+			let bisglycinateGiftPackagingItemId = $(
+				"tr.removeable[data-micro-sku='NAT0147'] .p-total input[name='itemId']"
+			).attr("value");
+			let bisglycinateGiftPackagingPriceId = $(
+				"tr.removeable[data-micro-sku='NAT0147'] .p-total input[name='priceId']"
+			).attr("value");
 
-				let magnesiumGiftPackagingCode = "NATBAL13";
+			let magnesiumGiftPackagingCode = "NATBAL13";
 
-				let giftPackagingDivHTML = `
+			let giftPackagingDivHTML = `
 				<div class="gift-packaging magnesium">
 					<div class="gift-packaging-agree">
 						<div class="gift-packaging-checkbox">
@@ -72,48 +79,47 @@ if (document.body.classList.contains("admin-logged")) {
 					</div>
 				</div>
 				`;
-				$(giftPackagingDivHTML).insertAfter($(".discount-coupon"));
+			$(giftPackagingDivHTML).insertAfter($(".discount-coupon"));
 
-				$("#magnesium-giftPackagingInput").on("change", function () {
-					if (this.checked) {
-						changeMagnesiumForBoxes();
-						sessionStorage.setItem("changedMagnesiumForBoxes", true);
+			$("#magnesium-giftPackagingInput").on("change", function () {
+				if (this.checked) {
+					changeMagnesiumForBoxes();
+					sessionStorage.setItem("changedMagnesiumForBoxes", true);
+				} else {
+					changeBoxesForMagnesium();
+				}
+				function changeMagnesiumForBoxes() {
+					magnesiumGiftPackagingAmount =
+						natiosMalateAmount < natiosBisglycinateAmount ? natiosMalateAmount : natiosBisglycinateAmount;
+					//remove malate
+					if (natiosMalateAmount === magnesiumGiftPackagingAmount) {
+						shoptet.cartShared.removeFromCart({ itemId: malateGiftPackagingItemId });
 					} else {
-						changeBoxesForMagnesium();
-					}
-					function changeMagnesiumForBoxes() {
-						magnesiumGiftPackagingAmount =
-							natiosMalateAmount < natiosBisglycinateAmount ? natiosMalateAmount : natiosBisglycinateAmount;
-						//remove malate
-						if (natiosMalateAmount === magnesiumGiftPackagingAmount) {
-							shoptet.cartShared.removeFromCart({ itemId: malateGiftPackagingItemId });
-						} else {
-							shoptet.cartShared.updateQuantityInCart({
-								itemId: malateGiftPackagingItemId,
-								priceId: malateGiftPackagingPriceId,
-								amount: natiosMalateAmount - magnesiumGiftPackagingAmount,
-							});
-						}
-
-						//remove bisglycinate
-						if (natiosBisglycinateAmount === magnesiumGiftPackagingAmount) {
-							shoptet.cartShared.removeFromCart({ itemId: bisglycinateGiftPackagingItemId });
-						} else {
-							shoptet.cartShared.updateQuantityInCart({
-								itemId: bisglycinateGiftPackagingItemId,
-								priceId: bisglycinateGiftPackagingPriceId,
-								amount: natiosBisglycinateAmount - magnesiumGiftPackagingAmount,
-							});
-						}
-
-						//add balicek
-						shoptet.cartShared.addToCart({
-							productCode: magnesiumGiftPackagingCode,
-							amount: magnesiumGiftPackagingAmount,
+						shoptet.cartShared.updateQuantityInCart({
+							itemId: malateGiftPackagingItemId,
+							priceId: malateGiftPackagingPriceId,
+							amount: natiosMalateAmount - magnesiumGiftPackagingAmount,
 						});
 					}
-				});
-			}
+
+					//remove bisglycinate
+					if (natiosBisglycinateAmount === magnesiumGiftPackagingAmount) {
+						shoptet.cartShared.removeFromCart({ itemId: bisglycinateGiftPackagingItemId });
+					} else {
+						shoptet.cartShared.updateQuantityInCart({
+							itemId: bisglycinateGiftPackagingItemId,
+							priceId: bisglycinateGiftPackagingPriceId,
+							amount: natiosBisglycinateAmount - magnesiumGiftPackagingAmount,
+						});
+					}
+
+					//add balicek
+					shoptet.cartShared.addToCart({
+						productCode: magnesiumGiftPackagingCode,
+						amount: magnesiumGiftPackagingAmount,
+					});
+				}
+			});
 		}
 
 		/*--------------------------------------------*/
