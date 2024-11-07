@@ -35,7 +35,7 @@ if (document.body.classList.contains("admin-logged")) {
 					src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova krabicka_nahled.png"
 					alt="Natios krabička" width="600" height="550" loading="lazy"></div>
 			<div id="packaging-poznamky">
-				<div class="packaging-price"><span>39</span>,- Kč / ks</div>
+
 				<span>Krabička je určena na 2 doplňky stravy značky Natios.</span>
 				<div class="display-none" id="calcium-gift"><b>Pozor:</b> NATIOS Calcium se kvůli většího balení do
 					dárkové krabičky nevleze.</div>
@@ -52,21 +52,24 @@ if (document.body.classList.contains("admin-logged")) {
 						id="produkty-sklonovani-zvoleno"> NATIOS produktů</span>.
 				</div>
 			</div>
-			<span id="gift-quantity" class="quantity">
-				<span class="increase-tooltip js-increase-tooltip" data-trigger="manual" data-container="body"
-					data-original-title="Není možné zakoupit více než 9999 ks." aria-hidden="true" role="tooltip"
-					data-testid="tooltip"></span>
-				<span class="decrease-tooltip js-decrease-tooltip" data-trigger="manual" data-container="body"
-					data-original-title="Minimální množství, které lze zakoupit, je 1 ks." aria-hidden="true"
-					role="tooltip" data-testid="tooltip"></span>
-				<input type="number" name="amount" value="1" class="amount" autocomplete="off" data-decimals="0"
-					data-max="9999" data-min="1" step="any" min="1" max="9999" data-testid="cartAmount"
-					aria-label="Množství">
-				<span class="increase" aria-label="Zvýšit množství" tabindex="0" role="button"
-					data-testid="increase"></span>
-				<span class="decrease" aria-label="Snížit množství" tabindex="0" role="button"
-					data-testid="decrease"></span>
-			</span>
+			<div class="gift-select-quantity">
+				<span id="gift-quantity" class="quantity">
+					<span class="increase-tooltip js-increase-tooltip" data-trigger="manual" data-container="body"
+						data-original-title="Není možné zakoupit více než 9999 ks." aria-hidden="true" role="tooltip"
+						data-testid="tooltip"></span>
+					<span class="decrease-tooltip js-decrease-tooltip" data-trigger="manual" data-container="body"
+						data-original-title="Minimální množství, které lze zakoupit, je 1 ks." aria-hidden="true"
+						role="tooltip" data-testid="tooltip"></span>
+					<input type="number" name="amount" value="1" class="amount" autocomplete="off" data-decimals="0"
+						data-max="9999" data-min="1" step="any" min="1" max="9999" data-testid="cartAmount"
+						aria-label="Množství">
+					<span class="increase" aria-label="Zvýšit množství" tabindex="0" role="button"
+						data-testid="increase"></span>
+					<span class="decrease" aria-label="Snížit množství" tabindex="0" role="button"
+						data-testid="decrease"></span>
+				</span>
+				<div class="packaging-price"><span>39</span>,- Kč / ks</div>
+			</div>
 		</div>
 	</div>
 </div>
