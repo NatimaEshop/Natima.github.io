@@ -11,7 +11,6 @@ if (document.body.classList.contains("admin-logged")) {
 		});
 
 		function natiosGiftPackagingMagnesium() {
-			let returnBol = false;
 			let natiosMalateAmount = 0;
 			let natiosBisglycinateAmount = 0;
 			let magnesiumGiftPackagingAmount = 0;
@@ -91,6 +90,13 @@ if (document.body.classList.contains("admin-logged")) {
 				function changeMagnesiumForBoxes() {
 					magnesiumGiftPackagingAmount =
 						natiosMalateAmount < natiosBisglycinateAmount ? natiosMalateAmount : natiosBisglycinateAmount;
+					console.log("------------------------------------------");
+					console.log("------------------------------------------");
+					console.log("------------------------------------------");
+					console.log("magnesiumGiftPackagingAmount: ", magnesiumGiftPackagingAmount);
+					console.log("------------------------------------------");
+					console.log("------------------------------------------");
+					console.log("------------------------------------------");
 					//remove malate
 					if (natiosMalateAmount === magnesiumGiftPackagingAmount) {
 						shoptet.cartShared.removeFromCart({ itemId: malateGiftPackagingItemId });
