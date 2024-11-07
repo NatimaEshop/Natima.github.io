@@ -25,15 +25,15 @@ if (document.body.classList.contains("admin-logged")) {
 			}
 
 			let giftPackagingDivHTML = `
-		<div class="gift-packaging">
+<div class="gift-packaging">
 	<div class="gift-packaging-agree">
 		<div class="gift-packaging-checkbox">
 			<input type="checkbox" id="giftPackagingInput" name="giftPackagingInput" value="true">
 			<label for="giftPackagingInput"><span>V košíku máte doplňky stravy NATIOS. Chcete přidat také dárkovou
 					krabičku?</span></label>
 			<div class="gift-packaging-image"><img
-					src="https://cdn.myshoptet.com/usr/www.natima.cz/user/shop/big/12028_natios-darkova-krabicka.jpg?6729fc0a"
-					alt="Natios krabička" width="1024" height="768" loading="lazy"></div>
+					src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova krabicka_nahled.png"
+					alt="Natios krabička" width="600" height="550" loading="lazy"></div>
 			<div class="packaging-price"><span>39</span>,- Kč / ks</div>
 			<div id="packaging-poznamky">
 				<span>Krabička je určena na 2 doplňky stravy značky Natios.</span>
