@@ -41,6 +41,7 @@ if (document.body.classList.contains("admin-logged")) {
 					}
 				}
 			}
+			$("body").addClass("has-magnesium-gift-packaging");
 
 			let malateGiftPackagingItemId = $("tr.removeable[data-micro-sku='NAT0406'] .p-total input[name='itemId']").attr(
 				"value"
@@ -63,9 +64,9 @@ if (document.body.classList.contains("admin-logged")) {
 	<div class="gift-packaging-agree">
 		<div class="gift-packaging-checkbox">
 			<input type="checkbox" id="magnesium-giftPackagingInput" name="giftPackagingInput" value="true">
-			<label for="magnesium-giftPackagingInput"><span>V košíku máte kombinaci:<br><b>NATIOS Magnesium Malate a
-						Magnesium Bisglycinate</b>. Chcete tyto produkty obdržet v <b>dárkové krabičce
-						ZDARMA?</b></span></label>
+			<label for="magnesium-giftPackagingInput"><span>V košíku máte kombinaci NATIOS Magnesium Malate a
+					Bisglycinate. Chcete tyto produkty obdržet v dárkové krabičce
+					ZDARMA?</span></label>
 			<div class="gift-packaging-image"><img
 					src="https://www.natima.cz/user/documents/upload/gallery/Natima_darkova magnesium-krabicka_nahled.png"
 					alt="Natios Magnesium krabička" width="600" height="550" loading="lazy"></div>
