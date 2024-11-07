@@ -178,7 +178,7 @@ if (document.body.classList.contains("admin-logged")) {
 						$("#maximum-product-amount-gift").text(natiosAmountOfGiftProducts);
 						$("#selected-amount-of-gift-packaging").text(natiosAmountOfGiftBoxes);
 						$("#selected-amount-of-gift-packaging-products").text(
-							natiosAmountOfGiftProducts * 2 - natiosAmountOfGiftBoxes * 2
+							natiosAmountOfGiftBoxes * 2 - natiosAmountOfGiftProducts * 2
 						);
 
 						if (natiosAmountOfGiftProducts > 4) {
@@ -189,7 +189,7 @@ if (document.body.classList.contains("admin-logged")) {
 							$("#produkty-sklonovani-maximum").text("produkty");
 						}
 
-						if (natiosAmountOfGiftProducts * 2 - natiosAmountOfGiftBoxes * 2 > 4) {
+						if (natiosAmountOfGiftBoxes * 2 - natiosAmountOfGiftProducts * 2 > 4) {
 							$("#produkty-sklonovani-zvoleno").text("produktů");
 						} else {
 							$("#produkty-sklonovani-zvoleno").text("produkty");
