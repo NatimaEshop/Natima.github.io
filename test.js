@@ -16,10 +16,10 @@ if (document.body.classList.contains("admin-logged")) {
 
 			$(".removeable").each(function () {
 				if ($(this).attr("data-micro-sku") == "NAT0406") {
-					natiosMalateAmount += 1;
+					natiosMalateAmount = $(this).find(".quantity input").val();
 				}
 				if ($(this).attr("data-micro-sku") == "NAT0147") {
-					natiosBisglycinateAmount += 1;
+					natiosBisglycinateAmount = $(this).find(".quantity input").val();
 				}
 			});
 
