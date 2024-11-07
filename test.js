@@ -84,6 +84,7 @@ if (document.body.classList.contains("admin-logged")) {
 				} else {
 					changeBoxesForMagnesium();
 				}
+
 				function changeMagnesiumForBoxes() {
 					magnesiumGiftPackagingAmount =
 						natiosMalateAmount < natiosBisglycinateAmount ? natiosMalateAmount : natiosBisglycinateAmount;
@@ -117,6 +118,23 @@ if (document.body.classList.contains("admin-logged")) {
 							amount: magnesiumGiftPackagingAmount,
 						});
 					}
+				}
+
+				function changeBoxesForMagnesium() {
+					let magnesiumGiftPackagingItemId = $(
+						"tr.removeable[data-micro-sku='NATBAL13'] .p-total input[name='itemId']"
+					).attr("value");
+
+					//remove boxes
+
+					shoptet.cartShared.removeFromCart({ itemId: magnesiumGiftPackagingItemId });
+
+					//add malate
+
+					shoptet.cartShared.addToCart({ productCode: "NAT0406", amount: magnesiumGiftPackagingAmount });
+
+					//add bisglycinate
+					shoptet.cartShared.addToCart({ productCode: "NAT0147", amount: magnesiumGiftPackagingAmount });
 				}
 			});
 		}
