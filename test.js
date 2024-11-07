@@ -2,12 +2,12 @@ if (document.body.classList.contains("admin-logged")) {
 	if (document.body.classList.contains("ordering-process")) {
 		let editedNatiosPackaging = false;
 		document.addEventListener("ShoptetDOMCartContentLoaded", function () {
-			natiosGiftPackagingMagnesium();
 			natiosGiftPackaging();
+			natiosGiftPackagingMagnesium();
 		});
 		document.addEventListener("DOMContentLoaded", function () {
-			natiosGiftPackagingMagnesium();
 			natiosGiftPackaging();
+			natiosGiftPackagingMagnesium();
 		});
 
 		function natiosGiftPackagingMagnesium() {
@@ -73,23 +73,35 @@ if (document.body.classList.contains("admin-logged")) {
 					//remove malate
 					if (natiosMalateAmount === magnesiumGiftPackagingAmount) {
 						shoptet.cartShared.removeFromCart({ itemId: malateGiftPackagingItemId });
+						console.log("---------------------");
+						console.log("REMOVING ALL MALATE");
+						console.log("---------------------");
 					} else {
 						shoptet.cartShared.updateQuantityInCart({
 							itemId: malateGiftPackagingItemId,
 							priceId: malateGiftPackagingPriceId,
 							amount: natiosMalateAmount - magnesiumGiftPackagingAmount,
 						});
+						console.log("---------------------");
+						console.log("REMOVING " + natiosMalateAmount - magnesiumGiftPackagingAmount + " MALATE");
+						console.log("---------------------");
 					}
 
 					//remove bisglycinate
 					if (natiosBisglycinateAmount === magnesiumGiftPackagingAmount) {
 						shoptet.cartShared.removeFromCart({ itemId: bisglycinateGiftPackagingItemId });
+						console.log("---------------------");
+						console.log("REMOVING ALL BISGLY");
+						console.log("---------------------");
 					} else {
 						shoptet.cartShared.updateQuantityInCart({
 							itemId: bisglycinateGiftPackagingItemId,
 							priceId: bisglycinateGiftPackagingPriceId,
 							amount: natiosBisglycinateAmount - magnesiumGiftPackagingAmount,
 						});
+						console.log("---------------------");
+						console.log("REMOVING " + natiosBisglycinateAmount - magnesiumGiftPackagingAmount + " BISGLYCINATE");
+						console.log("---------------------");
 					}
 
 					//add balicek
