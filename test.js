@@ -282,6 +282,7 @@ if (document.body.classList.contains("admin-logged")) {
 					console.log("test1");
 					if ($(this).attr("data-micro-sku") == "NAT0406") {
 						natiosMalateAmount = $(this).find(".quantity input").val();
+						console.log("malate amount: " + natiosMalateAmount);
 						console.log("test2");
 					}
 					if ($(this).attr("data-micro-sku") == "NAT0147") {
