@@ -144,14 +144,14 @@
 
 /*vlajky*/
 .flags .flag {
-	border-radius: calc(var(--border-radius));
+	border-radius: calc(var(--border-radius) - 2px);
 	max-width: 100%;
 }
 
 .flags.flags-default .flag {
 	background: var(--color-primary-o90) !important;
 	font-weight: 500;
-	margin-bottom: 0.3em;
+	margin-bottom: 0.35em;
 	padding: 6px 8px;
 	font-size: 12px;
 	-webkit-transition: none;
