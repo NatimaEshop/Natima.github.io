@@ -469,7 +469,7 @@ if (document.body.classList.contains("type-detail")) {
 				}
 			});
 			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
-				$(".p-short-description").html(
+				$(".p-short-description").append(
 					'<div class="slevovy-kod-popis skola-10"><p>Zadejte v košíku slevový kód <b>SKOLA10</b> a využijte 10% slevu na všechny produkty v kategorii <a href="/zpatky-do-skoly/">Zpátky do školy</a>.</p><p>*nelze kombinovat s dalšími slevovými kupóny</p></div>'
 				);
 			}
