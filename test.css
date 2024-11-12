@@ -8,6 +8,10 @@
 	font-size: 14px !important;
 	position: relative;
 	padding: 0.75em 20px 0.75em 50px;
+
+	border-radius: var(--border-radius);
+
+	margin-bottom: calc(var(--gap) * 2);
 }
 .nelze-uplatnit-slevovy-kod p {
 	font-size: inherit !important;
