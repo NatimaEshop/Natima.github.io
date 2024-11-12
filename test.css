@@ -15,6 +15,7 @@
 }
 .nelze-uplatnit-slevovy-kod p {
 	font-size: inherit !important;
+	margin: 8px 0;
 }
 .nelze-uplatnit-slevovy-kod::before {
 	content: "";
