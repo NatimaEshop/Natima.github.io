@@ -352,9 +352,9 @@ let productNameInDetail;
 if (document.body.classList.contains("type-detail")) {
 	/*nadpis a vlajecky do praveho sloupce*/
 	$(".p-code-label").text("Kód produktu:");
-	$(".row.product-top > div:first-child()").insertBefore(
+	/*$(".row.product-top > div:first-child()").insertBefore(
 		"#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()"
-	);
+	);*/
 	productNameInDetail = $(".p-detail-inner-header h1").html();
 	/*TADY*/
 
