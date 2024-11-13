@@ -462,6 +462,9 @@ if (document.body.classList.contains("type-detail")) {
 			}
 		}
 
+		/*VLAJKY ZPET DO FOTKY*/
+		$(".product-top .p-image").append($(".product-top .p-detail-info .flags-default"));
+
 		if (document.body.classList.contains("cs")) {
 			$(".product-top .availability-amount").each(function () {
 				if ($(this).text().indexOf(">3") > -1) {

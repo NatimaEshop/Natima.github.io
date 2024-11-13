@@ -47,6 +47,28 @@
 	margin: 0;
 	margin-right: 6px;
 }
+/*vlajky do fotky produktu*/
+.product-top .p-image .flags-default {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.product-top .p-image .flags-default .flag {
+	margin-bottom: 0.35em;
+}
+.extended-description .flags-default::before {
+	display: none;
+}
+.extended-description .flags-default {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 10px;
+	margin-bottom: 10px;
+}
 .flag.flag-vip {
 	display: none !important;
 }
