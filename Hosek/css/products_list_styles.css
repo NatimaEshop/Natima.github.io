@@ -149,7 +149,7 @@
 }
 
 .flags.flags-default .flag {
-	background: var(--color-primary-o90) !important;
+	background: var(--color-primary) !important;
 	font-weight: 500;
 	margin-bottom: 0.35em;
 	padding: 6px 8px;
@@ -163,6 +163,7 @@
 	margin-top: 10px;
 	margin-left: 10px;
 	z-index: 3;
+	max-width: calc(100% - 45px);
 }
 
 /*akční cena*/
@@ -272,6 +273,9 @@
 }
 
 @media (max-width: 1200px) {
+	.flags.flags-default .flag {
+		font-size: 10px;
+	}
 	.flags.flags-default {
 		margin-top: 8px;
 		margin-left: 8px;
