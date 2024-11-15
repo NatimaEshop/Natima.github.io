@@ -64,10 +64,22 @@
 	font: inherit;
 	max-height: 999em;
 }
-.read-more-state ~ .read-more-trigger:before {
+.cs .read-more-state ~ .read-more-trigger:before {
 	content: "Zobrazit více";
 }
-.read-more-state:checked ~ .read-more-trigger:before {
+.cs .read-more-state:checked ~ .read-more-trigger:before {
+	content: "Zobrazit méně";
+}
+.sk .read-more-state ~ .read-more-trigger:before {
+	content: "Zobraziť viac";
+}
+.sk .read-more-state:checked ~ .read-more-trigger:before {
+	content: "Zobraziť menej";
+}
+.pl .read-more-state ~ .read-more-trigger:before {
+	content: "Zobrazit více";
+}
+.pl .read-more-state:checked ~ .read-more-trigger:before {
 	content: "Zobrazit méně";
 }
 .read-more-trigger,
@@ -125,6 +137,9 @@
 }
 .sk .blog-products a::after {
 	content: "Zobraziť";
+}
+.pl .blog-products a::after {
+	content: "Zobrazit";
 }
 .blog-products a:hover::after {
 	background: var(--color-primary);
@@ -532,6 +547,10 @@
 .sk .blog-fetched-products > a::after,
 .sk .blog-fetched-category > .product::after {
 	content: "Zobraziť produkt";
+}
+.pl .blog-fetched-products > a::after,
+.pl .blog-fetched-category > .product::after {
+	content: "Zobrazit produkt";
 }
 .blog-fetched-products > a p,
 .blog-fetched-category > .product .name span {
