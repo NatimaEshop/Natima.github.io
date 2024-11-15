@@ -329,10 +329,22 @@ body {
 	animation-duration: 0.2s;
 	animation-fill-mode: ease;
 }
-#header .header-top .top-nav-button-login:hover::before {
+.cs #header .header-top .top-nav-button-login:hover::before {
 	content: "Přihlášení / Registrace";
 }
-#header .header-top .top-nav-button-account:hover::before {
+.cs #header .header-top .top-nav-button-account:hover::before {
+	content: "Můj účet";
+}
+.sk #header .header-top .top-nav-button-login:hover::before {
+	content: "Prihlásenie / Registrácia";
+}
+.sk #header .header-top .top-nav-button-account:hover::before {
+	content: "Môj účet";
+}
+.pl #header .header-top .top-nav-button-login:hover::before {
+	content: "Přihlášení / Registrace";
+}
+.pl #header .header-top .top-nav-button-account:hover::before {
 	content: "Můj účet";
 }
 
@@ -397,6 +409,15 @@ body {
 	animation: hoverOpacity;
 	animation-duration: 0.2s;
 	animation-fill-mode: ease;
+}
+.cs .dkLabFavHeaderIconBtn:hover::after {
+	content: "Oblíbené produkty";
+}
+.sk .dkLabFavHeaderIconBtn:hover::after {
+	content: "Obľúbené produkty";
+}
+.pl .dkLabFavHeaderIconBtn:hover::after {
+	content: "Oblíbené produkty";
 }
 
 /*header kosik*/
@@ -957,8 +978,14 @@ body {
 		text-align: center;
 		width: max-content;
 	}
+	.cs.submenu-visible .menu-level-1 li.exp > a::after {
+		content: "Zobrazit vše z kategorie";
+	}
 	.sk.submenu-visible .menu-level-1 li.exp > a::after {
 		content: "Zobraziť všetko z kategórie";
+	}
+	.pl.submenu-visible .menu-level-1 li.exp > a::after {
+		content: "Zobrazit vše z kategorie";
 	}
 	.navigation-close {
 		z-index: 1;
