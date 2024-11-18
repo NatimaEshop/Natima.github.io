@@ -1572,6 +1572,13 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	.type-detail .p-detail-inner .p-detail-info .flags {
 		margin-top: -15px;
 	}
+	.p-image-carousel .flags-default {
+		width: auto !important;
+		padding: 0 !important;
+	}
+	.p-image-carousel .flags-default::before {
+		display: none !important;
+	}
 }
 @media (min-width: 768px) {
 	.p-image-carousel div {
