@@ -58,6 +58,10 @@ $(".cs .menu-item-2639").remove(); /*houby*/
 $(".sk .menu-item-2384").remove();
 $(".sk .menu-item-2387").remove();
 $(".sk .menu-item-2404").remove(); /*houby*/
+$(".cs .menu-item-2244").remove(); /*BF*/
+$(".cs .menu-item-2647").remove(); /*NATIOS BF*/
+$(".sk .menu-item-1935").remove(); /*BF*/
+$(".sk .menu-item-2411").remove(); /*NATIOS BF*/
 /*------------------------------------------------------KONEC odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
 
 /*------------------------------------------------------Menu na mobilu a košík přímo do košíku*/
