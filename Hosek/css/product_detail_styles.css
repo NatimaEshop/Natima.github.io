@@ -278,6 +278,12 @@ body.user-logged-in .flag.flag-vip {
 	font-size: 18px;
 	font-weight: 800;
 }
+.sk .basic-description .detail-parameters::before {
+	content: "Detailné parametre:";
+}
+.pl .basic-description .detail-parameters::before {
+	content: "Szczegółowe specyfikacje:";
+}
 .basic-description .detail-parameters span,
 .basic-description .detail-parameters td {
 	font-size: 16px;
@@ -418,6 +424,18 @@ body.user-logged-in .flag.flag-vip {
 	background: var(--color-black-600);
 	border-radius: var(--border-radius);
 	transform: translatex(50%) translatey(120%);
+}
+.sk.type-product .dkLabFavouriteDetailLinkAdd:hover::after {
+	content: "Pridať do obľúbených";
+}
+.sk.type-product .dkLabFavouriteDetailLinkRemove:hover::after {
+	content: "Odobrať z obľúbených";
+}
+.pl.type-product .dkLabFavouriteDetailLinkAdd:hover::after {
+	content: "Dodaj do ulubionych";
+}
+.pl.type-product .dkLabFavouriteDetailLinkRemove:hover::after {
+	content: "Usuń ulubiony produkt";
 }
 
 @media (max-width: 1100px) {
@@ -1339,6 +1357,9 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 }
 .sk #productsAlternative::before {
 	content: "Ďalšie dostupné varianty:";
+}
+.pl #productsAlternative::before {
+	content: "Inne dostępne warianty:";
 }
 #productsAlternative .products-alternative {
 	column-gap: 1.9%;

@@ -73,7 +73,7 @@
 	overflow: hidden;
 }
 .user-action-in .user-action-cart .cart-widget-products::before {
-	content: "Nákupní košík";
+	content: "";
 	position: absolute;
 	left: 30px;
 	top: 14px;
