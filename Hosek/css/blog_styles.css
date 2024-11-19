@@ -77,10 +77,10 @@
 	content: "Zobraziť menej";
 }
 .pl .read-more-state ~ .read-more-trigger:before {
-	content: "Zobrazit více";
+	content: "Pokaż więcej";
 }
 .pl .read-more-state:checked ~ .read-more-trigger:before {
-	content: "Zobrazit méně";
+	content: "Pokaż mniej";
 }
 .read-more-trigger,
 .zobrazitvice {
@@ -127,7 +127,7 @@
 	transform: scale(1.05);
 }
 .blog-products a::after {
-	content: "Zobrazit";
+	content: "Pokaż";
 	border-radius: var(--border-radius);
 	border-style: solid;
 	padding: 0.5em 2em;
@@ -550,7 +550,7 @@
 }
 .pl .blog-fetched-products > a::after,
 .pl .blog-fetched-category > .product::after {
-	content: "Zobrazit produkt";
+	content: "Pokaż produkt";
 }
 .blog-fetched-products > a p,
 .blog-fetched-category > .product .name span {

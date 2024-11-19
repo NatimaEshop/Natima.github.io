@@ -1986,7 +1986,7 @@ ol.cart-header li.active strong span::before {
 		content: "Späť";
 	}
 	.pl.ordering-process .kosik-zpet::after {
-		content: "Zpět";
+		content: "Powrót";
 	}
 	.ordering-process .kosik-zpet {
 		display: flex;
@@ -2290,7 +2290,7 @@ ol.cart-header li.active strong span::before {
 	content: "Pri doručovaní zásielky dopravcovia vyžadujú telefónne číslo so slovenskou predvoľbou.";
 }
 .pl #checkoutContent .country-flags::before {
-	content: "Při doručování zásilky dopravci vyžadují telefonní číslo s českou předvolbou.";
+	content: "Przy dostawie przesyłki przewoźnicy wymagają numeru telefonu z polskim numerem kierunkowym.";
 }
 #checkoutContent .country-flags:hover::before {
 	opacity: 1;

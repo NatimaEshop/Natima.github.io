@@ -342,10 +342,10 @@ body {
 	content: "Môj účet";
 }
 .pl #header .header-top .top-nav-button-login:hover::before {
-	content: "Přihlášení / Registrace";
+	content: "Logowanie / Rejestracja";
 }
 .pl #header .header-top .top-nav-button-account:hover::before {
-	content: "Můj účet";
+	content: "Moje konto";
 }
 
 /*header oblibené*/
@@ -417,7 +417,7 @@ body {
 	content: "Obľúbené produkty";
 }
 .pl .dkLabFavHeaderIconBtn:hover::after {
-	content: "Oblíbené produkty";
+	content: "Ulubione produkty";
 }
 
 /*header kosik*/
@@ -985,7 +985,7 @@ body {
 		content: "Zobraziť všetko z kategórie";
 	}
 	.pl.submenu-visible .menu-level-1 li.exp > a::after {
-		content: "Zobrazit vše z kategorie";
+		content: "Pokaż wszystko z kategorii";
 	}
 	.navigation-close {
 		z-index: 1;
