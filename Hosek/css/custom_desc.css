@@ -945,6 +945,12 @@
 .custom-desc .ingredients tr th:nth-child(3) {
 	text-align: right;
 }
+.aspect-ratio-1-1 {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1/1;
+	max-width: 100%;
+}
 .aspect-ratio-3-4 {
 	width: 100%;
 	height: auto;
