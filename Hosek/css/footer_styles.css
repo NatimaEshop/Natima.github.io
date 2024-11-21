@@ -3,12 +3,11 @@
 	background: transparent;
 }
 
-.custom-footer__banner143 {
+.cs .custom-footer__banner143,
+.sk .custom-footer__banner95 {
 	display: none;
 }
-.custom-footer__banner142 .banner {
-	overflow: visible;
-}
+
 #footer .site-name {
 	display: none;
 }
