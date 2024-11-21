@@ -15,11 +15,6 @@
 	border-radius: var(--border-radius);
 }
 
-.ordering-process #header .header-top .top-nav-button-login:hover::before,
-.ordering-process #header .header-top .top-nav-button-account:hover::before {
-	display: none;
-}
-
 /*footer*/
 .custom-footer__banner95 {
 	display: none;
@@ -38,12 +33,4 @@
 	.dkLabFavHeaderIconBtn:hover::after {
 		transform: translatex(-50%);
 	}
-}
-
-.user-action-login.popup-widget {
-	right: 121px !important;
-}
-
-.ordering-process .user-action-login.popup-widget {
-	right: 5px !important;
 }
