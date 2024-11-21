@@ -1,32 +1,9 @@
-/*objednavka*/
-.in-krok-1 .order-summary {
-	display: grid;
-}
-
-.in-krok-1 .checkout-box {
-	order: 2;
-	width: 440px;
-	padding: 20px 20px;
-	max-width: 100%;
-	margin-left: auto !important;
-	margin-right: 00px !important;
-	margin-top: 40px !important;
-	background: var(--color-primary-100);
-	border-radius: var(--border-radius);
-}
-
 /*footer*/
 .custom-footer__banner95 {
 	display: none;
 }
 .custom-footer__banner94 .banner {
 	overflow: visible;
-}
-
-@media (max-width: 767px) {
-	.in-krok-1 .checkout-box {
-		width: auto;
-	}
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {

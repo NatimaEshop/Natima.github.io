@@ -737,6 +737,19 @@ ol.cart-header li.active strong span::before {
 .in-zamowienie-informacje-o-tobie.ordering-process .checkout-box {
 	margin: 0;
 }
+
+.sk.in-krok-1 .checkout-box,
+.pl.in-zamowienie-platnosci-i-wysylki .checkout-box {
+	order: 2;
+	width: 440px;
+	padding: 20px 20px;
+	max-width: 100%;
+	margin-left: auto !important;
+	margin-right: 00px !important;
+	margin-top: 40px !important;
+	background: var(--color-primary-100);
+	border-radius: var(--border-radius);
+}
 .in-krok-1.ordering-process .checkout-box .btn,
 .in-krok-2.ordering-process .checkout-box .btn,
 .in-zamowienie-platnosci-i-wysylki.ordering-process .checkout-box .btn,
@@ -1104,6 +1117,7 @@ ol.cart-header li.active strong span::before {
 .in-krok-1 .order-summary,
 .in-zamowienie-platnosci-i-wysylki .order-summary {
 	margin-top: 40px;
+	display: grid;
 }
 .in-krok-2 .order-summary,
 .in-zamowienie-informacje-o-tobie .order-summary {
