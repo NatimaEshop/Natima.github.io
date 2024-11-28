@@ -641,7 +641,7 @@ if (document.body.classList.contains("type-detail")) {
 				$("#productsAlternative").append('<div id="show-more-variants">Všetky varianty</div>');
 			}
 			if (polishEshop) {
-				$("#productsAlternative").append('<div id="show-more-variants">Wszystkie warianty</div>');
+				$("#productsAlternative").append('<div id="show-more-variants">Wszystkie opcje</div>');
 			}
 
 			$("#show-more-variants").click(function () {
@@ -882,9 +882,9 @@ if (document.querySelector("body.in-kosik")) {
 			$(".in-kosik .cart-summary h4").text(darkyText);
 		}
 		if (polishEshop) {
-			darkyText = "Darčeky";
-			darkyTextObjednejte = "Objednajte si ešte za ";
-			darkyTextHodnotnejsi = " a vyberte si z hodnotnejších darčekov.";
+			darkyText = "Prezenty";
+			darkyTextObjednejte = "Zamów jeszcze za ";
+			darkyTextHodnotnejsi = " i wybierz bardziej wartościowy prezent.";
 			dataIdNatiosZasobnik = "XXXXXXXXX";
 			$(".in-koszyk .cart-summary h4").text(darkyText);
 		}
@@ -924,7 +924,7 @@ if (document.querySelector("body.in-kosik")) {
 }
 
 /*kosik 2*/
-if (document.querySelector("body.in-krok-1")) {
+if (document.querySelector("body.in-krok-1") || document.querySelector("body.in-zamowienie-platnosci-i-wysylki")) {
 	$(".checkout-box").appendTo(".co-basic-information");
 
 	$(".next-step").appendTo(".order-summary-inner");
@@ -989,6 +989,14 @@ if (document.querySelector("body.in-krok-1")) {
 			);
 			$("#order-billing-methods").append(
 				'<div id="showAllBillingMethods" class="showAllOrder">Zobraziť všetky možnosti</div>'
+			);
+		}
+		if (polishEshop) {
+			$("#order-shipping-methods").append(
+				'<div id="showAllShippingMethods" class="showAllOrder">Pokaż wszystkie sposoby</div>'
+			);
+			$("#order-billing-methods").append(
+				'<div id="showAllBillingMethods" class="showAllOrder">Pokaż wszystkie sposoby</div>'
 			);
 		}
 
@@ -1069,13 +1077,29 @@ if (document.querySelector("body.in-krok-1")) {
 function removeDelivery() {
 	$(".co-delivery-method input").prop("checked", false);
 	$(".co-delivery-method .radio-wrapper.active").removeClass("active");
-	$(".recapitulation-shipping-billing-info").eq(0).html("<span>Zvolte dopravu</span>Doprava");
+	if (czechEshop) {
+		$(".recapitulation-shipping-billing-info").eq(0).html("<span>Zvolte dopravu</span>Doprava");
+	}
+	if (slovakEshop) {
+		$(".recapitulation-shipping-billing-info").eq(0).html("<span>Vyberte dopravu</span>Doprava");
+	}
+	if (polishEshop) {
+		$(".recapitulation-shipping-billing-info").eq(0).html("<span>Wybierz sposób dostawy</span>Dostawa");
+	}
 }
 
 function removePayment() {
 	$(".co-payment-method input").prop("checked", false);
 	$(".co-payment-method .radio-wrapper.active").removeClass("active");
-	$(".recapitulation-shipping-billing-info").eq(1).html("<span>Zvolte platbu</span>Platba");
+	if (czechEshop) {
+		$(".recapitulation-shipping-billing-info").eq(1).html("<span>Zvolte platbu</span>Platba");
+	}
+	if (slovakEshop) {
+		$(".recapitulation-shipping-billing-info").eq(1).html("<span>Vyberte platbu</span>Platba");
+	}
+	if (polishEshop) {
+		$(".recapitulation-shipping-billing-info").eq(1).html("<span>Wybierz sposób płatności</span>Płatność");
+	}
 }
 
 function editGifts() {
@@ -1093,7 +1117,10 @@ function editGifts() {
 }
 
 /*poslední krok objednávky*/
-if (document.body.classList.contains("in-krok-2")) {
+if (
+	document.body.classList.contains("in-krok-2") ||
+	document.body.classList.contains("in-zamowienie-informacje-o-tobie")
+) {
 	const orderNextStepButton = $(".next-step");
 	const orderCheckoutBox = $(".checkout-box");
 	const orderConsentsFirst = $(".consents-first");
@@ -1149,142 +1176,14 @@ document.addEventListener("ShoptetCartAddCartItem", function () {
 				if (slovakEshop) {
 					$(".msg-success").append('<a href="/kosik" class="added-to-cart"><span>Prejsť do košíka →</span></a>');
 				}
+				if (polishEshop) {
+					$(".msg-success").append('<a href="/koszyk" class="added-to-cart"><span>Przejdź do koszyka →</span></a>');
+				}
 			}, 50);
 		},
 		{ once: true }
 	);
 });
-
-/*---------------------------------------------------------------------------------------------------Přidání dárku do košíku zdarma*/
-if (document.body.classList.contains("in-kosik")) {
-	let kodProduktuDarekTaskaNatios = "NAT1229D";
-	let kodyKuponuDarekTaskaNatios = ["taska", "taška"];
-	let discountFormInput = "";
-	let discountFormHTML = "";
-	let itemID = "";
-	let containsFreeGift = false;
-	let hodnotaKosiku = 0;
-	let hodnotaKosikuProUplatneni = 1000;
-	if (slovakEshop) {
-		hodnotaKosikuProUplatneni = 40;
-	}
-	$(document).on("submit", ".discount-coupon form", function (e) {
-		hodnotaKosiku = dataLayer[0].shoptet.cartInfo.getNoBillingShippingPrice.withVat;
-		discountFormInput = $(".discount-coupon input");
-		if (
-			kodyKuponuDarekTaskaNatios.includes(discountFormInput.val().toLowerCase()) &&
-			hodnotaKosiku >= hodnotaKosikuProUplatneni
-		) {
-			vlozeniKuponuNaDarekZdarma();
-
-			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
-				getGiftItemID();
-				if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
-					changeDiscountFormContent();
-				} else if (containsFreeGift) {
-					shoptet.cartShared.removeFromCart({ itemId: itemID });
-					containsFreeGift = false;
-					changeDiscountFormContentToOriginal();
-				} else {
-					changeDiscountFormContentToOriginal();
-				}
-			});
-		} else if (
-			kodyKuponuDarekTaskaNatios.includes(discountFormInput.val().toLowerCase()) &&
-			hodnotaKosiku < hodnotaKosikuProUplatneni
-		) {
-			setTimeout(function () {
-				if (czechEshop) {
-					$(".msg-error span[data-testid='notifierMessage']").text(
-						"Tento kód je možné pouze při objednávce nad " + hodnotaKosikuProUplatneni + " Kč."
-					);
-				}
-				if (slovakEshop) {
-					$(".msg-error span[data-testid='notifierMessage']").text(
-						"Tento kód je možné iba pri objednávke nad " + hodnotaKosikuProUplatneni + " €."
-					);
-				}
-			}, 300);
-		}
-	});
-
-	document.addEventListener("DOMContentLoaded", function () {
-		getGiftItemID();
-
-		if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
-			changeDiscountFormContent();
-
-			document.addEventListener("ShoptetDOMCartContentLoaded", function () {
-				getGiftItemID();
-				if (containsFreeGift && hodnotaKosiku >= hodnotaKosikuProUplatneni) {
-					changeDiscountFormContent();
-				} else if (containsFreeGift) {
-					shoptet.cartShared.removeFromCart({ itemId: itemID });
-					containsFreeGift = false;
-					changeDiscountFormContentToOriginal();
-				} else {
-					changeDiscountFormContentToOriginal();
-				}
-			});
-		} else if (containsFreeGift) {
-			shoptet.cartShared.removeFromCart({ itemId: itemID });
-			containsFreeGift = false;
-			changeDiscountFormContentToOriginal();
-		}
-	});
-
-	function vlozeniKuponuNaDarekZdarma() {
-		$("body").addClass("free-gift-added");
-		shoptet.cartShared.addToCart({ productCode: kodProduktuDarekTaskaNatios });
-		setTimeout(function () {
-			$("body").removeClass("free-gift-added");
-		}, 3000);
-	}
-
-	function changeDiscountFormContent() {
-		let appliedFreeGiftCouponHTMLcz =
-			'<span>Vložený slevový kupón</span><div class="applied-coupon gift-coupon"><strong>Dárek zdarma - Taška NATIOS</strong><div id="removeGift">x</div></div>';
-		let appliedFreeGiftCouponHTMLsk =
-			'<span>Vložený zľavový kupón</span><div class="applied-coupon gift-coupon"><strong>Darček zadarmo - Taška NATIOS</strong><div id="removeGift">x</div></div>';
-
-		if (czechEshop) {
-			$(".discount-coupon").html(appliedFreeGiftCouponHTMLcz);
-		}
-		if (slovakEshop) {
-			$(".discount-coupon").html(appliedFreeGiftCouponHTMLsk);
-		}
-		$("#removeGift").on("click touch", function () {
-			shoptet.cartShared.removeFromCart({ itemId: itemID });
-			$(".discount-coupon").html(discountFormHTML);
-			containsFreeGift = false;
-		});
-	}
-	function changeDiscountFormContentToOriginal() {
-		let originalCouponHTMLcz =
-			'<form method="post" action="/action/Cart/addDiscountCoupon/" class="input-group csrf-enabled" data-testid="formDiscountCoupon"><input type="text" name="discountCouponCode" id="discountCouponCode" class="form-control" required="" placeholder="Vložit slevový kupón" aria-label="Slevový kupón" data-testid="inputDiscountCoupon"><button type="submit" class="btn btn-secondary" data-testid="buttonSubmitDiscountCoupon">Přidat</button></form>';
-		let originalCouponHTMLsk =
-			'<form method="post" action="/action/Cart/addDiscountCoupon/" class="input-group csrf-enabled" data-testid="formDiscountCoupon"><input type="text" name="discountCouponCode" id="discountCouponCode" class="form-control" required="" placeholder="Vložiť zľavový kupón" aria-label="Zľavový kupón" data-testid="inputDiscountCoupon"><button type="submit" class="btn btn-secondary" data-testid="buttonSubmitDiscountCoupon">Pridať</button></form>';
-		if (czechEshop) {
-			$(".discount-coupon").html(originalCouponHTMLcz);
-		}
-		if (slovakEshop) {
-			$(".discount-coupon").html(originalCouponHTMLsk);
-		}
-	}
-
-	function getGiftItemID() {
-		hodnotaKosiku = dataLayer[0].shoptet.cartInfo.getNoBillingShippingPrice.withVat;
-		containsFreeGift = false;
-		let cartItems = dataLayer[0].shoptet.cartInfo.cartItems;
-		for (let item of cartItems) {
-			if (item.code === kodProduktuDarekTaskaNatios) {
-				itemID = item.itemId;
-				containsFreeGift = true;
-			}
-		}
-	}
-}
-/*---------------------------------------------------------------------------------------------------KONEC Přidání dárku do košíku zdarma*/
 
 /*----------------------------------------------------------------------------Pocet přečtení článků na blogové stránce*/
 if (document.body.classList.contains("type-posts-listing")) {
@@ -1334,7 +1233,7 @@ if (document.body.classList.contains("type-posts-listing")) {
 			setTimeout(getViewCountCustom, delayChanged ? updatedDelay : initialDelay);
 		}
 		if (data.response == 403) {
-			console.info("Statistiky nejsou veřejné");
+			console.info("Stats are not public");
 		}
 	}
 	getViewCountCustom();
@@ -1429,7 +1328,11 @@ if (document.body.classList.contains("type-category") || document.body.classList
 	);
 }
 /*cz a sk varianta*/
-if (document.body.classList.contains("in-vyhledavani") || document.body.classList.contains("in-vyhledavanie")) {
+if (
+	document.body.classList.contains("in-vyhledavani") ||
+	document.body.classList.contains("in-vyhledavanie") ||
+	document.body.classList.contains("in-wyszukiwanie")
+) {
 	document.addEventListener(
 		"resizeEnd",
 		function () {
