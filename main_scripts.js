@@ -61,19 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
 $(".cs .menu-item-2607").remove(); /*Novinky*/
 $(".cs .menu-item-2612").remove(); /*skryta kategorie*/
 $(".cs .menu-item-2639").remove(); /*houby*/
-$(".cs .menu-item-2244").remove(); /*BF*/
 $(".cs .menu-item-2647").remove(); /*NATIOS BF*/
 
 $(".sk .menu-item-2384").remove(); /*Novinky*/
 $(".sk .menu-item-2387").remove(); /*skryta kategorie*/
 $(".sk .menu-item-2404").remove(); /*houby*/
-$(".sk .menu-item-1935").remove(); /*BF*/
 $(".sk .menu-item-2411").remove(); /*NATIOS BF*/
 
 $(".pl .menu-item-4125").remove(); /*Novinky*/
 $(".pl .menu-item-4134").remove(); /*skryta kategorie*/
 $(".pl .menu-item-4110").remove(); /*houby*/
-$(".pl .menu-item-4089").remove(); /*BF*/
 $(".pl .menu-item-4122").remove(); /*NATIOS BF*/
 /*------------------------------------------------------KONEC odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
 

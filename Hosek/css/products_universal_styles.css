@@ -120,7 +120,7 @@
 	content: "Akcie mesiaca⚡" !important;
 }
 .pl #filters label[for="dd[]1"] span::before {
-	content: "Akcie mesiaca⚡" !important;
+	content: "Promocja miesiąca⚡" !important;
 }
 #filters label[for="dd[]1"].active span::before {
 	font-weight: inherit;
