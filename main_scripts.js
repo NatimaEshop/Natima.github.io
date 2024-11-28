@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		/*Odkazy na kategorie na hlavní stránce*/
 		let links = [];
-		if (document.body.classList.contains("cs")) {
+		if (czechEshop) {
 			links = ["/novinky/", "/-akce-mesice/", "/dle-zamereni/", "/blog/"];
 		}
 		if (document.body.classList.contains("sk")) {
