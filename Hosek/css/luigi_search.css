@@ -1,6 +1,7 @@
 /*fix přeblikávání stareho vzhledávání cs a sk*/
 .in-vyhledavani #content-wrapper > .content-wrapper-in,
-.in-vyhladavanie #content-wrapper > .content-wrapper-in {
+.in-vyhladavanie #content-wrapper > .content-wrapper-in,
+.in-wyszukiwanie #content-wrapper > .content-wrapper-in {
 	visibility: hidden;
 }
 
@@ -29,15 +30,18 @@
 	border-radius: var(--border-radius);
 	padding: 10px 32px !important;
 }
-.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero {
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero,
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-heromobile {
 	border-radius: var(--border-radius);
 	width: 36px;
 	height: 36px;
 }
-.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero img {
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero img,
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-heromobile img {
 	display: none;
 }
-.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero::after {
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero::after,
+.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-heromobile::after {
 	content: "";
 	background-image: url("https://www.natima.cz/user/documents/upload/Natima/addToCartIcon.svg");
 	background-size: contain;
@@ -138,7 +142,8 @@
 		width: 100% !important;
 	}
 
-	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero {
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-hero,
+	.luigi-ac-rest-main .luigi-ac-product .luigi-ac-action-heromobile {
 		position: absolute;
 		top: -8px;
 		right: 8px;
@@ -418,7 +423,8 @@
 	.luigi-ac-hero .luigi-ac-description .luigi-ac-text {
 		margin: 0 !important;
 	}
-	.luigi-ac-rest-main .luigi-ac-description .luigi-ac-action-hero {
+	.luigi-ac-rest-main .luigi-ac-description .luigi-ac-action-hero,
+	.luigi-ac-rest-main .luigi-ac-description .luigi-ac-action-heromobile {
 		right: 1px !important;
 		bottom: 0px;
 		width: 32px;
