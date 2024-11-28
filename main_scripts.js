@@ -21,8 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (czechEshop) {
 			links = ["/novinky/", "/-akce-mesice/", "/dle-zamereni/", "/blog/"];
 		}
-		if (document.body.classList.contains("sk")) {
+		if (slovakEshop) {
 			links = ["/novinky/", "/--akcie-mesiaca/", "/dla-zamerania/", "/blog/"];
+		}
+		if (polishEshop) {
+			links = ["/nowosci/", "/promocja-miesiaca/", "/dle-zamereni/", "/blog/"];
 		}
 		$(".homepage-group-title.h4").each(function (index) {
 			if (index < links.length) {
@@ -32,11 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 		/*Odkaz na oblíbené značky na hlavní stránce*/
 		let oblibeneZnazkyOdkaz = "";
-		if (document.body.classList.contains("cs")) {
+		if (czechEshop) {
 			oblibeneZnazkyOdkaz = "/favorite-znacky/";
 		}
-		if (document.body.classList.contains("sk")) {
+		if (slovakEshop) {
 			oblibeneZnazkyOdkaz = "/oblubene-znacky/";
+		}
+		if (polishEshop) {
+			oblibeneZnazkyOdkaz = "/ulubione-marki/";
 		}
 		let oblibeneZnacky = $(".footer-banner .h4");
 		let novyOdkaz = $("<a></a>")
@@ -200,10 +206,10 @@ if (document.querySelector(".type-category")) {
 
 	/*radit dle mobil*/
 
-	if (document.body.classList.contains("cs")) {
+	if (czechEshop) {
 		$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Řadit dle</span></div>");
 	}
-	if (document.body.classList.contains("sk")) {
+	if (slovakEshop) {
 		$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Radit podľa</span></div>");
 	}
 
@@ -476,7 +482,7 @@ if (document.body.classList.contains("type-detail")) {
 		/*VLAJKY ZPET DO FOTKY*/
 		$(".product-top .p-image").append($(".product-top .p-detail-info .flags-default"));
 
-		if (document.body.classList.contains("cs")) {
+		if (czechEshop) {
 			$(".product-top .availability-amount").each(function () {
 				if ($(this).text().indexOf(">3") > -1) {
 					$(this).html("více než 3&nbsp;ks");
@@ -496,7 +502,7 @@ if (document.body.classList.contains("type-detail")) {
 				$(".nelze-uplatnit-slevovy-kod").html("<p>U tohoto produktu není možné uplatnit slevový kód.</p>");
 			}
 		}
-		if (document.body.classList.contains("sk")) {
+		if (slovakEshop) {
 			$(".product-top .availability-amount").each(function () {
 				if ($(this).text().indexOf(">3") > -1) {
 					$(this).html("viac ako 3&nbsp;ks");
@@ -539,10 +545,10 @@ if (document.body.classList.contains("type-detail")) {
 			});
 		}
 		if ($("#productsAlternative .product").length > 2) {
-			if (document.body.classList.contains("cs")) {
+			if (czechEshop) {
 				$("#productsAlternative").append('<div id="show-more-variants">Všechny varianty</div>');
 			}
-			if (document.body.classList.contains("sk")) {
+			if (slovakEshop) {
 				$("#productsAlternative").append('<div id="show-more-variants">Všetky varianty</div>');
 			}
 
@@ -768,7 +774,7 @@ if (document.querySelector("body.in-kosik")) {
 
 		let pocetProduktuNatiosVKosiku = 0;
 
-		if (document.body.classList.contains("sk")) {
+		if (slovakEshop) {
 			darkyText = "Darčeky";
 			darkyTextObjednejte = "Objednajte si ešte za ";
 			darkyTextHodnotnejsi = " a vyberte si z hodnotnejších darčekov.";
@@ -863,7 +869,7 @@ if (document.querySelector("body.in-krok-1")) {
 
 	/*srolování metod po výberu*/
 	document.addEventListener("DOMContentLoaded", function () {
-		if (document.body.classList.contains("cs")) {
+		if (czechEshop) {
 			$("#order-shipping-methods").append(
 				'<div id="showAllShippingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
 			);
@@ -871,7 +877,7 @@ if (document.querySelector("body.in-krok-1")) {
 				'<div id="showAllBillingMethods" class="showAllOrder">Zobrazit všechny možnosti</div>'
 			);
 		}
-		if (document.body.classList.contains("sk")) {
+		if (slovakEshop) {
 			$("#order-shipping-methods").append(
 				'<div id="showAllShippingMethods" class="showAllOrder">Zobraziť všetky možnosti</div>'
 			);
@@ -944,7 +950,7 @@ if (document.querySelector("body.in-krok-1")) {
 	/*konec srolování*/
 
 	/*Dorucujeme také na slovensko*/
-	if (document.body.classList.contains("cs")) {
+	if (czechEshop) {
 		if ($('option[value="151"][selected="selected"]').length) {
 			$("body").addClass("hiddenCartOptions");
 			let appendElement = $(
@@ -1031,10 +1037,10 @@ document.addEventListener("ShoptetCartAddCartItem", function () {
 		"ShoptetCartUpdated",
 		function () {
 			setTimeout(function () {
-				if (document.body.classList.contains("cs")) {
+				if (czechEshop) {
 					$(".msg-success").append('<a href="/kosik" class="added-to-cart"><span>Přejít do košíku →</span></a>');
 				}
-				if (document.body.classList.contains("sk")) {
+				if (slovakEshop) {
 					$(".msg-success").append('<a href="/kosik" class="added-to-cart"><span>Prejsť do košíka →</span></a>');
 				}
 			}, 50);
@@ -1053,7 +1059,7 @@ if (document.body.classList.contains("in-kosik")) {
 	let containsFreeGift = false;
 	let hodnotaKosiku = 0;
 	let hodnotaKosikuProUplatneni = 1000;
-	if (document.body.classList.contains("sk")) {
+	if (slovakEshop) {
 		hodnotaKosikuProUplatneni = 40;
 	}
 	$(document).on("submit", ".discount-coupon form", function (e) {
@@ -1082,12 +1088,12 @@ if (document.body.classList.contains("in-kosik")) {
 			hodnotaKosiku < hodnotaKosikuProUplatneni
 		) {
 			setTimeout(function () {
-				if (document.body.classList.contains("cs")) {
+				if (czechEshop) {
 					$(".msg-error span[data-testid='notifierMessage']").text(
 						"Tento kód je možné pouze při objednávce nad " + hodnotaKosikuProUplatneni + " Kč."
 					);
 				}
-				if (document.body.classList.contains("sk")) {
+				if (slovakEshop) {
 					$(".msg-error span[data-testid='notifierMessage']").text(
 						"Tento kód je možné iba pri objednávke nad " + hodnotaKosikuProUplatneni + " €."
 					);
@@ -1135,10 +1141,10 @@ if (document.body.classList.contains("in-kosik")) {
 		let appliedFreeGiftCouponHTMLsk =
 			'<span>Vložený zľavový kupón</span><div class="applied-coupon gift-coupon"><strong>Darček zadarmo - Taška NATIOS</strong><div id="removeGift">x</div></div>';
 
-		if (document.body.classList.contains("cs")) {
+		if (czechEshop) {
 			$(".discount-coupon").html(appliedFreeGiftCouponHTMLcz);
 		}
-		if (document.body.classList.contains("sk")) {
+		if (slovakEshop) {
 			$(".discount-coupon").html(appliedFreeGiftCouponHTMLsk);
 		}
 		$("#removeGift").on("click touch", function () {
@@ -1152,10 +1158,10 @@ if (document.body.classList.contains("in-kosik")) {
 			'<form method="post" action="/action/Cart/addDiscountCoupon/" class="input-group csrf-enabled" data-testid="formDiscountCoupon"><input type="text" name="discountCouponCode" id="discountCouponCode" class="form-control" required="" placeholder="Vložit slevový kupón" aria-label="Slevový kupón" data-testid="inputDiscountCoupon"><button type="submit" class="btn btn-secondary" data-testid="buttonSubmitDiscountCoupon">Přidat</button></form>';
 		let originalCouponHTMLsk =
 			'<form method="post" action="/action/Cart/addDiscountCoupon/" class="input-group csrf-enabled" data-testid="formDiscountCoupon"><input type="text" name="discountCouponCode" id="discountCouponCode" class="form-control" required="" placeholder="Vložiť zľavový kupón" aria-label="Zľavový kupón" data-testid="inputDiscountCoupon"><button type="submit" class="btn btn-secondary" data-testid="buttonSubmitDiscountCoupon">Pridať</button></form>';
-		if (document.body.classList.contains("cs")) {
+		if (czechEshop) {
 			$(".discount-coupon").html(originalCouponHTMLcz);
 		}
-		if (document.body.classList.contains("sk")) {
+		if (slovakEshop) {
 			$(".discount-coupon").html(originalCouponHTMLsk);
 		}
 	}
