@@ -82,7 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	/*Vypnutí mezikroku zobrazení košíku na click na mobilu*/
 	$("#header .navigation-buttons .cart-count").on("touchstart", function () {
 		$(".popup-widget.cart-widget").css("display", "none");
-		window.location.href = "/kosik";
+		if (czechEshop) {
+			window.location.href = "/kosik";
+		}
+		if (slovakEshop) {
+			window.location.href = "/kosik";
+		}
+		if (polishEshop) {
+			window.location.href = "/koszyk";
+		}
 	});
 	/*Chování navigace na mobilu a tabletu*/
 	if (!window.matchMedia("(min-width: " + "768" + "px)").matches) {
@@ -212,6 +220,9 @@ if (document.querySelector(".type-category")) {
 	if (slovakEshop) {
 		$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Radit podľa</span></div>");
 	}
+	if (polishEshop) {
+		$(".filters-unveil-button-wrapper").append("<div class='raditPodle'><span>Sortuj według</span></div>");
+	}
 
 	$(".raditPodle").on("click tap", function () {
 		$(".category-header").toggleClass("active");
@@ -226,8 +237,21 @@ if (document.querySelector(".type-category")) {
 			const showMoreCategory = document.createElement("span");
 			const showLessCategory = document.createElement("span");
 
-			const showMoreCategoryContent = document.createTextNode("Zobrazit více");
-			const showLessategoryContent = document.createTextNode("Zobrazit méně");
+			let showMoreCategoryContent;
+			let showLessCategoryContent;
+
+			if (czechEshop) {
+				showMoreCategoryContent = document.createTextNode("Zobrazit více");
+				showLessategoryContent = document.createTextNode("Zobrazit méně");
+			}
+			if (slovakEshop) {
+				showMoreCategoryContent = document.createTextNode("Zobraziť viac");
+				showLessategoryContent = document.createTextNode("Zobraziť menej");
+			}
+			if (polishEshop) {
+				showMoreCategoryContent = document.createTextNode("Pokaż więcej");
+				showLessategoryContent = document.createTextNode("Pokaż mniej");
+			}
 
 			showMoreCategory.appendChild(showMoreCategoryContent);
 			showLessCategory.appendChild(showLessategoryContent);
@@ -253,8 +277,21 @@ if (document.querySelector(".type-category")) {
 			const showMoreCategorySecond = document.createElement("span");
 			const showLessCategorySecond = document.createElement("span");
 
-			const showMoreCategoryContentSecond = document.createTextNode("Zobrazit více");
-			const showLessategoryContentSecond = document.createTextNode("Zobrazit méně");
+			let showMoreCategoryContentSecond;
+			let showLessategoryContentSecond;
+
+			if (czechEshop) {
+				showMoreCategoryContentSecond = document.createTextNode("Zobrazit více");
+				showLessategoryContentSecond = document.createTextNode("Zobrazit méně");
+			}
+			if (slovakEshop) {
+				showMoreCategoryContentSecond = document.createTextNode("Zobraziť viac");
+				showLessategoryContentSecond = document.createTextNode("Zobraziť menej");
+			}
+			if (polishEshop) {
+				showMoreCategoryContentSecond = document.createTextNode("Pokaż więcej");
+				showLessategoryContentSecond = document.createTextNode("Pokaż mniej");
+			}
 
 			showMoreCategorySecond.appendChild(showMoreCategoryContentSecond);
 			showLessCategorySecond.appendChild(showLessategoryContentSecond);
@@ -305,8 +342,18 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 			showMoreBrand = document.createElement("span");
 			showLessBrand = document.createElement("span");
 
-			showMoreBrandContent = document.createTextNode("Zobrazit více");
-			showLessBrandContent = document.createTextNode("Zobrazit méně");
+			if (czechEshop) {
+				showMoreBrandContent = document.createTextNode("Zobrazit více");
+				showLessBrandContent = document.createTextNode("Zobrazit méně");
+			}
+			if (slovakEshop) {
+				showMoreBrandContent = document.createTextNode("Zobraziť viac");
+				showLessBrandContent = document.createTextNode("Zobraziť menej");
+			}
+			if (polishEshop) {
+				showMoreBrandContent = document.createTextNode("Pokaż więcej");
+				showLessBrandContent = document.createTextNode("Pokaż mniej");
+			}
 
 			showMoreBrand.appendChild(showMoreBrandContent);
 			showLessBrand.appendChild(showLessBrandContent);
@@ -383,11 +430,20 @@ if (document.body.classList.contains("type-detail")) {
 		$(".dkLabFavouriteDiv").insertAfter(".add-to-cart button");
 		$(".stars-wrapper").eq(0).appendTo(".p-final-price-wrapper");
 
-		if ($(".availability-value").text().indexOf("Momen") > -1) {
-			$(".availability-value").addClass("red");
+		if (czechEshop) {
+			if ($(".availability-value").text().indexOf("Momen") > -1) {
+				$(".availability-value").addClass("red");
+			}
 		}
-		if ($(".availability-value").text().indexOf("nasklad") > -1) {
-			$(".availability-value").addClass("red");
+		if (slovakEshop) {
+			if ($(".availability-value").text().indexOf("Momen") > -1) {
+				$(".availability-value").addClass("red");
+			}
+		}
+		if (polishEshop) {
+			if ($(".availability-value").text().indexOf("Chwilowo") > -1) {
+				$(".availability-value").addClass("red");
+			}
 		}
 
 		$(".p-detail-inner-header > h1").clone().appendTo(".description-inner .extended-description");
@@ -414,8 +470,16 @@ if (document.body.classList.contains("type-detail")) {
 
 		if (detailParameters.length > 2) {
 			$(".basic-description").append(detailParametersTable);
-			$(".basic-description .row-header-label:contains('Hmotnost')").parent().parent().hide();
-			$(".basic-description .row-header-label:contains('Hmotnosť')").parent().parent().hide();
+			if (czechEshop) {
+				$(".basic-description .row-header-label:contains('Hmotnost')").parent().parent().hide();
+			}
+			if (slovakEshop) {
+				$(".basic-description .row-header-label:contains('Hmotnosť')").parent().parent().hide();
+			}
+			if (polishEshop) {
+				$(".basic-description .row-header-label:contains('Masa')").parent().parent().hide();
+				$(".basic-description .row-header-label:contains('Waga')").parent().parent().hide();
+			}
 		}
 
 		/*Úprava rozližení fotek na mobilu*/
@@ -522,6 +586,31 @@ if (document.body.classList.contains("type-detail")) {
 				$(".nelze-uplatnit-slevovy-kod").html("<p>U tohto produktu nie je možné uplatniť zľavový kód.</p>");
 			}
 		}
+		if (polishEshop) {
+			$(".product-top .availability-amount").each(function () {
+				if ($(this).text().indexOf(">3") > -1) {
+					$(this).html("powyżej 3&nbsp;szt");
+				}
+			});
+			/*Upravit*/
+
+			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
+				$(".p-short-description").append(
+					'<div class="slevovy-kod-popis skola-10"><p>Zadajte v košíku zľavový kód <b>SKOLA10</b> a využite 10% zľavu na všetky produkty v kategórii <a href="/naspat-do-skoly/">Naspäť do školy</a>.</p><p>*nemožno kombinovať s ďalšími zľavovými kupónmi</p></div>'
+				);
+			}
+			/*Natios přispívá*/
+			/*
+			if (dataLayer[0].shoptet.product.manufacturer == "Natios") {
+				$(".p-short-description").append(
+					'<div class="natios-daruje-blok"><p>Natios z každého predaného produktu <b>daruje 1 Kč detskej hematoonkológii</b> vo Fakultnej nemocnici v Ostrave.</br></br> Liečba každého onkologického pacienta v Českej republike sa odhaduje na približne 8&nbsp;000&nbsp;Kč mesačne. Veríme teda, že týmto krokom spoločne dokážeme pomôcť niekoľkým rodinám.</br></br>Viac sa môžete dočítať <a href="https://www.natima.sk/blog/natios-pomaha-hematoonkologii-v-ostrave/">tu.</a></p><a href="https://www.natima.sk/blog/natios-pomaha-hematoonkologii-v-ostrave/"><img src="https://www.natima.cz/user/documents/upload/NatiosDarujeFNO_2.svg"alt="Natios daruje 1 Kč"></a></div>'
+				);
+			}
+				*/
+			if ($(".nelze-uplatnit-slevovy-kod").length > 0) {
+				$(".nelze-uplatnit-slevovy-kod").html("<p>Na ten produkt nie ma możliwości zastosowania kodu rabatowego.</p>");
+			}
+		}
 
 		/*alternative varianty podobné*/
 		$("#productsAlternative .products .product:has(.p-tools > a)").each(function () {
@@ -550,6 +639,9 @@ if (document.body.classList.contains("type-detail")) {
 			}
 			if (slovakEshop) {
 				$("#productsAlternative").append('<div id="show-more-variants">Všetky varianty</div>');
+			}
+			if (polishEshop) {
+				$("#productsAlternative").append('<div id="show-more-variants">Wszystkie warianty</div>');
 			}
 
 			$("#show-more-variants").click(function () {
@@ -765,23 +857,37 @@ if (document.querySelector("body.in-kosik")) {
 	function upravaDarkuVKosiku() {
 		let giftSpan = $(".extra.gift > span");
 
-		let darkyText = "Dárky";
-		let darkyTextObjednejte = "Objednejte ještě za ";
-		let darkyTextHodnotnejsi = " a vyberte si z hodnotnějších dárků.";
+		let darkyText = "";
+		let darkyTextObjednejte = "";
+		let darkyTextHodnotnejsi = "";
 		const darkyPrice = $(".extra.gift > span > strong").eq(0);
 		const darkyPriceRange = $(".extra.gift .price-range");
-		let dataIdNatiosZasobnik = "10188";
+		let dataIdNatiosZasobnik = "";
 
 		let pocetProduktuNatiosVKosiku = 0;
+
+		if (czechEshop) {
+			darkyText = "Dárky";
+			darkyTextObjednejte = "Objednejte ještě za ";
+			darkyTextHodnotnejsi = " a vyberte si z hodnotnějších dárků.";
+			dataIdNatiosZasobnik = "10188";
+			$(".in-kosik .cart-summary h4").text(darkyText);
+		}
 
 		if (slovakEshop) {
 			darkyText = "Darčeky";
 			darkyTextObjednejte = "Objednajte si ešte za ";
 			darkyTextHodnotnejsi = " a vyberte si z hodnotnejších darčekov.";
 			dataIdNatiosZasobnik = "20589";
+			$(".in-kosik .cart-summary h4").text(darkyText);
 		}
-
-		$(".in-kosik .cart-summary h4").text(darkyText);
+		if (polishEshop) {
+			darkyText = "Darčeky";
+			darkyTextObjednejte = "Objednajte si ešte za ";
+			darkyTextHodnotnejsi = " a vyberte si z hodnotnejších darčekov.";
+			dataIdNatiosZasobnik = "XXXXXXXXX";
+			$(".in-koszyk .cart-summary h4").text(darkyText);
+		}
 
 		/*zobrazeni natios zasobniku a tašky pouze pokud obsahuje natios produkt*/
 		if ($(".p-name a:contains('NATIOS')").length > 0) {
