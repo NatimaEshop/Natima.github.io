@@ -93,7 +93,7 @@
 	content: "Akcia mesiaca⚡";
 }
 .pl .flag.flag-action::after {
-	content: "Akcia mesiaca⚡";
+	content: "Promocja miesiąca⚡";
 }
 
 #filters label[for="dd[]1"] {
@@ -129,7 +129,7 @@
 /*Prepsani vlajky Akce na Letný výprodej v Luigi*/
 .cs .lb-checkbox[data-color="Akce"] .lb-checkbox__text--original,
 .sk .lb-checkbox[data-color="Akcia"] .lb-checkbox__text--original,
-.pl .lb-checkbox[data-color="Akcia"] .lb-checkbox__text--original {
+.pl .lb-checkbox[data-color="Akce"] .lb-checkbox__text--original {
 	font-size: 0;
 }
 .cs .lb-checkbox[data-color="Akce"] .lb-checkbox__text--original::before {
@@ -140,8 +140,8 @@
 	content: "Akcie mesiaca ⚡" !important;
 	font-size: 14px;
 }
-.pl .lb-checkbox[data-color="Akcia"] .lb-checkbox__text--original::before {
-	content: "Akcie mesiaca ⚡" !important;
+.pl .lb-checkbox[data-color="Akce"] .lb-checkbox__text--original::before {
+	content: "Promocja miesiąca⚡" !important;
 	font-size: 14px;
 }
 
