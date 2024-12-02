@@ -251,7 +251,7 @@ if (document.querySelector(".type-category")) {
 			}
 
 			showMoreCategory.appendChild(showMoreCategoryContent);
-			showLessCategory.appendChild(showLessategoryContent);
+			showLessCategory.appendChild(showLessCategoryContent);
 
 			showMoreCategory.classList.add("category-read", "more");
 			showLessCategory.classList.add("category-read", "less");
