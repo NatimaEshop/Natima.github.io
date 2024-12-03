@@ -829,7 +829,7 @@ if (document.body.classList.contains("ordering-process")) {
 	});
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------krok 1 kosik*/
-if (document.querySelector("body.in-kosik")) {
+if (document.querySelector("body.in-kosik") || document.querySelector("body.in-koszyk")) {
 	rearangeSummary();
 	function rearangeSummary() {
 		const summaryInsertPlace = $(".summary-wrapper .price-wrapper");
