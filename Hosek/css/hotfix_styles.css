@@ -1,16 +1,20 @@
-.in-kosik #fvstudio-delivery-info {
+.in-kosik #fvstudio-delivery-info,
+.in-koszyk {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start !important;
 }
-.in-kosik .extra.delivery > span {
+.in-kosik .extra.delivery > span,
+.in-koszyk .extra.delivery > span {
 	max-width: 80%;
 	text-align: left;
 }
-.in-kosik .extra.delivery > span strong {
+.in-kosik .extra.delivery > span strong,
+.in-koszyk .extra.delivery > span strong {
 	margin-right: 0;
 }
-.in-kosik .extra.delivery::before {
+.in-kosik .extra.delivery::before,
+.in-koszyk .extra.delivery::before {
 	margin-left: 10px;
 }
 
@@ -20,7 +24,8 @@
 	margin-left: 0;
 }
 
-.in-kosik .extra.discount::before {
+.in-kosik .extra.discount::before,
+.in-koszyk .extra.discount::before {
 	display: none;
 }
 
