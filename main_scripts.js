@@ -545,8 +545,8 @@ if (document.body.classList.contains("type-detail")) {
 
 		if (czechEshop) {
 			$(".product-top .availability-amount").each(function () {
-				if ($(this).text().indexOf(">3") > -1) {
-					$(this).html("více než 3&nbsp;ks");
+				if ($(this).text().indexOf(">10") > -1) {
+					$(this).html("více než 10&nbsp;ks");
 				}
 			});
 			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
@@ -565,8 +565,8 @@ if (document.body.classList.contains("type-detail")) {
 		}
 		if (slovakEshop) {
 			$(".product-top .availability-amount").each(function () {
-				if ($(this).text().indexOf(">3") > -1) {
-					$(this).html("viac ako 3&nbsp;ks");
+				if ($(this).text().indexOf(">10") > -1) {
+					$(this).html("viac ako 10&nbsp;ks");
 				}
 			});
 			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
@@ -585,8 +585,8 @@ if (document.body.classList.contains("type-detail")) {
 		}
 		if (polishEshop) {
 			$(".product-top .availability-amount").each(function () {
-				if ($(this).text().indexOf(">3") > -1) {
-					$(this).html("powyżej 3&nbsp;szt");
+				if ($(this).text().indexOf(">10") > -1) {
+					$(this).html("powyżej 10&nbsp;szt");
 				}
 			});
 			/*Upravit*/
