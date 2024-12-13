@@ -55,6 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		/*Presunuti blogu*/
 		$(".homepage-blog-wrapper > .h4").insertBefore(".homepage-blog-wrapper");
 	}
+
+	if (polishEshop) {
+		//if first h1 isnt equal to page title, change h1 to page title
+		if ($("h1").eq(0).text() != document.title) {
+			$("h1").text(document.title);
+		}
+	}
 });
 
 /*-----------------------------------------------------------odstranění skrytých kategorií pro fix hamburgeru, kdy se nezobrazují záložky*/
