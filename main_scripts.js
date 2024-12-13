@@ -1350,24 +1350,12 @@ document.addEventListener(
 
 /*--------------------------------------------Přepsání poslké H1*/
 if (polishEshop) {
-	let h1 = $("h1").eq;
+	let h1 = $("h1").first();
 	let title = document.title;
-	//if first h1 isnt equal to page title,
-	if (h1.text() != title) {
-		/*change h1 to page title but remove " - Natima" or " | Natima" if its in there*/
-
-		if (title.indexOf(" - Natima") > -1) {
-			title = title.replace(" - Natima", "");
-		}
-		if (title.indexOf(" - natima") > -1) {
-			title = title.replace(" - natima", "");
-		}
-		if (title.indexOf(" | Natima") > -1) {
-			title = title.replace(" | Natima", "");
-		}
-		if (title.indexOf(" | natima") > -1) {
-			title = title.replace(" | natima", "");
-		}
+	// If the first h1 isn't equal to the page title,
+	if (h1.text() !== title) {
+		// Change h1 to page title but remove " - Natima" or " | Natima" if it's in there
+		title = title.replace(/ - Natima| - natima| \| Natima| \| natima/g, "");
 		h1.text(title);
 	}
 }
