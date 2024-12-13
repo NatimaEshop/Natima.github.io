@@ -1350,6 +1350,9 @@ document.addEventListener(
 
 /*--------------------------------------------Přepsání poslké H1*/
 if (polishEshop) {
+	if (document.body.classList.contains("in-index")) {
+		return;
+	}
 	let h1 = $("h1").first();
 	let title = document.title;
 	// If the first h1 isn't equal to the page title,
