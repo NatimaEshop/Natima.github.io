@@ -19,7 +19,7 @@ $(document).ready(function () {
 	}, 1);
 
 	// Cycle the active class every 6 seconds
-	let cycleInterval = setInterval(cycleActiveClass, 6000);
+	let cycleInterval = setInterval(cycleActiveClass, 4000);
 
 	// Restart the cycle on window resize
 	$(window).resize(function () {
@@ -34,7 +34,7 @@ $(document).ready(function () {
 			$(".main-text").css("min-width", "auto");
 			mainTextWidth = $(".main-text").width();
 			$(".main-text").css("min-width", mainTextWidth);
-			cycleInterval = setInterval(cycleActiveClass, 6000);
+			cycleInterval = setInterval(cycleActiveClass, 4000);
 		}, 1);
 	});
 });
