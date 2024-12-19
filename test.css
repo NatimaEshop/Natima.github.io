@@ -96,9 +96,10 @@
 	justify-content: flex-start;
 }
 .top-lista-car.active {
-	animation: top-lista-car-animation 2s infinite;
+	animation: top-lista-car-animation 2s;
 	animation-direction: alternate-reverse;
 	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
 }
 @keyframes top-lista-car-animation {
 	0% {
