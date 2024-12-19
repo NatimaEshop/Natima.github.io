@@ -46,6 +46,7 @@
 	height: auto;
 	font-size: inherit;
 	grid-row: 1;
+	z-index: 0;
 }
 
 .product .p .p-in .p-in-in > a > span {
