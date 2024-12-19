@@ -11,7 +11,7 @@ $(document).ready(function () {
 	// Initially add the active class to the first span
 	$(".top-lista .add-texts span").first().addClass("active");
 	$(".top-lista-car").addClass("active");
-	/*
+
 	// Get .main-text width and set it as its min-width
 	setTimeout(function () {
 		let mainTextWidth = $(".main-text").width();
@@ -37,5 +37,4 @@ $(document).ready(function () {
 			cycleInterval = setInterval(cycleActiveClass, 4000);
 		}, 1);
 	});
-	*/
 });
