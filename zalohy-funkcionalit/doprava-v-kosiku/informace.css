@@ -1,0 +1,22 @@
+/*Dopravy*/
+#order-shipping-methods > div::after {
+	display: block;
+	color: var(--color-primary);
+	font-size: 14px;
+	font-weight: 400;
+	position: relative;
+	padding-left: 24px;
+	bottom: 10px;
+}
+#shipping-17::after,
+#shipping-51::after {
+	content: "Garancia doručenia do Vianoc pri objednaní do 18.12. do 12:00.";
+}
+#shipping-26::after {
+	content: "Garancia doručenia do Vianoc pri objednaní do 19.12. do 12:00.";
+}
+#shipping-35::after,
+#shipping-92::after,
+#shipping-95::after {
+	content: "Garancia doručenia pri objednaní do 19.12. do 12:00.";
+}
