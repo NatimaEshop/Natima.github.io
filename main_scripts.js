@@ -559,8 +559,10 @@ if (document.body.classList.contains("type-detail")) {
 					'<div class="natios-daruje-blok"><p>Natios z každého prodaného produktu <b>daruje 1 Kč dětské hematoonkologii</b> ve Fakultní nemocnici v Ostravě.</br></br> Léčba každého onkologického pacienta v České republice se odhaduje na přibližně 8&nbsp;000&nbsp;Kč měsíčně. Věříme tedy, že tímto krokem společně dokážeme pomoci několika rodinám. </br></br>Více se můžete dočíst <a href="https://natima.cz/blog/natios-pomaha-hematoonkologii-v-ostrave/">zde.</a></p><a href="https://natima.cz/blog/natios-pomaha-hematoonkologii-v-ostrave/"><img src="https://natima.cz/user/documents/upload/NatiosDarujeFNO_2.svg"alt="Natios daruje 1 Kč"></a></div>'
 				);
 			}
-			if ($(".nelze-uplatnit-slevovy-kod").length > 0) {
-				$(".nelze-uplatnit-slevovy-kod").html("<p>U tohoto produktu není možné uplatnit slevový kód.</p>");
+			if ($(".upozorneni-produkt.nelze-uplatnit-slevovy-kod").length > 0) {
+				$(".upozorneni-produkt.nelze-uplatnit-slevovy-kod").html(
+					"<p>U tohoto produktu není možné uplatnit slevový kód.</p>"
+				);
 			}
 		}
 		if (slovakEshop) {

@@ -1689,7 +1689,7 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 	overflow: hidden;
 }
 
-.nelze-uplatnit-slevovy-kod {
+.upozorneni-produkt {
 	display: flex;
 	justify-content: flex-start;
 	width: fit-content;
@@ -1704,11 +1704,11 @@ body.type-detail .products .product:hover .flags.flags-extra .flag.flag-discount
 
 	margin-bottom: calc(var(--gap) * 2);
 }
-.nelze-uplatnit-slevovy-kod p {
+.upozorneni-produkt p {
 	font-size: inherit !important;
 	margin: 8px 0;
 }
-.nelze-uplatnit-slevovy-kod::before {
+.upozorneni-produkt::before {
 	content: "";
 	position: absolute;
 	left: 12px;

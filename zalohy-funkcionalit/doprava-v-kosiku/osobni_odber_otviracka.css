@@ -1,0 +1,18 @@
+.osobni-otviracka {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	font-size: 14px;
+	color: var(--color-primary);
+	padding-left: 24px;
+	margin-bottom: 10px;
+	z-index: 1;
+}
+.osobni-otviracka > div {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 0.5em;
+}
+.osobni-otviracka > div > span {
+	font-weight: 600;
+}
