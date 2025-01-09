@@ -1353,7 +1353,7 @@ if (polishEshop) {
 	if (
 		document.body.classList.contains("type-category") ||
 		document.body.classList.contains("type-manufacturer-detail") ||
-		document.body.classList.contains("type-page") ||
+		document.body.classList.contains("type-page")
 	) {
 		let h1 = $("h1").first();
 		let title = document.title;
