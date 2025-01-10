@@ -107,7 +107,7 @@ body footer .container.footer-bottom {
 	position: absolute;
 	top: calc(var(--newsletter-height) / -1);
 	left: 0;
-	width: 100%;
+	width: 100% !important;
 	padding: 0 !important;
 }
 .custom-footer > div:first-child .banner {
