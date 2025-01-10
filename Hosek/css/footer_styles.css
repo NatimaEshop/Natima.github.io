@@ -4,7 +4,8 @@
 }
 
 .cs .custom-footer__banner143,
-.sk .custom-footer__banner95 {
+.sk .custom-footer__banner95,
+.pl .custom-footer__banner3 {
 	display: none;
 }
 
@@ -21,6 +22,10 @@ footer .custom-footer > div {
 	padding: 30px 15px 0 0 !important;
 	text-align: left;
 	width: 20%;
+}
+
+.pl footer .custom-footer > div {
+	width: 25%;
 }
 
 footer .custom-footer > div .banner {
