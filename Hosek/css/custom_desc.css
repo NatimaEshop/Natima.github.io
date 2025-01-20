@@ -26,19 +26,24 @@
 .custom-desc p {
 	text-wrap: pretty;
 }
-.custom-desc .pad {
+.custom-desc .pad,
+.custom-desc .row .pad {
 	padding: var(--padding-block) !important;
 }
-.custom-desc .pad-l {
+.custom-desc .pad-l,
+.custom-desc .row .pad-l {
 	padding-left: var(--padding-block) !important;
 }
-.custom-desc .pad-r {
+.custom-desc .pad-r,
+.custom-desc .row .pad-r {
 	padding-right: var(--padding-block) !important;
 }
-.custom-desc .pad-t {
+.custom-desc .pad-t,
+.custom-desc .row .pad-t {
 	padding-top: var(--padding-block) !important;
 }
-.custom-desc .pad-b {
+.custom-desc .pad-b,
+.custom-desc .row .pad-b {
 	padding-bottom: var(--padding-block) !important;
 }
 .custom-desc .m-top-auto {
