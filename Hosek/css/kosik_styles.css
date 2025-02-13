@@ -517,7 +517,7 @@ ol.cart-header li.active strong span::before {
 /*schovani natios zasobniku*/
 .cs.in-kosik ul.free-gifts li[data-free-gift-id="10188"],
 .sk.in-kosik ul.free-gifts li[data-free-gift-id="20589"],
-.in-koszyk ul.free-gifts li[data-free-gift-id="20589"] {
+.pl.in-koszyk ul.free-gifts li[data-free-gift-id="21107"] {
 	display: none;
 }
 

@@ -882,7 +882,7 @@ if (document.querySelector("body.in-kosik") || document.querySelector("body.in-k
 			darkyText = "Prezenty";
 			darkyTextObjednejte = "Zamów jeszcze za ";
 			darkyTextHodnotnejsi = " i wybierz bardziej wartościowy prezent.";
-			dataIdNatiosZasobnik = "XXXXXXXXX";
+			dataIdNatiosZasobnik = "21107";
 			$(".in-koszyk .cart-summary h4").text(darkyText);
 		}
 
