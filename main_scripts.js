@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			links = ["/novinky/", "/--akcie-mesiaca/", "/dla-zamerania/", "/blog/"];
 		}
 		if (polishEshop) {
-			links = ["/nowosci/", "/promocja-miesiaca/", "/wedlug-przeznaczenia/", "/blog/"];
+			links = ["/wedlug-przeznaczenia/", "/nowosci/", "/promocja-miesiaca/", "/blog/"];
 		}
 		$(".homepage-group-title.h4").each(function (index) {
 			if (index < links.length) {
