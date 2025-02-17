@@ -562,6 +562,9 @@ if (document.body.classList.contains("type-detail")) {
 			if ($(".nelze-uplatnit-slevovy-kod").length > 0) {
 				$(".nelze-uplatnit-slevovy-kod").html("<p>U tohoto produktu není možné uplatnit slevový kód.</p>");
 			}
+			if ($(".nelze-uplatnit-vernostni-slevu").length > 0) {
+				$(".nelze-uplatnit-vernostni-slevu").html("<p>U tohoto produktu není možné uplatnit věrnostní slevu.</p>");
+			}
 		}
 		if (slovakEshop) {
 			$(".product-top .availability-amount").each(function () {
@@ -581,6 +584,9 @@ if (document.body.classList.contains("type-detail")) {
 			}
 			if ($(".nelze-uplatnit-slevovy-kod").length > 0) {
 				$(".nelze-uplatnit-slevovy-kod").html("<p>U tohto produktu nie je možné uplatniť zľavový kód.</p>");
+			}
+			if ($(".nelze-uplatnit-vernostni-slevu").length > 0) {
+				$(".nelze-uplatnit-vernostni-slevu").html("<p>U tohto produktu nie je možné uplatniť vernostnú zľavu.</p>");
 			}
 		}
 		if (polishEshop) {
@@ -606,6 +612,9 @@ if (document.body.classList.contains("type-detail")) {
 				*/
 			if ($(".nelze-uplatnit-slevovy-kod").length > 0) {
 				$(".nelze-uplatnit-slevovy-kod").html("<p>Na ten produkt nie ma możliwości zastosowania kodu rabatowego.</p>");
+			}
+			if ($(".nelze-uplatnit-vernostni-slevu").length > 0) {
+				$(".nelze-uplatnit-vernostni-slevu").html("<p>Na ten produkt nie można zastosować rabatu lojalnościowego.</p>");
 			}
 		}
 
