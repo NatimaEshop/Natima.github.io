@@ -149,3 +149,36 @@ body.in-index .content.wide h1 {
 
 @media (min-width: 1660px) {
 }
+
+/*admin*/
+@media (max-width: 768px) {
+	.admin-bar {
+		display: block;
+		width: 100%;
+		z-index: 9999999999;
+		bottom: 0 !important;
+		top: auto;
+		height: auto;
+		transform: translatey();
+	}
+	.admin-bar #div-bar-menu {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.admin-bar #bar-menu {
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+	.admin-bar #bar-menu > li {
+		flex: 1;
+		display: block;
+		text-align: center;
+		outline: solid;
+		outline-width: 1px;
+		padding: 10px 5px;
+	}
+	.admin-bar #bar-menu > li > ul {
+		display: none;
+	}
+}
