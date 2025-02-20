@@ -157,9 +157,8 @@ body.in-index .content.wide h1 {
 		width: 100%;
 		z-index: 9999999999;
 		bottom: 0 !important;
-		top: auto;
+		top: auto !important;
 		height: auto;
-		transform: translatey();
 	}
 	.admin-bar #div-bar-menu {
 		margin: 0 !important;
