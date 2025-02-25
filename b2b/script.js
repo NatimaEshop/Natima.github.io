@@ -47,12 +47,20 @@ bannerMainPage.addClass("displayFlex");
 /*platby faktury a převod*/
 const zakaznikGroupId = infoZakaznika.groupId;
 const idVelkoobchod_2 = 4;
+const customerEmail = infoZakaznika.email;
 
 if (zakaznikGroupId == idVelkoobchod_2) {
 	$('.radio-wrapper[data-id="billing-76"]').show();
 } else {
 	$('.radio-wrapper[data-id="billing-73"]').show();
 }
+
+/*cukrfree 14 dni splatnost misto 7*/
+if (customerEmail == "cukrfree@gmail.com") {
+	$('.radio-wrapper[data-id="billing-76"]').hide();
+	$('.radio-wrapper[data-id="billing-87"]').show();
+}
+
 /*pridano do kos*/
 var unikatni = 0;
 var unikatniOdstraneni = 0;
