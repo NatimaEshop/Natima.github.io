@@ -365,9 +365,10 @@ $(function () {
 });
 
 function calculateMinSellPriceWithVAT() {
+	/*
 	if ($("body").hasClass("admin-logged") === false) {
 		return;
-	}
+	}*/
 	let stdPriceElements = document.querySelectorAll(".price-standard");
 
 	stdPriceElements.forEach(function (element) {

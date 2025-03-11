@@ -338,3 +338,10 @@ label[for="dd[]44"], /*BENU*/
 label[for="dd[]47"] /*FILTR*/ {
 	display: none !important;
 }
+
+.site-msg.information {
+	color: white;
+}
+.site-msg.information .close::before {
+	color: white;
+}
