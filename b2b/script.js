@@ -132,6 +132,7 @@ prepisMarze();
 document.addEventListener("DOMContentLoaded", function () {
 	prepisMarze();
 	pridanoDoKosikuPopup();
+	calculateMinSellPriceWithVAT();
 });
 
 /*vice produktu*/
@@ -140,6 +141,7 @@ document.addEventListener(
 	function () {
 		prepisMarze();
 		pridanoDoKosikuPopup();
+		calculateMinSellPriceWithVAT();
 	},
 	false
 );
@@ -153,6 +155,7 @@ document.addEventListener(
 			function () {
 				prepisMarze();
 				pridanoDoKosikuPopup();
+				calculateMinSellPriceWithVAT();
 			},
 			true
 		);
@@ -169,6 +172,7 @@ document.addEventListener(
 			function () {
 				prepisMarze();
 				pridanoDoKosikuPopup();
+				calculateMinSellPriceWithVAT();
 			},
 			true
 		);
@@ -185,6 +189,7 @@ document.addEventListener(
 			function () {
 				prepisMarze();
 				pridanoDoKosikuPopup();
+				calculateMinSellPriceWithVAT();
 			},
 			true
 		);
@@ -199,6 +204,7 @@ $("#loadNextSearchResults").click(function () {
 		function () {
 			prepisMarze();
 			pridanoDoKosikuPopup();
+			calculateMinSellPriceWithVAT();
 		},
 		true
 	);
@@ -357,3 +363,67 @@ $(function () {
 		$(this).parent().toggleClass("active");
 	});
 });
+
+function calculateMinSellPriceWithVAT() {
+	if ($("body").hasClass("admin-logged") === false) {
+		return;
+	}
+	let stdPriceElements = document.querySelectorAll(".price-standard");
+
+	stdPriceElements.forEach(function (element) {
+		// Get standard price text
+		if (element.classList.contains("calculated")) {
+			return;
+		}
+		let stdPriceSpan = element.querySelector("span");
+		let stdPriceText = stdPriceSpan.textContent.trim();
+		stdPriceText = stdPriceText.replace("Kč", "").trim().replace(",", ".");
+		let stdPriceNumber = parseFloat(stdPriceText);
+		console.log("Price:", stdPriceNumber);
+
+		let container = element.parentElement.parentElement;
+		let priceWithVAT = container.querySelector(".price-additional");
+		let priceWOVAT = container.querySelector(".price-final");
+
+		if (!priceWithVAT || !priceWOVAT) {
+			console.warn("Missing price-additional or price-final elements in container");
+			return;
+		}
+
+		// Process sellingPriceWithVAT text: remove parentheses, "Kč", trim and replace comma with dot
+		let sellingPriceWithVATText = priceWithVAT.textContent
+			.replace(/[()]/g, "")
+			.replace("Kč", "")
+			.trim()
+			.replace(",", ".");
+		let sellingPriceWithVAT = parseFloat(sellingPriceWithVATText);
+
+		// Process sellingPriceWOVAT text similarly
+		let sellingPriceWOVATText = priceWOVAT.textContent.replace("Kč", "").trim().replace(",", ".");
+		let sellingPriceWOVAT = parseFloat(sellingPriceWOVATText);
+
+		let VAT = sellingPriceWithVAT / sellingPriceWOVAT;
+		VAT = Math.round(VAT * 100) / 100;
+
+		let stdPriceWithVAT = stdPriceNumber * VAT;
+		stdPriceWithVAT = Math.round(stdPriceWithVAT * 100) / 100;
+
+		console.log("VAT:", VAT);
+		console.log("Price with VAT:", stdPriceWithVAT);
+
+		//input stdPriceWithVAT value to the stdPriceWithVAT with Kč
+		//if price has . replace with ,
+		if (stdPriceWithVAT.toString().includes(".")) {
+			stdPriceWithVAT = stdPriceWithVAT.toFixed(2).replace(".", ",");
+		}
+		stdPriceSpan.textContent = stdPriceWithVAT + " Kč";
+		//add calculated class to the element
+		element.classList.add("calculated");
+	});
+}
+
+//if body has admin-logged
+/*
+if ($("body").hasClass("admin-logged")) {
+	calculateMinSellPriceWithVAT();
+}*/
