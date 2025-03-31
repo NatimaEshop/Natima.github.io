@@ -213,6 +213,7 @@ $("#loadNextSearchResults").click(function () {
 /*DEN DETI*/
 /*DEN DETI*/
 /*DEN DETI*/
+/*
 let appendDenDeti =
 	'<div class="natios-daruje-blok"><p>Nejen že Natios dnes nakoupíte s <b>5% slevou</b>, ale Natios <b>daruje navíc 5&nbsp;% z celkové částky objednávky dětské hematoonkologii</b> ve Fakultní nemocnici v Ostravě.</br></br> Léčba každého onkologického pacienta v České republice se odhaduje na přibližně 8&nbsp;000&nbsp;Kč měsíčně. Věříme tedy, že tímto krokem společně dokážeme pomoci několika rodinám.</div>';
 if ($("body").hasClass("type-detail")) {
@@ -230,7 +231,7 @@ if ($("body").hasClass("type-detail")) {
 		let originalPriceHtml = `<del>${originalPrice} Kč</del> `;
 		$priceFinalHolder.prepend(originalPriceHtml);
 	}
-}
+}*/
 
 document.addEventListener("DOMContentLoaded", function (event) {
 	if (document.body.classList.contains("type-detail")) {
