@@ -477,6 +477,7 @@ if (document.body.classList.contains("type-detail")) {
 				$(".basic-description .row-header-label:contains('Masa')").parent().parent().hide();
 				$(".basic-description .row-header-label:contains('Waga')").parent().parent().hide();
 			}
+			$(".basic-description .row-header-label:contains('EAN')").parent().parent().hide();
 		}
 
 		/*Úprava rozližení fotek na mobilu*/
