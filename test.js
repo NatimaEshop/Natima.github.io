@@ -1,6 +1,5 @@
 if (document.body.classList.contains("in-velikonocni-slevy") && document.body.classList.contains("type-post")) {
 	document.addEventListener("DOMContentLoaded", function () {
-		oldBlog();
 		function oldBlog() {
 			let timeElement = $(".news-item-detail time[datetime]");
 			let dateStr = timeElement.attr("datetime");
