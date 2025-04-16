@@ -1,7 +1,4 @@
-if (
-	(document.body.classList.contains("in-blog") || document.body.classList.contains("in-velikonocni-slevy")) &&
-	document.body.classList.contains("type-post")
-) {
+if (document.body.classList.contains("in-blog") && document.body.classList.contains("type-post")) {
 	document.addEventListener("DOMContentLoaded", function () {
 		oldBlog();
 		function oldBlog() {
