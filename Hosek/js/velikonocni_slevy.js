@@ -1,7 +1,7 @@
 /*------------------------------------------------*/
 /*Jedná se prakticky o blog, pouze osekany na kategorie*/
 /*Bylo nutné udělat další script, kvůli nové rubrice*/
-/*Script je načítán inline přímo v článku*/
+/*Script je načítán script tagem přímo v článku, proto tu nejsou if body contains*/
 
 document.addEventListener("DOMContentLoaded", function () {
 	fetchAndAppendBlogCategory();
