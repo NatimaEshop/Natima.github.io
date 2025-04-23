@@ -1358,8 +1358,8 @@ document.addEventListener(
 );
 /*-----------------------------------------------------------------------KONEC Automatické načtení 2. stránku produktů při scrollingu*/
 
-/*--------------------------------------------Přepsání poslké H1*/
-if (polishEshop) {
+/*--------------------------------------------Přepsání H1 v kategorii apod na content Title*/
+if (polishEshop || slovakEshop) {
 	if (
 		document.body.classList.contains("type-category") ||
 		document.body.classList.contains("type-manufacturer-detail") ||
