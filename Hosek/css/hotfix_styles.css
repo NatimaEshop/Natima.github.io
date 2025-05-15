@@ -431,3 +431,17 @@ body.type-category .breadcrumbs a::after {
 		color: var(--color-primary);
 	}
 }
+
+.cart-widget-product-image {
+	height: 76px;
+	display: flex !important;
+	align-items: center;
+	align-content: center;
+}
+
+.user-action-in .user-action-cart .cart-widget-product .cart-widget-product-name > span {
+	top: 21px;
+}
+.quantity > label {
+	order: 2;
+}
