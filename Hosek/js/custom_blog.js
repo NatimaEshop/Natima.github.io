@@ -22,9 +22,21 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 		function blogAutor() {
 			$("#content p").each(function () {
 				if (/##AUTOR##KATEŘINAT/i.test($(this).text())) {
-					$(this).replaceWith(
-						'<div id="blog-author"><div class="author-image"><img src="https://www.natima.cz/user/documents/upload/Blog/autori/KaterinaTranova.webp" alt="Kateřina" width="500" height="500"></div><div class="author-text"><p class="author-label">Autor</p><p class="author-name">Kateřina</p><div class="expandale author-text"><div class="expanding"><p>Zajímám se o zdravý životní styl, sport, kosmetiku a zdravou stravu. Mým cílem je inspirovat ostatní, aby pečovali o své tělo i mysl a stali se tou nejlepší verzí sebe samých. Pravidelně se věnuji různým sportovním aktivitám a hledám nové cesty, jak optimalizovat svou fyzickou kondici i duševní pohodu.</p><p>Zdravá strava je pro mě klíčovým prvkem, který podporuje mé zdraví a energii. Kromě sportu a výživy mě baví objevovat nové kosmetické trendy a produkty, které podporují přirozenou krásu a zdraví. Ve volném čase si ráda přečtu dobrou knihu, která mi poskytne nejen odpočinek, ale i nové poznatky. Na blogu se s vámi podělím o své zkušenosti, tipy a rady, jak žít zdravěji a spokojeněji.</p></div></div></div></div>'
-					);
+					if (document.body.classList.contains("cs")) {
+						$(this).replaceWith(
+							'<div id="blog-author"><div class="author-image"><img src="https://www.natima.cz/user/documents/upload/Blog/autori/KaterinaTranova.webp" alt="Kateřina" width="500" height="500"></div><div class="author-text"><p class="author-label">Autor</p><p class="author-name">Kateřina</p><div class="expandale author-text"><div class="expanding"><p>Zajímám se o zdravý životní styl, sport, kosmetiku a zdravou stravu. Mým cílem je inspirovat ostatní, aby pečovali o své tělo i mysl a stali se tou nejlepší verzí sebe samých. Pravidelně se věnuji různým sportovním aktivitám a hledám nové cesty, jak optimalizovat svou fyzickou kondici i duševní pohodu.</p><p>Zdravá strava je pro mě klíčovým prvkem, který podporuje mé zdraví a energii. Kromě sportu a výživy mě baví objevovat nové kosmetické trendy a produkty, které podporují přirozenou krásu a zdraví. Ve volném čase si ráda přečtu dobrou knihu, která mi poskytne nejen odpočinek, ale i nové poznatky. Na blogu se s vámi podělím o své zkušenosti, tipy a rady, jak žít zdravěji a spokojeněji.</p></div></div></div></div>'
+						);
+					}
+					if (document.body.classList.contains("sk")) {
+						$(this).replaceWith(
+							'<div id="blog-author"><div class="author-image"><img src="https://www.natima.cz/user/documents/upload/Blog/autori/KaterinaTranova.webp" alt="Kateřina" width="500" height="500"></div><div class="author-text"><p class="author-label">Autor</p><p class="author-name">Kateřina</p><div class="expandale author-text"><div class="expanding"><p>Zaujímam sa o zdravý životný štýl, šport, kozmetiku a zdravú stravu. Môj cieľ je inšpirovať ostatných, aby sa starali o svoje telo aj myseľ a stali sa tou najlepšou verziou seba samých. Pravidelne sa venujem rôznym športovým aktivitám a hľadám nové cesty, ako optimalizovať svoju fyzickú kondíciu aj duševnú pohodu.</p><p>Zdravá strava je pre mňa kľúčovým prvkom, ktorý podporuje moje zdravie a energiu. Okrem športu a výživy ma baví objavovať nové kozmetické trendy a produkty, ktoré podporujú prirodzenú krásu a zdravie. Vo voľnom čase si rada prečítam dobrú knihu, ktorá mi poskytne nielen oddych, ale aj nové poznatky. Na blogu sa s vami podelím o svoje skúsenosti, tipy a rady, ako žiť zdravšie a spokojnejšie.</p></div></div></div></div>'
+						);
+					}
+					if (document.body.classList.contains("pl")) {
+						$(this).replaceWith(
+							'<div id="blog-author"><div class="author-image"><img src="https://www.natima.cz/user/documents/upload/Blog/autori/KaterinaTranova.webp" alt="Kasia" width="500" height="500"></div><div class="author-text"><p class="author-label">Autor</p><p class="author-name">Kasia</p><div class="expandale author-text"><div class="expanding"><p>Interesuję się zdrowym stylem życia, sportem, kosmetyką i zdrowym odżywianiem. Moim celem jest inspirowanie innych do dbania o swoje ciało i umysł oraz stawania się najlepszą wersją siebie. Regularnie angażuję się w różne aktywności sportowe i poszukuję nowych sposobów na optymalizację swojej kondycji fizycznej i psychicznej.</p><p>Zdrowa dieta jest dla mnie kluczowym elementem wspierającym moje zdrowie i energię. Oprócz sportu i odżywiania, interesują mnie nowe trendy kosmetyczne i produkty, które wspierają naturalne piękno i zdrowie. W wolnym czasie lubię przeczytać dobrą książkę, która dostarcza mi nie tylko relaksu, ale także nowych spostrzeżeń. Na blogu podzielę się z Wami moimi doświadczeniami, wskazówkami i radami, jak żyć zdrowiej i szczęśliwiej.</p></div></div></div></div>'
+						);
+					}
 				}
 			});
 		}
@@ -100,6 +112,11 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 				span1whatFind.textContent = "Čo v článku nájdete?";
 				spanShow.textContent = "Zobraziť zoznam";
 				spanHide.textContent = "Skryť zoznam";
+			}
+			if (document.body.classList.contains("pl")) {
+				span1whatFind.textContent = "Co znajdziesz w artykule?";
+				spanShow.textContent = "Pokaż listę";
+				spanHide.textContent = "Ukryj listę";
 			}
 
 			whatFind.appendChild(span1whatFind);
@@ -179,6 +196,12 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 					showBlogText = "Zobraziť všetky články";
 					showBlogHeadingText = "Mohlo by vás tiež zaujímať";
 				}
+				if (document.body.classList.contains("pl")) {
+					blogURL = "/blog/";
+					showBlogText = "Zobacz wszystkie artykuły";
+					showBlogHeadingText = "Może Cię również zainteresować";
+				}
+
 				let showBlogButton = $("<div>", { class: "show-all-blog-btn" }).append(
 					$("<a>", { href: blogURL, target: "_blank" }).text(showBlogText)
 				);
@@ -351,6 +374,9 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 						}
 						if (document.body.classList.contains("sk")) {
 							showCategoryText = "Zobraziť všetko";
+						}
+						if (document.body.classList.contains("pl")) {
+							showCategoryText = "Zobacz wszystko";
 						}
 
 						// Create the show-all-blog-btn div with an anchor inside
