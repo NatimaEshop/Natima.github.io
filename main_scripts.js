@@ -550,9 +550,9 @@ if (document.body.classList.contains("type-detail")) {
 					$(this).html("více než 10&nbsp;ks");
 				}
 			});
-			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
+			if ($(".product-top .flag-dendeti10").length > 0) {
 				$(".p-short-description").append(
-					'<div class="slevovy-kod-popis skola-10"><p>Zadejte v košíku slevový kód <b>SKOLA10</b> a využijte 10% slevu na všechny produkty v kategorii <a href="/zpatky-do-skoly/">Zpátky do školy</a>.</p><p>*nelze kombinovat s dalšími slevovými kupóny</p></div>'
+					'<div class="slevovy-kod-popis skola-10"><p>Zadejte v košíku slevový kód <b>DENDETI10</b> a využijte 10% slevu na všechny produkty v kategorii <a href="https://www.natima.cz/detske-zbozi/">Pro děti</a>.</p><p>*nelze kombinovat s dalšími slevovými kupóny</p></div>'
 				);
 			}
 			if (dataLayer[0].shoptet.product.manufacturer == "Natios") {
@@ -573,9 +573,9 @@ if (document.body.classList.contains("type-detail")) {
 					$(this).html("viac ako 10&nbsp;ks");
 				}
 			});
-			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
+			if ($(".product-top .flag-dendeti10").length > 0) {
 				$(".p-short-description").append(
-					'<div class="slevovy-kod-popis skola-10"><p>Zadajte v košíku zľavový kód <b>SKOLA10</b> a využite 10% zľavu na všetky produkty v kategórii <a href="/naspat-do-skoly/">Naspäť do školy</a>.</p><p>*nemožno kombinovať s ďalšími zľavovými kupónmi</p></div>'
+					'<div class="slevovy-kod-popis skola-10"><p>Zadajte v košíku zľavový kód <b>DENDETI10</b> a využite 10% zľavu na všetky produkty v kategórii <a href="https://www.natima.sk/detske-zbozi/">Pre deti</a>.</p><p>*nemožno kombinovať s ďalšími zľavovými kupónmi</p></div>'
 				);
 			}
 			if (dataLayer[0].shoptet.product.manufacturer == "Natios") {
@@ -597,10 +597,9 @@ if (document.body.classList.contains("type-detail")) {
 				}
 			});
 			/*Upravit*/
-
-			if ($(".product-top .flag-zpatky-do-skoly").length > 0) {
+			if ($(".product-top .flag-dendeti10").length > 0) {
 				$(".p-short-description").append(
-					'<div class="slevovy-kod-popis skola-10"><p>Zadajte v košíku zľavový kód <b>SKOLA10</b> a využite 10% zľavu na všetky produkty v kategórii <a href="/naspat-do-skoly/">Naspäť do školy</a>.</p><p>*nemožno kombinovať s ďalšími zľavovými kupónmi</p></div>'
+					'<div class="slevovy-kod-popis skola-10"><p>Zadajte v košíku zľavový kód <b>DZIECI10</b> a využite 10% zľavu na všetky produkty v kategórii <a href="/naspat-do-skoly/">Naspäť do školy</a>.</p><p>*nemožno kombinovať s ďalšími zľavovými kupónmi</p></div>'
 				);
 			}
 			/*Natios přispívá*/
