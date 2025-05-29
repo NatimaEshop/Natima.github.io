@@ -599,7 +599,7 @@ if (document.body.classList.contains("type-detail")) {
 			/*Upravit*/
 			if ($(".product-top .flag-dendeti10").length > 0) {
 				$(".p-short-description").append(
-					'<div class="slevovy-kod-popis skola-10"><p>Zadajte v košíku zľavový kód <b>DZIECI10</b> a využite 10% zľavu na všetky produkty v kategórii <a href="/naspat-do-skoly/">Naspäť do školy</a>.</p><p>*nemožno kombinovať s ďalšími zľavovými kupónmi</p></div>'
+					'<div class="slevovy-kod-popis skola-10"><p>Wpisz w koszyku kod rabatowy <b>DZIECI10</b> i skorzystaj z 10% zniżki na wszystkie produkty z kategorii <a href="https://www.natima.pl/dla-dzieci/">Dla dzieci</a>.</p><p>*nie można łączyć z innymi kodami rabatowymi</p></div>'
 				);
 			}
 			/*Natios přispívá*/
