@@ -491,6 +491,7 @@
 	margin-bottom: 4rem;
 	position: relative;
 }
+
 .blog-fetched-products > a,
 .blog-fetched-category > .product a {
 	text-decoration: none !important;

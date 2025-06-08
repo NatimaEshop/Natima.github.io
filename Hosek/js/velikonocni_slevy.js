@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 									$(this).attr("src", dataSrc);
 								}
 							});
-
+						$(product).find("a.image").append($(product).find(".p-in"));
 						blogProductsDiv.append(product);
 					}
 

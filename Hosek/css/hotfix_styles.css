@@ -445,3 +445,14 @@ body.type-category .breadcrumbs a::after {
 .quantity > label {
 	order: 2;
 }
+
+.blog-fetched-category > .product .p {
+	height: 100%;
+}
+.blog-fetched-category > .product .p > a {
+	height: calc(100% + 4rem);
+	display: block;
+}
+.blog-fetched-category > .product::after {
+	pointer-events: none;
+}
