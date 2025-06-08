@@ -364,7 +364,7 @@ if (document.body.classList.contains("in-blog") && document.body.classList.conta
 										$(this).attr("src", dataSrc);
 									}
 								});
-
+							$(product).find("a").append($(product).find(".p-in"));
 							blogProductsDiv.append(product);
 						}
 
