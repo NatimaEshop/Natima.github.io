@@ -412,7 +412,17 @@ if (document.body.classList.contains("type-manufacturer-detail")) {
 let productNameInDetail;
 if (document.body.classList.contains("type-detail")) {
 	/*nadpis a vlajecky do praveho sloupce*/
-	$(".p-code-label").text("Kód produktu:");
+
+	if (czechEshop) {
+		$(".p-code-label").text("Kód produktu:");
+	}
+	if (slovakEshop) {
+		$(".p-code-label").text("Kód produktu:");
+	}
+	if (polishEshop) {
+		$(".p-code-label").text("Kod produktu:");
+	}
+
 	$(".row.product-top > div:first-child()").insertBefore(
 		"#content .col-xs-12.col-lg-6.p-info-wrapper > div:first-child()"
 	);
