@@ -742,7 +742,8 @@
 }
 
 /*Blog pocet precteni a cas čtení*/
-#applypark_addon03_articleReadStats {
+#applypark_addon03_articleReadStats,
+.articleAnalytics_statsValue {
 	display: none !important;
 }
 
