@@ -56,7 +56,7 @@ if (zakaznikGroupId == idVelkoobchod_2) {
 }
 
 /*cukrfree 14 dni splatnost misto 7*/
-if (customerEmail == "cukrfree@gmail.com") {
+if (customerEmail == "cukrfree@gmail.com" || customerEmail == "fakturace@vitalpoint.cz") {
 	$('.radio-wrapper[data-id="billing-76"]').hide();
 	$('.radio-wrapper[data-id="billing-87"]').show();
 }
