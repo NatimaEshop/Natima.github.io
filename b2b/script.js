@@ -379,7 +379,10 @@ function calculateMinSellPriceWithVAT() {
 		}
 		let stdPriceSpan = element.querySelector("span");
 		let stdPriceText = stdPriceSpan.textContent.trim();
-		stdPriceText = stdPriceText.replace("Kč", "").trim().replace(",", ".");
+		stdPriceText = stdPriceText.replace("Kč", "");
+		stdPriceText = stdPriceText.replace("€", "");
+		stdPriceText = stdPriceText.replace(" ", "");
+		stdPriceText = stdPriceText.trim().replace(",", ".");
 		let stdPriceNumber = parseFloat(stdPriceText);
 		console.log("Price:", stdPriceNumber);
 
@@ -396,12 +399,19 @@ function calculateMinSellPriceWithVAT() {
 		let sellingPriceWithVATText = priceWithVAT.textContent
 			.replace(/[()]/g, "")
 			.replace("Kč", "")
+			.replace("€", "")
+			.replace(" ", "")
 			.trim()
 			.replace(",", ".");
 		let sellingPriceWithVAT = parseFloat(sellingPriceWithVATText);
 
 		// Process sellingPriceWOVAT text similarly
-		let sellingPriceWOVATText = priceWOVAT.textContent.replace("Kč", "").trim().replace(",", ".");
+		let sellingPriceWOVATText = priceWOVAT.textContent
+			.replace("Kč", "")
+			.replace("€", "")
+			.replace(" ", "")
+			.trim()
+			.replace(",", ".");
 		let sellingPriceWOVAT = parseFloat(sellingPriceWOVATText);
 
 		let VAT = sellingPriceWithVAT / sellingPriceWOVAT;
@@ -418,7 +428,12 @@ function calculateMinSellPriceWithVAT() {
 		if (stdPriceWithVAT.toString().includes(".")) {
 			stdPriceWithVAT = stdPriceWithVAT.toFixed(2).replace(".", ",");
 		}
-		stdPriceSpan.textContent = stdPriceWithVAT + " Kč";
+
+		if (dataLayer[0].shoptet.currency === "EUR") {
+			stdPriceSpan.textContent = stdPriceWithVAT + " €";
+		} else {
+			stdPriceSpan.textContent = stdPriceWithVAT + " Kč";
+		}
 		//add calculated class to the element
 		element.classList.add("calculated");
 	});
