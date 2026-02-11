@@ -49,17 +49,31 @@ const zakaznikGroupId = infoZakaznika.groupId;
 const idVelkoobchod_2 = 4;
 const customerEmail = infoZakaznika.email;
 
-if (zakaznikGroupId == idVelkoobchod_2) {
+const fakturace7id = 10;
+const fakturace14id = 13;
+const fakturace30id = 16;
+let platbaFakturaceSeSplatnosti = $(".radio-wrapper[data-id='billing-115']");
+let platbaPrevodem = $('.radio-wrapper[data-id="billing-73"]');
+
+if (zakaznikGroupId == fakturace7id || zakaznikGroupId == fakturace14id || zakaznikGroupId == fakturace30id) {
+	platbaFakturaceSeSplatnosti.show();
+	platbaPrevodem.hide();
+} else {
+	platbaFakturaceSeSplatnosti.hide();
+	platbaPrevodem.show();
+}
+
+/* if (zakaznikGroupId == idVelkoobchod_2) {
 	$('.radio-wrapper[data-id="billing-76"]').show();
 } else {
 	$('.radio-wrapper[data-id="billing-73"]').show();
-}
+} */
 
 /*cukrfree 14 dni splatnost misto 7*/
-if (customerEmail == "cukrfree@gmail.com" || customerEmail == "fakturace@vitalpoint.cz") {
+/* if (customerEmail == "cukrfree@gmail.com" || customerEmail == "fakturace@vitalpoint.cz") {
 	$('.radio-wrapper[data-id="billing-76"]').hide();
 	$('.radio-wrapper[data-id="billing-87"]').show();
-}
+} */
 
 /*pridano do kos*/
 var unikatni = 0;
@@ -97,7 +111,7 @@ function pridanoDoKosikuPopup() {
 					}, 3000);
 				}
 			},
-			{ once: true }
+			{ once: true },
 		);
 		setTimeout(function () {
 			$("#cboxOverlay").remove();
@@ -109,7 +123,7 @@ function pridanoDoKosikuPopup() {
 /*marze*/
 /*det*/
 $(".p-data-wrapper>form .p-price-wrapper .price-save").text(
-	$(".p-data-wrapper>form .p-price-wrapper .price-save").text().replace("–", "")
+	$(".p-data-wrapper>form .p-price-wrapper .price-save").text().replace("–", ""),
 );
 if ($(".p-data-wrapper>form .p-price-wrapper .price-save:contains('39 %')").length > 0) {
 	$(".p-data-wrapper>form .p-price-wrapper .price-save").text(" 40 %");
@@ -143,7 +157,7 @@ document.addEventListener(
 		pridanoDoKosikuPopup();
 		calculateMinSellPriceWithVAT();
 	},
-	false
+	false,
 );
 
 /*zmena serazeni*/
@@ -157,10 +171,10 @@ document.addEventListener(
 				pridanoDoKosikuPopup();
 				calculateMinSellPriceWithVAT();
 			},
-			true
+			true,
 		);
 	},
-	false
+	false,
 );
 
 /*filter*/
@@ -174,10 +188,10 @@ document.addEventListener(
 				pridanoDoKosikuPopup();
 				calculateMinSellPriceWithVAT();
 			},
-			true
+			true,
 		);
 	},
-	false
+	false,
 );
 
 /*stranka*/
@@ -191,10 +205,10 @@ document.addEventListener(
 				pridanoDoKosikuPopup();
 				calculateMinSellPriceWithVAT();
 			},
-			true
+			true,
 		);
 	},
-	false
+	false,
 );
 
 /*vyhledavani*/
@@ -206,7 +220,7 @@ $("#loadNextSearchResults").click(function () {
 			pridanoDoKosikuPopup();
 			calculateMinSellPriceWithVAT();
 		},
-		true
+		true,
 	);
 });
 
